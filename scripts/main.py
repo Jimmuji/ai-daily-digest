@@ -1,9 +1,9 @@
 """
 AI Daily Digest - Main entry point.
-Fetches AI news from multiple sources, summarizes with Gemini, and saves as markdown.
+Fetches AI news from multiple sources, summarizes with AI, and saves outputs.
 """
 
-import os
+import json
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -31,17 +31,33 @@ def main():
         print("No items fetched. Exiting.")
         sys.exit(0)
 
-    # Step 2: AI summarization
-    print("\n[Step 2] Generating AI summary...")
+    # Step 2: Save raw fetched data for traceability
+    data_dir = Path(__file__).parent.parent / "data"
+    data_dir.mkdir(exist_ok=True)
+    raw_file = data_dir / f"{date_str}.raw.json"
+    raw_payload = {
+        "date": date_str,
+        "generated_at": today.isoformat(),
+        "counts": {key: len(value) for key, value in data.items()},
+        "items": data,
+    }
+    raw_file.write_text(
+        json.dumps(raw_payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"\n[Step 2] Saved raw data to {raw_file}")
+
+    # Step 3: AI summarization
+    print("\n[Step 3] Generating AI summary...")
     markdown = summarize(data, date_str)
 
-    # Step 3: Save to file
+    # Step 4: Save daily markdown
     output_dir = Path(__file__).parent.parent / "daily"
     output_dir.mkdir(exist_ok=True)
     output_file = output_dir / f"{date_str}.md"
 
     output_file.write_text(markdown, encoding="utf-8")
-    print(f"\n[Step 3] Saved to {output_file}")
+    print(f"\n[Step 4] Saved to {output_file}")
     print("Done!")
 
 

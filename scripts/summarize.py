@@ -11,12 +11,21 @@ SYSTEM_PROMPT = """你是一个专业的 AI 行业资讯编辑。你的任务是
 要求：
 1. 从提供的原始内容中筛选出最有价值的 10-15 条资讯
 2. 去除重复和低质量内容
-3. 每条资讯用 2-3 句话总结，保留关键信息（谁、做了什么、为什么重要）
+3. 每条资讯必须保留原文链接，不能省略 URL
 4. 按类别分组：📰 行业新闻 / 📄 重要论文 / 🔧 开源项目
-5. 在末尾加一段 "今日观察"（3-5 句话），点评今天 AI 领域的整体动态
-6. 所有内容必须基于提供的原始素材，不要编造
-7. 输出格式为 Markdown
-8. 用中文输出，专有名词保留英文
+5. 每条资讯都要给出重要性评分：★☆☆☆☆ 到 ★★★★★，并写一句 "为什么重要"
+6. 重要性评分参考：是否来自一手来源、是否影响开发者/产品/产业、是否可立即试用、是否代表趋势变化
+7. 每条资讯用 2-3 句话总结，保留关键信息（谁、做了什么、为什么重要）
+8. 在末尾加一段 "今日观察"（3-5 句话），点评今天 AI 领域的整体动态
+9. 所有内容必须基于提供的原始素材，不要编造
+10. 输出格式为 Markdown
+11. 用中文输出，专有名词保留英文
+
+每条资讯请使用这个格式：
+- **标题**：一句话摘要。
+  - 重要性：★★★★☆ / 5
+  - 为什么重要：说明对开发者、产品、研究或产业的影响。
+  - 来源：[Source Name](URL)
 """
 
 
@@ -27,17 +36,34 @@ def format_raw_content(data):
     if data.get("news"):
         sections.append("=== 新闻资讯 ===")
         for item in data["news"]:
-            sections.append(f"[{item['source']}] {item['title']}\nURL: {item['url']}\n{item['summary']}\n")
+            sections.append(
+                f"[{item['source']}] {item['title']}\n"
+                f"URL: {item['url']}\n"
+                f"Published: {item.get('published') or 'unknown'}\n"
+                f"Importance hint: {item.get('importance_hint', 3)}/5\n"
+                f"{item['summary']}\n"
+            )
 
     if data.get("papers"):
         sections.append("=== 学术论文 ===")
         for item in data["papers"]:
-            sections.append(f"{item['title']}\nURL: {item['url']}\n{item['summary']}\n")
+            sections.append(
+                f"[{item['source']}] {item['title']}\n"
+                f"URL: {item['url']}\n"
+                f"Published: {item.get('published') or 'unknown'}\n"
+                f"Importance hint: {item.get('importance_hint', 3)}/5\n"
+                f"{item['summary']}\n"
+            )
 
     if data.get("projects"):
         sections.append("=== 开源项目 ===")
         for item in data["projects"]:
-            sections.append(f"{item['title']}\nURL: {item['url']}\n{item['summary']}\n")
+            sections.append(
+                f"[{item['source']}] {item['title']}\n"
+                f"URL: {item['url']}\n"
+                f"Importance hint: {item.get('importance_hint', 3)}/5\n"
+                f"{item['summary']}\n"
+            )
 
     return "\n".join(sections)
 
@@ -57,7 +83,8 @@ def summarize(data, date_str):
 
     user_prompt = f"""今天是 {date_str}。
 
-以下是今天收集到的 AI 领域原始资讯，请整理成每日简报：
+以下是今天收集到的 AI 领域原始资讯，请整理成每日简报。
+请优先选择重要性高、来源可靠、对 AI builder 有实际参考价值的内容：
 
 {raw_content}"""
 

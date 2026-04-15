@@ -28,17 +28,19 @@ jobs:
       - name: Generate daily digest
         env:
           API_KEY: ${{ secrets.API_KEY }}
+          API_BASE_URL: ${{ vars.API_BASE_URL || 'https://api.deepseek.com' }}
+          API_MODEL: ${{ vars.API_MODEL || 'deepseek-chat' }}
         run: cd scripts && python main.py
 
       - name: Commit and push
         run: |
           git config user.name "AI Daily Bot"
           git config user.email "bot@github.com"
-          git add daily/
+          git add daily/ data/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            DATE=$(date -u +"%Y-%m-%d")
+            DATE=$(TZ=Asia/Shanghai date +"%Y-%m-%d")
             git commit -m "📰 Daily digest for ${DATE}"
             git push
           fi

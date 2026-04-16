@@ -1,0 +1,46 @@
+name: Keepalive
+
+# GitHub disables scheduled workflows on repos with no activity for 60 days.
+# This workflow keeps the repo "alive" by making a lightweight commit every 50 days.
+# It also serves as a fallback: if the daily digest somehow missed, re-trigger it.
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 08:30 Beijing time - fallback for daily digest
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check if today's digest exists
+        id: check
+        run: |
+          DATE=$(TZ=Asia/Shanghai date +"%Y-%m-%d")
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          if [ -f "daily/${DATE}.md" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Today's digest already exists"
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "Today's digest is MISSING - will trigger"
+          fi
+
+      - name: Trigger daily digest if missing
+        if: steps.check.outputs.exists == 'false'
+        run: gh workflow run daily.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Keepalive commit (prevent GitHub from disabling schedules)
+        run: |
+          git config user.name "Keepalive Bot"
+          git config user.email "bot@github.com"
+          git commit --allow-empty -m "keepalive: $(date -u +%Y-%m-%d)"
+          git push

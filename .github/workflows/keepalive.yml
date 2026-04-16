@@ -43,4 +43,5 @@ jobs:
           git config user.name "Keepalive Bot"
           git config user.email "bot@github.com"
           git commit --allow-empty -m "keepalive: $(date -u +%Y-%m-%d)"
+          git pull --rebase
           git push

@@ -1,6 +1,6 @@
 {
   "date": "2026-04-27",
-  "generated_at": "2026-04-27T11:04:10.891591+08:00",
+  "generated_at": "2026-04-27T13:29:27.234687+08:00",
   "counts": {
     "papers": 20,
     "projects": 15,
@@ -8,6 +8,58 @@
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets",
+        "url": "https://huggingface.co/papers/2604.22294",
+        "normalized_url": "https://huggingface.co/papers/2604.22294",
+        "summary": "Real-world document question answering is challenging. Analysts must synthesize evidence across multiple documents and different parts of each document. However, any fixed LLM context window can be exceeded as document collections grow. A common workaround is to decompose documents into chunks and assemble answers from chunk-level outputs, but this introduces an aggregation bottleneck: as the number of chunks grows, systems must still combine and reason over an increasingly large body of extract",
+        "source": "HuggingFace Papers",
+        "published": "2026-04-24T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2604.22294"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Sessa: Selective State Space Attention",
+        "url": "https://huggingface.co/papers/2604.18580",
+        "normalized_url": "https://huggingface.co/papers/2604.18580",
+        "summary": "Modern sequence modeling is dominated by two families: Transformers, whose self-attention can access arbitrary elements of the visible sequence, and structured state-space models, which propagate information through an explicit recurrent state. These mechanisms face different limitations on long contexts: when attention is diffuse, the influence of individual tokens is diluted across the effective support, while recurrent state propagation can lose long-range sensitivity unless information is ac",
+        "source": "HuggingFace Papers",
+        "published": "2026-04-21T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2604.18580"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "FlowAnchor: Stabilizing the Editing Signal for Inversion-Free Video Editing",
+        "url": "https://huggingface.co/papers/2604.22586",
+        "normalized_url": "https://huggingface.co/papers/2604.22586",
+        "summary": "We propose FlowAnchor, a training-free framework for stable and efficient inversion-free, flow-based video editing. Inversion-free editing methods have recently shown impressive efficiency and structure preservation in images by directly steering the sampling trajectory with an editing signal. However, extending this paradigm to videos remains challenging, often failing in multi-object scenes or with increased frame counts. We identify the root cause as the instability of the editing signal in h",
+        "source": "HuggingFace Papers",
+        "published": "2026-04-24T00:00:00.000Z",
+        "importance_hint": 4,
+        "metadata": {
+          "paper_id": "2604.22586"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "DiffNR: Diffusion-Enhanced Neural Representation Optimization for Sparse-View 3D Tomographic Reconstruction",
+        "url": "https://huggingface.co/papers/2604.21518",
+        "normalized_url": "https://huggingface.co/papers/2604.21518",
+        "summary": "Neural representations (NRs), such as neural fields and 3D Gaussians, effectively model volumetric data in computed tomography (CT) but suffer from severe artifacts under sparse-view settings. To address this, we propose DiffNR, a novel framework that enhances NR optimization with diffusion priors. At its core is SliceFixer, a single-step diffusion model designed to correct artifacts in degraded slices. We integrate specialized conditioning layers into the network and develop tailored data curat",
+        "source": "HuggingFace Papers",
+        "published": "2026-04-23T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2604.21518"
+        }
+      },
       {
         "category": "papers",
         "title": "AgriIR: A Scalable Framework for Domain-Specific Knowledge Retrieval",
@@ -214,58 +266,6 @@
         "importance_hint": 5,
         "metadata": {
           "paper_id": "2604.20244"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks",
-        "url": "https://huggingface.co/papers/2604.20987",
-        "normalized_url": "https://huggingface.co/papers/2604.20987",
-        "summary": "Long horizon interactive environments are a testbed for evaluating agents skill usage abilities. These environments demand multi step reasoning, the chaining of multiple skills over many timesteps, and robust decision making under delayed rewards and partial observability. Games are a good testbed for evaluating agent skill usage in environments. Large Language Models (LLMs) offer a promising alternative as game playing agents, but they often struggle with consistent long horizon decision making",
-        "source": "HuggingFace Papers",
-        "published": "2026-04-22T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2604.20987"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Trust but Verify: Introducing DAVinCI -- A Framework for Dual Attribution and Verification in Claim Inference for Language Models",
-        "url": "https://huggingface.co/papers/2604.21193",
-        "normalized_url": "https://huggingface.co/papers/2604.21193",
-        "summary": "Large Language Models (LLMs) have demonstrated remarkable fluency and versatility across a wide range of NLP tasks, yet they remain prone to factual inaccuracies and hallucinations. This limitation poses significant risks in high-stakes domains such as healthcare, law, and scientific communication, where trust and verifiability are paramount. In this paper, we introduce DAVinCI - a Dual Attribution and Verification framework designed to enhance the factual reliability and interpretability of LLM",
-        "source": "HuggingFace Papers",
-        "published": "2026-04-23T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2604.21193"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Explainable Disentangled Representation Learning for Generalizable Authorship Attribution in the Era of Generative AI",
-        "url": "https://huggingface.co/papers/2604.21300",
-        "normalized_url": "https://huggingface.co/papers/2604.21300",
-        "summary": "Learning robust representations of authorial style is crucial for authorship attribution and AI-generated text detection. However, existing methods often struggle with content-style entanglement, where models learn spurious correlations between authors' writing styles and topics, leading to poor generalization across domains. To address this challenge, we propose Explainable Authorship Variational Autoencoder (EAVAE), a novel framework that explicitly disentangles style from content through arch",
-        "source": "HuggingFace Papers",
-        "published": "2026-04-23T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2604.21300"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "TingIS: Real-time Risk Event Discovery from Noisy Customer Incidents at Enterprise Scale",
-        "url": "https://huggingface.co/papers/2604.21889",
-        "normalized_url": "https://huggingface.co/papers/2604.21889",
-        "summary": "Real-time detection and mitigation of technical anomalies are critical for large-scale cloud-native services, where even minutes of downtime can result in massive financial losses and diminished user trust. While customer incidents serve as a vital signal for discovering risks missed by monitoring, extracting actionable intelligence from this data remains challenging due to extreme noise, high throughput, and semantic complexity of diverse business lines. In this paper, we present TingIS, an end",
-        "source": "HuggingFace Papers",
-        "published": "2026-04-23T00:00:00.000Z",
-        "importance_hint": 4,
-        "metadata": {
-          "paper_id": "2604.21889"
         }
       }
     ],
@@ -484,12 +484,12 @@
     "news": [
       {
         "category": "news",
-        "title": "杨立昆骂阿莫迪，究竟有没有道理？",
-        "url": "https://www.36kr.com/p/3780863073573896",
-        "normalized_url": "https://www.36kr.com/p/3780863073573896",
-        "summary": "大家现在都有立场，但未来如何真很难说",
+        "title": "白酒品牌走向国际消费场，茅台在消博会测试新表达",
+        "url": "https://www.36kr.com/p/3784522817641476",
+        "normalized_url": "https://www.36kr.com/p/3784522817641476",
+        "summary": "白酒国际化需文化场景支撑，茅台在消博会通过体验互动降低认知门槛。",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:42:53+00:00",
+        "published": "2026-04-27T04:06:53+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -497,12 +497,12 @@
       },
       {
         "category": "news",
-        "title": "网大死过一次，但正在被AI救活",
-        "url": "https://www.36kr.com/p/3780866685148423",
-        "normalized_url": "https://www.36kr.com/p/3780866685148423",
-        "summary": "5亿寻龙诀和200万AI网大在同赛道？",
+        "title": "AI眼镜开始走进消费展，乐奇Rokid想回答一个更现实的问题",
+        "url": "https://www.36kr.com/p/3784513124408325",
+        "normalized_url": "https://www.36kr.com/p/3784513124408325",
+        "summary": "AI眼镜从技术展示转向日常使用，关键在佩戴舒适与场景适配。",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:42:42+00:00",
+        "published": "2026-04-27T04:06:04+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -510,12 +510,38 @@
       },
       {
         "category": "news",
-        "title": "Anthropic 的“刀法”越来越像苹果和微软了",
-        "url": "https://www.36kr.com/p/3784460976299014",
-        "normalized_url": "https://www.36kr.com/p/3784460976299014",
-        "summary": "Anthropic让人又爱又恨",
+        "title": "因为太有男人味，AI男友被嘲疯了",
+        "url": "https://www.36kr.com/p/3784531725458441",
+        "normalized_url": "https://www.36kr.com/p/3784531725458441",
+        "summary": "你愿意花多少钱攻略一位AI男友？",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:41:31+00:00",
+        "published": "2026-04-27T03:58:39+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "做乐园、搞AI、补短板，情绪消费上市公司们都不好过？",
+        "url": "https://www.36kr.com/p/3784525077371905",
+        "normalized_url": "https://www.36kr.com/p/3784525077371905",
+        "summary": "自有IP“难产”，授权模式见顶？还有好生意吗？",
+        "source": "36Kr AI",
+        "published": "2026-04-27T03:58:25+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "最强大模型，保质期越来越短了",
+        "url": "https://www.36kr.com/p/3784538900569345",
+        "normalized_url": "https://www.36kr.com/p/3784538900569345",
+        "summary": "领先不再是稳态，追赶也并非线性",
+        "source": "36Kr AI",
+        "published": "2026-04-27T03:58:05+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -523,38 +549,12 @@
       },
       {
         "category": "news",
-        "title": "智能机器人，下一个万亿赛道",
-        "url": "https://www.36kr.com/p/3782271095282691",
-        "normalized_url": "https://www.36kr.com/p/3782271095282691",
-        "summary": "机器人，正在重构社会。",
+        "title": "DeepSeek两天两次降价，百万token仅2分钱，调用量一度飙升近4倍，Agent模型价格锚被打穿",
+        "url": "https://www.36kr.com/p/3784523493202952",
+        "normalized_url": "https://www.36kr.com/p/3784523493202952",
+        "summary": "DeepSeek连续两日降价，部分价格已降至原价四十分之一。",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:23:45+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "DeepSeek-V4技术报告暗藏的10个神级彩蛋，“炼丹玄学”也被写进论文",
-        "url": "https://www.36kr.com/p/3782104958426114",
-        "normalized_url": "https://www.36kr.com/p/3782104958426114",
-        "summary": "DeepSeek在“省钱”和“省资源”上达到了变态的程度。",
-        "source": "36Kr AI",
-        "published": "2026-04-27T02:23:04+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "860亿巨头的亲儿子，一把融资10亿",
-        "url": "https://www.36kr.com/p/3782162311076868",
-        "normalized_url": "https://www.36kr.com/p/3782162311076868",
-        "summary": "国产推理GPU公司曦望，刚刚融了超10亿元。",
-        "source": "36Kr AI",
-        "published": "2026-04-27T02:22:44+00:00",
+        "published": "2026-04-27T03:57:39+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -562,38 +562,12 @@
       },
       {
         "category": "news",
-        "title": "企业AI战事升级：OpenAI进攻，钉钉飞书企微守擂",
-        "url": "https://www.36kr.com/p/3782083791385345",
-        "normalized_url": "https://www.36kr.com/p/3782083791385345",
-        "summary": "入场太晚了。",
+        "title": "跨境商家的门槛，这次真的没有了",
+        "url": "https://www.36kr.com/p/3784493444455684",
+        "normalized_url": "https://www.36kr.com/p/3784493444455684",
+        "summary": "AI让独立站建站更简单，一句话生成完整站点。",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:22:31+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "这一次，梁文锋和杨植麟隔空握手",
-        "url": "https://www.36kr.com/p/3782028489464835",
-        "normalized_url": "https://www.36kr.com/p/3782028489464835",
-        "summary": "这一周从Kimi发布K2.6开始，DeepSeek发布V4结束。",
-        "source": "36Kr AI",
-        "published": "2026-04-27T02:22:22+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "GPT image-2爆火后，设计师的天塌了吗？",
-        "url": "https://www.36kr.com/p/3782622027264777",
-        "normalized_url": "https://www.36kr.com/p/3782622027264777",
-        "summary": "AI热潮下，设计师们重新解释自己的价值。",
-        "source": "36Kr AI",
-        "published": "2026-04-27T02:19:52+00:00",
+        "published": "2026-04-27T03:53:23+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -601,12 +575,38 @@
       },
       {
         "category": "news",
-        "title": "潮玩劲吹IP风",
-        "url": "https://www.36kr.com/p/3784425771037184",
-        "normalized_url": "https://www.36kr.com/p/3784425771037184",
-        "summary": "没有谁不想切下更大块蛋糕。",
+        "title": "荣威携家越07概念车登陆北京车展，与火山引擎共创AI原生汽车新范式",
+        "url": "https://www.36kr.com/p/3784538765679878",
+        "normalized_url": "https://www.36kr.com/p/3784538765679878",
+        "summary": "以昂扬美学惊艳亮相 更懂中国家庭的审美需求",
         "source": "36Kr AI",
-        "published": "2026-04-27T02:19:20+00:00",
+        "published": "2026-04-27T03:52:08+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "时代拐点已至？如果AGI将在未来2、3年内到来……",
+        "url": "https://www.36kr.com/p/3784531055948289",
+        "normalized_url": "https://www.36kr.com/p/3784531055948289",
+        "summary": "对于AI，短期看是替代，中期看是加速，长期看是扩张。",
+        "source": "36Kr AI",
+        "published": "2026-04-27T03:51:55+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "商场儿童区，藏着一台赌博启蒙机",
+        "url": "https://www.36kr.com/p/3784526794808320",
+        "normalized_url": "https://www.36kr.com/p/3784526794808320",
+        "summary": "“亲子游戏”弹珠机",
+        "source": "36Kr AI",
+        "published": "2026-04-27T03:49:31+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"

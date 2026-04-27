@@ -190,14 +190,20 @@ def fetch_github_trending():
     return items
 
 
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124.0 Safari/537.36"
+}
+
+
 def fetch_rss_feed(feed_url, source_name, max_items=10):
     """Generic RSS feed fetcher."""
     items = []
     try:
-        feed = feedparser.parse(feed_url)
+        resp = requests.get(feed_url, headers=BROWSER_HEADERS, timeout=20)
+        resp.raise_for_status()
+        feed = feedparser.parse(resp.content)
         cutoff = datetime.now(timezone.utc) - timedelta(days=2)
         for entry in feed.entries[:max_items]:
-            # Try to parse date
             published = entry.get("published_parsed") or entry.get("updated_parsed")
             if published:
                 entry_date = datetime(*published[:6], tzinfo=timezone.utc)
@@ -216,18 +222,55 @@ def fetch_rss_feed(feed_url, source_name, max_items=10):
                 metadata={"feed_url": feed_url},
             ))
     except Exception as e:
-        print(f"[{source_name}] Error: {e}")
+        print(f"  [{source_name}] Error: {e}")
+    return items
+
+
+def fetch_hacker_news():
+    """Fetch top AI stories from Hacker News via Algolia API."""
+    items = []
+    try:
+        from datetime import datetime, timezone, timedelta
+        since = int((datetime.now(timezone.utc) - timedelta(days=1)).timestamp())
+        url = (
+            f"https://hn.algolia.com/api/v1/search"
+            f"?query=AI+LLM+machine+learning"
+            f"&tags=story"
+            f"&numericFilters=created_at_i>{since},points>10"
+            f"&hitsPerPage=30"
+        )
+        resp = requests.get(url, timeout=20)
+        resp.raise_for_status()
+        hits = resp.json().get("hits", [])
+
+        for hit in hits:
+            title = hit.get("title", "")
+            # Filter for AI-relevant titles
+            if not any(kw in title.lower() for kw in AI_KEYWORDS):
+                continue
+            items.append(make_item(
+                category="news",
+                title=title,
+                url=hit.get("url") or f"https://news.ycombinator.com/item?id={hit.get('objectID')}",
+                summary=f"HN points: {hit.get('points', 0)}, comments: {hit.get('num_comments', 0)}",
+                source="Hacker News",
+                published=hit.get("created_at"),
+            ))
+        items = items[:15]
+    except Exception as e:
+        print(f"  [Hacker News] Error: {e}")
     return items
 
 
 # RSS sources - all free, no auth needed
 RSS_SOURCES = [
-    # Chinese sources (via working RSSHub mirror)
+    # Chinese sources
     ("https://rsshub.rssforever.com/36kr/search/articles/ai", "36Kr AI"),
     ("https://rsshub.rssforever.com/sspai/tag/AI", "SSPAI AI"),
     # English sources
-    ("https://techcrunch.com/category/artificial-intelligence/feed/", "TechCrunch AI"),
-    ("https://www.theverge.com/rss/ai-artificial-intelligence/index.xml", "The Verge AI"),
+    ("https://venturebeat.com/category/ai/feed/",                          "VentureBeat AI"),
+    ("https://techcrunch.com/category/artificial-intelligence/feed/",      "TechCrunch AI"),
+    ("https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",  "The Verge AI"),
 ]
 
 
@@ -241,8 +284,12 @@ def fetch_all():
     projects = fetch_github_trending()
     print(f"  Got {len(projects)} projects")
 
+    print("Fetching Hacker News...")
+    hn_items = fetch_hacker_news()
+    print(f"  Got {len(hn_items)} items")
+
     print("Fetching RSS feeds...")
-    news = []
+    news = list(hn_items)
     for url, name in RSS_SOURCES:
         feed_items = fetch_rss_feed(url, name)
         print(f"  [{name}] Got {len(feed_items)} items")

@@ -1,13 +1,9 @@
-各位通勤路上的朋友，早上好！今天是2026年7月9号，欢迎收听今天的AI行业播报。今天AI圈可是热闹非凡，从语音模型到芯片，从开源到盈利，信息量巨大。别急，我帮你捋一捋，咱们边走边听。
-先说说最重磅的，OpenAI今天发布了GPT-Live，一个全双工语音模型，简单说就是你和ChatGPT聊天，它能随时打断你、倾听你，对话感觉就像跟真人唠嗑一样自然。这玩意儿一出来，语音交互的体验感直接拉满。不过，OpenAI也没闲着，他们还在准备周四发布GPT-5.6，据说这个新模型在编码任务上，能以半价超越Claude Mythos 5，而且之前因为美国政府要求延期，现在终于要亮相了。另外，OpenAI的首席未来学家Joshua Achiam离职了，这位安全研究的核心人物一走，大家又开始担心OpenAI的安全方向了。
-再来看xAI，他们发布了Grok 4.5，定价低得惊人，每百万输入token只要两美元，性价比直接碾压Fable 5和GPT-5.5。虽然性能上可能还有差距，但这么便宜的价格，让那些差距都不那么重要了。
-Anthropic这边也是好消息不断，第三季度盈利超过10亿美元，率先实现了扭亏，这对整个AI行业来说，是个超级正面的信号。他们还把Claude Cowork扩展到了移动端和Web端，从开发者工具转向了知识工作者市场，Agent开始跨设备平台化了。更有意思的是，Anthropic建议用Fable 5当规划器，Sonnet 5来执行，这样能省下37%的成本。这种“顾问”模式，以63%的成本达到了92%的性能，简直是Agent架构的实用宝典。
-Meta也没闲着，发布了Muse Image模型，可以用Instagram照片生成别人的AI图像。但这个@提及功能引发了隐私争议，默认的opt-out模式可能违反了GDPR，看来又要掀起一波讨论。
-DeepSeek秘密造芯了，专攻推理，已经和供应链接洽。AI公司自研芯片的趋势越来越明显，推理成本有望进一步下降。Mistral也进军机器人领域，发布了Robostral Navigate 8B模型，只用单RGB摄像头就能导航，在R2R-CE基准上达到了76.6%，真是让人眼前一亮。
-Google DeepMind为Gemini API托管Agent新增了后台执行和MCP支持，异步运行、远程MCP服务器、自定义函数，Agent的实用性大大提升。Prime Intellect拿到了1.3亿美元的A轮融资，帮企业构建自有AI Agent，让企业不用依赖前沿实验室就能训练自己的Agent系统。高德也发布了Phys AI Data，首个面向物理AI训练的一站式空间数据基座，降低了具身智能的落地门槛。
-还有个有趣的发现，API厂商定价存在认知套利，52%是AI推理成本分水岭。开发者们，重新评估你的API选择吧，别被定价忽悠了。
-开源项目这边也热闹。MiniMax计划今年晚些时候开源2.7万亿参数模型，这参数规模再创新高，可能改变开源和闭源的竞争格局。OfficeCLI专为AI Agent打造，免费开源，单二进制，无需安装Office，Agent就能直接读写Word、Excel、PPT，太实用了。还有systempromptsleaks，收集了各大模型的系统提示词，对Agent开发直接参考。Tencent Cloud CubeSandbox支持Arm架构，解锁多架构Agent算力。TencentDB-Agent-Memory提供完全本地长期记忆方案，零外部API依赖。agent-skills和superpowers项目日增千星，社区正在从“怎么写Agent”转向“怎么规模化Agent”。OpenAI官方出品的codex-plugin-cc，打通了Claude Code和Codex两大编码Agent生态。
-论文方面，训练单层Transformer就能匹配全参数RL训练效果，大幅降低计算成本。Gemma 4技术报告发布，开源权重、原生多模态。DSpark解决长序列推测解码的接受率衰减问题，提升推理吞吐量。SWE-Review用Agent代码审查闭环解决Issue，提升代码Agent可靠性。CanvasAgent通过视觉工具编排实现复杂图像创建和编辑。Liquid AI开源Antidoom，终结推理模型的“死亡循环”问题，死亡循环率从22.9%降至1%。
-最后，AI圈热议，有人说300行代码就能写个Cursor，引发Agent工具链讨论。Reddit用户实测，本地Gemma 4 31B大幅碾压免费版ChatGPT，社区热议OpenAI是否在用小型模型降本。
-今日观察：今天最清晰的信号是Agent架构从“单一大模型”走向“混合编排”。Anthropic官方推荐的Fable 5做规划器加Sonnet 5执行模式，以及OpenAI GPT-Live将深层推理委托给GPT-5.5，都印证了“大模型做规划、小模型做执行”已成为主流实践。同时，开源模型生态正在加速追赶，MiniMax的2.7T参数模型、Gemma 4技术报告密集发布，开源与闭源的差距在缩小。另一个值得关注的趋势是Agent技能工程化，GitHub上agent-skills、superpowers等项目日增千星，社区正在从“怎么写Agent”转向“怎么规模化Agent”。
-好了，今天的播报就到这里，希望这些信息能帮你开启美好的一天。我们明天见！
+各位听众朋友早上好，今天是2026年7月9号，欢迎收听今天的AI行业播报。今天AI圈相当热闹，从价格战到技术突破，从语音交互到Agent基础设施，信息量非常大。咱们来快速梳理一下今天的看点。
+先聊聊最劲爆的消息。SpaceXAI今天发布了Grok 4.5，专门为编码和Agent场景设计，但最让人关注的是它的价格——只有竞争对手的一半。这个定价策略可能会彻底搅乱API市场的价格格局，对Anthropic和OpenAI来说，压力不小。说到OpenAI，他们今天也放了个大招，推出了GPT-Live，这是一个全新的全双工语音模型，最大的特点是能边听边说，对话流畅度大幅提升，感觉就像和一个真人在聊天。另外，OpenAI的GPT-5.6也确定了发布时间，就在本周四，据说在编码基准上超越了之前的神话级模型，但成本只有一半，之前因为美国政府的要求延迟了，现在终于要来了。
+再来看看Anthropic这边。他们今天有两件大事。第一件，Anthropic成了第一家实现盈利的头部AI公司，第三季度盈利超过10亿美元，这给整个行业打了一剂强心针，证明AI生意确实能赚钱。第二件，他们把Claude Cowork这个Agent工具扩展到了移动端和Web端，而且有趣的是，数据表明大多数用户并不是用它来写代码，而是做其他知识工作。这说明Anthropic正在从开发者工具转向更广阔的知识工作者市场。另外，Anthropic还推荐了一个新玩法，把Fable 5这个大型模型当作“管理者”，让它把任务委派给更便宜的Sonnet 5，这样能达到92%的性能，但成本只有63%，这种Agent编排的新范式很有启发性。
+Meta这边也没闲着，发布了Muse Image模型，这个模型能引用Instagram用户的照片来生成AI图像，相当于把AI图像生成带入了社交图谱时代。但这也引发了隐私争议，GDPR合规的问题又摆在了台面上。
+国产AI这边也有大动作。DeepSeek被曝出秘密造芯，专攻推理芯片，而且一年前就启动了，看来AI公司自研芯片的趋势越来越明显。腾讯发布了Hy3，一个295B参数的MoE开源模型，但只有21B的活跃参数，支持256K上下文，原生支持vLLM和AMD硬件，成了开源MoE的新标杆。MiniMax更是计划开源一个2.7万亿参数的模型M3 Pro，这将是史上最大的开源模型，推理和多步任务能力都有大幅提升。
+其他值得关注的消息还有：Mistral进军机器人领域，发布了Robostral Navigate，一个只有8B参数的模型，只用单摄像头就能导航，大大降低了具身智能的部署门槛。Google DeepMind为Gemini API托管Agent新增了后台执行和MCP支持，Agent可以异步运行、连接远程服务器，实用性大增。Slack集成了Salesforce，Slackbot现在可以从聊天中拉取CRM数据、生成图表、发送DocuSign，真正实现了对话即工作流。Prime Intellect获得了1.3亿美元的A轮融资，专门帮助企业构建自己的AI Agent。高德发布了Phys AI Data，这是首个面向物理AI训练的一站式空间数据基座，填补了基础设施空白。还有Google的深度伪造检测系统成功揭穿了关于McConnell的伪造图片，在真实政治场景中验证了有效性。
+论文和开源项目方面，今天也有很多亮点。Google发布了Gemma 4技术报告，新一代开源多模态模型系列，从2.3B到31B参数，支持视觉和音频，还有思考模式。有篇论文提出单层Transformer训练就能匹敌全参数RL训练，大幅降低训练成本。还有Hierarchical Sparse Attention的研究，朝着无限上下文建模迈进。开源项目方面，OfficeCLI让AI可以直接读写Word、Excel、PPT，无需安装Office，单日涨星超过1700个。agent-skills提供了生产级的工程技能集，systempromptsleaks收集了各大模型的系统提示词，工程参考价值很高。腾讯云还开源了CubeSandbox和TencentDB-Agent-Memory，分别是面向Agent的轻量沙箱和本地长期记忆系统。
+最后是今日观察。今天最值得关注的信号是“Agent基础设施的全面爆发”。从OpenAI的GPT-Live全双工语音、Anthropic的Claude Cowork移动化，到Google的Managed Agents后台执行，三大巨头在同一天发力Agent交互体验。而开源生态中，agent-skills、OfficeCLI、CubeSandbox等项目在GitHub上单日暴涨千星，说明社区正在从“用AI写代码”转向“构建AI自主完成任务的完整工具链”。与此同时，Grok 4.5的“半价策略”和MiniMax即将开源的2.7T参数模型，预示着API定价战和开源模型规模竞赛将进一步加剧。
+好了，今天的播报就到这里，我们明天见。

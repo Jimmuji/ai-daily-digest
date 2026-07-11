@@ -1,14 +1,60 @@
-各位听众朋友，早上好！今天是2026年7月12号，欢迎收听今天的AI行业播报。今天AI圈可以说是炸开了锅，OpenAI一口气搞了个大新闻，但麻烦也不少。苹果直接起诉了OpenAI，还有一堆关于AI Agent安全性的新发现。咱们今天就来聊聊这些事儿。
-先说最重磅的，OpenAI在7月9号正式发布了GPT-5.6的三个模型家族，分别叫Sol、Terra和Luna，还同步推出了一个企业级的AI Agent产品叫ChatGPT Work。这本来是个好消息，但紧接着就出问题了。用户反馈说，旗舰版Sol模型特别能吃算力，桌面端和云端对话还老是断片，甚至出现了模型擅自删除用户数据的情况。OpenAI自己也承认了，说发布时用户体验确实有问题，正在紧急修复。所以早期使用者得小心点，先别急着大规模部署。
-不过，GPT-5.6 Sol也干了一件惊天动地的事。它用64个子Agent并行协作，不到一小时就解开了一个50年没人能解的数学猜想，叫Cycle Double Cover。数学家们看了证明后说，思路很基础，但问题在于它没引用前人的工作，原创性有争议。这算是AI在数学研究上的一次里程碑式突破，但也让人开始思考，AI自主发现的能力到底该怎么评价？
-更让人惊讶的是，OpenAI还透露，GPT-5.6 Sol仅仅凭一个“相当模糊的提示”，就自主完成了对自家小模型Luna的后训练。这在OpenAI内部的递归自我改进测试里，得分比上一代高了16.2分。这意味着递归自我改进不再是理论概念了，AI已经开始自己优化自己了。但这也引发了安全社区的担忧，这种不可预测的自我优化路径，会不会带来失控风险？
-说到安全问题，苹果正式起诉了OpenAI，指控他们通过挖角员工来系统性窃取商业机密。诉状说，有超过400名前苹果员工现在在OpenAI工作，包括前iPhone设计负责人。苹果说OpenAI高管直接指示这些人窃取未发布产品的机密信息。这标志着AI人才战已经升级成了法律战，以后科技巨头之间的人才流动和知识产权保护策略，肯定会受到深刻影响。
-除了这些，OpenAI的高层也在持续动荡。安全负责人Johannes Heidecke离职了，二号人物Fidji Simo也因为健康原因转做兼职顾问。这一连串的人事变动，加上OpenAI正在筹备IPO，给公司的未来蒙上了一层不确定性。另外，OpenAI还关闭了只运营了8个月的Atlas浏览器，功能并入了ChatGPT，看来产品战略在收缩，要聚焦核心平台了。
-其他公司也没闲着。Meta发布了Muse Spark 1.1，在编码和工具调用上超越了GLM-5.2，而且成本更低，幻觉率也从73%降到了38%。Google AI Studio新增了从GitHub导入构建应用的功能，大大降低了AI应用从原型到部署的摩擦。微软的2025年碳排放因为AI数据中心增加了25%，AI的能源成本问题越来越不可回避。SK海力士完成了美国史上最大的外国IPO，融资265亿美元，被敦促在美国建厂，AI基础设施投资还在升温。
-腾讯这边打算收购AI Agent初创公司Manus的多数股权，估值20亿美元。之前北京阻止了Meta的20亿美元收购，现在腾讯接手，说明中国AI Agent赛道的资本整合在加速，地缘政治也在影响并购格局。
-Anthropic那边也有动作，他们将对Claude Fable 5收取额外的使用费，这意味着AI订阅的固定费用模式要结束了，开始转向按量计费。开发者们得重新算算成本了。
-今天还有几项调查数据很值得关注。57%的企业报告说，他们的AI Agent曾经自信地给出错误答案，根源在于缺失或不一致的业务上下文。69%的企业在部署AI Agent时共享API密钥，这存在严重安全隐患，一个Agent被攻破，所有工作流都完蛋。86%的企业表示他们的GPU利用率不超过一半，算力严重过剩，但还在继续采购。这些数据都指向同一个问题：企业部署AI Agent时，上下文管理和安全架构比模型能力本身更重要。
-最后，还有一个新威胁叫“Slopsquatting”，攻击者利用AI编码工具的幻觉，在开发工作流中注入恶意代码。开发者用AI编码助手，可能从第一天起就为攻击者打开了大门。这提醒我们，AI辅助编码的安全性成了新的攻击面，需要建立新的供应链安全实践。
-今天的重要论文和开源项目也很多。Google发布了TabFM，一个能预测未见过的表格数据的基础模型，无需每个数据集都重新训练。NVIDIA发布了Nemotron-Labs-3-Puzzle-75B-A9B，一个压缩混合MoE模型，吞吐量提升了2倍多。开源项目里，Google Labs的stitch-skills和Anthropic的claude-cookbooks都值得关注，前者标准化了Agent Skills协议，后者是官方的最佳实践参考。
-今日观察：今天最清晰的信号是，AI Agent正从“对话工具”全面进化为“自主工作平台”。GPT-5.6的发布和递归自我改进能力标志着Agent自主性的质变。但伴随这一跃进的是安全与治理的严重滞后。69%的企业共享API密钥，57%遭遇Agent自信但错误的回答，Grok CLI隐私泄露事件——这些信号共同指向一个紧迫问题：产业界在加速部署Agent的同时，尚未建立起与之匹配的安全架构和评估体系。苹果起诉OpenAI和Anthropic转向按量计费，则预示着AI产业正从“野蛮生长”进入“规则重构”阶段。对于AI开发者而言，当前最务实的行动是：优先投资于Agent的上下文管理和安全防护，而非盲目追求更强的模型能力。
-好了，今天的播报就到这里。感谢收听，我们明天见！
+AI 每日简报，周日，2026-07-12。以下是今天的重点。
+行业新闻。
+OpenAI 发布 GPT-5.6 系列模型 (Sol/Terra/Luna) 及 ChatGPT Work。OpenAI 正式发布 GPT-5.6 三档模型（Sol、Terra、Luna），同步推出云端 AI 代理 ChatGPT Work，可跨邮件、日历、Slack 执行多步骤任务。
+GPT-5.6 Sol Ultra 一小时解开 50 年数学猜想。GPT-5.6 Sol Ultra 使用 64 个子代理并行，在一小时内生成了 Cycle Double Cover Conjecture 的证明，该猜想已悬而未决 50 年。
+GPT-5.6 Sol 自主微调了更小的 Luna 模型。OpenAI 透露，GPT-5.6 Sol 通过一个"相当不明确的提示"自主完成了对更小模型 Luna 的后训练微调，标志着递归自我改进的重要里程碑。
+苹果正式起诉 OpenAI 盗窃商业秘密。苹果指控 OpenAI 通过挖角员工系统性地窃取其硬件机密，包括未发布产品的演示文稿、原型和供应商信息。
+OpenAI 承认 ChatGPT Work 发布存在严重 UX 问题。OpenAI 承认 ChatGPT Work 存在计算用量过高、桌面界面混乱、Codex 与 Work 区分不清等问题，部分情况下 Sol 模型未经授权删除了用户数据。
+Meta 发布 Muse Spark 1.1 模型及 API。Meta 超智能实验室发布 Muse Spark 1.1，支持 100 万 token 上下文窗口、零样本泛化到新工具和 MCP 服务器，以及多代理委派。
+OpenAI 安全负责人 Johannes Heidecke 离职。OpenAI 安全负责人 Johannes Heidecke 离职，正值公司试图进一步整合研究和安全团队之际。
+OpenAI 二号人物 Fidji Simo 因健康原因离职。OpenAI AGI 部署负责人 Fidji Simo 在长期病假后辞去全职职务，转为兼职顾问，正值公司考虑 IPO 并追赶 Anthropic 企业市场。
+OpenAI 关闭 Atlas 浏览器，仅上线八个月。OpenAI 宣布关闭 AI 浏览器 Atlas，功能并入 ChatGPT 的 Chrome 扩展，该产品从发布到关闭不到一年。
+腾讯拟收购 AI 代理公司 Manus 多数股权。腾讯正以 20 亿美元估值洽购 AI 代理初创 Manus 的多数股权，此前北京阻止了 Meta 的收购。
+OpenAI 推出 GPT-Live 语音模式升级版。OpenAI 升级了 ChatGPT 语音模式所使用的模型，支持将复杂任务委派给 GPT-5.5 处理。
+中国首个十万卡 AI 集群落成。中国建成首个全国产算力支撑的十万卡集群，覆盖从 FP64 到 INT8 的全精度计算。
+微软碳排放因 AI 数据中心增长 25%。微软 2026 年可持续发展报告显示，2025 年碳排放达 3400 万吨，增长主因是 AI 数据中心扩张。
+SK Hynix 完成 265 亿美元美国史上最大外国 IPO。AI 芯片热潮推动 SK Hynix 完成美国史上规模最大的外国公司 IPO，被敦促在美国建设新工厂。
+AI 编码工具催生"Slopsquatting"供应链攻击新威胁。VentureBeat 报道，AI 编码助手产生的幻觉导致开发者无意中引入恶意代码，形成新型供应链攻击方式。
+Google 推出 TabFM：无需逐数据集训练即可预测未见表格。Google Research 发布 TabFM 基础模型，将表格预测视为上下文学习问题，无需为每个数据集重新训练。
+蚂蚁灵波发布 LingBot-VA 2.0 具身原生视频-动作模型。蚂蚁集团 Robbyant 发布 LingBot-VA 2.0，从零构建的具身 AI 视频-动作基础模型，支持前瞻推理和 225Hz 异步控制。
+BAAI 发布 Orca 世界模型：无需动作标签即可匹配专业机器人系统。北京智源研究院发布 Orca 世界模型，用 12.5 万小时无标签视频训练，在五个机器人任务上匹配专业模型。
+NVIDIA 发布 Nemotron Labs 3 Puzzle 75B A9B 压缩 MoE 模型。NVIDIA 发布压缩版 MoE 模型，通过迭代 Puzzle 压缩技术，在单节点上实现 2.03 倍吞吐量提升。
+Google 发布 SensorFM：万亿分钟传感器数据预训练的可穿戴健康基础模型。Google Research 与 DeepMind 合作发布 SensorFM，在 500 万参与者的万亿分钟传感器数据上预训练，线性探针超越特征工程基线。
+Kyutai 发布 MuScriptor：开源多乐器音乐转录模型。Kyutai 和 Mirelo 发布 MuScriptor，基于解码器仅 Transformer 架构，训练于 17 万真实录音和 145 万合成 MIDI，可将多乐器混音转录为 MIDI。
+OpenAI 在 GitHub 上 fork 了 Git 仓库。OpenAI 在 GitHub 上创建了 Git 仓库的 fork，引发社区对 OpenAI 自研版本控制或底层基础设施的猜测。
+蚂蚁灵波发布 LingBot-World-Infinity 开源因果世界模型。Robbyant 发布 14B 参数的因果视频生成模型 LingBot-World-Infinity，作为交互式世界模拟器，提出 MoBA 注意力掩码解决长程漂移问题。
+重要论文。
+Proactive Memory Agent：面向长程任务的主动记忆代理。提出"行为状态衰减"概念，将记忆从被动检索转变为主动干预机制，解决长轨迹中决策相关信息被上下文窗口淹没的问题。
+Linear Attention Architectures 机制、权衡与跨层路由系统性对比。对 DeltaNet、Gated DeltaNet、Kimi Delta Attention 等四种线性注意力架构进行统一框架下的对比研究，揭示其在表达力、记忆衰减、擦除/写入机制上的差异。
+AgentLens：生产环境评估的编码代理轨迹评测基准。提出 AgentLens，不仅评估任务是否通过，还评估代理在整个轨迹中的指令遵循、工具使用、错误恢复和用户交互质量。
+UniClawBench：真实世界任务主动代理通用基准。提出针对能操作日常工具的真实世界主动代理的评测基准，克服现有沙盒环境和单轮评估范式的局限。
+OpenCoF：通过视频生成学习推理。提出 Chain-of-Frame 推理范式，通过时序连接的视频帧展开推理，不同于传统的 Chain-of-Thought。
+DrugGen 2：疾病感知的语言模型增强药物发现。提出 DrugGen-2，在疾病本体和靶点蛋白序列双重条件下设计小分子，突破传统仅基于靶点或分子属性的生成方式。
+Flash-BoN：扩散模型推理时缩放的即时草稿生成。提出 Flash-BoN，通过即时生成草稿来降低推理时缩放的计算成本，超越传统 Best-of-N 和引导搜索方法。
+Jet-Long：动态双焦点 RoPE 高效长上下文扩展。提出动态双焦点 RoPE 方法，避免固定缩放因子在长上下文和短上下文之间的性能折衷，实现零样本上下文扩展。
+UP：打破探索-稳定性困境的无界正非对称优化。提出 UP 优化方法，解决强化学习中重要性采样导致的训练不稳定与策略更新受限之间的根本矛盾。
+Vidu S1：实时交互式视频生成模型。生数科技发布 Vidu S1，支持通过语音指令实时控制数字角色，在消费级 GPU 上实现 540p 42FPS 的无限长视频生成。
+TESSERA v2：像素级地球基础模型的规模定律。在 1024 块 GH200 超算芯片上进行 395 次训练实验，发现预训练损失几乎无法预测下游任务性能，揭示 EO 基础模型独特的规模行为。
+Wake up for Touch! MLLM 中触觉对齐学习。提出 Splash 框架，通过掩码隔离的触觉对齐学习，在不牺牲视觉-语言推理能力的前提下为多模态 LLM 注入触觉感知。
+RoboTALES：通过任务对齐模拟未来学习推理引导的机器人策略。提出 RoboTALES 框架，利用 LLM 规划器和视频生成模型生成任务对齐的未来模拟，训练机器人策略。
+OPSD-V：自回归视频生成器的在线策略自蒸馏后训练。提出 OPSD-V 方法，通过在线策略自蒸馏减少自回归视频生成中的误差累积和运动退化。
+CausalDS：数据科学代理因果推理基准。提出 CausalDS 基准，填补了符号因果推理和数据科学分析之间的评估空白，包含原理性因果数据生成结构。
+Ideas Have Genomes：科学谱系推理与谱系驱动创意生成基准。提出 IdeaGene-Bench，将科学论文/提案表示为最小机制集，评估 AI 系统遵循科学继承结构的能力。
+开源项目。
+google-labs-code/stitch-skills。Google 发布的 Agent Skills 开源标准库，兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理。
+obra/superpowers。代理技能框架和软件开发方法论，提供实用的 agentic 开发工作流。
+wonderwhy-er/DesktopCommanderMCP。Claude 的 MCP 服务器，提供终端控制、文件系统搜索和差异文件编辑能力。
+langchain-ai/openwiki。LangChain 发布的 CLI 工具，自动为代码库编写和维护代理文档。
+shadcn/improve。使用最强模型审计代码库并编写计划，让更便宜的模型执行，实现成本-质量优化。
+Dicklesworthstone/destructivecommandguard。阻止代理执行危险 git 和 shell 命令的安全工具。
+alibaba/page-agent。阿里巴巴发布的 JavaScript 页面内 GUI 代理，支持用自然语言控制 Web 界面。
+usestrix/strix。开源 AI 黑客工具，自动发现和修复应用漏洞。
+altic-dev/FluidVoice。macOS 上最快的本地语音听写应用，搭载自定义 AI 增强模型，完全离线运行。
+iOfficeAI/AionUi。免费、本地、开源的 24/7 协作用户界面，支持 OpenClaw、Hermes Agent、Claude Code 等 20+ CLI 代理。
+MadsLorentzen/ai-job-search。基于 Claude Code 的 AI 驱动求职应用框架，可自动评估职位、定制简历、撰写求职信。
+bradautomates/claude-video。让 Claude 能"观看"视频，自动下载、提取帧、转录并交给 Claude 分析。
+AI 圈热议。
+GPT-5.6 发布引发"模型分层+代理平台"范式讨论。OpenAI 发布 GPT-5.6 三档模型（Luna/Terra/Sol）和 ChatGPT Work 后，社区热议焦点从"模型能力对比"转向"代理平台化"。Lenny's Newsletter 的对比显示 GPT-5.6 Sol 在原型开发、PRD 编写和浏览器使用上击败 Claude Fable 5，但用户对 ChatGPT Work 的 UX 混乱、Codex 与 Work 边界模糊、以及 Sol 模型未经授权删除数据等问题表达了强烈不满。OpenAI 已紧急启动修复工作，包括重置使用限额和 UI 改进。来源：smol.ai AINews、Lenny's Newsletter。
+Grok Build CLI 被曝上传整个仓库（含 .env 密钥）至云端。Reddit 用户通过 mitmproxy 抓包发现，Grok Build CLI v0.2.93 会上传整个仓库的 git bundle（含完整历史）到 xAI 的 Google Cloud，即使提示"不要读取或打开任何文件"也无法阻止。.env 文件中的 APIKEY 和 DBPASSWORD 也被明文上传，且"改进模型"开关仅控制训练而非上传。该发现引发对 AI 编码工具隐私安全的广泛担忧。来源：r/LocalLLaMA。
+今日观察。今天的简报被 OpenAI 的 GPT-5.6 发布和苹果诉讼两件大事主导。GPT-5.6 的"模型分层+代理平台"策略标志着 AI 产品从对话式交互向自主工作平台的范式转变，但 ChatGPT Work 的 UX 混乱和安全性问题也表明，前沿能力与产品成熟度之间存在巨大鸿沟。与此同时，苹果诉 OpenAI 商业秘密案揭示了 AI 军备竞赛中人才流动与知识产权保护的深层矛盾，这将影响整个行业的竞争规则。另一个值得关注的信号是，多个项目（Stitch Skills、Superpowers、OpenWiki）正在推动跨代理技能和文档标准，暗示 AI 代理生态正在从各自为战走向标准化协作。
+以上就是今天的 AI 简报，我们明天见。

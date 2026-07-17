@@ -15,6 +15,29 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-07-18 周六</title>
+      <description>各位听众朋友，早上好！今天是2026年7月18号，欢迎收听今天的AI行业播报。今天的看点非常密集：开源模型首次在规模上追平闭源前沿，Agent安全危机从理论变成现实，还有一系列让人眼前一亮的开源项目和论文。好，咱们直接进入正题。
+先说今天最重磅的消息。月之暗面发布了Kimi K3，一个2.8万亿参数的MoE开源模型，在多项基准测试中逼近Claude Fable 5和GPT-5.6 Sol。关键是，这个模型只用了300人的团队就完成了训练。这直接冲击了“算力就是护城河”的叙事。OpenAI的策略师甚至警告说，开源权重模型主导的世界等于AI共产主义。而Reddit上的社区也在热议，Anthropic和OpenAI到底有没有秘密配方？还是说，护城河只是规模？与此同时，极端量化方案，比如Bonsai 27B，一个1-bit量化模型，只有3.9GB，可以在iPhone上跑，保持约90%的基准测试分数。这让大家开始质疑，700B以上的MoE模型还能叫本地模型吗？看来，让大模型真正走向终端设备，极端量化是关键路径。
+说完开源模型，咱们看看Agent安全。今天有好几条消息都指向同一个问题：我们还没准备好让AI Agent拥有系统级权限。GPT-5.6在完全访问模式下，意外删除了用户的整个家目录。原因是模型覆盖了临时目录环境变量，然后执行了破坏性操作。OpenAI承诺增加安全措施，但这事儿在开发者社区引发了信任危机。更让人担心的是，一项针对107家企业的调查显示，超过一半的企业已经遭遇了AI Agent安全事件或险情，而且大多数Agent还在共享凭证，缺乏独立身份隔离。与此同时，1Password推出了Claude的浏览器集成，允许聊天机器人访问存储的用户名和密码。安全风险和安全便利，这两条线正在激烈拉扯。
+再说说监管。欧盟裁定谷歌必须向竞争对手的AI助手和搜索引擎开放Android和搜索的关键部分。德国媒体监管机构也首次对Google的AI Overviews和Perplexity做出裁决，认为AI Overviews属于Google自有内容，不是中立搜索结果。这意味着AI搜索要承担与传统媒体一样的法律责任。监管正在加码，AI时代的反垄断和内容责任，正在成为新常态。
+接下来看几个有意思的开源项目和产品。OpenAI发布了GPT-Red，一个自动化红队模型，在提示注入攻击中成功率高达84%，而人类只有13%。这是AI安全自动化的关键一步。Capital One开源了VulnHunter，一个Agentic AI代码安全工具，可以扫描漏洞、映射攻击路径并提出修复方案。金融巨头把内部工具开源，这信号很明确。另外，GitHub发布了Copilot SDK，让Copilot从IDE插件扩展成一个平台，第三方可以构建Copilot驱动的应用。微软还开源了Flint，一种可视化语言，让AI Agent能可靠地创建美观的图表。还有Reflect，一个本地优先、AI Agent友好的Markdown笔记应用也开源了。这些工具都在降低Agent开发的门槛。
+最后说几个趋势。Sakana AI把Nvidia的Nemotron模型集成到Fugu编排器中，通过动态组合多个语言模型来挑战单一前沿模型。多模型协作的“集体智能”正在成为对抗单一巨模型的新范式。而OpenAI推出的Codex Micro，一个带摇杆的硬件控制器，专门用来控制AI Agent。这意味着AI交互正在从键盘向物理控制器演进。还有Linus Torvalds，他在Linux内核邮件列表上力挺AI辅助代码审查工具，对批评者说“滚开”。AI在核心开源开发中的角色争议，正在升级。
+今日观察。今天最清晰的信号有三个。第一，开源模型在规模上首次追平闭源前沿。Kimi K3证明了高效架构和精干团队可以挑战无限算力的叙事。第二，Agent安全正从理论担忧变成现实危机。GPT-5.6删除文件、54%的企业遭遇安全事故、1Password开放凭证访问，这三件事在同一天发生，绝不是巧合。当Agent获得系统级权限时，安全基础设施还没跟上。第三，多Agent协作和极端量化代表了两个相反但同样重要的方向。前者用组合策略对抗单一巨模型，后者让大模型真正走向终端设备。好，今天的播报就到这里，我们明天见。</description>
+      <itunes:summary>各位听众朋友，早上好！今天是2026年7月18号，欢迎收听今天的AI行业播报。今天的看点非常密集：开源模型首次在规模上追平闭源前沿，Agent安全危机从理论变成现实，还有一系列让人眼前一亮的开源项目和论文。好，咱们直接进入正题。
+先说今天最重磅的消息。月之暗面发布了Kimi K3，一个2.8万亿参数的MoE开源模型，在多项基准测试中逼近Claude Fable 5和GPT-5.6 Sol。关键是，这个模型只用了300人的团队就完成了训练。这直接冲击了“算力就是护城河”的叙事。OpenAI的策略师甚至警告说，开源权重模型主导的世界等于AI共产主义。而Reddit上的社区也在热议，Anthropic和OpenAI到底有没有秘密配方？还是说，护城河只是规模？与此同时，极端量化方案，比如Bonsai 27B，一个1-bit量化模型，只有3.9GB，可以在iPhone上跑，保持约90%的基准测试分数。这让大家开始质疑，700B以上的MoE模型还能叫本地模型吗？看来，让大模型真正走向终端设备，极端量化是关键路径。
+说完开源模型，咱们看看Agent安全。今天有好几条消息都指向同一个问题：我们还没准备好让AI Agent拥有系统级权限。GPT-5.6在完全访问模式下，意外删除了用户的整个家目录。原因是模型覆盖了临时目录环境变量，然后执行了破坏性操作。OpenAI承诺增加安全措施，但这事儿在开发者社区引发了信任危机。更让人担心的是，一项针对107家企业的调查显示，超过一半的企业已经遭遇了AI Agent安全事件或险情，而且大多数Agent还在共享凭证，缺乏独立身份隔离。与此同时，1Password推出了Claude的浏览器集成，允许聊天机器人访问存储的用户名和密码。安全风险和安全便利，这两条线正在激烈拉扯。
+再说说监管。欧盟裁定谷歌必须向竞争对手的AI助手和搜索引擎开放Android和搜索的关键部分。德国媒体监管机构也首次对Google的AI Overviews和Perplexity做出裁决，认为AI Overviews属于Google自有内容，不是中立搜索结果。这意味着AI搜索要承担与传统媒体一样的法律责任。监管正在加码，AI时代的反垄断和内容责任，正在成为新常态。
+接下来看几个有意思的开源项目和产品。OpenAI发布了GPT-Red，一个自动化红队模型，在提示注入攻击中成功率高达84%，而人类只有13%。这是AI安全自动化的关键一步。Capital One开源了VulnHunter，一个Agentic AI代码安全工具，可以扫描漏洞、映射攻击路径并提出修复方案。金融巨头把内部工具开源，这信号很明确。另外，GitHub发布了Copilot SDK，让Copilot从IDE插件扩展成一个平台，第三方可以构建Copilot驱动的应用。微软还开源了Flint，一种可视化语言，让AI Agent能可靠地创建美观的图表。还有Reflect，一个本地优先、AI Agent友好的Markdown笔记应用也开源了。这些工具都在降低Agent开发的门槛。
+最后说几个趋势。Sakana AI把Nvidia的Nemotron模型集成到Fugu编排器中，通过动态组合多个语言模型来挑战单一前沿模型。多模型协作的“集体智能”正在成为对抗单一巨模型的新范式。而OpenAI推出的Codex Micro，一个带摇杆的硬件控制器，专门用来控制AI Agent。这意味着AI交互正在从键盘向物理控制器演进。还有Linus Torvalds，他在Linux内核邮件列表上力挺AI辅助代码审查工具，对批评者说“滚开”。AI在核心开源开发中的角色争议，正在升级。
+今日观察。今天最清晰的信号有三个。第一，开源模型在规模上首次追平闭源前沿。Kimi K3证明了高效架构和精干团队可以挑战无限算力的叙事。第二，Agent安全正从理论担忧变成现实危机。GPT-5.6删除文件、54%的企业遭遇安全事故、1Password开放凭证访问，这三件事在同一天发生，绝不是巧合。当Agent获得系统级权限时，安全基础设施还没跟上。第三，多Agent协作和极端量化代表了两个相反但同样重要的方向。前者用组合策略对抗单一巨模型，后者让大模型真正走向终端设备。好，今天的播报就到这里，我们明天见。</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-07-18.mp3" length="1906128" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-07-18.mp3</guid>
+      <pubDate>Sat, 18 Jul 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>05:17</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-07-17 周五</title>
       <description>各位听众朋友们早上好，今天是2026年7月17号，欢迎收听今天的AI行业播报。今天可以说是一个开源模型的大爆发日，同时Agent安全问题也接连爆出，咱们一起来梳理一下今天的重要看点。
 先说说今天最重磅的消息，月之暗面发布了Kimi K3，这是一个2.8万亿参数的开源模型，性能据说已经逼近GPT-5.6 Sol和Claude Fable 5。7月27号就会开放权重，这将是全球最大的开源模型，对整个开源生态的冲击力可想而知。与此同时，前OpenAI CTO Murati创立的Thinking Machines Lab也发布了Inkling，一个975B参数的多模态模型，采用Apache 2.0许可，虽然参数规模很大，但定位是可微调的基座模型，并不是追求最强性能。德国AI联盟也没闲着，他们发布了Soofi S，一个30B参数的Mamba-Transformer混合架构模型，在英德双语基准测试上表现领先，展示了混合架构的潜力。
@@ -439,29 +462,6 @@ Anthropic还发布了Claude Science，一个整合碎片化工具和数据集的
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-07-04.mp3</guid>
       <pubDate>Sat, 04 Jul 2026 08:00:00 +0800</pubDate>
       <itunes:duration>06:11</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-07-03 周五</title>
-      <description>各位听众朋友早上好，今天是2026年7月3号，欢迎收听今天的AI行业播报。今天AI圈的消息真不少，从芯片到编码工具，从政府关系到模型训练，信息量很大。咱们先来看几个重头戏，再慢慢聊。
-首先，芯片这边又热闹了。Anthropic正在跟三星电子谈定制AI芯片的事，这步棋跟OpenAI和博通的合作有点像，看来AI公司自己下场做芯片已经成了趋势，谁都不想被一家供应商卡脖子。另一边，Nvidia也没闲着，他们现在不光卖芯片，还开始大量投资AI初创公司，想通过这种方式削弱大科技公司对芯片业务的控制，等于自己当起了AI生态的“央行”。微软也搞了个大动作，砸了25亿美元成立一个新部门叫Frontier，直接把6000名工程师派驻到企业客户内部去推动AI落地，这可不是卖工具了，这是在卖服务，模式上是个重大转变。
-说到模型，Anthropic今天还有两条消息。一是他们的最强模型Claude Fable 5，之前因为美国商务部出口管制被限制，现在管制令撤销了，全球用户又能用了。二是他们给Claude Code的系统提示词砍掉了80%，理由是Fable 5模型自己就能搞定，不需要那么多指令。这其实是个信号——模型越强，你反而越不用教它怎么做事，提示工程的玩法可能要变了。
-编码工具这块，竞争也在升级。智谱AI推出了一个免费的桌面应用叫ZCode，基于他们的GLM-5.2模型，直接挑战Cursor、Claude Code和GitHub Copilot。中国公司杀进这个市场，说明AI编码工具已经成了兵家必争之地。另外，OpenAI和Anthropic的编码Agent居然第一次互联了，有个开源项目叫codex-plugin-cc，能让Claude Code调用Codex来审查代码或者分配任务，两大阵营开始握手，挺好。
-再聊聊Agent落地的现实问题。扎克伯格今天也承认了，AI Agent的发展比预期慢，这其实是行业共识，大家都觉得落地不容易。但好消息是，数据证明进步是真实的。八个月内，AI Agent能完成专业质量自由职业项目的比例，从百分之二点五飙升到了百分之十六，翻了四倍多，替代知识工作的速度在加速。不过，摩根士丹利分享了一个反直觉的经验——他们把Agent的自主性降低了，让人更紧密地参与，结果最复杂的对账工作量反而减半。这说明有时候“降级”反而更有效。阿里巴巴的SkillWeaver框架也很有意思，通过构建执行图，精准选择技能，把Agent的Token使用量降了百分之九十九，直接省成本。
-最后看几篇有意思的论文。有研究发现，现在三种流行的推理训练方法——GRPO、Dr. GRPO和DAPO——本质都在调同一个东西，就是模型对同一问题的答案分歧程度，这能帮大家统一理解。还有一篇论文警告，测试时计算扩展不是越多越好，过度采样反而会降低准确率，这是个重要的理论修正。另外，阿里和腾讯云都有开源动作，阿里发布了Agent-Reach，让Agent能像有眼睛一样浏览整个互联网，不用API费用；腾讯云开源了CubeSandbox，一个轻量安全的Agent沙箱环境。
-今日观察：今天最清晰的信号是Agent生态正在快速分化与专业化。一方面，更强模型需要更少约束，提示工程范式在变；另一方面，行业在用各种务实手段解决落地瓶颈，比如降Token、降自主性。同时，芯片军备竞赛白热化，从定制芯片到投资初创公司，再到派驻工程师，“卖铲子”的竞争已经全面升级。好了，今天的播报就到这里，我是你的AI主播，我们明天见。</description>
-      <itunes:summary>各位听众朋友早上好，今天是2026年7月3号，欢迎收听今天的AI行业播报。今天AI圈的消息真不少，从芯片到编码工具，从政府关系到模型训练，信息量很大。咱们先来看几个重头戏，再慢慢聊。
-首先，芯片这边又热闹了。Anthropic正在跟三星电子谈定制AI芯片的事，这步棋跟OpenAI和博通的合作有点像，看来AI公司自己下场做芯片已经成了趋势，谁都不想被一家供应商卡脖子。另一边，Nvidia也没闲着，他们现在不光卖芯片，还开始大量投资AI初创公司，想通过这种方式削弱大科技公司对芯片业务的控制，等于自己当起了AI生态的“央行”。微软也搞了个大动作，砸了25亿美元成立一个新部门叫Frontier，直接把6000名工程师派驻到企业客户内部去推动AI落地，这可不是卖工具了，这是在卖服务，模式上是个重大转变。
-说到模型，Anthropic今天还有两条消息。一是他们的最强模型Claude Fable 5，之前因为美国商务部出口管制被限制，现在管制令撤销了，全球用户又能用了。二是他们给Claude Code的系统提示词砍掉了80%，理由是Fable 5模型自己就能搞定，不需要那么多指令。这其实是个信号——模型越强，你反而越不用教它怎么做事，提示工程的玩法可能要变了。
-编码工具这块，竞争也在升级。智谱AI推出了一个免费的桌面应用叫ZCode，基于他们的GLM-5.2模型，直接挑战Cursor、Claude Code和GitHub Copilot。中国公司杀进这个市场，说明AI编码工具已经成了兵家必争之地。另外，OpenAI和Anthropic的编码Agent居然第一次互联了，有个开源项目叫codex-plugin-cc，能让Claude Code调用Codex来审查代码或者分配任务，两大阵营开始握手，挺好。
-再聊聊Agent落地的现实问题。扎克伯格今天也承认了，AI Agent的发展比预期慢，这其实是行业共识，大家都觉得落地不容易。但好消息是，数据证明进步是真实的。八个月内，AI Agent能完成专业质量自由职业项目的比例，从百分之二点五飙升到了百分之十六，翻了四倍多，替代知识工作的速度在加速。不过，摩根士丹利分享了一个反直觉的经验——他们把Agent的自主性降低了，让人更紧密地参与，结果最复杂的对账工作量反而减半。这说明有时候“降级”反而更有效。阿里巴巴的SkillWeaver框架也很有意思，通过构建执行图，精准选择技能，把Agent的Token使用量降了百分之九十九，直接省成本。
-最后看几篇有意思的论文。有研究发现，现在三种流行的推理训练方法——GRPO、Dr. GRPO和DAPO——本质都在调同一个东西，就是模型对同一问题的答案分歧程度，这能帮大家统一理解。还有一篇论文警告，测试时计算扩展不是越多越好，过度采样反而会降低准确率，这是个重要的理论修正。另外，阿里和腾讯云都有开源动作，阿里发布了Agent-Reach，让Agent能像有眼睛一样浏览整个互联网，不用API费用；腾讯云开源了CubeSandbox，一个轻量安全的Agent沙箱环境。
-今日观察：今天最清晰的信号是Agent生态正在快速分化与专业化。一方面，更强模型需要更少约束，提示工程范式在变；另一方面，行业在用各种务实手段解决落地瓶颈，比如降Token、降自主性。同时，芯片军备竞赛白热化，从定制芯片到投资初创公司，再到派驻工程师，“卖铲子”的竞争已经全面升级。好了，今天的播报就到这里，我是你的AI主播，我们明天见。</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-07-03.mp3" length="1545120" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-07-03.mp3</guid>
-      <pubDate>Fri, 03 Jul 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>04:17</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

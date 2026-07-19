@@ -49,73 +49,75 @@
 🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
 
 📰 行业新闻
-· Anthropic 调整 Claude Fable 5 订阅策略：Max/Team Premium 用户限额定为 50%，Pro 用户转向 API 计费
-  来源：https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/
-· Moonshot Kimi K3 需求暴增，暂停新订阅注册
+· Moonshot AI 因 Kimi K3 需求暴增暂停新订阅
   来源：https://twitter.com/kimi_moonshot/status/2078855608565207130
-· 阿里发布 Qwen 3.8：2.4T 参数多模态开源模型，声称仅次于 Fable 5
+· Kimi K3 前端编码超越 Fable 5，但复杂数学大幅落后
+  来源：https://the-decoder.com/moonshots-kimi-k3-outperforms-fable-5-in-frontend-code-but-lags-far-behind-in-complex-math/
+· 阿里巴巴发布 Qwen 3.8：2.4T 参数开源多模态模型，称仅次 Fable 5
   来源：https://the-decoder.com/alibabas-qwen-takes-on-kimi-k3-with-open-weight-qwen-3-8-says-model-is-second-only-to-fable-5/
-· Claude Code 已切换至 Rust 版 Bun 运行时，启动速度提升 10%
+· Anthropic 调整 Claude Fable 5 订阅策略：纳入 Max/Team 但限制减半
+  来源：https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/
+· Claude Code 已使用 Rust 版 Bun，启动速度提升 10%
   来源：https://simonwillison.net/2026/Jul/19/claude-code-in-bun-in-rust/#atom-everything
-· Anthropic 使用 Claude Code 完成大规模代码迁移，发布技术博客
+· Anthropic 用 Claude Code 执行大规模代码迁移
   来源：https://claude.com/blog/ai-code-migration
-· OpenAI 将 Codex 模型上下文窗口从 372k 缩减至 272k
-  来源：https://github.com/openai/codex/pull/33972/files
-· Google DeepMind 发布 GenCeption：视频生成器即世界模型，计算机视觉任务无需额外训练
-  来源：https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/
-· 腾讯云发布 ADP 4.0 海外版：集成 Google Workspace、Jira，定位 AgentOps 全生命周期管理
+· Databricks 估值达 1880 亿美元，巩固 AI 基础设施地位
+  来源：https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/
+· 腾讯发布 ADP 4.0 海外版：集成 Google Workspace、Jira，定位 AgentOps
   来源：https://www.infoq.cn/article/r6m3xASYYfM81h9dNBRE
 · 腾讯发布三大具身基座模型，工业实测成功率超 95%
   来源：https://www.infoq.cn/article/uD0p2FcQE2JKSwYY1wXK
-· Databricks 估值达 1880 亿美元，巩固 AI 第二曲线地位
-  来源：https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/
-· Capital One 开源 VulnHunter：AI 驱动的代码漏洞扫描与修复工具
+· 黎曼动力发布 Riemann-1.0：基于 20 万小时人类操作视频的机器人模型
+  来源：https://www.qbitai.com/2026/07/454592.html
+· Capital One 开源 VulnHunter：AI 驱动的代码安全漏洞扫描工具
   来源：https://venturebeat.com/technology/capital-one-releases-vulnhunter-an-open-source-ai-tool-that-finds-software-flaws-before-hackers-do
+· Google DeepMind 提出 GenCeption：视频生成器内嵌世界模型
+  来源：https://the-decoder.com/google-deepmind-argues-video-generators-already-contain-the-world-models-computer-vision-has-been-missing/
+· HuggingFace 披露 AI 驱动的安全攻击：攻击者使用自主 AI Agent 系统
+  来源：https://huggingface.co/blog/security-incident-july-2026
+· OpenAI 发布 GPT-Red：基于自我博弈的自动化红队系统
+  来源：https://openai.com/index/unlocking-self-improvement-gpt-red
 
 📄 重要论文
-· LongStraw：百万 token 级 RL 后训练架构，固定 GPU 预算下突破 2M token 上下文
+· LongStraw：固定 GPU 预算下实现 2M+ Token 长上下文 RL 后训练
   来源：https://huggingface.co/papers/2607.14952
-· DeepMind GenCeption：视频生成器即通用世界模型，无需额外训练数据即可完成视觉任务
-  来源：https://huggingface.co/papers/2607.15038
-· SEED：自进化在线策略蒸馏，用于 Agent 强化学习
+· SEED：面向 Agent 强化学习的自演进同策略蒸馏
   来源：https://huggingface.co/papers/2607.14777
-· RoboTTT：将机器人策略上下文扩展到 8K 时间步，实现单样本模仿学习
+· RoboTTT：将机器人策略的视觉运动上下文扩展到 8000 时间步
   来源：https://huggingface.co/papers/2607.15275
-· Generative Compilation：AI 生成代码时实时编译器反馈，Rust 代码生成成功率大幅提升
+· TTCD：Token 时间连续扩散语言模型
+  来源：https://huggingface.co/papers/2607.14106
+· Generative Compilation：AI 生成代码时实时编译器反馈
   来源：https://huggingface.co/papers/2607.13921
-· Smarter and Cheaper at Once：字节精确 KV-Cache 移植让冻结小模型能力提升且成本降低
-  来源：https://huggingface.co/papers/2607.14431
-· On-Policy Distillation 揭秘：角色、病理与调控
-  来源：https://huggingface.co/papers/2607.13399
-· Partition, Prompt, Aggregate：语言模型中的统计自一致性
-  来源：https://huggingface.co/papers/2607.15277
+· RxBrain：具身认知基础模型，联合语言-视觉推理与想象
+  来源：https://huggingface.co/papers/2607.14187
+· BadWAM：世界-行动模型可能&quot;想对做错&quot;
+  来源：https://huggingface.co/papers/2607.15207
 
 🔧 开源项目
 · bojieli/ai-agent-book：《深入理解 AI Agent》开源书籍，日增 1734 star
   来源：https://github.com/bojieli/ai-agent-book
 · MoonshotAI/kimi-cli：Kimi Code CLI 发布，日增 418 star
   来源：https://github.com/MoonshotAI/kimi-cli
-· KnockOutEZ/wigolo：本地优先的 AI 编码 Agent 网络工具，日增 605 star
-  来源：https://github.com/KnockOutEZ/wigolo
-· github/copilot-sdk：GitHub Copilot Agent 多平台 SDK
-  来源：https://github.com/github/copilot-sdk
-· trycua/cua：开源 Computer Use 2.0 驱动与基准测试
-  来源：https://github.com/trycua/cua
-· kvcache-ai/ktransformers：异构 LLM 推理/微调优化框架，日增 328 star
-  来源：https://github.com/kvcache-ai/ktransformers
-· PostHog/posthog：AI 可观测性平台，日增 424 star
-  来源：https://github.com/PostHog/posthog
 · tirth8205/code-review-graph：本地优先代码智能图，日增 551 star
   来源：https://github.com/tirth8205/code-review-graph
-· lyogavin/airllm：单 4GB GPU 运行 70B 模型推理
-  来源：https://github.com/lyogavin/airllm
+· KnockOutEZ/wigolo：本地优先搜索/抓取/爬虫 MCP 工具，日增 605 star
+  来源：https://github.com/KnockOutEZ/wigolo
+· kvcache-ai/ktransformers：异构 LLM 推理/微调优化框架，日增 328 star
+  来源：https://github.com/kvcache-ai/ktransformers
+· github/copilot-sdk：GitHub Copilot Agent 多平台 SDK
+  来源：https://github.com/github/copilot-sdk
+· trycua/cua：开源 Computer Use 2.0 驱动与跨 OS 集群
+  来源：https://github.com/trycua/cua
+· PostHog/posthog：AI 可观测性平台，日增 424 star
+  来源：https://github.com/PostHog/posthog
 
 🐦 AI 圈热议
-· Kimi K3 与 Qwen 3.8 连续发布引发&quot;中国模型是否即将超越美国模型&quot;的激烈讨论：Reddit r/LocalLLaMA 社区热议中国开源模型逼近前沿的速度，有用户预测&quot;六个月内将出现超越时刻&quot;。同时，OpenAI 战略未来负责人 Dean W. Ball 分析认为，开源权重模型最终会减缓 AI 资本支出，可能导致国家管控的公共基础设施。来源：[Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1v0t6w4/how_long_before_chinese_models_fully_surpass_us/) &amp; [Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1v0czbk/head_of_strategic_futures_from_openai_on/)
-· HuggingFace 披露 AI 驱动安全事件：攻击者使用自主 AI Agent 入侵生产基础设施：HuggingFace 发布安全事件报告，披露攻击者使用端到端自主 AI Agent 系统入侵生产环境，而防御方也借助 AI 进行检测和取证。报告指出&quot;攻击者不受使用政策约束，而我们自己的取证工作却被防护措施阻碍&quot;。来源：[Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1v0ywoi/huggingface_security_incident_report_the_attacker/)
+· Kimi K3 登顶 Code Arena 引发&quot;中国模型超越论&quot;大讨论：Moonshot 的 Kimi K3 成为首个在编码领域超越 Claude Fable 5 和 GPT-5.6 的中国模型，Reddit r/LocalLLaMA 上热议&quot;中国模型何时全面超越美国模型&quot;；OpenAI 战略未来主管 Dean W. Ball 分析称中国允许开源如此强大的模型令人意外，认为开源最终会减缓 AI 资本支出。来源：[TLDR AI](https://tldr.tech/ai/2026-07-17)、[Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1v0czbk/head_of_strategic_futures_from_openai_on/)
+· HuggingFace 披露首次由 AI Agent 自主驱动的生产环境入侵：攻击者使用自主 AI Agent 系统进行端到端攻击，HuggingFace 则用 AI 辅助检测与溯源。社区讨论焦点在于&quot;攻击者不受任何使用政策约束，而我们自己的取证工作却被安全护栏阻碍&quot;这一讽刺性困境。来源：[Reddit](https://www.reddit.com/r/LocalLLaMA/comments/1v0ywoi/huggingface_security_incident_report_the_attacker/)
 
 💡 今日观察
-今天最值得关注的信号是中国 AI 模型的集体爆发：Kimi K3 登顶 Code Arena 迫使 Anthropic 调整 Fable 5 订阅策略，阿里紧接着发布 Qwen 3.8 开源 2.4T 参数模型，中国模型在编码和 Agent 任务上已具备与前沿模型竞争的实力。与此同时，DeepMind 的 GenCeption 证明了视频生成器即世界模型的范式潜力，而 OpenAI 缩减 Codex 上下文窗口的反向操作和 HuggingFace 的 AI 驱动安全事件则提醒我们：AI 能力的提升正带来新的工程和安全挑战。开源生态方面，Claude Code 切换到 Rust Bun、GitHub Copilot SDK 发布、以及多个 Agent 相关工具的爆发，表明 AI 编码 Agent 正在快速走向标准化和平台化。
+今天最值得关注的信号是**中国模型在编码领域首次登顶**——Kimi K3 在 Code Arena Frontend 超越 Fable 5 和 GPT-5.6，Qwen 3.8 紧随其后，标志着开源/国产模型在实用性任务上已进入第一梯队。但数学推理的显著差距（K3 仅 39% vs 前沿模型 90%）说明&quot;智能&quot;的不同维度仍在分化。另一个关键趋势是**AI Agent 安全正在成为新战场**：HuggingFace 的 AI 驱动攻击披露、OpenAI 的 GPT-Red 自我博弈系统、Capital One 的 VulnHunter 开源工具，都指向同一个方向——Agent 时代的安全需要 Agent 本身来应对。建议开发者重点关注 LongStraw 和 SEED 两篇论文，它们直接解决了 Agent 长程训练的核心工程瓶颈。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

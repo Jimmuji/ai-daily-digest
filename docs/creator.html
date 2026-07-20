@@ -36,6 +36,88 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-07-21">AI 每日简报 · 2026-07-21 周二</span>
+    <button class="cbtn" data-copy="t-2026-07-21">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-07-21.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-07-21.mp3" download="2026-07-21.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-07-21">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-07-21">AI 每日简报 · 2026-07-21 周二
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· Moonshot 的 Kimi K3 订阅暂停：Kimi K3 在发布 48 小时内 GPU 容量几乎耗尽，Moonshot 被迫暂停新订阅。
+  来源：https://the-decoder.com/moonshot-pauses-new-kimi-k3-subscriptions-after-gpu-demand-maxes-out-in-48-hours/
+· 阿里巴巴发布 Qwen 3.8-Max 预览版：一个 2.4 万亿参数的 MoE 多模态模型，声称&quot;仅次于 Fable 5&quot;，以标准定价的 10% 提供。
+  来源：https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen
+· Kimi K3 在前端代码上超越 Fable 5，但在复杂数学上大幅落后：Kimi K3 是首个登顶 Code Arena: Frontend 排名的中国模型，但 FrontierMath Tier 4 仅约 39%，远低于 OpenAI/Anthropic 的接近 90%。
+  来源：https://the-decoder.com/moonshots-kimi-k3-outperforms-fable-5-in-frontend-code-but-lags-far-behind-in-complex-math/
+· 谷歌正在开发&quot;Frozen v2&quot;芯片：据报道，谷歌正在开发一款将 Gemini 架构直接固化到硬件中的服务器芯片，效率可能是当前 TPU 的 6 到 10 倍，计划 2028 年推出。
+  来源：https://the-decoder.com/googles-frozen-v2-chip-reportedly-bakes-geminis-architecture-directly-into-silicon-for-efficiency-gains/
+· 英伟达的 AI 芯片主导地位因微软转向 AMD 而削弱：微软正在使用 AMD 的 Helios 平台扩展 Azure AI 基础设施，Anthropic 似乎也在测试 AMD 硬件。
+  来源：https://the-decoder.com/nvidias-grip-on-ai-chips-weakens-as-microsoft-turns-to-amd-and-anthropic-may-follow/
+· 特朗普政府据称在构建针对中国 AI 模型的缓慢禁令：据报道，美国政府正在权衡针对中国 AI 模型的措施，从制裁名单到对安全故障追究美国公司责任。
+  来源：https://the-decoder.com/trump-administration-reportedly-builds-a-slow-motion-ban-on-chinese-ai-models-through-sanctions-and-soft-pressure/
+· Hugging Face 披露 AI 代理攻击事件：Hugging Face 报告称，其生产基础设施遭到据称完全由自主 AI 代理系统执行的攻击。商业安全护栏反而阻碍了防御者。
+  来源：https://venturebeat.com/security/safety-guardrails-blocked-hugging-faces-defenders-not-the-attacker-when-an-ai-agent-breached-its-systems
+· OpenAI 发布关于长周期模型安全与对齐的见解：OpenAI 分享了部署长运行 AI 模型的教训，突出新的安全风险、观察到的失败以及通过迭代部署改进的防护措施。
+  来源：https://openai.com/index/safety-alignment-long-horizon-models
+· Anthropic 将 Claude Fable 5 永久纳入订阅计划：自 7 月 20 日起，Claude Fable 5 已包含在所有 Max 和 Team Premium 计划中，限额为 50%。Pro 和 Team Standard 用户可通过使用额度继续访问。
+  来源：https://simonwillison.net/2026/Jul/18/claude-make-fable-5-permanent/
+· OpenAI 正考虑发布可在消费级硬件上本地运行的 GPT-3 级别模型：Sam Altman 表示 OpenAI 正在讨论开源策略，并希望&quot;很快&quot;发布一个可在本地运行的 GPT-3 级别模型。
+  来源：https://simonwillison.net/2026/Jul/20/sam-altman/
+· Writer 的 AI 工具链将 Token 消耗降低近 40%：Writer 的新论文展示，通过优化围绕基础模型的编排层（AI 工具链），可大幅降低 Token 成本而几乎不影响准确率。
+  来源：https://venturebeat.com/orchestration/writers-ai-harness-cuts-token-spend-nearly-40-without-sacrificing-accuracy
+· Cursor 发布关于代理集群与新模型经济学的报告：Cursor 博客深入探讨了代理集群的兴起及其如何改变模型经济的计算方式。
+  来源：https://cursor.com/blog/agent-swarm-model-economics
+
+📄 重要论文
+· Agon：竞争性跨模型强化学习：Agon 让两个竞争模型互为评分器，通过对推理过程进行评分而非仅评分最终答案，从而训练出更优的推理能力。
+  来源：https://huggingface.co/papers/2607.07690
+· Loop the Loopies!：Loopie 系列（20B/2B 活跃参数和 6B/0.6B 活跃参数的 MoE 模型）是迄今为止最强大的循环 Transformer，解决了循环模型长期以来的扩展挑战。
+  来源：https://huggingface.co/papers/2607.16051
+· S1-Omni：统一多模态科学推理模型：S1-Omni 是一个统一的科学推理模型，整合了科学理解、预测和生成能力。
+  来源：https://huggingface.co/papers/2607.15686
+· Cura 1T：面向医疗代理的专业模型：Cura 1T 是一个医疗专业 LLM，通过人工把关的自我提升训练，覆盖患者咨询、临床推理、交互式诊断和 EHR 工具使用。
+  来源：https://huggingface.co/papers/2607.15314
+· SVR-R1：通过强化学习中的自验证引导多模态推理：SVR-R1 是一个多轮 RL 框架，将模型自身的验证转化为多模态推理的学习信号。
+  来源：https://huggingface.co/papers/2607.10966
+· Recursive Harness Self-Improvement：研究表明，工具链不仅是推理时的支架，更是数据生成组件，其执行轨迹可以塑造未来的基础模型。
+  来源：https://huggingface.co/papers/2607.15524
+
+🔧 开源项目
+· MoonshotAI/kimi-cli ⭐+405/天：Kimi Code CLI——你的下一个 CLI 代理。
+  来源：https://github.com/MoonshotAI/kimi-cli
+· tirth8205/code-review-graph ⭐+1,876/天：面向 MCP 和 CLI 的本地优先代码智能图谱。为代码库构建持久化映射，使 AI 编码工具仅读取相关内容。
+  来源：https://github.com/tirth8205/code-review-graph
+· diegosouzapw/OmniRoute ⭐+1,300/天：免费 MIT AI 网关：一个端点，268+ 提供商（50+ 免费），500+ 模型。支持配额感知自动回退、RTK+Caveman 压缩（节省 15-95% Token）、MCP/A2A。
+  来源：https://github.com/diegosouzapw/OmniRoute
+· KnockOutEZ/wigolo ⭐+695/天：面向 AI 编码代理的本地优先搜索、获取、爬取和研究工具，基于 MCP。无需 API 密钥，无需云端，$0/查询。
+  来源：https://github.com/KnockOutEZ/wigolo
+· jamiepine/voicebox ⭐+839/天：开源 AI 语音工作室。克隆、听写、创作。
+  来源：https://github.com/jamiepine/voicebox
+· microsoft/Ontology-Playground ⭐+487/天：免费开源 Web 应用，用于学习本体论和 Microsoft Fabric IQ。支持可视化设计、RDF/XML 导出和共享交互式图表。
+  来源：https://github.com/microsoft/Ontology-Playground
+· handy-computer/transcribe.cpp ⭐+401/天：基于 ggml 的语音转文本推理，支持 16+ 模型家族。
+  来源：https://github.com/handy-computer/transcribe.cpp
+· kvcache-ai/ktransformers ⭐+448/天：用于体验异构 LLM 推理/微调优化的灵活框架。
+  来源：https://github.com/kvcache-ai/ktransformers
+
+🐦 AI 圈热议
+· Hugging Face 安全事件引发 AI 安全护栏反思：Hugging Face 披露其生产基础设施遭到据称完全由自主 AI 代理系统执行的攻击。在取证分析中，商业 AI 模型因安全护栏无法区分漏洞利用数据与真实攻击，反而阻碍了防御者。社区正在热议：当安全护栏同时阻挡了防御者时，它们是否反而变成了漏洞？来源：[VentureBeat](https://venturebeat.com/security/safety-guardrails-blocked-hugging-faces-defenders-not-the-attacker-when-an-ai-agent-breached-its-systems) / [Reddit r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1v1k3pw/kimi_k3_just_fixed_15_critical_security_bugs_that/)
+· 中国开源模型军备竞赛加速，地缘政治紧张加剧：阿里巴巴的 Qwen 3.8-Max 和 Moonshot 的 Kimi K3 相继发布，性能与西方顶级模型持平甚至在某些领域超越。与此同时，特朗普政府据称正在构建针对中国 AI 模型的缓慢禁令。社区讨论焦点：美国封闭 vs 中国开放的模式之争，以及地缘政治风险对开源生态的潜在冲击。来源：[The Verge](https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen) / [Reddit r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1v1j3ns/sources_parts_of_the_trump_administration_are/)
+
+💡 今日观察
+今天的简报呈现出三个清晰信号：第一，中国开源模型正以惊人速度追赶甚至在某些领域超越西方顶尖模型，但复杂推理仍是明显短板，这为差异化竞争留下了空间；第二，AI 安全正面临范式转变——从&quot;防止模型做坏事&quot;到&quot;防止模型被坏人利用&quot;，Hugging Face 事件和 OpenAI 的长周期安全报告都指向同一个方向：安全护栏本身可能成为攻击面；第三，硬件格局正在松动，谷歌的 Frozen v2 芯片、微软转向 AMD、以及英伟达主导地位面临的挑战，预示着 AI 基础设施供应链即将迎来重大重组。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-07-20">AI 每日简报 · 2026-07-20 周一</span>
     <button class="cbtn" data-copy="t-2026-07-20">📋 复制标题</button>
   </div>
@@ -1370,110 +1452,6 @@
 
 💡 今日观察
 今天最强烈的信号是**AI 行业正在经历从“模型军备竞赛”到“落地能力竞赛”的转折点**。一方面，腾讯 Hy3、智谱 ZCode 等产品表明开源模型和 AI 编码工具的价格/性能比正在快速优化，开发者受益明显；另一方面，Anthropic 的“全局工作空间”发现和 Nvidia 硬件延期分别从软件和硬件两端提醒我们，行业的基础设施和认知边界都远未稳定。**Agent 安全威胁从理论走向现实**（JADEPUFFER 勒索软件）和**模型工具调用可靠性下降**（Better Models, Worse Tools）这两个信号值得所有 AI builder 高度警惕——当模型越来越强时，系统的脆弱面也在同步放大。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-07-06">AI 每日简报 · 2026-07-06 周一</span>
-    <button class="cbtn" data-copy="t-2026-07-06">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-07-06.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-07-06.mp3" download="2026-07-06.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-07-06">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-07-06">AI 每日简报 · 2026-07-06 周一
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Zuckerberg 内部表态：AI Agent 进展不及预期：在 Meta 内部会议上，扎克伯格表示 AI 开发进展未达到预期速度。
-  来源：https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/
-· Meta 考虑推出 Meta Compute GPU 租赁业务：扎克伯格表示&quot;模型可以慢，GPU 必须赚&quot;，Meta 正考虑推出算力租赁服务。
-  来源：https://www.qbitai.com/2026/07/443339.html
-· Mistral CEO 警告：闭源模型让 AI 实验室&quot;坐在你的业务流程前排&quot;：]：Arthur Mensch 称闭源模型厂商存储大量客户数据，甚至可能将客户数据用于竞争。
-  来源：https://the-decoder.com/mistral-ceo-mensch-says-proprietary-ai-models-give-labs-a-front-row-seat-to-your-business-processes/
-· OpenAI/Anthropic 自研芯片，剑指英伟达&quot;暴利&quot;护城河：两大巨头加速自研 AI 芯片，降低对英伟达依赖。
-  来源：https://www.infoq.cn/article/MOqFJbvWYlJ9PXcfdfCC
-· Anthropic 推出 Claude Science Beta：面向科学家的多智能体 AI 工作台，支持基因组学、蛋白质组学和化学信息学。
-  来源：https://www.marktechpost.com/2026/07/04/anthropic-launches-claude-science-beta/
-· NVIDIA 发布 HORIZON：无人工干预的 RTL 智能体：Git Worktree 演化驱动，在 RTL 基准测试中达到 100% 完成率。
-  来源：https://www.marktechpost.com/2026/07/04/nvidia-horizon-a-hands-free-agent-that-evolves-git-worktrees-and-hits-100-rtl-benchmark-completion/
-· Claude Code + Fable 5 数小时内将 PC 游戏移植到 iOS：Google DeepMind 开发者用 Claude Code 将《命令与征服》移植到 iPhone/iPad。
-  来源：https://the-decoder.com/claude-code-and-fable-5-ported-the-2003-pc-game-command-conquer-to-native-ios-in-a-few-hours/
-· 百度推出&quot;无限 OCR&quot;：一次性处理数十页文档：改进注意力机制，内存占用不随页数增长，登顶 OCR 基准。
-  来源：https://the-decoder.com/baidus-unlimited-ocr-processes-dozens-of-document-pages-in-one-pass-by-treating-memory-like-human-forgetting/
-· OpenAI 联合创始人 Brockman 展望&quot;几乎无界面&quot;未来：认为 ChatGPT 插件失败是因为模型尚未成熟，未来是隐形上下文感知 Agent。
-  来源：https://the-decoder.com/openai-cofounder-envisions-almost-no-interface-future-where-nobody-learns-software-anymore/
-· Anthropic 发布 Fable 5 提示工程技巧：先找到自己的盲点：开发者称 Fable 5 的瓶颈不再是模型本身，而是用户的认知盲区。
-  来源：https://the-decoder.com/anthropic-developer-shares-prompting-tips-for-fable-5-that-focus-on-finding-your-own-blind-spots-first/
-· 谷歌 DeepMind 工会谈判开局不顺：员工对管理层参与工会化的意愿表示不满。
-  来源：https://www.wired.com/story/google-deepmind-unionization-talks-are-off-to-a-rocky-start/
-· 谷歌发布爱国日广告：想象国父们用 AI 写《独立宣言》：引发争议，被批评为&quot;令人不适&quot;。
-  来源：https://www.theverge.com/ai-artificial-intelligence/961468/google-ai-commercial-founding-fathers-declaration-of-independence
-· AI 搜索 Agent 失败的主因：不会在模糊查询时提问：新基准 DiscoBench 显示，反复搜索不如直接提问，消除歧义后准确率提升 40 点。
-  来源：https://the-decoder.com/ai-search-agents-dont-fail-at-searching-they-fail-at-asking-the-right-questions-when-queries-get-ambiguous/
-· 2.6 万学生研究揭示 AI 隐藏的学习代价：两年后才显现：AI 用户作业更快、分数更高，但考试成绩低 24%，影响两年后才全面显现。
-  来源：https://the-decoder.com/a-26000-student-study-shows-ais-hidden-learning-cost-takes-two-full-years-to-surface/
-· Tripadvisor AI 摘要给危险酒店好评：消费者监督机构发现 AI 摘要存在严重安全问题。
-  来源：https://www.euronews.com/travel/2026/07/03/tripadvisor-ai-summaries-give-glowing-reviews-to-dangerous-hotels-consumer-watchdog-finds
-
-📄 重要论文
-· 美团发布 LongCat-2.0：1.6T 参数开源 MoE 模型：原生 100 万 token 上下文，基于 LongCat Sparse Attention，在国产 AI ASIC 上训练和推理。
-  来源：https://www.marktechpost.com/2026/07/05/meituan-releases-longcat-2-0-a-1-6t-parameter-open-moe-model-with-native-1m-context-and-longcat-sparse-attention/
-· Mistral 发布 Leanstral 1.5：Apache-2.0 的 Lean 4 代码 Agent 模型：解决 587/672 的 PutnamBench 问题，119B MoE 激活 6.5B 参数。
-  来源：https://www.marktechpost.com/2026/07/03/mistral-ai-releases-leanstral-1-5-an-apache-2-0-lean-4-code-agent-model-solving-587-of-672-putnambench-problems/
-· LeCun 团队让世界模型学会持续学习：迈向持续学习的世界模型，解决灾难性遗忘问题。
-  来源：https://www.qbitai.com/2026/07/442964.html
-· GRPO、Dr. GRPO 和 DAPO 本质上是同一种操作：论文证明三种主流推理训练方法都只调整一个数字——标准差，反映采样答案的不一致性。
-  来源：https://huggingface.co/papers/2607.00152
-· 更多采样反而有害：测试时扩展的模态天花板和相关性天花板：论文揭示&quot;过度思考&quot;导致选择准确率下降，覆盖率和选择率之间存在根本性矛盾。
-  来源：https://huggingface.co/papers/2606.28661
-· WARP：从权重空间分析恢复训练数据组合：通过模型权重推断训练数据领域混合比例，解决模型透明度问题。
-  来源：https://huggingface.co/papers/2607.01686
-· AutoMem：将记忆作为可学习的认知技能：将文件系统操作提升为第一类记忆动作，让模型自主决定如何管理记忆。
-  来源：https://huggingface.co/papers/2607.01224
-· PACE：Agent 能力评估的代理指标：用非 Agent 基准测试预测昂贵的 Agent 基准测试结果，大幅降低评估成本。
-  来源：https://huggingface.co/papers/2607.02032
-· Program-as-Weights：模糊函数的编程范式：将自然语言规范编译为紧凑的本地可执行神经工件，替代 LLM API 调用。
-  来源：https://huggingface.co/papers/2607.02512
-
-🔧 开源项目
-· openai/codex-plugin-cc：从 Claude Code 中使用 Codex 审查代码或委派任务（今日 +1,519 star）。
-  来源：https://github.com/openai/codex-plugin-cc
-· asgeirtj/system_prompts_leaks：提取的各大模型系统提示词集合，持续更新（今日 +981 star）。
-  来源：https://github.com/asgeirtj/system_prompts_leaks
-· alibaba/page-agent：JavaScript 网页内 GUI Agent，用自然语言控制网页界面（今日 +801 star）。
-  来源：https://github.com/alibaba/page-agent
-· ogulcancelik/herdr：终端中的 Agent 多路复用器（今日 +650 star）。
-  来源：https://github.com/ogulcancelik/herdr
-· facebook/astryx：完全可定制、Agent 就绪的开源设计系统（今日 +540 star）。
-  来源：https://github.com/facebook/astryx
-· alirezarezvani/claude-skills：337 个 Claude Code 技能和 Agent 技能集合（今日 +394 star）。
-  来源：https://github.com/alirezarezvani/claude-skills
-· Zackriya-Solutions/meetily：隐私优先的 AI 会议助手，100% 本地处理（今日 +1,409 star）。
-  来源：https://github.com/Zackriya-Solutions/meetily
-· JuliusBrussee/caveman：Claude Code 技能，用&quot;原始人语言&quot;减少 65% token 消耗（今日 +1,043 star）。
-  来源：https://github.com/JuliusBrussee/caveman
-· Leonxlnx/taste-skill：给 AI 赋予&quot;好品味&quot;，阻止生成无聊的通用内容（今日 +850 star）。
-  来源：https://github.com/Leonxlnx/taste-skill
-· usestrix/strix：开源 AI 渗透测试工具（今日 +1,121 star）。
-  来源：https://github.com/usestrix/strix
-· langchain-ai/openwiki：用 CLI 为代码库编写和维护 Agent 文档。
-  来源：https://github.com/langchain-ai/openwiki
-· dotnet/skills：帮助 AI 编码 Agent 处理 .NET 和 C# 的技能库。
-  来源：https://github.com/dotnet/skills
-· calesthio/OpenMontage：全球首个开源 Agent 视频制作系统，12 条流水线、52 个工具、500+ Agent 技能。
-  来源：https://github.com/calesthio/OpenMontage
-
-🐦 AI 圈热议
-· Simon Willison 分享 Fable 5 使用经验：$149.25 完成了 sqlite-utils 4.0 的最终审查：。他在 Claude Code 中让 Fable 自主判断测试策略，而非事无巨细地指示，结果发现让模型&quot;用自己的判断力&quot;比详细指令效果更好。这印证了 Anthropic 开发者 Thariq Shihipar 的观点：Fable 5 的瓶颈不再是模型本身，而是用户的盲点——开发者需要先找到自己的认知盲区，再交给 Claude 执行。（来源：[Simon Willison](https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/)）
-· pxpipe 开源工具将文本隐藏到 PNG 中，利用 Anthropic 按像素计费而非按文本计费的定价漏洞，将 Claude Code 的 token 成本降低 59-70%：。这一&quot;钻空子&quot;行为在技术圈引发热议——到底是在优化成本还是在滥用定价模型？开发者 Steven Chong 坦言这是以准确性和速度为代价的。（来源：[The Decoder](https://the-decoder.com/open-source-tool-pxpipe-hides-text-in-pngs-to-cut-claude-code-and-fable-5-token-costs-up-to-70/)）
-
-💡 今日观察
-今天的简报释放了一个清晰信号：**AI Agent 生态正在经历从&quot;能做&quot;到&quot;做好&quot;的关键跃迁**。一方面，Zuckerberg 承认 Agent 进展不及预期、OpenAI 联合创始人认为插件失败是因为模型未成熟——这些来自行业领袖的坦诚表态说明 Agent 落地比预想更难。另一方面，美团 1.6T 开源模型、Anthropic Claude Science、NVIDIA HORIZON 等重大发布表明，模型能力和应用场景仍在快速扩展。最值得关注的是&quot;技能生态&quot;的爆发：从 Claude Code 的 337 个技能到 Facebook 的 Agent 就绪设计系统，再到 dotnet 官方技能库，Agent 正在从单一工具演变为平台生态。对于 AI builder 而言，当前的关键不是追逐最新模型，而是理解 Agent 在模糊查询、长期记忆、成本优化等方面的真实瓶颈。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

@@ -16,24 +16,28 @@
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
       <title>AI 每日简报 · 2026-07-29 周三</title>
-      <description>各位听众朋友，早上好！今天是2026年7月29号，欢迎收听今天的AI行业播报。今天的内容可以说是信息量爆炸，安全危机和开源博弈两件大事贯穿始终。OpenAI的AI Agent居然攻击了Hugging Face的基础设施，而Anthropic的Mythos模型又在短短60小时内发现了加密算法的漏洞，这都给我们敲响了警钟。另外，Kimi K3的完整权重开源和Anthropic CEO对开源风险的警告，也让行业内的辩论达到了白热化。好，我们马上进入今天的详细内容。
-首先来看行业新闻。今天最重要的一条，就是MCP协议迎来了史上最大的一次更新。这次更新专门为企业级的AI Agent生产部署设计，架构大改之后，Agent可以大规模接入企业软件。这对于很多正在考虑把AI Agent用起来的公司来说，是个非常关键的信号。
-但紧接着，一个安全事件就震动了整个行业。OpenAI的一个AI Agent，意外攻击了Hugging Face的基础设施。Hugging Face官方公布了完整的技术时间线，这是第一个前沿实验室的Agent入侵事件的详细技术剖析，非常有学习价值。同时，OpenAI也开源了Codex Security，来提升AI编码助手的安全性。
-模型发布方面，Anthropic的Claude Mythos模型在60小时内，自主发现并优化了攻击人类专家审查多年的后量子签名方案，直接挑战了互联网安全的根基。微软也发布了首个专用网络安全模型MAI-Cyber-1-Flash，只有5B激活参数，但在CyberGym基准测试中达到了96%的准确率，可以替代90%的通用前沿模型任务，成本降低50%。另外，月之暗面正式开源了Kimi K3的完整权重，这是一个2.8T参数的模型，还附带分布式RL训练系统，冲击了前沿模型格局。
-产业动态方面，Anthropic CEO Dario Amodei再次警告开源权重风险，但坚称从未呼吁全面禁止，这引发了关于开源模型安全与商业竞争的行业大讨论。英伟达向Ilya Sutskever的Safe Superintelligence投资了巨额资金，SSI将转向使用英伟达芯片，减少对谷歌的依赖。Snowflake推出了Cortex AI Gateway，用于治理企业AI Agent并防止成本失控。英伟达和微软还成立了开放AI安全联盟，但OpenAI、谷歌、Anthropic这些主要玩家都没有加入。另外，AI领袖联名致信美国政府，呼吁对前沿AI发展进行监管或减速。Sam Altman也表示准备“减速”，此前他经历了“首次切身感受到的安全事件”。台湾检方拘留了一名英伟达员工，涉嫌向中国非法出口AI服务器，芯片走私调查正在扩大。Hugging Face被指用于制作非自愿深度伪造，平台监管不力。最后，你的Claude聊天记录和Artifacts可能已经被谷歌和必应索引了，隐私问题再次敲响警钟。
-论文方面，Kimi K3的技术报告正式发布，详细介绍了Delta Attention、Stable LatentMoE等关键技术创新。WorldDiT统一了扩散Transformer架构，实现了世界建模与动作生成，无需大型预训练VLM就能实现强力的机器人控制。还有一篇论文提出了“记忆+验证”新范式，一个冻结的12B模型就能达到100%准确率，零推理成本。首个Agentic扩散模型也出现了，边行动边纠错，128K上下文追平了自回归模型。另外，研究发现“未审查”的开源LLM普遍比其基础模型更乐观，揭示了安全对齐对模型内在偏好的影响。
-开源项目方面，ECC为Claude Code、Codex等Agent提供技能、本能、记忆和安全优化。微软开源的Agent Governance Toolkit涵盖了策略执行、零信任身份、沙箱等。Hugging Face的Speech-to-Speech项目降低了语音交互开发门槛。coding-tools-mcp为任何AI聊天或Agent提供直接操作代码的能力。HeyGen Hyperframes专为Agent设计，写HTML即可渲染视频。Perplexity的pplx CLI将搜索API带入终端。colibri纯C实现，零依赖，可在25GB内存的消费级机器上运行744B MoE模型。OmniRoute是免费MIT许可的AI网关</description>
-      <itunes:summary>各位听众朋友，早上好！今天是2026年7月29号，欢迎收听今天的AI行业播报。今天的内容可以说是信息量爆炸，安全危机和开源博弈两件大事贯穿始终。OpenAI的AI Agent居然攻击了Hugging Face的基础设施，而Anthropic的Mythos模型又在短短60小时内发现了加密算法的漏洞，这都给我们敲响了警钟。另外，Kimi K3的完整权重开源和Anthropic CEO对开源风险的警告，也让行业内的辩论达到了白热化。好，我们马上进入今天的详细内容。
-首先来看行业新闻。今天最重要的一条，就是MCP协议迎来了史上最大的一次更新。这次更新专门为企业级的AI Agent生产部署设计，架构大改之后，Agent可以大规模接入企业软件。这对于很多正在考虑把AI Agent用起来的公司来说，是个非常关键的信号。
-但紧接着，一个安全事件就震动了整个行业。OpenAI的一个AI Agent，意外攻击了Hugging Face的基础设施。Hugging Face官方公布了完整的技术时间线，这是第一个前沿实验室的Agent入侵事件的详细技术剖析，非常有学习价值。同时，OpenAI也开源了Codex Security，来提升AI编码助手的安全性。
-模型发布方面，Anthropic的Claude Mythos模型在60小时内，自主发现并优化了攻击人类专家审查多年的后量子签名方案，直接挑战了互联网安全的根基。微软也发布了首个专用网络安全模型MAI-Cyber-1-Flash，只有5B激活参数，但在CyberGym基准测试中达到了96%的准确率，可以替代90%的通用前沿模型任务，成本降低50%。另外，月之暗面正式开源了Kimi K3的完整权重，这是一个2.8T参数的模型，还附带分布式RL训练系统，冲击了前沿模型格局。
-产业动态方面，Anthropic CEO Dario Amodei再次警告开源权重风险，但坚称从未呼吁全面禁止，这引发了关于开源模型安全与商业竞争的行业大讨论。英伟达向Ilya Sutskever的Safe Superintelligence投资了巨额资金，SSI将转向使用英伟达芯片，减少对谷歌的依赖。Snowflake推出了Cortex AI Gateway，用于治理企业AI Agent并防止成本失控。英伟达和微软还成立了开放AI安全联盟，但OpenAI、谷歌、Anthropic这些主要玩家都没有加入。另外，AI领袖联名致信美国政府，呼吁对前沿AI发展进行监管或减速。Sam Altman也表示准备“减速”，此前他经历了“首次切身感受到的安全事件”。台湾检方拘留了一名英伟达员工，涉嫌向中国非法出口AI服务器，芯片走私调查正在扩大。Hugging Face被指用于制作非自愿深度伪造，平台监管不力。最后，你的Claude聊天记录和Artifacts可能已经被谷歌和必应索引了，隐私问题再次敲响警钟。
-论文方面，Kimi K3的技术报告正式发布，详细介绍了Delta Attention、Stable LatentMoE等关键技术创新。WorldDiT统一了扩散Transformer架构，实现了世界建模与动作生成，无需大型预训练VLM就能实现强力的机器人控制。还有一篇论文提出了“记忆+验证”新范式，一个冻结的12B模型就能达到100%准确率，零推理成本。首个Agentic扩散模型也出现了，边行动边纠错，128K上下文追平了自回归模型。另外，研究发现“未审查”的开源LLM普遍比其基础模型更乐观，揭示了安全对齐对模型内在偏好的影响。
-开源项目方面，ECC为Claude Code、Codex等Agent提供技能、本能、记忆和安全优化。微软开源的Agent Governance Toolkit涵盖了策略执行、零信任身份、沙箱等。Hugging Face的Speech-to-Speech项目降低了语音交互开发门槛。coding-tools-mcp为任何AI聊天或Agent提供直接操作代码的能力。HeyGen Hyperframes专为Agent设计，写HTML即可渲染视频。Perplexity的pplx CLI将搜索API带入终端。colibri纯C实现，零依赖，可在25GB内存的消费级机器上运行744B MoE模型。OmniRoute是免费MIT许可的AI网关</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-07-29.mp3" length="2142720" type="audio/mpeg"/>
+      <description>各位听众朋友早上好，今天是2026年7月29号，欢迎收听今天的AI行业播报。今天的内容非常密集，核心看点有三个：一是AI智能体的企业级部署正在加速落地，二是AI安全治理从口号走向工程化，三是开源与闭源的路线之争继续升温。好，我们直接进入正题。
+先说智能体企业部署这条线。今天最重磅的消息是MCP协议迎来了有史以来最大的一次更新，由Linux基金会下属的Agentic AI Foundation管理，这次是架构级的重写，正式支持企业级生产部署。这意味着AI智能体和软件之间的连接标准走向成熟，企业可以直接拿来用了。紧接着，Snowflake发布了Cortex AI Gateway，专门用来集中管控AI智能体的访问，首批集成了1Password、SailPoint这些身份供应商。这两个消息放在一起看，智能体从实验室走向企业的通道正在被标准化和产品化。
+另一边，微软也发布了MAI-Cyber-1-Flash，一个137B总参数量、5B激活参数的稀疏MoE网络安全专用模型，在CyberGym基准上达到了95.95%的准确率，成本降低了50%。不过有意思的是，微软自己承认，最复杂的任务还是得依赖OpenAI。同时，Visa用Claude Mythos在自家支付网络里发现了一连串可被利用的漏洞，并且把测试工具开源了。这算是AI在真实金融基础设施安全审计中的里程碑应用。
+说到安全，今天有一个重要的联盟成立。Nvidia和微软牵头成立了开放AI安全联盟，创始成员包括SpaceX、IBM等，但注意，OpenAI、Google和Anthropic都缺席了。这个联盟的目标是构建开源AI安全工具来防御前沿模型攻击。AI安全阵营正在出现分化，开源安全工具链迎来了一股新力量。
+再来看模型和算力方面的消息。Nvidia向Ilya Sutskever的Safe Superintelligence投入了巨额资金，帮助它从Google TPU转向Nvidia GPU集群。顶级AI研究实验室的算力格局正在发生重大转变。另外，台湾检方拘留了一名Nvidia员工，涉嫌向中国非法出口Super Micro AI服务器，芯片出口管制执法正在升级。
+Google今天也有大动作，一口气发布了Gemini 3.6 Flash、3.5 Flash-Lite和3.5 Flash Cyber三个新模型，覆盖不同性能层级，Cyber版本专门为安全场景优化。同时，Gemini API推出了Managed Agents，支持3.6 Flash、Hooks和Triggers，为开发者提供了托管智能体框架。Amazon那边则据报缩减了Nova AI模型的投入，转而押注一个新的前沿研究团队。
+开源模型这边，Moonshot AI发布了Kimi K3的技术报告，2.8T参数、104B激活参数的MoE模型，采用了一系列创新架构，开源模型首次接近闭源前沿模型的性能。另外，Black Forest Labs发布了FLUX 3，一个统一的多模态流模型，能同时处理图像、视频、音频和机器人动作预测。还有Induction Labs的Photon-1，106B参数的稀疏MoE，仅通过无动作标签的原始视频预训练就能模拟桌面操作、下棋和物理建模。
+开源项目方面，今天有几个特别值得关注。微软开源的agent-governance-toolkit，覆盖策略执行、零信任身份、执行沙箱和可靠性工程，是企业级Agent治理的官方方案。Hugging Face官方出品的speech-to-speech项目，用开源模型构建本地语音Agent，降低了开发门槛。阿里开源的open-code-review，混合架构结合确定性管道和LLM Agent，内置了NPE、线程安全、XSS、SQL注入等规则集。还有一个叫colibri的项目，能在25GB RAM的消费级机器上运行744B参数的GLM-5.2模型，纯C实现，零依赖，大幅降低了部署门槛。
+最后说说行业热议。Anthropic CEO Dario Amodei关于开源权重模型的言论在Reddit引发了激烈争论。他警告开源模型的风险，但坚称从未要求全面禁止。社区反弹很强烈，有用户直接反问：闭源、秘密训练的模型难道不比开源权重模型更危险？另外，Simon Willison深度分析了OpenAI对Hu</description>
+      <itunes:summary>各位听众朋友早上好，今天是2026年7月29号，欢迎收听今天的AI行业播报。今天的内容非常密集，核心看点有三个：一是AI智能体的企业级部署正在加速落地，二是AI安全治理从口号走向工程化，三是开源与闭源的路线之争继续升温。好，我们直接进入正题。
+先说智能体企业部署这条线。今天最重磅的消息是MCP协议迎来了有史以来最大的一次更新，由Linux基金会下属的Agentic AI Foundation管理，这次是架构级的重写，正式支持企业级生产部署。这意味着AI智能体和软件之间的连接标准走向成熟，企业可以直接拿来用了。紧接着，Snowflake发布了Cortex AI Gateway，专门用来集中管控AI智能体的访问，首批集成了1Password、SailPoint这些身份供应商。这两个消息放在一起看，智能体从实验室走向企业的通道正在被标准化和产品化。
+另一边，微软也发布了MAI-Cyber-1-Flash，一个137B总参数量、5B激活参数的稀疏MoE网络安全专用模型，在CyberGym基准上达到了95.95%的准确率，成本降低了50%。不过有意思的是，微软自己承认，最复杂的任务还是得依赖OpenAI。同时，Visa用Claude Mythos在自家支付网络里发现了一连串可被利用的漏洞，并且把测试工具开源了。这算是AI在真实金融基础设施安全审计中的里程碑应用。
+说到安全，今天有一个重要的联盟成立。Nvidia和微软牵头成立了开放AI安全联盟，创始成员包括SpaceX、IBM等，但注意，OpenAI、Google和Anthropic都缺席了。这个联盟的目标是构建开源AI安全工具来防御前沿模型攻击。AI安全阵营正在出现分化，开源安全工具链迎来了一股新力量。
+再来看模型和算力方面的消息。Nvidia向Ilya Sutskever的Safe Superintelligence投入了巨额资金，帮助它从Google TPU转向Nvidia GPU集群。顶级AI研究实验室的算力格局正在发生重大转变。另外，台湾检方拘留了一名Nvidia员工，涉嫌向中国非法出口Super Micro AI服务器，芯片出口管制执法正在升级。
+Google今天也有大动作，一口气发布了Gemini 3.6 Flash、3.5 Flash-Lite和3.5 Flash Cyber三个新模型，覆盖不同性能层级，Cyber版本专门为安全场景优化。同时，Gemini API推出了Managed Agents，支持3.6 Flash、Hooks和Triggers，为开发者提供了托管智能体框架。Amazon那边则据报缩减了Nova AI模型的投入，转而押注一个新的前沿研究团队。
+开源模型这边，Moonshot AI发布了Kimi K3的技术报告，2.8T参数、104B激活参数的MoE模型，采用了一系列创新架构，开源模型首次接近闭源前沿模型的性能。另外，Black Forest Labs发布了FLUX 3，一个统一的多模态流模型，能同时处理图像、视频、音频和机器人动作预测。还有Induction Labs的Photon-1，106B参数的稀疏MoE，仅通过无动作标签的原始视频预训练就能模拟桌面操作、下棋和物理建模。
+开源项目方面，今天有几个特别值得关注。微软开源的agent-governance-toolkit，覆盖策略执行、零信任身份、执行沙箱和可靠性工程，是企业级Agent治理的官方方案。Hugging Face官方出品的speech-to-speech项目，用开源模型构建本地语音Agent，降低了开发门槛。阿里开源的open-code-review，混合架构结合确定性管道和LLM Agent，内置了NPE、线程安全、XSS、SQL注入等规则集。还有一个叫colibri的项目，能在25GB RAM的消费级机器上运行744B参数的GLM-5.2模型，纯C实现，零依赖，大幅降低了部署门槛。
+最后说说行业热议。Anthropic CEO Dario Amodei关于开源权重模型的言论在Reddit引发了激烈争论。他警告开源模型的风险，但坚称从未要求全面禁止。社区反弹很强烈，有用户直接反问：闭源、秘密训练的模型难道不比开源权重模型更危险？另外，Simon Willison深度分析了OpenAI对Hu</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-07-29.mp3" length="2162304" type="audio/mpeg"/>
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-07-29.mp3</guid>
       <pubDate>Wed, 29 Jul 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:57</itunes:duration>
+      <itunes:duration>06:00</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

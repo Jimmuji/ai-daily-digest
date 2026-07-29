@@ -4,8 +4,11 @@ Each function returns a list of dicts with stable fields for traceability.
 """
 
 import html
+import json
 import re
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import feedparser
@@ -403,43 +406,53 @@ RSS_SOURCES = [
 ]
 
 
-def fetch_all():
-    """Fetch from all sources, return categorized data."""
-    print("Fetching HuggingFace Papers...")
-    papers = fetch_huggingface_papers()
-    print(f"  Got {len(papers)} papers")
+def _fetch_rss_with_fallback(url, name, max_items, cutoff_days):
+    """Try each candidate URL (rsshub instances etc.); first that yields wins."""
+    candidates = url if isinstance(url, (list, tuple)) else [url]
+    for candidate in candidates:
+        feed_items = fetch_rss_feed(candidate, name, max_items=max_items, cutoff_days=cutoff_days)
+        if feed_items:
+            return feed_items
+    return []
 
-    print("Fetching arXiv (cs.AI/CL/CV/LG)...")
-    arxiv_items = fetch_arxiv()
-    print(f"  Got {len(arxiv_items)} arXiv papers")
-    papers.extend(arxiv_items)
 
-    print("Fetching GitHub Trending (official page)...")
-    trending_page = fetch_github_trending_page()
-    print(f"  Got {len(trending_page)} trending repos")
+def fetch_all(max_workers=8):
+    """Fetch from all sources concurrently, return categorized data.
 
-    print("Fetching GitHub Trending (OSSInsight)...")
-    oss_projects = fetch_github_trending()
-    print(f"  Got {len(oss_projects)} projects")
+    Every fetcher swallows its own errors and returns a list, so a slow or
+    failing source can't block or crash the others. Wall-clock is now the
+    slowest single source instead of the sum of all of them.
+    """
+    print(f"Fetching from all sources (up to {max_workers} in parallel)...")
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        f_papers_hf = ex.submit(fetch_huggingface_papers)
+        f_papers_arxiv = ex.submit(fetch_arxiv)
+        f_trending_page = ex.submit(fetch_github_trending_page)
+        f_trending_oss = ex.submit(fetch_github_trending)
+        f_hn = ex.submit(fetch_hacker_news)
+        rss_futures = [
+            (name, ex.submit(_fetch_rss_with_fallback, url, name, max_items, cutoff_days))
+            for url, name, max_items, cutoff_days in RSS_SOURCES
+        ]
 
-    # Official trending first (higher quality), OSSInsight as backup/supplement
-    projects = trending_page + oss_projects
+        hf_papers = f_papers_hf.result()
+        arxiv_items = f_papers_arxiv.result()
+        print(f"  HuggingFace Papers: {len(hf_papers)}  |  arXiv: {len(arxiv_items)}")
+        papers = hf_papers + arxiv_items
 
-    print("Fetching Hacker News...")
-    hn_items = fetch_hacker_news()
-    print(f"  Got {len(hn_items)} items")
+        # Official trending first (higher quality), OSSInsight as backup/supplement
+        trending_page = f_trending_page.result()
+        oss_projects = f_trending_oss.result()
+        print(f"  GitHub Trending page: {len(trending_page)}  |  OSSInsight: {len(oss_projects)}")
+        projects = trending_page + oss_projects
 
-    print("Fetching RSS feeds...")
-    news = list(hn_items)
-    for url, name, max_items, cutoff_days in RSS_SOURCES:
-        candidates = url if isinstance(url, (list, tuple)) else [url]
-        feed_items = []
-        for candidate in candidates:
-            feed_items = fetch_rss_feed(candidate, name, max_items=max_items, cutoff_days=cutoff_days)
-            if feed_items:  # first instance that works wins
-                break
-        print(f"  [{name}] Got {len(feed_items)} items")
-        news.extend(feed_items)
+        hn_items = f_hn.result()
+        print(f"  Hacker News: {len(hn_items)}")
+        news = list(hn_items)
+        for name, fut in rss_futures:
+            feed_items = fut.result()
+            print(f"  [{name}] {len(feed_items)} items")
+            news.extend(feed_items)
 
     data = {
         "papers": dedupe_items(papers),
@@ -451,3 +464,68 @@ def fetch_all():
     raw_total = len(papers) + len(projects) + len(news)
     print(f"Deduped {raw_total} raw items to {deduped_total} unique items")
     return data
+
+
+# ── Cross-day de-duplication ──────────────────────────────────────────────────
+# A story that trends for several days would otherwise reappear in the digest
+# every day. We remember the URLs that were actually *published* in recent
+# digests and drop matching raw items on later days.
+
+def _read_json(path, default):
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except Exception:
+        return default
+
+
+def load_recent_seen_urls(store_path, window_days=5):
+    """Return the set of normalized URLs published in the last `window_days`."""
+    store = _read_json(store_path, {})
+    recent_dates = sorted(store.keys())[-window_days:]
+    seen = set()
+    for d in recent_dates:
+        seen.update(store.get(d, []))
+    return seen
+
+
+def drop_seen_items(data, seen_urls):
+    """Remove items whose normalized_url was already published recently.
+
+    Returns (filtered_data, dropped_count). Items without a URL are always kept.
+    """
+    if not seen_urls:
+        return data, 0
+    dropped = 0
+    filtered = {}
+    for category, items in data.items():
+        kept = []
+        for item in items:
+            nurl = item.get("normalized_url")
+            if nurl and nurl in seen_urls:
+                dropped += 1
+                continue
+            kept.append(item)
+        filtered[category] = kept
+    return filtered, dropped
+
+
+def record_published_urls(store_path, date_str, published_markdown, window_days=7):
+    """Extract source links from a finished digest and remember them.
+
+    Only URLs that made it into the published markdown are stored, so unselected
+    raw items don't get suppressed on later days. The store is pruned to the last
+    `window_days` dates to stay small.
+    """
+    store = _read_json(store_path, {})
+    urls = set()
+    for match in re.finditer(r"\]\((https?://[^)\s]+)\)", published_markdown or ""):
+        nurl = normalize_url(match.group(1))
+        if nurl:
+            urls.add(nurl)
+    store[date_str] = sorted(urls)
+    for old_date in sorted(store.keys())[:-window_days]:
+        store.pop(old_date, None)
+    Path(store_path).write_text(
+        json.dumps(store, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return len(urls)

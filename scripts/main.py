@@ -11,7 +11,12 @@ from pathlib import Path
 
 import requests
 
-from sources import fetch_all
+from sources import (
+    fetch_all,
+    load_recent_seen_urls,
+    drop_seen_items,
+    record_published_urls,
+)
 from summarize import summarize
 from generate_site import generate_site
 from audio import generate_audio, prune_old_audio
@@ -52,20 +57,28 @@ def main():
 
     print(f"=== AI Daily Digest for {date_str} ===\n")
 
+    data_dir = Path(__file__).parent.parent / "data"
+    data_dir.mkdir(exist_ok=True)
+    seen_file = data_dir / "seen_urls.json"
+
     # Step 1: Fetch data from all sources
     print("[Step 1] Fetching data from sources...")
     data = fetch_all()
 
+    # Drop stories already published in recent digests (cross-day dedup)
+    seen_urls = load_recent_seen_urls(seen_file, window_days=5)
+    data, dropped = drop_seen_items(data, seen_urls)
+    if dropped:
+        print(f"Dropped {dropped} item(s) already published in the last 5 days.")
+
     total = sum(len(v) for v in data.values())
-    print(f"\nTotal items fetched: {total}")
+    print(f"\nTotal items after dedup: {total}")
 
     if total == 0:
         print("No items fetched. Exiting.")
         sys.exit(0)
 
     # Step 2: Save raw fetched data for traceability
-    data_dir = Path(__file__).parent.parent / "data"
-    data_dir.mkdir(exist_ok=True)
     raw_file = data_dir / f"{date_str}.raw.json"
     raw_payload = {
         "date": date_str,
@@ -97,6 +110,10 @@ def main():
         print(f"          Saved English to {output_file_en}")
     else:
         print("          No English version generated.")
+
+    # Remember the source links we published so they don't recur tomorrow.
+    published = record_published_urls(seen_file, date_str, markdown, window_days=7)
+    print(f"          Recorded {published} published URL(s) for cross-day dedup.")
 
     # Step 5: Synthesize voice broadcast (MP3 for commute listening)
     print("\n[Step 5] Generating voice broadcast...")

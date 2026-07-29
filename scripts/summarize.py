@@ -9,6 +9,7 @@ items: the English half got cut off mid-item (or never started).
 
 import os
 import re
+import time
 import requests
 
 
@@ -58,27 +59,42 @@ Rules:
 """
 
 
-def _chat(system, user, max_tokens=8192, temperature=0.7):
-    """One chat call. Returns (text, finish_reason)."""
+def _chat(system, user, max_tokens=8192, temperature=0.7, retries=3):
+    """One chat call, retried with exponential backoff. Returns (text, finish_reason)."""
     api_key = os.environ.get("API_KEY")
     if not api_key:
         raise ValueError("API_KEY environment variable is required")
     base_url = os.environ.get("API_BASE_URL", "https://api.deepseek.com")
     model = os.environ.get("API_MODEL", "deepseek-chat")
-    resp = requests.post(
-        f"{base_url}/chat/completions",
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
-        json={
-            "model": model,
-            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            "temperature": temperature,
-            "max_tokens": max_tokens,
-        },
-        timeout=180,
-    )
-    resp.raise_for_status()
-    choice = resp.json()["choices"][0]
-    return choice["message"]["content"], choice.get("finish_reason")
+
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            resp = requests.post(
+                f"{base_url}/chat/completions",
+                headers={"Authorization": f"Bearer {api_key}",
+                         "Content-Type": "application/json"},
+                json={
+                    "model": model,
+                    "messages": [{"role": "system", "content": system},
+                                 {"role": "user", "content": user}],
+                    "temperature": temperature,
+                    "max_tokens": max_tokens,
+                },
+                timeout=180,
+            )
+            resp.raise_for_status()
+            choice = resp.json()["choices"][0]
+            return choice["message"]["content"], choice.get("finish_reason")
+        except Exception as e:  # network error / 5xx / timeout
+            last_error = e
+            if attempt < retries:
+                wait = 2 ** attempt  # 2s, 4s, 8s
+                print(f"[summarize] attempt {attempt}/{retries} failed: {e}; retrying in {wait}s")
+                time.sleep(wait)
+            else:
+                print(f"[summarize] attempt {attempt}/{retries} failed: {e}")
+    raise last_error
 
 
 def _trim_partial(text, finish_reason, label):

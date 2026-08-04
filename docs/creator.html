@@ -36,6 +36,100 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-08-05">AI 每日简报 · 2026-08-05 周三</span>
+    <button class="cbtn" data-copy="t-2026-08-05">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-08-05.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-08-05.mp3" download="2026-08-05.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-08-05">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-08-05">AI 每日简报 · 2026-08-05 周三
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· 阿里巴巴发布 Qwen3.8-Max：2.4 万亿参数 MoE 旗舰模型，号称在 Agent 计算机使用上超越 GPT-5.6 和 Fable 5，开放权重下周发布。
+  来源：https://www.theverge.com/ai-artificial-intelligence/974342/alibaba-qwen-max-open-weight-ai
+· Google 将数十亿美元 Anthropic 芯片风险移出资产负债表：与 Broadcom、Apollo、Blackstone 合作融资结构，约 2000 亿美元合同依赖 Anthropic 持续增长。
+  来源：https://the-decoder.com/google-moves-billions-in-anthropic-chip-risk-off-its-balance-sheet/
+· 硅谷开源派阻止白宫拟议的中国 AI 禁令：OpenAI/Anthropic 主张限制，Nvidia/Google/Meta 反对，白宫暂缓但 9 月前或有决定。
+  来源：https://the-decoder.com/silicon-valleys-rift-over-open-source-pushes-back-contemplated-white-house-bans-on-chinese-ai/
+· OpenAI 反击 Apple 商业秘密诉讼：公布 iMessage 记录，显示 Apple 员工主动联系前同事索取技术帮助和内部文件。
+  来源：https://the-decoder.com/openai-fires-back-at-apples-trade-secret-lawsuit-with-chat-logs-showing-apple-employees-kept-texting-their-former-colleague/
+· Anthropic 与成立仅半年的 Volta 签订 100 亿美元算力协议：继续大规模绑定算力，云合作版图再扩张。
+  来源：https://techcrunch.com/2026/08/04/anthropic-signs-10-billion-deal-with-ai-cloud-startup-volta/
+· Nvidia 主导的开放 AI 安全联盟一周内已有进展：120+ 家公司加入，已提出防御 AI Agent 的提案。
+  来源：https://techcrunch.com/2026/08/04/nvidia-doesnt-mess-around-a-week-after-open-ai-industry-group-formed-its-already-showing-progress/
+· Mistral 发布 Shieldstral：30 亿参数开源多模态审核模型，用于内容安全过滤。
+  来源：https://mistral.ai/news/shieldstral/
+· 德州叫停新建数据中心并要求审计：州长命令 PUCT 和 ERCOT 核查新项目，能源瓶颈开始反噬 AI 扩张。
+  来源：https://techcrunch.com/2026/08/04/texas-halts-new-data-centers-as-governor-calls-for-audits/
+· MiniMax H3 成首个登顶 AI 视频榜的开源模型：视频生成权重开源，开放模型首次占据榜首。
+  来源：https://the-decoder.com/chinas-minimax-h3-is-the-first-open-model-to-top-an-ai-video-ranking/
+· 欧盟 AI 法案透明度规则生效：8 月 2 日起，企业须披露 AI 交互和深度伪造内容。
+  来源：https://www.theverge.com/ai-artificial-intelligence/974571/eu-ai-act-transparency-labels-rules-deepfakes
+· OpenAI 发布 GPT-Live 实时语音架构：无轮次语音模型 + 低延迟架构，6 个月建成。
+  来源：https://openai.com/index/continuous-voice-interaction-with-gpt-live
+· IBM：92% 的 AI 安全事件源于缺乏基本访问控制：模型本身很少是问题所在。
+  来源：https://the-decoder.com/ibm-finds-92-of-companies-hit-by-ai-security-breaches-lacked-basic-access-controls/
+· Bending Spoons 以 12.5 亿美元收购 Airtable：数据管理赛道整合加速。
+  来源：https://www.businesswire.com/news/home/20260730994716/en/Bending-Spoons-has-entered-into-a-definitive-agreement-to-acquire-Airtable-for-$1.285-billion
+
+📄 重要论文
+· DiffusionGemma 技术报告：离散扩散语言模型，256 token 并行生成，微调 Gemma 4 MoE 实现高速文本生成。
+  来源：https://huggingface.co/papers/2608.00146
+· Zero-Mem：LLM Agent 零 Token 记忆操作：结构化记忆访问无需额外 LLM 调用，消除中间记录生成成本。
+  来源：https://huggingface.co/papers/2607.29377
+· 当 AI 基准测试饱和：基准饱和的系统性研究：系统分析基准测试饱和现象及其影响。
+  来源：https://arxiv.org/abs/2602.16763
+· AURORA-LM：连续潜空间扩散语言建模：保留高容量表征，自动编码统一表示，突破离散 token 限制。
+  来源：https://arxiv.org/abs/2608.02602v1
+· To Add Is Machine, To Delete Is Human：LLM 代码编辑的系统性删除回避问题，SWE-bench 榜首模型删除召回率最高仅 71.7%。
+  来源：https://huggingface.co/papers/2607.28887
+· Wnuan：企业专有知识问答的分阶段后训练：三阶段流程，接受率从 52.76% 提升至 91.51%。
+  来源：https://huggingface.co/papers/2608.01862
+· Model or Harness？Agent 失败的交互中心分类法：区分模型、框架、环境等故障来源，解决修复分配问题。
+  来源：https://huggingface.co/papers/2607.28802
+· GradCuit：信用分配的梯度流实现测试时潜在推理：可解释的测试时潜在推理新方法。
+  来源：https://huggingface.co/papers/2608.02585
+
+🔧 开源项目
+· Cursor 开源 MoK（Mixture-of-Kittens）：确定性 MoE 训练 Megakernel，GB300 NVL72 上比最强公开基线快 2.37 倍。
+  来源：https://www.marktechpost.com/2026/08/04/cursor-open-sources-mixture-of-kittens-mok-a-deterministic-moe-training-megakernel-for-gb300-nvl72-racks/
+· Y Combinator 开源 QM 多智能体协作框架：MIT 协议，Slack/Web 运行，多 Agent 共享隔离工作区。
+  来源：https://www.marktechpost.com/2026/08/03/y-combinator-open-sources-qm-multiplayer-ai-agent-harness/
+· 腾讯云开源 TencentDB-Agent-Memory：团队级 Agent 记忆中枢，4 类可复用记忆资产（Chat Memory、Skill、LLM-Wiki、Code-Graph）。日增 1138 star。
+  来源：https://github.com/TencentCloud/TencentDB-Agent-Memory
+· DeepSeek-Reasonix：DeepSeek 原生终端编码 Agent，围绕前缀缓存稳定性设计。日增 924 star。
+  来源：https://github.com/esengine/DeepSeek-Reasonix
+· AirLLM：单张 4GB GPU 运行 70B 模型推理。日增 1716 star。
+  来源：https://github.com/lyogavin/airllm
+· YC 开源 QM：多智能体协作框架，MIT 协议，Slack/Web 运行。
+  来源：https://github.com/yc-software/qm
+· Genspark 开源 GenOffice：AI 原生办公套件，字节级保留往返编辑，支持 Docs/Sheets/Slides/PDF。
+  来源：https://www.marktechpost.com/2026/08/03/genspark-open-sources-genoffice-a-free-ad-free-ai-office-suite-for-macos-and-windows-with-docs-sheets-slides-pdf/
+· Reflex 开源 XY 图表库：Rust 核心 + WebGL2，1 亿点图表 0.08 秒渲染。
+  来源：https://www.marktechpost.com/2026/08/04/reflex-open-sources-xy/
+· OfficeCLI：专为 AI Agent 打造的 Office 套件，单二进制、无需安装 Office。
+  来源：https://github.com/iOfficeAI/OfficeCLI
+· Warp Agent CLI：Warp 推出的终端编码 Agent CLI。
+  来源：https://www.warp.dev/blog/introducing-the-warp-agent-cli-coding-agent
+
+🐦 AI 圈热议
+· HuggingFace CEO 称中国正在赢得 AI 竞赛：在 r/LocalLLaMA 引发热议，强调中国已建立从原材料、光刻设备到 GPU 制造、模型训练、能源的独立供应链。社区讨论认为这一趋势在机器人和电动车领域已有先例。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1vfj3q7/hugging_face_ceo_says_china_is_winning_the_ai/
+· Steve Yegge 谈 Opus 4.7 的&quot;再来两件事&quot;怪癖：Gas Town 项目因 Opus 4.7 引入的&quot;just two more things&quot;倾向而崩溃——模型总想继续调整自身而非收敛于完成实际工作。开发者社区对前沿模型行为退化问题讨论热烈。
+  来源：https://simonwillison.net/2026/Aug/4/steve-yegge/#atom-everything
+
+💡 今日观察
+今天最值得关注的信号是**开源模型与闭源前沿的差距正在快速缩小**：Qwen3.8-Max、MiniMax H3 分别在 Agent 和视频生成领域登顶，HuggingFace CEO &quot;中国赢得 AI 竞赛&quot;的判断引发社区共鸣。与此同时，**AI 基建的财务与能源约束开始显性化**——Google 将 Anthropic 芯片风险移出资产负债表、德州叫停数据中心，算力军备竞赛进入深水区。第三，**Agent 安全问题从边缘走向中心**：Nvidia 主导的开放安全联盟、IBM 的访问控制报告、Mistral 的 Shieldstral 发布，都指向 Agent 大规模落地前的最后一块短板。最后，OpenAI 与 Apple 的诉讼战公开化，顶级 AI 公司之间的人才与知识产权争夺将重塑行业规则。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-08-04">AI 每日简报 · 2026-08-04 周二</span>
     <button class="cbtn" data-copy="t-2026-08-04">📋 复制标题</button>
   </div>
@@ -1373,100 +1467,6 @@
 
 💡 今日观察
 今天最值得关注的信号是**中国模型在编码领域首次登顶**——Kimi K3 在 Code Arena Frontend 超越 Fable 5 和 GPT-5.6，Qwen 3.8 紧随其后，标志着开源/国产模型在实用性任务上已进入第一梯队。但数学推理的显著差距（K3 仅 39% vs 前沿模型 90%）说明&quot;智能&quot;的不同维度仍在分化。另一个关键趋势是**AI Agent 安全正在成为新战场**：HuggingFace 的 AI 驱动攻击披露、OpenAI 的 GPT-Red 自我博弈系统、Capital One 的 VulnHunter 开源工具，都指向同一个方向——Agent 时代的安全需要 Agent 本身来应对。建议开发者重点关注 LongStraw 和 SEED 两篇论文，它们直接解决了 Agent 长程训练的核心工程瓶颈。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-07-19">AI 每日简报 · 2026-07-19 周日</span>
-    <button class="cbtn" data-copy="t-2026-07-19">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-07-19.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-07-19.mp3" download="2026-07-19.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-07-19">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-07-19">AI 每日简报 · 2026-07-19 周日
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Kimi K3 发布：2.8万亿参数开源模型，性能逼近前沿闭源模型：月之暗面发布全球最大开源模型 Kimi K3（2.8T参数），在多个基准上接近 Claude Fable 5 和 GPT-5.6 Sol，权重将于7月27日前开源。
-  来源：https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems
-· Anthropic 大幅削减 Claude Fable 5 使用限制：自7月20日起，Fable 5 在 Max 和 Team Premium 计划中仅保留50%配额，Pro 用户获一次性$100信用额度后转按 API 计费。
-  来源：https://the-decoder.com/anthropic-slashes-claude-fable-5-limits-in-max-and-team-premium-and-pushes-pro-users-toward-api-pricing/
-· OpenAI GPT-5.6 出现删除用户文件的安全事故：在&quot;完全访问模式&quot;下，GPT-5.6 多次意外删除用户整个主目录，OpenAI 承诺增加额外防护并发布详细事故报告。
-  来源：https://the-decoder.com/gpt-5-6-is-deleting-user-files-when-given-full-access-and-openai-says-it-shouldnt-but-did/
-· 商汤科技发布 SenseNova U1 Pro，从&quot;内容生成&quot;走向&quot;系统级交付&quot;：商汤在 WAIC 2026 发布旗舰多模态平台，开启多模态交付新时代。
-  来源：https://www.36kr.com/p/3901159363905409
-· WAIC 2026 风向标：国产算力从&quot;单芯片内卷&quot;进入&quot;生态为王&quot;时代：算力竞争焦点从芯片性能转向生态协同，商汤发起&quot;银河计划&quot;共建5个万卡级国产智算集群。
-  来源：https://www.36kr.com/p/3901075755550601
-· 1Password 为 Claude 推出浏览器集成，可直接使用存储的凭证：Claude 现可访问 1Password 中的用户名和密码，自动完成多步骤任务如预订旅行和管理在线账户。
-  来源：https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration
-· 苹果起诉 OpenAI 窃取商业机密，指控超400名前苹果员工入职 OpenAI：苹果提起贸易秘密诉讼，指控 OpenAI 系统性挖角并窃取技术，可能影响 OpenAI 的 IPO 计划。
-  来源：https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/
-· Databricks 估值达1880亿美元，延续 AI 第二增长曲线：Databricks 成功转型为 AI 公司，并发布关于开源权重模型节省编程成本的研究。
-  来源：https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/
-· Meta 计划向 Anthropic 出售过剩 AI 算力：据报道 Meta 正与 Anthropic 谈判，出租其数据中心的计算能力。
-  来源：https://the-decoder.com/zuckerbergs-plan-to-sell-excess-ai-compute-could-finds-its-first-big-customer-in-anthropic/
-· Google 将 NotebookLM 更名为 Gemini Notebook：AI 笔记应用 NotebookLM 更名为 Gemini Notebook，保持独立应用同时更深整合 Gemini 和 Google 搜索。
-  来源：https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm
-· EU 命令 Google 向竞争对手开放 Android 和搜索：欧盟根据数字反垄断规则，要求 Google 向 rival AI 助手和搜索引擎开放 Android 的关键部分。
-  来源：https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma
-· Linus Torvalds 力挺 AI 工具在 Linux 内核开发中的应用：Torvalds 在内核邮件列表中表示将&quot;非常大声地忽略&quot;任何试图劝阻使用 AI 代码审查工具的人。
-  来源：https://the-decoder.com/linus-torvalds-tells-ai-critics-in-the-linux-kernel-community-to-fork-off/
-· Capital One 开源 VulnHunter：AI 安全工具，在黑客之前发现软件漏洞：Capital One 发布开源 Agentic AI 安全工具，扫描源码发现可利用漏洞并建议修复。
-  来源：https://venturebeat.com/technology/capital-one-releases-vulnhunter-an-open-source-ai-tool-that-finds-software-flaws-before-hackers-do
-· 54% 的企业已遭遇 AI Agent 安全事件：调查显示超半数企业经历过 Agent 安全事件，大多数 Agent 仍共享凭证，缺乏独立身份。
-  来源：https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials
-
-📄 重要论文
-· LongStraw：固定 GPU 预算下实现 200 万 Token 以上的长上下文强化学习：提出架构感知的执行栈，在固定 GPU 预算下实现百万 Token 级 RL 后训练，解决 Agent 长轨迹训练的瓶颈。
-  来源：https://huggingface.co/papers/2607.14952
-· SEED：面向 Agent 强化学习的自演化同策略蒸馏：提出 SEED 框架，通过在策略蒸馏中引入自演化机制，弥合稀疏轨迹奖励与 Token 级策略学习之间的监督缺口。
-  来源：https://huggingface.co/papers/2607.14777
-· Smarter and Cheaper at Once：字节精确 KV-Cache 嫁接技术：提出 KV-Cache 嫁接方法，将验证知识以字节精确的 KV 状态存储并在推理时恢复，使冻结小模型更强大且更便宜。
-  来源：https://huggingface.co/papers/2607.14431
-· Generative Compilation：AI 生成代码时实时编译器反馈：提出在 LLM 解码过程中嵌入编译器反馈，实时修正代码生成，特别针对 Rust 等强类型语言。
-  来源：https://huggingface.co/papers/2607.13921
-· UniVR：在视觉空间中思考的统一视觉推理：首次研究从纯视觉演示同时学习复杂推理、细粒度物理动态和长期规划，提出 VR-GRPO 强化学习范式。
-  来源：https://huggingface.co/papers/2607.12800
-· RoboTTT：上下文规模扩展的机器人策略：将视觉运动上下文扩展到 8000 时间步，实现一次性的上下文模仿学习和在线策略改进。
-  来源：https://huggingface.co/papers/2607.15275
-· GRASP：面向 Agentic RAG 的粒度感知搜索策略：提出基于强化学习的框架，训练模型自主决定何时检索、使用何种匹配方式以及控制上下文粒度。
-  来源：https://huggingface.co/papers/2607.10463
-· Demystifying On-Policy Distillation：角色、病理与调控：系统研究同策略蒸馏在 LLM 后训练中的作用，揭示其作为探索催化剂而非能力上限扩展者的本质。
-  来源：https://huggingface.co/papers/2607.13399
-· WanSong v1.0：纯扩散模型的长格式商业级歌曲生成：提出纯扩散架构的歌曲生成模型，直接生成高质量长格式音频，支持可控性。
-  来源：https://huggingface.co/papers/2607.14749
-· Fine-tune video and image models at scale with NVIDIA NeMo Automodel and 🤗 Diffusers：NVIDIA 与 Hugging Face 合作，提供大规模微调视频和图像模型的解决方案。
-  来源：https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel
-
-🔧 开源项目
-· MoonshotAI/kimi-cli：月之暗面发布的 Kimi Code CLI，新一代命令行 Agent。
-  来源：https://github.com/MoonshotAI/kimi-cli
-· tirth8205/code-review-graph：本地优先的代码智能图谱，为 MCP 和 CLI 构建持久化代码库映射，显著减少 AI 代码审查的上下文开销。
-  来源：https://github.com/tirth8205/code-review-graph
-· KnockOutEZ/wigolo：AI 编码 Agent 的本地优先搜索、抓取和研究工具，通过 MCP 协议运行，无需 API 密钥，完全本地化。
-  来源：https://github.com/KnockOutEZ/wigolo
-· iOfficeAI/OfficeCLI：首个专为 AI Agent 构建的 Office 套件，可读写编辑 Word、Excel 和 PowerPoint 文件，免费开源，单二进制文件。
-  来源：https://github.com/iOfficeAI/OfficeCLI
-· lyogavin/airllm：支持在单张 4GB GPU 上运行 70B 参数模型的推理框架。
-  来源：https://github.com/lyogavin/airllm
-· JustVugg/colibri：在 25GB 内存的消费级机器上运行 GLM-5.2（744B MoE），纯 C 实现，零依赖，专家流式加载。
-  来源：https://github.com/JustVugg/colibri
-· PostHog/posthog：领先的自主产品构建平台，提供 AI 可观测性、分析、会话回放、功能开关、实验、错误追踪、日志等开发者工具。
-  来源：https://github.com/PostHog/posthog
-· Capital One 开源 VulnHunter：Agentic AI 安全工具，扫描源码发现可利用漏洞并提出修复建议。
-  来源：https://venturebeat.com/technology/capital-one-releases-vulnhunter-an-open-source-ai-tool-that-finds-software-flaws-before-hackers-do
-
-🐦 AI 圈热议
-· Kimi K3 引发开源模型 vs 闭源模型新一轮辩论：Reddit r/LocalLLaMA 和 Hacker News 上热议 Kimi K3 的发布，认为这标志着中国开源模型已逼近前沿闭源模型水平。有用户评论称&quot;墙上的字迹已经很明显了，Anthropic 和 OpenAI 的处境不妙&quot;，开源社区认为开源模型的集体加速正在改变竞争格局。来源：[r/LocalLLaMA](https://www.reddit.com/r/LocalLLaMA/comments/1uziqyt/kimi_moment_i_think_the_writing_is_on_the_wall/)
-· GPT-5.6 使用提示词解决了凸优化领域30年未解问题：Reddit r/math 上报道，GPT-5.6 通过一个提示成功关闭了凸优化领域一个30年的理论缺口，引发对 AI 数学推理能力的广泛讨论。来源：[Reddit](https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a/)
-
-💡 今日观察
-今天最强烈的信号是 **Kimi K3 的发布正在重塑全球 AI 竞争格局**。作为史上最大的开源模型（2.8T 参数），它在多个基准上逼近甚至超越 GPT-5.6 Sol 和 Claude Fable 5，而 Anthropic 同日宣布大幅削减 Fable 5 的使用配额，显示出开源模型对闭源商业模式的直接冲击。与此同时，**Agent 安全成为行业焦点**：GPT-5.6 删除用户文件的事故、54%企业遭遇 Agent 安全事件的调查、以及 Capital One 开源 VulnHunter，都指向同一个方向——Agent 正在从&quot;能跑&quot;走向&quot;安全地跑&quot;。最后，WAIC 2026 透露的&quot;算力重组、Agent 交付、AI 硬件闭环&quot;三大信号，以及商汤&quot;银河计划&quot;共建万卡集群，表明国产 AI 基础设施正从可用走向规模化商业落地。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

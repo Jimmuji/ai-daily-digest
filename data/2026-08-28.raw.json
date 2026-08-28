@@ -1,13 +1,65 @@
 {
   "date": "2026-08-28",
-  "generated_at": "2026-08-28T12:25:09.414991+08:00",
+  "generated_at": "2026-08-28T14:02:38.583705+08:00",
   "counts": {
     "papers": 39,
     "projects": 23,
-    "news": 133
+    "news": 132
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "PILOT in the Loop: Live Self-Improvement for Long-Horizon Agents",
+        "url": "https://huggingface.co/papers/2608.26530",
+        "normalized_url": "https://huggingface.co/papers/2608.26530",
+        "summary": "Long-horizon agent runs generate experience that can improve both the current run and future work. Most self-improvement methods process this experience only after execution ends, so they cannot redirect the active run or immediately apply and validate lessons learned from it. We argue that self-improvement should instead be live, using emerging experience both to redirect the active run and to update the persistent harness. Existing agent architectures do not fully support this goal. Single-age",
+        "source": "HuggingFace Papers",
+        "published": "2026-08-27T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2608.26530"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models",
+        "url": "https://huggingface.co/papers/2608.25518",
+        "normalized_url": "https://huggingface.co/papers/2608.25518",
+        "summary": "A common strategy for scaling world models is to train on more crawled video with more compute. We argue that this strategy is inefficient: scaling world models also requires a recursive data engine that offers grounded reward signals. The success of code agents illustrates why this matters. As code is executable, compilers and runtimes can provide high-quality rewards for Reinforcement Learning (RL) post-training of LLMs. By contrast, spatial generation still relies largely on fuzzy proxies suc",
+        "source": "HuggingFace Papers",
+        "published": "2026-08-26T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2608.25518"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Procedura: Agentic 3D Modeling with Procedural Control",
+        "url": "https://huggingface.co/papers/2608.26238",
+        "normalized_url": "https://huggingface.co/papers/2608.26238",
+        "summary": "Native 3D generators now recover impressive mesh geometry from a single image. However, a dense mesh stays soft where a machined object should be sharp, it carries no part decomposition, and it exposes no parameter a user could edit. To address this, we explore the paradigm of 3D shape as code, leveraging and scaling the coding ability of an LLM for 3D modeling. We introduce Procedura, a novel 3D modeling agent framework that writes an object as a procedural assembly, a parametric program whose ",
+        "source": "HuggingFace Papers",
+        "published": "2026-08-26T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2608.26238"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Thinking on Shots: Consistent Multi-Shot Video Editing with Agentic Reasoning",
+        "url": "https://huggingface.co/papers/2608.26809",
+        "normalized_url": "https://huggingface.co/papers/2608.26809",
+        "summary": "While generative AI has significantly advanced video editing, existing methods primarily focus on single-shot or short video clips. Editing long videos with multiple instructions remains a formidable challenge. Naive chunking strategies, e.g., fixed-duration segmentation, often lead to entity fragmentation, severe editing hallucinations, and disrupted temporal continuity. To bridge this gap, we introduce the Multi-Instruction Multi-Shot Long-Video Editing (MMLVE) task, which is structured around",
+        "source": "HuggingFace Papers",
+        "published": "2026-08-27T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2608.26809"
+        }
+      },
       {
         "category": "papers",
         "title": "GameWAM: A World Action Model for Video Games",
@@ -344,58 +396,6 @@
         "importance_hint": 5,
         "metadata": {
           "paper_id": "2608.23383"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Video-IFBench: Evaluating Instruction Following of Multimodal LLMs in Video Understanding Scenarios",
-        "url": "https://huggingface.co/papers/2608.25529",
-        "normalized_url": "https://huggingface.co/papers/2608.25529",
-        "summary": "Multimodal Large Language Models (MLLMs) have shown strong performance in video understanding. However, their ability to follow instructions in this domain remains under-explored. Real-world video understanding requires models not only to interpret video content correctly, but also to satisfy diverse user-specified constraints. Existing benchmarks focus primarily on task accuracy rather than instruction adherence, leaving this capability insufficiently evaluated. To address this gap, we introduc",
-        "source": "HuggingFace Papers",
-        "published": "2026-08-26T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2608.25529"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "FIRM-Video: Check Before You Score for Reliable Text-to-Video Reward Modeling",
-        "url": "https://huggingface.co/papers/2608.21839",
-        "normalized_url": "https://huggingface.co/papers/2608.21839",
-        "summary": "Reliable reward models are essential for text-to-video evaluation and alignment. However, the trade-off between evaluation accuracy and inference efficiency places high demands on the quality of training supervision. Existing approaches often rely on holistic judges with fixed rubrics or open-ended reasoning, leading to incomplete inspection, unfaithful justification, and entangled attribution. We introduce FIRM-Video, a unified checklist-driven data construction framework based on a check-befor",
-        "source": "HuggingFace Papers",
-        "published": "2026-08-22T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2608.21839"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Rubrics as Visual-Repair Context for Self-Evolving UI-to-Code Generation",
-        "url": "https://huggingface.co/papers/2608.24138",
-        "normalized_url": "https://huggingface.co/papers/2608.24138",
-        "summary": "Large vision-language models have shown strong progress in UI-to-code generation, yet their test-time self-evolution remains unstable. We first identify a fundamental obstacle, termed visual repair coupling: a local code edit may propagate through layout, style, and component dependencies, correcting one visual mismatch while degrading regions that were previously faithful. To address this issue, we present RubSE, a Rubric-guided Self-Evolution framework that uses rubrics to represent visual fee",
-        "source": "HuggingFace Papers",
-        "published": "2026-08-25T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2608.24138"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Stream4D: 4D-Consistency for Streaming Autoregressive Diffusion Video Models",
-        "url": "https://huggingface.co/papers/2608.19556",
-        "normalized_url": "https://huggingface.co/papers/2608.19556",
-        "summary": "Streaming autoregressive diffusion models enable real-time, long-horizon video generation, but their training objectives optimize local frame prediction rather than the geometry and dynamics of a coherent world: long rollouts accumulate geometric drift and degrade into static or unnatural motion. Recent bidirectional approaches address this problem using rewards signals built upon 3D Gaussian-Splatting reconstruction. However, a single rigid 3d reconstruction cannot model a dynamic scene, so thi",
-        "source": "HuggingFace Papers",
-        "published": "2026-08-20T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2608.19556"
         }
       },
       {
@@ -812,10 +812,21 @@
     "news": [
       {
         "category": "news",
+        "title": "Please stop flooding our projects with AI slop to furnish your CV",
+        "url": "https://neilalexander.dev/2026/06/30/flooding-contributions",
+        "normalized_url": "https://neilalexander.dev/2026/06/30/flooding-contributions",
+        "summary": "HN points: 96, comments: 32",
+        "source": "Hacker News",
+        "published": "2026-08-28T03:49:33Z",
+        "importance_hint": 3,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "Alphabet stock sheds $700B as AI bills climb",
         "url": "https://www.semafor.com/article/08/27/2026/alphabet-stock-sheds-700b-as-ai-bills-climb",
         "normalized_url": "https://www.semafor.com/article/08/27/2026/alphabet-stock-sheds-700b-as-ai-bills-climb",
-        "summary": "HN points: 17, comments: 3",
+        "summary": "HN points: 31, comments: 4",
         "source": "Hacker News",
         "published": "2026-08-28T02:23:11Z",
         "importance_hint": 3,
@@ -826,7 +837,7 @@
         "title": "Judge Rules Trump Administration’s Blacklisting of Anthropic Was Illegal",
         "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
         "normalized_url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
-        "summary": "HN points: 135, comments: 61",
+        "summary": "HN points: 210, comments: 90",
         "source": "Hacker News",
         "published": "2026-08-28T02:03:38Z",
         "importance_hint": 4,
@@ -837,7 +848,7 @@
         "title": "Stripe said to abandon $50B pursuit of PayPal",
         "url": "https://www.bloomberg.com/news/articles/2026-08-28/advent-stripe-consortium-is-said-to-drop-pursuit-of-paypal",
         "normalized_url": "https://www.bloomberg.com/news/articles/2026-08-28/advent-stripe-consortium-is-said-to-drop-pursuit-of-paypal",
-        "summary": "HN points: 48, comments: 14",
+        "summary": "HN points: 86, comments: 34",
         "source": "Hacker News",
         "published": "2026-08-28T01:57:26Z",
         "importance_hint": 3,
@@ -848,7 +859,7 @@
         "title": "The \"I don't know, Claude wrote this\" pandemic",
         "url": "https://www.manager.dev/newsletter/the-i-don-t-know-claude-wrote-this-pandemic",
         "normalized_url": "https://www.manager.dev/newsletter/the-i-don-t-know-claude-wrote-this-pandemic",
-        "summary": "HN points: 11, comments: 2",
+        "summary": "HN points: 19, comments: 2",
         "source": "Hacker News",
         "published": "2026-08-28T01:01:32Z",
         "importance_hint": 3,
@@ -859,7 +870,7 @@
         "title": "Terminal-Bench-Science: Evaluating AI agents on scientific research workflows",
         "url": "https://www.terminal-bench-science.ai/announcement",
         "normalized_url": "https://www.terminal-bench-science.ai/announcement",
-        "summary": "HN points: 55, comments: 13",
+        "summary": "HN points: 62, comments: 16",
         "source": "Hacker News",
         "published": "2026-08-28T00:06:51Z",
         "importance_hint": 4,
@@ -870,7 +881,7 @@
         "title": "AI Engineer Notebooks – free, framework-free RAG/agents/evals on Colab",
         "url": "https://github.com/calmrocks/ai-engineer-notebooks",
         "normalized_url": "https://github.com/calmrocks/ai-engineer-notebooks",
-        "summary": "HN points: 68, comments: 7",
+        "summary": "HN points: 79, comments: 9",
         "source": "Hacker News",
         "published": "2026-08-27T21:46:39Z",
         "importance_hint": 4,
@@ -881,7 +892,7 @@
         "title": "Show HN: We built open OpenRouter that turns usage into a better model",
         "url": "https://github.com/experientiallabs/experiential",
         "normalized_url": "https://github.com/experientiallabs/experiential",
-        "summary": "HN points: 135, comments: 24",
+        "summary": "HN points: 153, comments: 26",
         "source": "Hacker News",
         "published": "2026-08-27T21:18:35Z",
         "importance_hint": 4,
@@ -889,10 +900,21 @@
       },
       {
         "category": "news",
+        "title": "Lawsuit: Grok was trained on child sex abuse images of preschool-age victim",
+        "url": "https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says/",
+        "normalized_url": "https://arstechnica.com/tech-policy/2026/08/elon-musks-xai-used-child-porn-to-train-grok-models-lawsuit-says",
+        "summary": "HN points: 11, comments: 0",
+        "source": "Hacker News",
+        "published": "2026-08-27T20:59:08Z",
+        "importance_hint": 3,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "$900M paid out to end wind farm project going to firm run by Mar-a-Lago neighbor",
         "url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-windfarm-money-neighbors-florida-b3040628.html",
         "normalized_url": "https://www.independent.co.uk/news/world/americas/us-politics/trump-windfarm-money-neighbors-florida-b3040628.html",
-        "summary": "HN points: 104, comments: 25",
+        "summary": "HN points: 117, comments: 25",
         "source": "Hacker News",
         "published": "2026-08-27T20:44:52Z",
         "importance_hint": 3,
@@ -903,7 +925,7 @@
         "title": "Meta Paid $17B – Gets to Write Safety Rules for Other SocMedia Platform",
         "url": "https://www.techdirt.com/2026/08/26/meta-just-paid-nearly-17-billion-to-make-sure-it-gets-to-write-the-kid-safety-rules-for-every-other-social-media-platform/",
         "normalized_url": "https://www.techdirt.com/2026/08/26/meta-just-paid-nearly-17-billion-to-make-sure-it-gets-to-write-the-kid-safety-rules-for-every-other-social-media-platform",
-        "summary": "HN points: 132, comments: 28",
+        "summary": "HN points: 134, comments: 28",
         "source": "Hacker News",
         "published": "2026-08-27T20:41:51Z",
         "importance_hint": 5,
@@ -936,7 +958,7 @@
         "title": "Fewer Americans Pay to Use LLMs Than Still Pay to Play World of Warcraft",
         "url": "https://wjamesau.substack.com/p/fewer-americans-pay-to-use-chatgpt",
         "normalized_url": "https://wjamesau.substack.com/p/fewer-americans-pay-to-use-chatgpt",
-        "summary": "HN points: 23, comments: 10",
+        "summary": "HN points: 26, comments: 10",
         "source": "Hacker News",
         "published": "2026-08-27T19:09:55Z",
         "importance_hint": 3,
@@ -947,7 +969,7 @@
         "title": "Nvidia Starts Pac as AI Chip Maker Builds DC Influence Force",
         "url": "https://news.bgov.com/bloomberg-government-news/nvidia-starts-a-pac-as-ai-chip-maker-buids-influence-force-in-dc",
         "normalized_url": "https://news.bgov.com/bloomberg-government-news/nvidia-starts-a-pac-as-ai-chip-maker-buids-influence-force-in-dc",
-        "summary": "HN points: 89, comments: 40",
+        "summary": "HN points: 90, comments: 40",
         "source": "Hacker News",
         "published": "2026-08-27T18:34:40Z",
         "importance_hint": 5,
@@ -955,25 +977,68 @@
       },
       {
         "category": "news",
-        "title": "Previewing the Model Hardware Standard",
-        "url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
-        "normalized_url": "https://www.anthropic.com/news/model-hardware-standard-research-preview",
-        "summary": "HN points: 95, comments: 34",
-        "source": "Hacker News",
-        "published": "2026-08-27T18:04:50Z",
-        "importance_hint": 4,
-        "metadata": {}
+        "title": "黄仁勋最新采访：内存涨价，这是好事儿啊！",
+        "url": "https://www.36kr.com/p/3958688993082499",
+        "normalized_url": "https://www.36kr.com/p/3958688993082499",
+        "summary": "黄仁勋怼完了资本怼比尔盖茨，银行看不懂，但是英伟达看得懂",
+        "source": "36Kr AI",
+        "published": "2026-08-28T05:21:04+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
       },
       {
         "category": "news",
-        "title": "Gemini-3.5-Transcribe",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/",
-        "normalized_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe",
-        "summary": "HN points: 187, comments: 54",
-        "source": "Hacker News",
-        "published": "2026-08-27T18:03:42Z",
+        "title": "中国风投，正在从“选人”转向“选城市”",
+        "url": "https://www.36kr.com/p/3958611654802818",
+        "normalized_url": "https://www.36kr.com/p/3958611654802818",
+        "summary": "城市如何吸引资本？",
+        "source": "36Kr AI",
+        "published": "2026-08-28T05:16:32+00:00",
         "importance_hint": 3,
-        "metadata": {}
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "阿里全新Qoder上线，终于让编程能力外溢了",
+        "url": "https://www.36kr.com/p/3958606256274823",
+        "normalized_url": "https://www.36kr.com/p/3958606256274823",
+        "summary": "分分钟搞定薄荷健康同款App、企业自动测试脚本原型。",
+        "source": "36Kr AI",
+        "published": "2026-08-28T05:16:17+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Meta用一整年证明Agent无法取代员工：事故增四成，工程师救火多七成",
+        "url": "https://www.36kr.com/p/3958660983471488",
+        "normalized_url": "https://www.36kr.com/p/3958660983471488",
+        "summary": "Meta的AI豪赌惨败：曾设想裁掉60%，如今全员收拾三倍烂摊子",
+        "source": "36Kr AI",
+        "published": "2026-08-28T05:15:49+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "盖茨刚警告完失业危机，微软等科技巨头就开启了不断电AI牛马竞赛",
+        "url": "https://www.36kr.com/p/3958661810961538",
+        "normalized_url": "https://www.36kr.com/p/3958661810961538",
+        "summary": "就在盖茨的叹息声还没在互联网上完全消散时，从OpenAI到盖茨创立的微软，大佬们已经迫不及待地鸣响了新一轮“军备竞赛”的发令枪。",
+        "source": "36Kr AI",
+        "published": "2026-08-28T05:15:35+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
       },
       {
         "category": "news",
@@ -1042,67 +1107,41 @@
       },
       {
         "category": "news",
-        "title": "只降价20%，账单却少八成，GPT-5.6杀入Claude地盘重算编程账",
-        "url": "https://www.36kr.com/p/3958567373864320",
-        "normalized_url": "https://www.36kr.com/p/3958567373864320",
-        "summary": "真正烧钱的，是走过的弯路",
-        "source": "36Kr AI",
-        "published": "2026-08-28T02:46:13+00:00",
+        "title": "商汤大装置助力智象未来实现视频生成业务向国产算力无感迁移",
+        "url": "https://www.qbitai.com/2026/08/480227.html",
+        "normalized_url": "https://www.qbitai.com/2026/08/480227.html",
+        "summary": "国产算力跑通视频生成规模化应用",
+        "source": "量子位",
+        "published": "2026-08-28T04:09:39+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://www.qbitai.com/rss"
         }
       },
       {
         "category": "news",
-        "title": "OpenAI把Codex做成「永动机」，内部代码曝光：不强制休眠不停机",
-        "url": "https://www.36kr.com/p/3958567414070663",
-        "normalized_url": "https://www.36kr.com/p/3958567414070663",
-        "summary": "整个硅谷，都在死磕「持久化智能体」",
-        "source": "36Kr AI",
-        "published": "2026-08-28T02:46:03+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "1699元跌到500元，跑鞋黄金五年结束丨深氪",
-        "url": "https://www.36kr.com/p/3958572354715014",
-        "normalized_url": "https://www.36kr.com/p/3958572354715014",
-        "summary": "在中国，一门爆火的消费品生意注定加速走完生命周期。这是玩家们“难以避免的宿命”。",
-        "source": "36Kr AI",
-        "published": "2026-08-28T02:30:42+00:00",
+        "title": "智谱 GLM-5.3-Flash上线，商汤大装置提供国产算力支持",
+        "url": "https://www.qbitai.com/2026/08/480223.html",
+        "normalized_url": "https://www.qbitai.com/2026/08/480223.html",
+        "summary": "国产异构助力前沿智能进入普惠时代",
+        "source": "量子位",
+        "published": "2026-08-28T04:06:16+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://www.qbitai.com/rss"
         }
       },
       {
         "category": "news",
-        "title": "AI可解释性与对齐：J-Space，思维链，AI人格，幻觉，与金门大桥",
-        "url": "https://www.36kr.com/p/3958546041994627",
-        "normalized_url": "https://www.36kr.com/p/3958546041994627",
-        "summary": "我们离真正读懂AI的内部世界，还有多远？",
-        "source": "36Kr AI",
-        "published": "2026-08-28T02:21:19+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "36氪首发｜上科大团队做具身世界模型基础设施，完成千万美元种子轮融资",
-        "url": "https://www.36kr.com/p/3957651741949056",
-        "normalized_url": "https://www.36kr.com/p/3957651741949056",
-        "summary": "让机器人快速适应新环境并持续自进化。",
-        "source": "36Kr AI",
-        "published": "2026-08-28T02:07:05+00:00",
+        "title": "高德发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon，以12帧重建万帧3D场景",
+        "url": "https://www.qbitai.com/2026/08/480208.html",
+        "normalized_url": "https://www.qbitai.com/2026/08/480208.html",
+        "summary": "8月28日，阿里巴巴集团旗下高德正式发布首个无长程依赖的万帧级流式3D重建模型ABot-Recon。",
+        "source": "量子位",
+        "published": "2026-08-28T03:45:45+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://www.qbitai.com/rss"
         }
       },
       {
@@ -1198,41 +1237,28 @@
       },
       {
         "category": "news",
-        "title": "神秘「牛来」模型果然是智谱！GLM首个原生多模态，还用的国产卡",
-        "url": "https://www.qbitai.com/2026/08/479919.html",
-        "normalized_url": "https://www.qbitai.com/2026/08/479919.html",
-        "summary": "GLM-5.3 Flash",
-        "source": "量子位",
-        "published": "2026-08-26T16:48:12+00:00",
+        "title": "从云原生数据库到数据基础设施：架构、弹性与智能化演进 | 腾讯云数据库 DBTalk",
+        "url": "https://www.infoq.cn/video/gaAV7GRNCXWITqLRGu0H?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/video/gaAV7GRNCXWITqLRGu0H",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-08-28T12:31:09+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://www.infoq.cn/feed.xml"
+        }
+      },
+      {
+        "category": "news",
+        "title": "S3 兼容不代表具备 S3 级别的安全性",
+        "url": "https://www.infoq.cn/article/xr3L0bkiFZGzYmtZwscB?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/article/xr3L0bkiFZGzYmtZwscB",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-08-28T12:30:00+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "AI视频应用井喷，美图打开新的增长空间",
-        "url": "https://www.qbitai.com/2026/08/479895.html",
-        "normalized_url": "https://www.qbitai.com/2026/08/479895.html",
-        "summary": "从图像到视频，美图找到了一门更赚钱的生意",
-        "source": "量子位",
-        "published": "2026-08-26T10:18:10+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "小宇宙推出《AI趋势报告》：AI创作、AI办公、协作型AI等成讨论新趋势",
-        "url": "https://www.qbitai.com/2026/08/479811.html",
-        "normalized_url": "https://www.qbitai.com/2026/08/479811.html",
-        "summary": "AI内容创作者增长187%，相关节目数量增长239%",
-        "source": "量子位",
-        "published": "2026-08-26T10:17:15+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
+          "feed_url": "https://www.infoq.cn/feed.xml"
         }
       },
       {
@@ -1311,45 +1337,6 @@
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "曝英伟达129 亿美元收购Hugging Face！黄仁勋：我只后悔没有更早、更多投资OpenAI、Anthropic",
-        "url": "https://www.infoq.cn/article/Z9bIWfsMCIA9yiLUSDvJ?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/Z9bIWfsMCIA9yiLUSDvJ",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-08-28T09:29:22+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "世界人工智能开源大赛（GOAI）初赛评审结果暨晋级名单公告",
-        "url": "https://www.infoq.cn/article/Y410fSRGi67fUrNUuzYb?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/Y410fSRGi67fUrNUuzYb",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-08-27T17:56:39+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "AI 很会回答，但我不想在聊天记录里学习",
-        "url": "https://sspai.com/post/113743",
-        "normalized_url": "https://sspai.com/post/113743",
-        "summary": "我是「庞征博引」的开发者，这是一篇开发者自荐。 我一直有个毛病：碰到感兴趣的东西，很容易先收藏，心里想着「改天认真看看」。后来 AI 出现了，这件事方便了不少。遇到一个陌生概念，不用找书，也不用在十几个搜索结果之间来回跳，直接问就行。 但我很快又遇到了另一个问题。临时查一个东西很好用，真想连续学几天时，聊天记录却越来越难受。拿 Transformer 来说，第一轮可能只是问它是什么，接着碰到注意力机制、编码器和解码器，然后又是 Query、Key、Value、位置编码……每一个都能继续聊下去。聊的时候感觉很好，第二天回来，却经常要先往上翻半天，确认昨天到底看到哪里、哪些已经讲过。 我想做的事情其实很简单：既然 AI 已经这么会讲东西了，能不能别把所有东西都塞进聊天气泡里？ 于是有了「庞征博引」。 想学什么都行 第一次用的时候，不需要先想好一个完整的学习计划。首页只有一句「今天想从哪里开始？」，随便说一个最近感兴趣的东西就可以。比如我输入：「大模型 Transformer 原理入门」。AI 不会马上开始洋洋洒洒写教程，而是先问几句：以前了解多少，有没有编程基础，希望讲到什么程度。回答完以",
-        "source": "SSPAI AI",
-        "published": "2026-08-26T13:58:55+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://hub.slarker.me/sspai/tag/AI"
         }
       },
       {
@@ -1575,19 +1562,6 @@
       },
       {
         "category": "news",
-        "title": "Anthropic was illegally blacklisted by the Trump administration, court rules",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
-        "normalized_url": "https://www.theverge.com/ai-artificial-intelligence/985947/anthropic-supply-chain-risk-lawsuit-judge-ruling",
-        "summary": "On Thursday, a judge ruled that the Pentagon's blacklisting of Anthropic earlier this year was unconstitutional, delivering the AI lab a win in a monthslong rollercoaster of a battle with the Trump administration. The lawsuit, filed in March in a California district court, accused the Trump administration of unlawfully retaliating against Anthropic for setting \"red […]",
-        "source": "The Verge AI",
-        "published": "2026-08-28T03:14:06+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
-        }
-      },
-      {
-        "category": "news",
         "title": "Google’s AI note-taking app now allows you to interact with books",
         "url": "https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books",
         "normalized_url": "https://www.theverge.com/tech/985567/google-gemini-notebook-expert-sources-books",
@@ -1699,6 +1673,19 @@
         "source": "The Verge AI",
         "published": "2026-08-26T17:00:00+00:00",
         "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Bill Gates is deeply worried about AI, and he’s no longer staying quiet",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/984923/bill-gates-is-deeply-worried-about-ai-and-hes-no-longer-staying-quiet",
+        "normalized_url": "https://www.theverge.com/ai-artificial-intelligence/984923/bill-gates-is-deeply-worried-about-ai-and-hes-no-longer-staying-quiet",
+        "summary": "Bill Gates has been reflecting a lot on AI lately, and the process has triggered a stark awakening. Once a staunch AI optimist, the Microsoft cofounder is now deeply pessimistic about what AI means for our collective future. Having been conspicuously quiet on AI issues recently, Gates is back with a nearly 6,000-word essay seeking […]",
+        "source": "The Verge AI",
+        "published": "2026-08-26T11:07:40+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
         }

@@ -36,6 +36,102 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-09-04">AI 每日简报 · 2026-09-04 周五</span>
+    <button class="cbtn" data-copy="t-2026-09-04">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-09-04.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-09-04.mp3" download="2026-09-04.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-09-04">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-09-04">AI 每日简报 · 2026-09-04 周五
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· OpenAI 发布 GPT-6 Astra，宣称&quot;进入 AGI 时代&quot;：这是 OpenAI 最强大的模型，主打计算机使用与编程能力，API 定价 $10/$50 每百万 token，与 Claude Fable 5.1 持平。
+  来源：https://www.theverge.com/ai-artificial-intelligence/989601/openai-gpt-6-astra-release
+· 英伟达确认以 129 亿美元收购 Hugging Face：全球最大 AI 芯片商将全球最大开源 AI 模型平台收入囊中，平台拥有超 300 万模型、1800 万开发者。
+  来源：https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/
+· Meta 发布 Muse Spark 1.3，以价格战逼近头部模型：五个月内第四代模型，在 agentic benchmark 上进步最大，每任务 $0.55 低于所有同级竞品。
+  来源：https://the-decoder.com/meta-closes-in-on-the-top-with-muse-spark-1-3-and-undercuts-rivals-on-price/
+· Meta 付费 95% 折扣获取用户数据训练 Muse Spark：用户分享 prompt 与模型输出即可享受约 95% 折扣，为训练下一代模型&quot;贡献&quot;数据。
+  来源：https://techcrunch.com/2026/09/03/meta-is-paying-to-peek-at-how-you-use-their-latest-ai-model/
+· Google 发布 WeatherNext 3 天气模型：号称&quot;前所未有的分辨率&quot;，可生成 5 倍细节的全球天气预报，将接入搜索、Google Maps 和 Gemini。
+  来源：https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/
+· Google 推出 Gemini 3.8 Flash 与 3.8 Flash Cyber：同一核心模型、两套安全访问通道，Cyber 版在 CWE-Bench 达 47.2% pass@1，仅限&quot;可信防御者&quot;使用。
+  来源：https://www.marktechpost.com/2026/09/02/google-deepmind-releases-gemini-3-8-flash-and-gemini-3-8-flash-cyber-one-core-model-two-access-envelopes/
+· Anthropic 与 Lambda 签署 350 亿美元云计算协议：大规模扩充 Claude 基础设施，Lambda 为英伟达支持的云厂商。
+  来源：https://the-decoder.com/anthropic-ramps-up-claude-infrastructure-with-35-billion-lambda-deal/
+· OpenAI CEO Sam Altman 警告算力建设存在&quot;不可持续的荒谬&quot;：太多 Neocloud 厂商宣布巨量产能却没有客户支撑，算力成本下降可能让今天数十亿美元的项目变成坏投资。
+  来源：https://the-decoder.com/openai-ceo-sam-altman-warns-of-unsustainable-silliness-in-compute-buildout/
+· OpenAI 被曝切断与 Cursor 的十亿美元合作：为避免与 Elon Musk 旗下 SpaceX 收购后的 Cursor 产生关联，OpenAI 放弃了年收入超 10 亿美元的合作伙伴关系。
+  来源：https://www.wired.com/story/openai-elon-musk-cursor-billion-revenue/
+· 美国司法部支持 AI 训练合理使用，与版权局报告直接矛盾：在纽约时报诉 OpenAI 案中，DOJ 认为用受版权保护的文本训练 AI 属于合理使用。
+  来源：https://the-decoder.com/us-department-of-justice-backs-fair-use-for-ai-training-in-landmark-copyright-case/
+· ChatGPT、Claude、Grok 同时宕机，原因不明：三家头部 AI 服务在同一时间出现故障，引发对共享基础设施依赖的担忧。
+  来源：https://www.wired.com/story/nobody-is-saying-why-openai-and-anthropic-had-outages-today/
+· 英伟达发布免费工具 PAIR，将闲置电脑变成个人 AI 数据中心：开源软件可同步家庭电脑，配合 Ollama 和 LM Studio 处理本地 AI 推理任务。
+  来源：https://www.theverge.com/ai-artificial-intelligence/989435/nvidia-pair-personal-ai-router-home-local-llm-compute-tool-rtx-macbook
+
+📄 重要论文
+· WHALE：模型权重与 Agent Harness 联合优化的新方法：提出 Weight-Harness Alternating 优化算法，解决权重与可执行 harness 代码的联合优化问题。
+  来源：https://huggingface.co/papers/2609.00196
+· HarnessDev：让 LLM 自主创建和进化自己的 Agent Harness：新 benchmark 将评估重点从下游任务表现转向模型自主开发 harness 的能力。
+  来源：https://huggingface.co/papers/2609.01437
+· Language Models Can Control Their Own Attention：提出让 LLM 内在控制注意力机制的方法，避免全局注意力层扫描整个 KV cache 的 O(N) 开销。
+  来源：https://huggingface.co/papers/2609.02737
+· Post-Training Language Models for Gold-Medal Performance in Coding Competitions：用 22,000 道精选题目训练 Nemotron-3 系列，在 IOI/ICPC 级别编程竞赛中冲击金牌。
+  来源：https://huggingface.co/papers/2609.02849
+· NeoMME：高效多模态原生多语言编码器：260M 和 800M 参数的双向编码器，直接处理多语言文本与原始图像，避免 VLM 编码器的参数与算力浪费。
+  来源：https://huggingface.co/papers/2609.01657
+· Sparse Readout Prism：用特征而非 token 解释 Logit-Lens 分数：发现 lens 读数受拟合语料影响（语料条件性），提出基于特征解释的新方法。
+  来源：https://huggingface.co/papers/2609.01936
+· SolarWM：长视界视频世界模型的开源基础设施：从数据准备到长视界推理的完整开源方案，解决异构数据源与视频骨干网络的训练难题。
+  来源：https://arxiv.org/abs/2609.02886v1
+· CRISP：悬崖感知的自适应稀疏预填充：通过结构质量感知路由实现输入自适应的稀疏注意力，解决长上下文推理中预填充阶段的二次方复杂度。
+  来源：https://huggingface.co/papers/2609.01925
+· Aspire：模型能否从模糊目标中自我进化：提出 benchmark 考察 LLM 在&quot;成为更好的研究者&quot;这类模糊目标下的自我进化能力。
+  来源：https://huggingface.co/papers/2608.31111
+· Cliff：从第一个错误中学习过程奖励：无需专门奖励模型或师生同构假设，直接从首次错误中学习过程奖励。
+  来源：https://huggingface.co/papers/2609.02817
+
+🔧 开源项目
+· mattpocock/skills：TypeScript 专家 Matt Pocock 分享的&quot;真正的工程师技能&quot;，直接来自其 .agents 目录，单日 +1,576 star。
+  来源：https://github.com/mattpocock/skills
+· DietrichGebert/ponytail：让 AI Agent 像&quot;最懒的高级工程师&quot;一样思考——最好的代码是你从未写过的代码，单日 +2,138 star。
+  来源：https://github.com/DietrichGebert/ponytail
+· anthropics/skills：Anthropic 官方 Agent Skills 公共仓库，单日 +277 star。
+  来源：https://github.com/anthropics/skills
+· blader/humanizer：移除文本中 AI 生成痕迹的 Agent 技能，单日 +1,214 star。
+  来源：https://github.com/blader/humanizer
+· google-research/timesfm：Google Research 的时间序列基础模型，单日 +1,626 star。
+  来源：https://github.com/google-research/timesfm
+· NousResearch/hermes-agent：&quot;与你一起成长的 Agent&quot;，单日 +778 star。
+  来源：https://github.com/NousResearch/hermes-agent
+· affaan-m/ECC：Agent harness 性能优化系统，支持 Claude Code、Codex、Cursor 等，单日 +749 star。
+  来源：https://github.com/affaan-m/ECC
+· magnitudedev/magnitude：开源推理服务器，适配本地硬件运行最佳模型，兼容 Pi、OpenCode、Claude Code 等主流 Agent，单日 +130 star。
+  来源：https://github.com/magnitudedev/magnitude
+· obra/superpowers：Agentic 技能框架与软件开发方法论，单日 +470 star。
+  来源：https://github.com/obra/superpowers
+· f/prompts.chat：前 Awesome ChatGPT Prompts，现已开源可自托管，单日 +201 star。
+  来源：https://github.com/f/prompts.chat
+
+🐦 AI 圈热议
+· &quot;本地 AI 永不下线&quot;：ChatGPT、Claude、Grok 同时宕机时，Reddit 用户纷纷晒出本地 llama.cpp 正常运行——&quot;my local llama.cpp works as always&quot;。集中式 AI 服务的脆弱性与本地模型的可靠性形成鲜明对比，引发关于 AI 基础设施架构的广泛讨论。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1w6aec4/local_ai_cant_be_disabled/
+· Bernie Sanders 提议立法禁止 AI 引发社区恐慌：提案将&quot;超越人类认知能力的 AI&quot;定义为非法，最高可判 20 年监禁。Reddit 社区指出许多本地开源模型在某些能力上已超过人类，认为这实质上是要剥夺公众获取强大 AI 的权利。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1w6egid/bernie_sanders_proposes_to_ban_ai/
+
+💡 今日观察
+今天最重磅的信号无疑是 GPT-6 Astra 的发布与英伟达 129 亿美元收购 Hugging Face 的确认——前者标志着前沿模型正式迈入&quot;计算机使用&quot;与&quot;关键网络安全&quot;的新纪元，后者则让开源 AI 的中立港湾第一次被商业巨头掌控。与此同时，Meta Muse Spark 1.3 的激进定价和 Google Gemini 3.8 Flash 的&quot;模型分层分发&quot;策略表明，头部玩家正在从单纯的&quot;能力竞赛&quot;转向&quot;能力+安全+价格&quot;的多维博弈。而 ChatGPT/Claude/Grok 的同时宕机与 Sanders 的极端立法提案，则为这个&quot;AGI 时代&quot;的第一天增添了值得警惕的注脚：集中式基础设施的脆弱性与监管的失序，可能比模型能力本身更快地塑造 AI 的未来。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-09-03">AI 每日简报 · 2026-09-03 周四</span>
     <button class="cbtn" data-copy="t-2026-09-03">📋 复制标题</button>
   </div>
@@ -1526,128 +1622,6 @@
 
 💡 今日观察
 今天最值得关注的信号是**开源与闭源的竞争格局正在发生质变**：GLM-5.3 和 Qwen3.8-27B 等中国开源模型在能力上已逼近甚至部分超越西方闭源模型，而 Anthropic 内部&quot;Model 2&quot;的存在则表明前沿实验室在刻意保留实力。与此同时，**Agent 安全**成为全行业焦点——从 OpenAI 因安全暂停 Astra 训练，到多篇关于 Agent 委派安全、隐蔽通信检测的论文，安全已从边缘议题走向中心舞台。最后，**算力金融化**（Nvidia 的 5000 亿美元融资计划）和**AI 商业化验证**（Anthropic 日收入 9 亿、Stripe 营收增长 41%）标志着 AI 产业正从&quot;烧钱&quot;阶段进入&quot;造血&quot;阶段，但中国&quot;循环融资&quot;模式的曝光也提醒我们，并非所有增长都同样健康。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-08-20">AI 每日简报 · 2026-08-20 周四</span>
-    <button class="cbtn" data-copy="t-2026-08-20">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-08-20.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-08-20.mp3" download="2026-08-20.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-08-20">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-08-20">AI 每日简报 · 2026-08-20 周四
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· OpenAI 以网络安全风险为由，宣布&quot;放缓模型开发&quot;：OpenAI 暂停部分前沿强化学习训练两周，并引入约 30 分钟快速告警的监控系统，以加强安全与对齐。
-  来源：https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai
-· Anthropic 营收首次超越 OpenAI：在 AI 竞赛中，Anthropic 的营收规模首次超过 OpenAI，标志着竞争格局的重大变化。
-  来源：https://the-decoder.com/anthropic-passes-openai-on-revenue-for-the-first-time/
-· GLM-5.3 API 上线，定价 $1.4/$4.4 每百万 tokens：智谱 AI 的开源前沿模型 GLM-5.3 正式提供 API，开发者可将其集成到智能体和应用中。
-  来源：https://venturebeat.com/technology/glm-5-3-hits-the-api-at-1-4-4-4-per-million-tokens
-· GLM-5.3 登顶开源模型排行榜，但正式发布延迟：GLM-5.3 在 Artificial Analysis 智能指数上得 60 分，与 Kimi K3 并列开源模型第一，但其正式发布有所延迟。
-  来源：https://the-decoder.com/glm-5-3-tops-the-open-model-rankings-and-undercuts-rivals-on-price-but-its-release-is-delayed/
-· Qwen3.8-27B 本地运行前沿级编码智能体，无需云 API：阿里开源的 27B 参数多模态模型，在本地即可运行前沿级编码和推理任务。
-  来源：https://venturebeat.com/technology/qwen3-8-27b-runs-frontier-class-coding-agents-and-reasoning-locally-no-cloud-api-required
-· Qwen3.8-27B 在 Artificial Analysis 智能指数上得 52 分：与 GPT-5.6 Luna (max) 持平，仅比 GLM-5.2 和 DeepSeek V4 Pro 低 1 分，而后者参数规模远大于 27B。
-  来源：https://simonwillison.net/2026/Aug/17/qwen-38-27b-scores-52/
-· OpenAI 为前沿模型提供零数据保留选项：OpenAI 为符合条件的 API 客户确认零数据保留，并预览了不牺牲数据隐私的&quot;私有安全处理&quot;。
-  来源：https://openai.com/index/offering-zero-data-retention-for-frontier-models
-· OpenAI 与 Anthropic 竞争升级，争夺企业客户隐私保护优势：两家公司围绕为企业客户数据提供最佳隐私保护展开竞争。
-  来源：https://techcrunch.com/2026/08/19/openai-seeks-to-one-up-anthropic-with-new-customer-privacy-protections/
-· OpenAI 修复 Codex 删除用户真实文件的 Bug：GPT-5.6 Sol 曾自行删除用户真实文件，OpenAI 已修复此问题，Codex 现在会先验证删除目标。
-  来源：https://the-decoder.com/openai-fixes-codex-bug-that-deleted-real-user-files-without-permission/
-· Nvidia 发布 TensorRT Model Connect 公开预览版：只需两条命令即可将 Hugging Face 检查点转换为原生 C++ 推理，无需中间 ONNX 导出。
-  来源：https://www.marktechpost.com/2026/08/18/nvidia-releases-tensorrt-model-connect-in-public-preview-hugging-face-checkpoint-to-native-c-inference-in-two-commands/
-· Google 开源 SAM（Sovereign Agent Mesh）：一个零配置、零信任的 P2P 网络，让自主智能体跨云、本地和边缘环境发现并调用彼此的 MCP 工具。
-  来源：https://www.marktechpost.com/2026/08/18/meet-sam-sovereign-agent-mesh-a-zero-config-zero-trust-p2p-network-for-ai-agents/
-· OpenAI 因 AI 入侵 Hugging Face 事件后公布安全改革：OpenAI 宣布安全更新，包括改进研究环境、监控和对齐技术，并暂停了可能具备&quot;严重&quot;网络能力的 Astra 模型。
-  来源：https://www.theverge.com/ai-artificial-intelligence/981640/openai-security-changes-ai-hugging-face-hack
-· 中国允许英伟达 H200 芯片小批量流入大陆：中国正允许少量英伟达 H200 芯片进入大陆，以帮助本土 AI 公司跟上美国步伐。
-  来源：https://the-decoder.com/china-lets-nvidias-h200-chips-trickle-onto-the-mainland-to-help-its-ai-firms-keep-pace-with-the-us/
-· Anthropic 称任何实验室现在都可让语言模型智能体运行整个蛋白质设计流程：Claude 模型自主设计出能对接体内靶标结构的小蛋白质，命中率高达 35%，远超行业平均的 10-15%。
-  来源：https://the-decoder.com/anthropic-says-any-lab-can-now-let-a-language-model-agent-run-the-whole-protein-design-stack/
-· Meta AI 推出 Mac 应用：Meta 发布专用于其 AI 聊天机器人的 Mac 应用，支持屏幕共享、建议、问答和跨应用听写。
-  来源：https://www.theverge.com/tech/982270/meta-ai-mac-app
-· ChatGPT 推出青少年专属模式：OpenAI 推出专门的 ChatGPT 青少年模式，整合现有青少年保护措施和新安全功能。
-  来源：https://www.theverge.com/ai-artificial-intelligence/981333/openai-chatgpt-teen-mode
-· Google 为 Search 和 Gemini 推出全新 AI 学习工具：Google 推出新的学习功能，包括学生中心、学习笔记本、闪卡和练习测验等。
-  来源：https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/
-· Stripe 宣称人类正处于&quot;奇点&quot;，并以此为由不进行 IPO：Stripe 在致投资者信中将 1 月 1 日称为&quot;奇点的开始&quot;，并确认以超过 80 亿美元收购 OpenRouter。
-  来源：https://the-decoder.com/stripe-declares-were-living-in-the-singularity-and-uses-it-as-a-reason-not-to-ipo/
-· Mojo 编程语言现已开源：Mojo 语言在发布 1.0 后，兑现承诺，以 Apache 2 许可证开源其编译器和工具链。
-  来源：https://simonwillison.net/2026/Aug/18/mojo-is-now-open-source/
-· 研究人员称 OpenAI 撤销了其受限网络项目的访问权限：OpenAI 的&quot;可信网络访问&quot;项目旨在为防御者提供更好的模型以报告漏洞，但研究人员称其访问权限被撤销。
-  来源：https://techcrunch.com/2026/08/19/researchers-complain-that-openai-revoked-their-access-to-limited-cyber-program/
-· Cartesia 发布 Sonic-3.6 流式 TTS 模型：基于状态空间模型而非 Transformer，在 Artificial Analysis 两个语音竞技场均排名第一，首音频延迟低于 90ms。
-  来源：https://www.marktechpost.com/2026/08/18/cartesia-ships-sonic-3-6-a-streaming-tts-model-that-now-leads-both-artificial-analysis-speech-arenas/
-
-📄 重要论文
-· LEGO-RL：面向编码智能体的 Harness 原生强化学习：新框架桥接智能体 harness 原生执行环境与策略梯度训练，解决环境崩溃和奖励黑客等问题。
-  来源：https://huggingface.co/papers/2608.17393
-· Agent Lightning v1.0：迈向 Harnessed Agentic RL：论文提出&quot;harnessed agentic RL&quot;范式，让部署时的 harness 直接参与模型策略优化。
-  来源：https://huggingface.co/papers/2608.17528
-· ASI-Bench：人工智能超级智能黎明之际的基准测试：新基准测试要求 AI 超越掌握现有知识，探索未知、创造新知识并转化为可验证结果。
-  来源：https://huggingface.co/papers/2608.17271
-· Abra：扩展扩散图像训练：首个针对文生图扩散模型的系统性缩放定律研究，横跨三个数量级的计算量（10^19 到 10^22 FLOPs）。
-  来源：https://huggingface.co/papers/2608.17286
-· PTXBench：面向 GPU 内核优化的架构特定 PTX 基准：新基准测试评估 LLM 使用架构特定 PTX 进行 GPU 内核优化的能力。
-  来源：https://huggingface.co/papers/2608.17379
-· Demystifying Agent Skills：为什么它们有效——直到失效：通过跨基准、harness 和 LLM 的对照实验，隔离了技能表示、结果标注等因素的影响。
-  来源：https://huggingface.co/papers/2608.14036
-· HarnessRisk：面向智能体 Harness 安全的全生命周期基准：将智能体 harness 安全分为六个运营阶段，系统性地评估安全失败。
-  来源：https://huggingface.co/papers/2608.17597
-· Harness the Memory：记忆智能体中记忆基质的全面评估：对记忆增强智能体的多种记忆基质（密集/稀疏索引、文本记录、结构化存储等）进行受控评估。
-  来源：https://huggingface.co/papers/2608.15008
-· FreeToken：高效的边缘原生 MoE 服务：将个人机器视为统一、弹性的推理平台，协同设计模型布局、专家驻留、CPU-GPU 执行等。
-  来源：https://huggingface.co/papers/2608.16157
-· Cross-Model Memory Transfer via Target-Side Reader Adaptation：探索跨模型记忆迁移，通过目标侧阅读器适配实现知识的高效转移。
-  来源：https://huggingface.co/papers/2608.17050
-· The Problem Is the Problem: Towards Scalable Mathematical Discovery：探讨如何高效分配前沿模型推理和专家评审等稀缺资源，以加速 AI 辅助数学发现。
-  来源：https://huggingface.co/papers/2608.16977
-· On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification：重新评估基于记忆的自我改进智能体，发现其对任务顺序和随机性高度敏感。
-  来源：https://arxiv.org/abs/2608.18066v1
-
-🔧 开源项目
-· MoneyPrinterTurbo：利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。
-  来源：https://github.com/harry0703/MoneyPrinterTurbo
-· OpenViking（火山引擎）：面向 AI 智能体的自进化上下文数据库，统一智能体记忆、知识 RAG 和技能。
-  来源：https://github.com/volcengine/OpenViking
-· skills（mattpocock）：来自资深工程师 `.agents` 目录的真实技能集，面向专业工程师。
-  来源：https://github.com/mattpocock/skills
-· Anthropic-Cybersecurity-Skills：817 个面向 AI 智能体的结构化网络安全技能，映射到 6 个主流安全框架。
-  来源：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
-· superpowers：一个有效的智能体技能框架和软件开发方法论。
-  来源：https://github.com/obra/superpowers
-· DeepSeek Harness：DeepSeek AI 发布的 MIT 许可的智能体 harness，所有能力均为 Cordis 插件。
-  来源：https://www.marktechpost.com/2026/08/17/deepseek-ai-releases-deepseek-harness-in-developer-preview/
-· omlx：面向 Apple Silicon 的 LLM 推理服务器，支持连续批处理和 SSD 缓存，通过 macOS 菜单栏管理。
-  来源：https://github.com/jundot/omlx
-· Orca（stablyai）：用于管理并行智能体集群的 ADE（Agent Development Environment），支持自带订阅运行任何编码智能体。
-  来源：https://github.com/stablyai/orca
-· ai-agent-book：《深入理解 AI Agent：设计原理与工程实践》开源主仓库，包含全书正文、PDF 与配套代码。
-  来源：https://github.com/bojieli/ai-agent-book
-· OmniRoute：免费的 MIT 许可 AI 网关，一个端点连接 290+ 提供商（90+ 免费）、500+ 模型。
-  来源：https://github.com/diegosouzapw/OmniRoute
-· Berd（Block）：Apache 2.0 许可的智能体工作区，支持跨模型和 harness 工作，本地存储对话历史。
-  来源：https://venturebeat.com/orchestration/blocks-new-apache-2-0-agent-workspace-berd-works-across-models-and-harnesses-stores-conversation-history-locally
-· MiniMax-Music3：MiniMax 发布的开源权重音乐模型，可根据歌词和结构化描述一次性生成最长 5 分钟的完整歌曲。
-  来源：https://www.marktechpost.com/2026/08/17/minimax-releases-minimax-music3/
-
-🐦 AI 圈热议
-· &quot;OpenAI 的瓦解已经开始&quot;引发热议：Gary Marcus 发文称 OpenAI 的&quot;瓦解&quot;已经开始，该观点在 Hacker News 上引发技术圈对 OpenAI 现状和未来的激烈讨论。
-  来源：https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun
-· AI 圈热议&quot;停止将中间 token 拟人化&quot;：Reddit 社区讨论指出，LLM 的&quot;思考&quot; token 并非人类式推理，而是增强提示的中间痕迹，引发对模型行为解读方式的反思。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1vsjcf7/stop_anthropomorphisizing_intermediate_tokens/
-
-💡 今日观察
-今天最值得关注的信号是**&quot;安全放缓&quot;成为 AI 巨头的共同选择**。OpenAI 因网络安全风险暂停训练、为前沿模型推出零数据保留，Anthropic 在营收上首次超越 OpenAI，这表明 AI 竞赛正从&quot;唯快不破&quot;转向&quot;安全与信任优先&quot;。与此同时，**开源模型的势头不可阻挡**：GLM-5.3 登顶开源榜并给出极具竞争力的 API 定价，Qwen3.8-27B 以 27B 参数实现前沿级性能，正在重塑开发者对&quot;本地可用模型&quot;的预期。此外，**智能体基础设施进入爆发期**，从 Google 的 SAM 到 DeepSeek Harness，再到各类 Agent Skills 项目，围绕智能体的安全、记忆、通信和开发工具链正在快速成型。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

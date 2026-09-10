@@ -16,24 +16,26 @@
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
       <title>AI 每日简报 · 2026-09-11 周五</title>
-      <description>早上好，今天是 2026 年 9 月 11 日，欢迎收听 AI 每日播报。今天的关键词是“agent 走向基础设施”——从运行环境、支付闭环到安全审查，三件事同时被产品化。同时，推理成本继续下探，企业预算已经开始真实反映降价。我们花几分钟把重点串一遍。
-先看 OpenAI，今天几乎是刷屏式发布。最重磅的是 Agents API 公测版，它把驱动 Codex 的那套 harness 和基础设施封装成一次 API 调用，开发者可以在 OpenAI 托管沙箱、自有基础设施或者合作方沙箱里跑 agent，编排和长会话托管开箱即用，不用再自建运行时。同时发布的还有 GPT-Live-1 语音 API，这是一个全双工语音模型，能边听边说，交互性测试得分从上一代的 45.4% 提升到 80.1%，定价是每分钟 0.05 美元，实时语音 agent 可以落地了，但成本还得精算。另外，OpenAI 还推出了 ChatGPT 金融服务版和 Data agent，前者结合内置金融数据与 GPT-6 Astra，用于研究、建模和客户材料；后者能连接企业数据，用自然语言生成交互式仪表盘。不过也有个信号值得注意：因为 Astra 需求激增，OpenAI 暂停了 Pro 订阅的新用户注册，200 美元档位暂时买不到，算力仍然是瓶颈。
-Meta 这边，个人 AI agent Muse 已经冲到美国 App 榜第二。它可以通过 WhatsApp 订行程、购物、发邮件，甚至帮你议价，支付走 Stripe Link，还有一个安全 agent Sentinel 在动作触网之前做审查。这条线的意义在于，agent 商业化的支付闭环先于 OpenAI 跑通了。
-安全与合规方面，Anthropic 今天有两件事。一是指控阿里、Moonshot 和 DeepSeek 持续进行蒸馏攻击，而且近几个月随竞争加剧而升级，模型知识产权和合规风险在上升。二是威胁情报报告披露，他们阻止了可能的生物武器构建行为，前沿模型滥用的实际案例已经出现，安全审查只会越来越严。
-模型侧，Cognition 发布 SWE-2，号称对标 Fable 5.1 和 GPT-Astra，编程 agent 竞争又多一个强选项。DeepSeek 发布 V4.1-Flash，1M 上下文加 FP4 KV Cache，KV cache 内存降到前代四分之一，每 token 只激活 16B，在 DeepSWE 上略胜 Opus 5 和 GPT-5.6 Sol，MIT 许可。长上下文 agent 的显存瓶颈被明显缓解。Nvidia 这边，和 Palantir 合作以 AI 运行供应链，首个场景就是 Nvidia 自己百万级零部件的运营；同时公布 BioNeMo 推理运行时 BioIR，在 8 张 H100 上把 Boltz-2 折叠吞吐做到 58.5K 残基每 GPU 小时，对比开源实现提升 2.9 倍。
-工具和成本侧，Google 开源了 Mantis 安全技能工具包，面向 AI 编程 agent，覆盖扫描、误报过滤、沙箱复现、打补丁、再攻击和风险评分，Apache 2.0 许可，agent 自动修漏洞的闭环可以直接接进 CI。Redis 推出托管语义缓存 LangCache，声称最高削减 90% 的 LLM API 成本，缓存命中返回速度最高快 15 倍。Slack 推出 Slackforce Surfaces，聊天里就能用自然语言生成图表、仪表盘、演示和微站点。Ramp 的 AI 指数显示，头部 AI 支出企业人均成本降了近 10%，每百万 token 价格自 3 月以来跌了 41%，企业正主动从昂贵的前沿模型转向更便宜的替代品。Suno 发布 v6 音乐模型，首次在唱片业支持下训练，版权合规路径跑通了。
-开源社区今天也很热闹。i-have-adhd 这个 skill 让编程 agent 不再把答案埋在长篇输出里，单日涨星 3854；superpowers 提供 agentic skills 框架和工程化范式；腾讯开源 teamai-cli；llmfit 一条命令找出本机硬件能跑的模型；colibri 用纯 C 零依赖让前沿 MoE 跑在消费级硬件上；OmniRoute 是免费 AI 网关，单端点接入 352 家供应商；V</description>
-      <itunes:summary>早上好，今天是 2026 年 9 月 11 日，欢迎收听 AI 每日播报。今天的关键词是“agent 走向基础设施”——从运行环境、支付闭环到安全审查，三件事同时被产品化。同时，推理成本继续下探，企业预算已经开始真实反映降价。我们花几分钟把重点串一遍。
-先看 OpenAI，今天几乎是刷屏式发布。最重磅的是 Agents API 公测版，它把驱动 Codex 的那套 harness 和基础设施封装成一次 API 调用，开发者可以在 OpenAI 托管沙箱、自有基础设施或者合作方沙箱里跑 agent，编排和长会话托管开箱即用，不用再自建运行时。同时发布的还有 GPT-Live-1 语音 API，这是一个全双工语音模型，能边听边说，交互性测试得分从上一代的 45.4% 提升到 80.1%，定价是每分钟 0.05 美元，实时语音 agent 可以落地了，但成本还得精算。另外，OpenAI 还推出了 ChatGPT 金融服务版和 Data agent，前者结合内置金融数据与 GPT-6 Astra，用于研究、建模和客户材料；后者能连接企业数据，用自然语言生成交互式仪表盘。不过也有个信号值得注意：因为 Astra 需求激增，OpenAI 暂停了 Pro 订阅的新用户注册，200 美元档位暂时买不到，算力仍然是瓶颈。
-Meta 这边，个人 AI agent Muse 已经冲到美国 App 榜第二。它可以通过 WhatsApp 订行程、购物、发邮件，甚至帮你议价，支付走 Stripe Link，还有一个安全 agent Sentinel 在动作触网之前做审查。这条线的意义在于，agent 商业化的支付闭环先于 OpenAI 跑通了。
-安全与合规方面，Anthropic 今天有两件事。一是指控阿里、Moonshot 和 DeepSeek 持续进行蒸馏攻击，而且近几个月随竞争加剧而升级，模型知识产权和合规风险在上升。二是威胁情报报告披露，他们阻止了可能的生物武器构建行为，前沿模型滥用的实际案例已经出现，安全审查只会越来越严。
-模型侧，Cognition 发布 SWE-2，号称对标 Fable 5.1 和 GPT-Astra，编程 agent 竞争又多一个强选项。DeepSeek 发布 V4.1-Flash，1M 上下文加 FP4 KV Cache，KV cache 内存降到前代四分之一，每 token 只激活 16B，在 DeepSWE 上略胜 Opus 5 和 GPT-5.6 Sol，MIT 许可。长上下文 agent 的显存瓶颈被明显缓解。Nvidia 这边，和 Palantir 合作以 AI 运行供应链，首个场景就是 Nvidia 自己百万级零部件的运营；同时公布 BioNeMo 推理运行时 BioIR，在 8 张 H100 上把 Boltz-2 折叠吞吐做到 58.5K 残基每 GPU 小时，对比开源实现提升 2.9 倍。
-工具和成本侧，Google 开源了 Mantis 安全技能工具包，面向 AI 编程 agent，覆盖扫描、误报过滤、沙箱复现、打补丁、再攻击和风险评分，Apache 2.0 许可，agent 自动修漏洞的闭环可以直接接进 CI。Redis 推出托管语义缓存 LangCache，声称最高削减 90% 的 LLM API 成本，缓存命中返回速度最高快 15 倍。Slack 推出 Slackforce Surfaces，聊天里就能用自然语言生成图表、仪表盘、演示和微站点。Ramp 的 AI 指数显示，头部 AI 支出企业人均成本降了近 10%，每百万 token 价格自 3 月以来跌了 41%，企业正主动从昂贵的前沿模型转向更便宜的替代品。Suno 发布 v6 音乐模型，首次在唱片业支持下训练，版权合规路径跑通了。
-开源社区今天也很热闹。i-have-adhd 这个 skill 让编程 agent 不再把答案埋在长篇输出里，单日涨星 3854；superpowers 提供 agentic skills 框架和工程化范式；腾讯开源 teamai-cli；llmfit 一条命令找出本机硬件能跑的模型；colibri 用纯 C 零依赖让前沿 MoE 跑在消费级硬件上；OmniRoute 是免费 AI 网关，单端点接入 352 家供应商；V</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-09-11.mp3" length="2601216" type="audio/mpeg"/>
+      <description>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 9 月 11 号，星期五。今天的关键词只有一个，Agent 基础设施正在被一次性补齐，从 API、模型到消费级应用，全链条都有大动作，我们一个个来说。
+先看 OpenAI，今天一口气放了好几个大招。第一，Agents API 进入公测，把驱动 Codex 的那套 harness 直接封装成一次 API 调用，开发者可以在 OpenAI 托管沙箱、自有基础设施或者合作方沙箱里跑云 Agent，编排、长会话、工具调用全部开箱即用，不用再自己搭运行时。第二，GPT-Live-1 全双工语音 API 上线，能同时听和说，交互性测试得分从上一代的百分之四十五点四直接跳到百分之八十点一，定价是每分钟五美分，还支持自定义音色和电话接入，实时语音 Agent 的门槛一下子降下来了，不过成本还是要精算。第三，OpenAI 还推出了金融版 ChatGPT 和 ChatGPT Work 数据 Agent，前者内置金融数据加 GPT-6 Astra，用来做研究建模和客户材料，后者可以连接企业数据，用自然语言生成交互式仪表盘。另外一条消息，因为 Astra 需求太猛，OpenAI 暂停了 Pro 订阅的新注册，二十倍档位已经买不到了，算力吃紧已经成了产品约束。
+国内这边，DeepSeek 发布了 V4.1-Flash，五百五十二 B 骨干加一百九十六 B Engram 参数的 MoE 多模态模型，一百万上下文，FP4 KV Cache 加上跨层注意力复用，把显存压到前代的四分之一，MIT 许可，可以自托管。这意味着长上下文 Agent 的推理成本会骤降。
+Meta 也没闲着，个人 AI Agent Muse 通过 WhatsApp 就能完成购物、订票、写邮件甚至议价，支付走 Stripe Link，还有一个叫 Sentinel 的安全 Agent 在动作触网前逐条审查。Muse 目前已经是美国第二大 App，消费级 Agent 第一次跑通了交易闭环。
+不过行业也不是全是好消息。Anthropic 指控阿里、月之暗面和 DeepSeek 进行大规模蒸馏攻击，说这种行为近几个月持续升级。模型蒸馏的合规风险在上升，做出海产品的团队要注意留存数据来源证据。Anthropic 自己还发布了九月威胁情报报告，披露并阻断了一起疑似生物武器构建行为，同时详述了恶意 Agent 绕过 CAPTCHA 等滥用手法，这份报告值得做风控的同行细读。
+企业侧，Nvidia 和 Palantir 联手用 AI 跑供应链，第一个场景就是 Nvidia 自己百万级零部件的供应网络。Ramp 的数据显示，头部 AI 支出企业八月人均成本降了近百分之十，每百万 token 价格自三月以来跌了百分之四十一，企业正把用量从昂贵的前沿模型迁移到更便宜的替代品。Slack 上线了 Slackforce Surfaces，在聊天里用自然语言生成报表、投票、仪表盘甚至微站。环球音乐和 ElevenLabs 合作推出 AI 音乐平台，用户可以从正版曲库生成 remix、mashup 和改编版本，Suno 同期发布了首个获唱片业支持的 v6 模型，版权方从诉讼转向授权分成，合规路径基本成型。
+论文方面今天亮点很多。PARSER 用一组轻量子 Agent 各自绑定一个 chunk 并行读取全文，主 Agent 迭代深推理，把阅读和推理解耦，长文档 Agent 的延迟和鲁棒性同时改善。SWE-Bench Pro Verified 指出原版评测存在 gold solution 泄漏导致的 reward hacking，推出了更可靠的软件工程 Agent 基准，选型之前先看评测有没有被污染。还有 Φ-Bench 衡量模型能不能工程化支撑自己的基础设施，SAEScientist-Bench 测试 AI Agent 能不能自主做可解释性研究，Show-Harness 让一个 VLM Agent 就能玩机器人，Programmable World Model 把世界状态演化和视觉观测生成解耦。另外 DF26 基准显示假视频已经无法肉眼分辨，人类和 SOTA 深伪检测器双双失效，内容真实性验证得转向来源签名了。
+开源项目里，i-have-adhd 一天涨了三千八百多</description>
+      <itunes:summary>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 9 月 11 号，星期五。今天的关键词只有一个，Agent 基础设施正在被一次性补齐，从 API、模型到消费级应用，全链条都有大动作，我们一个个来说。
+先看 OpenAI，今天一口气放了好几个大招。第一，Agents API 进入公测，把驱动 Codex 的那套 harness 直接封装成一次 API 调用，开发者可以在 OpenAI 托管沙箱、自有基础设施或者合作方沙箱里跑云 Agent，编排、长会话、工具调用全部开箱即用，不用再自己搭运行时。第二，GPT-Live-1 全双工语音 API 上线，能同时听和说，交互性测试得分从上一代的百分之四十五点四直接跳到百分之八十点一，定价是每分钟五美分，还支持自定义音色和电话接入，实时语音 Agent 的门槛一下子降下来了，不过成本还是要精算。第三，OpenAI 还推出了金融版 ChatGPT 和 ChatGPT Work 数据 Agent，前者内置金融数据加 GPT-6 Astra，用来做研究建模和客户材料，后者可以连接企业数据，用自然语言生成交互式仪表盘。另外一条消息，因为 Astra 需求太猛，OpenAI 暂停了 Pro 订阅的新注册，二十倍档位已经买不到了，算力吃紧已经成了产品约束。
+国内这边，DeepSeek 发布了 V4.1-Flash，五百五十二 B 骨干加一百九十六 B Engram 参数的 MoE 多模态模型，一百万上下文，FP4 KV Cache 加上跨层注意力复用，把显存压到前代的四分之一，MIT 许可，可以自托管。这意味着长上下文 Agent 的推理成本会骤降。
+Meta 也没闲着，个人 AI Agent Muse 通过 WhatsApp 就能完成购物、订票、写邮件甚至议价，支付走 Stripe Link，还有一个叫 Sentinel 的安全 Agent 在动作触网前逐条审查。Muse 目前已经是美国第二大 App，消费级 Agent 第一次跑通了交易闭环。
+不过行业也不是全是好消息。Anthropic 指控阿里、月之暗面和 DeepSeek 进行大规模蒸馏攻击，说这种行为近几个月持续升级。模型蒸馏的合规风险在上升，做出海产品的团队要注意留存数据来源证据。Anthropic 自己还发布了九月威胁情报报告，披露并阻断了一起疑似生物武器构建行为，同时详述了恶意 Agent 绕过 CAPTCHA 等滥用手法，这份报告值得做风控的同行细读。
+企业侧，Nvidia 和 Palantir 联手用 AI 跑供应链，第一个场景就是 Nvidia 自己百万级零部件的供应网络。Ramp 的数据显示，头部 AI 支出企业八月人均成本降了近百分之十，每百万 token 价格自三月以来跌了百分之四十一，企业正把用量从昂贵的前沿模型迁移到更便宜的替代品。Slack 上线了 Slackforce Surfaces，在聊天里用自然语言生成报表、投票、仪表盘甚至微站。环球音乐和 ElevenLabs 合作推出 AI 音乐平台，用户可以从正版曲库生成 remix、mashup 和改编版本，Suno 同期发布了首个获唱片业支持的 v6 模型，版权方从诉讼转向授权分成，合规路径基本成型。
+论文方面今天亮点很多。PARSER 用一组轻量子 Agent 各自绑定一个 chunk 并行读取全文，主 Agent 迭代深推理，把阅读和推理解耦，长文档 Agent 的延迟和鲁棒性同时改善。SWE-Bench Pro Verified 指出原版评测存在 gold solution 泄漏导致的 reward hacking，推出了更可靠的软件工程 Agent 基准，选型之前先看评测有没有被污染。还有 Φ-Bench 衡量模型能不能工程化支撑自己的基础设施，SAEScientist-Bench 测试 AI Agent 能不能自主做可解释性研究，Show-Harness 让一个 VLM Agent 就能玩机器人，Programmable World Model 把世界状态演化和视觉观测生成解耦。另外 DF26 基准显示假视频已经无法肉眼分辨，人类和 SOTA 深伪检测器双双失效，内容真实性验证得转向来源签名了。
+开源项目里，i-have-adhd 一天涨了三千八百多</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-09-11.mp3" length="2510352" type="audio/mpeg"/>
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-11.mp3</guid>
       <pubDate>Fri, 11 Sep 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>07:13</itunes:duration>
+      <itunes:duration>06:58</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

@@ -1,8 +1,8 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T06:42:58.814083+08:00",
+  "generated_at": "2026-09-12T08:01:57.390181+08:00",
   "counts": {
-    "papers": 41,
+    "papers": 30,
     "projects": 11,
     "news": 137
   },
@@ -326,7 +326,7 @@
         "url": "https://huggingface.co/papers/2609.11929",
         "normalized_url": "https://huggingface.co/papers/2609.11929",
         "summary": "We launch SenseNova-U1.5, an 8B-MoT native unified multimodal model that understands, reasons about, and generates visual content within an encoder-free and VAE-free architecture. We strengthen its visual interface through spatially coherent patch reconstruction and scale its training with carefully curated generation and editing data, improved task formulation, structural prompt enhancement, and native resolutions of up to 4K. For post-training, we optimize specialized experts for visual aesthe",
-        "source": "HuggingFace Papers, arXiv",
+        "source": "HuggingFace Papers",
         "published": "2026-09-10T00:00:00.000Z",
         "importance_hint": 5,
         "metadata": {
@@ -397,275 +397,176 @@
         "metadata": {
           "paper_id": "2609.05463"
         }
-      },
-      {
-        "category": "papers",
-        "title": "GPU-CFR: 80x Faster Counterfactual Regret Minimization by Compiling the Game to Static Dataflow and CUDA Graph Replay",
-        "url": "https://arxiv.org/abs/2609.11923v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11923v1",
-        "summary": "Counterfactual regret minimization (CFR) is one of the few large numerical workloads that still runs faster on CPUs than on GPUs. Each iteration sweeps a game tree with up to billions of states in millions of small, interdependent gather and scatter steps issued through a generic tree interface. On a GPU every kernel finishes in microseconds, so kernel launches and framework dispatch dominate the run time, and prior GPU implementations have lost to optimized CPU code. We observe that for a fixed",
-        "source": "arXiv",
-        "published": "2026-09-10T17:58:14+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "General Quantification of Covariate and Concept Shifts",
-        "url": "https://arxiv.org/abs/2609.11918v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11918v1",
-        "summary": "Generalization under distribution shift remains a core challenge in modern machine learning, yet existing learning bound theory is limited to narrow, idealized settings and is non-estimable from samples. In this paper, we bridge the gap between theory and practical applications. We first show that existing definition of concept shift breaks when the source and target supports mismatch. Leveraging entropic optimal transport, we propose a key notion: $γ^{*}\\!$-concept shifts, and derive a general ",
-        "source": "arXiv",
-        "published": "2026-09-10T17:57:52+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Data Scarcity and Model Sparsity: Mixtures-of-Experts Overfit More to Repeated Data",
-        "url": "https://arxiv.org/abs/2609.11917v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11917v1",
-        "summary": "As the supply of human-written text is exhausted, it has become standard practice to repeat language model training data. Prior work has studied data repetition for densely activated Transformers, but the effects of data repetition remains largely unexplored for recently dominant sparse architectures such as Mixture-of-Experts (MoE), despite their increased compute efficiency. We vary data repetition rates across single- and multi-domain data mixes, and across MoE settings, including expert coun",
-        "source": "arXiv",
-        "published": "2026-09-10T17:57:33+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Can Edge-Deployable Vision-Language Models Identify Species?",
-        "url": "https://arxiv.org/abs/2609.11916v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11916v1",
-        "summary": "Camera traps often run in the field on edge hardware with limited or no connectivity, making small, locally-deployable vision-language models (VLMs) -- not frontier-scale ones -- the practically relevant class to evaluate for species identification. We test whether models in this deployment-relevant 2--8B range carry genuine taxonomic knowledge, evaluating four such VLMs (Qwen3-VL 2B/4B/8B, Gemma3 4B) against the domain-specific specialist BioCLIP (300M parameters) on a 96-species task, comparin",
-        "source": "arXiv",
-        "published": "2026-09-10T17:57:32+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact",
-        "url": "https://arxiv.org/abs/2609.11915v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11915v1",
-        "summary": "Generative artificial intelligence changes how firms reach customers, but standard marketing data do not record how often users see and notice a firm's name in generated answers. We develop Generative Marketing Mix Modeling (GMMM) to estimate the causal effects of Generative Engine Optimization (GEO) and Generative Engine Marketing (GEM). For GEO, GMMM combines repeated generated answers with question counts, shares of use across generative systems, and notice probabilities. For GEM, it combines",
-        "source": "arXiv",
-        "published": "2026-09-10T17:57:28+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Distance generalization in transformers: why bother with positional encoding?",
-        "url": "https://arxiv.org/abs/2609.11913v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11913v1",
-        "summary": "Out-of-distribution length generalization, namely to extrapolate a task from short to longer context, has been studied intensively for transformers. Here we focus on distance generalization, which probes performance when inter-token distances are changed between training and inference, while keeping a fixed context length. We construct two synthetic delay copy tasks, both involving finite distances between source and recall, where tokens are copied either fully or selectively, and test models on",
-        "source": "arXiv",
-        "published": "2026-09-10T17:57:19+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
-        "url": "https://arxiv.org/abs/2609.11911v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11911v1",
-        "summary": "Agentic AI is moving from bounded task execution toward systems that retain consequential state, continue operating and adapt across task boundaries. That shift creates a control problem that current harnesses largely solve by hand: objectives, retries, verification, stopping rules and other behavioral transitions are specified externally. We propose an artificial id, an adaptive internal drive for determining whether behavior should continue, stop or change. In a minimal virtual Petri-dish expe",
-        "source": "arXiv",
-        "published": "2026-09-10T17:56:41+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "From Protocols to Evidence: Bounded Claims for AI in Service of the Common Good",
-        "url": "https://arxiv.org/abs/2609.11910v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11910v1",
-        "summary": "Artificial Intelligence does more than create a governance problem. It can also reveal where institutions have already failed to provide responsiveness, belonging, care, and accountability. Once deployed, AI becomes an intervention in those conditions. It can repair, compound, substitute for, or conceal the failures it encounters. Responsible AI must therefore evaluate both the system and the institutional rupture into which it is introduced. The move from principles to protocols is already unde",
-        "source": "arXiv",
-        "published": "2026-09-10T17:56:36+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "TART: A Modular Tool for Technique-Aware Audio-to-Tablature Guitar Transcription",
-        "url": "https://arxiv.org/abs/2609.11904v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11904v1",
-        "summary": "Automatic Music Transcription (AMT) for guitar remains limited by three challenges: existing systems often fail to capture expressive techniques such as slides, bends, and percussive hits; they often assign notes to incorrect string-fret combinations; and they are typically trained on clean recordings, limiting their generalization to noisy real-world audio. To address these challenges, we propose TART, a modular four-stage audio-to-tablature pipeline consisting of (1) an audio-to-MIDI transcrip",
-        "source": "arXiv",
-        "published": "2026-09-10T17:55:12+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
-        "url": "https://arxiv.org/abs/2609.11900v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11900v1",
-        "summary": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity",
-        "source": "arXiv",
-        "published": "2026-09-10T17:54:32+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Caption-once, Frames-on-Demand: Visual-Need Routing for Budget-Aware Agentic Long Video Understanding",
-        "url": "https://arxiv.org/abs/2609.11899v1",
-        "normalized_url": "https://arxiv.org/abs/2609.11899v1",
-        "summary": "Long-video understanding on edge devices must reason over hours of content under tight compute and bandwidth budgets. Subsampling visual tokens loses temporal structure, while text-only video memories lose fine-grained visual attributes. We observe a visual-textual duality: language memories carry long-range temporal structure better than dense frames, while pixels remain decisive for attribute-level perception. Building on this insight, we propose Caption-once, Frames-onDemand (CFD), a budget-a",
-        "source": "arXiv",
-        "published": "2026-09-10T17:53:59+00:00",
-        "importance_hint": 5,
-        "metadata": {}
       }
     ],
     "projects": [
       {
         "category": "projects",
-        "title": "ayghri/i-have-adhd ⭐+3,440/天",
+        "title": "ayghri/i-have-adhd ⭐+3,463/天",
         "url": "https://github.com/ayghri/i-have-adhd",
         "normalized_url": "https://github.com/ayghri/i-have-adhd",
-        "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output. （GitHub Trending · 今日 +3,440 star）",
+        "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output. （GitHub Trending · 今日 +3,463 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "3,440"
+          "stars_today": "3,463"
         }
       },
       {
         "category": "projects",
-        "title": "melgarafael/DeskcommCRM ⭐+126/天",
+        "title": "melgarafael/DeskcommCRM ⭐+152/天",
         "url": "https://github.com/melgarafael/DeskcommCRM",
         "normalized_url": "https://github.com/melgarafael/DeskcommCRM",
-        "summary": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD. （GitHub Trending · 今日 +126 star）",
+        "summary": "Open-source AI sales OS — self-hosted CRM with native AI agents + WhatsApp (WAHA). Open alternative to Kommo, Octadesk & Intercom for any business that sells by chat. MCP-ready, multi-tenant, LGPD. （GitHub Trending · 今日 +152 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "126"
+          "stars_today": "152"
         }
       },
       {
         "category": "projects",
-        "title": "vastsa/PI-Desktop ⭐+545/天",
+        "title": "vastsa/PI-Desktop ⭐+552/天",
         "url": "https://github.com/vastsa/PI-Desktop",
         "normalized_url": "https://github.com/vastsa/PI-Desktop",
-        "summary": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins （GitHub Trending · 今日 +545 star）",
+        "summary": "Local-first AI coding agent desktop: Electron + Rust host core + pi Agent Harness + user-installable plugins （GitHub Trending · 今日 +552 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "545"
+          "stars_today": "552"
         }
       },
       {
         "category": "projects",
-        "title": "armory3d/armorpaint ⭐+354/天",
+        "title": "armory3d/armorpaint ⭐+350/天",
         "url": "https://github.com/armory3d/armorpaint",
         "normalized_url": "https://github.com/armory3d/armorpaint",
-        "summary": "Graphics Creation Tools （GitHub Trending · 今日 +354 star）",
+        "summary": "Graphics Creation Tools （GitHub Trending · 今日 +350 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "354"
+          "stars_today": "350"
         }
       },
       {
         "category": "projects",
-        "title": "alsk1992/CloddsBot ⭐+627/天",
+        "title": "alsk1992/CloddsBot ⭐+626/天",
         "url": "https://github.com/alsk1992/CloddsBot",
         "normalized_url": "https://github.com/alsk1992/CloddsBot",
-        "summary": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude. （GitHub Trending · 今日 +627 star）",
+        "summary": "Open Source AI trading agent that operates autonomously across 1000+ markets - Polymarket, Kalshi, Binance, Hyperliquid, Solana DEXs, 5 EVM chains. Scans for edge, executes instantly, manages risk while you sleep. Agent commerce protocol for machine-to-machine payments. Self-hosted. Built on Claude. （GitHub Trending · 今日 +626 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "627"
+          "stars_today": "626"
         }
       },
       {
         "category": "projects",
-        "title": "nashsu/llm_wiki ⭐+640/天",
+        "title": "nashsu/llm_wiki ⭐+647/天",
         "url": "https://github.com/nashsu/llm_wiki",
         "normalized_url": "https://github.com/nashsu/llm_wiki",
-        "summary": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。 （GitHub Trending · 今日 +640 star）",
+        "summary": "LLM Wiki is a cross-platform desktop application that turns your documents into an organized, interlinked knowledge base — automatically. Instead of traditional RAG (retrieve-and-answer from scratch every time), the LLM incrementally builds and maintains a persistent wiki from your sources。 （GitHub Trending · 今日 +647 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "640"
+          "stars_today": "647"
         }
       },
       {
         "category": "projects",
-        "title": "obra/superpowers ⭐+731/天",
+        "title": "obra/superpowers ⭐+729/天",
         "url": "https://github.com/obra/superpowers",
         "normalized_url": "https://github.com/obra/superpowers",
-        "summary": "An agentic skills framework & software development methodology that works. （GitHub Trending · 今日 +731 star）",
+        "summary": "An agentic skills framework & software development methodology that works. （GitHub Trending · 今日 +729 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "731"
+          "stars_today": "729"
         }
       },
       {
         "category": "projects",
-        "title": "jihe520/MathModelAgent ⭐+132/天",
+        "title": "jihe520/MathModelAgent ⭐+129/天",
         "url": "https://github.com/jihe520/MathModelAgent",
         "normalized_url": "https://github.com/jihe520/MathModelAgent",
-        "summary": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission. （GitHub Trending · 今日 +132 star）",
+        "summary": "🤖📐专为数学建模设计的 Agent & skills ,自动完成数学建模，生成一份完整的可以直接提交的论文。 An Agent Designed for Mathematical Modeling ,Automatically complete mathmodel and generate a complete paper ready for submission. （GitHub Trending · 今日 +129 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "132"
+          "stars_today": "129"
         }
       },
       {
         "category": "projects",
-        "title": "jordan-gibbs/hyperresearch ⭐+118/天",
+        "title": "jordan-gibbs/hyperresearch ⭐+153/天",
         "url": "https://github.com/jordan-gibbs/hyperresearch",
         "normalized_url": "https://github.com/jordan-gibbs/hyperresearch",
-        "summary": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki. （GitHub Trending · 今日 +118 star）",
+        "summary": "Agent-driven research knowledge base. Agents collect, search, and synthesize web research into a persistent, searchable wiki. （GitHub Trending · 今日 +153 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "118"
+          "stars_today": "153"
         }
       },
       {
         "category": "projects",
-        "title": "alphaXiv/OpenResearch ⭐+156/天",
+        "title": "alphaXiv/OpenResearch ⭐+120/天",
         "url": "https://github.com/alphaXiv/OpenResearch",
         "normalized_url": "https://github.com/alphaXiv/OpenResearch",
-        "summary": "Run parallel research agents with any model （GitHub Trending · 今日 +156 star）",
+        "summary": "Run parallel research agents with any model （GitHub Trending · 今日 +120 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "156"
+          "stars_today": "120"
         }
       },
       {
         "category": "projects",
-        "title": "pascalorg/editor ⭐+83/天",
+        "title": "pascalorg/editor ⭐+106/天",
         "url": "https://github.com/pascalorg/editor",
         "normalized_url": "https://github.com/pascalorg/editor",
-        "summary": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents. （GitHub Trending · 今日 +83 star）",
+        "summary": "Open-source 3D architectural editor with a local CLI, MCP tools, and practical workflows for humans and AI agents. （GitHub Trending · 今日 +106 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "83"
+          "stars_today": "106"
         }
       }
     ],
     "news": [
+      {
+        "category": "news",
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "normalized_url": "https://www.rubyhack.ai",
+        "summary": "HN points: 72, comments: 16",
+        "source": "Hacker News",
+        "published": "2026-09-11T23:17:42Z",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "news",
+        "title": "Houthis used Anthropic to develop guided weapons",
+        "url": "https://www.washingtonpost.com/technology/2026/09/11/rebels-used-anthropics-ai-bot-develop-guided-weapons-report-says/",
+        "normalized_url": "https://www.washingtonpost.com/technology/2026/09/11/rebels-used-anthropics-ai-bot-develop-guided-weapons-report-says",
+        "summary": "HN points: 11, comments: 1",
+        "source": "Hacker News",
+        "published": "2026-09-11T22:44:03Z",
+        "importance_hint": 4,
+        "metadata": {}
+      },
       {
         "category": "news",
         "title": "Show HN: Spanda – Sub-microsecond LLM epistemic uncertainty in Rust",
@@ -682,7 +583,7 @@
         "title": "GPT-6 built this earth exploration site in 5 prompts",
         "url": "https://earth.ethanplus.ai/",
         "normalized_url": "https://earth.ethanplus.ai",
-        "summary": "HN points: 16, comments: 20",
+        "summary": "HN points: 24, comments: 36",
         "source": "Hacker News",
         "published": "2026-09-11T21:39:52Z",
         "importance_hint": 3,
@@ -693,7 +594,7 @@
         "title": "The Netherlands, Spain push for EU-wide minimum age on social media",
         "url": "https://www.euronews.com/my-europe/2026/09/11/the-netherlands-spain-push-for-eu-wide-minimum-age-on-social-media",
         "normalized_url": "https://www.euronews.com/my-europe/2026/09/11/the-netherlands-spain-push-for-eu-wide-minimum-age-on-social-media",
-        "summary": "HN points: 14, comments: 2",
+        "summary": "HN points: 15, comments: 4",
         "source": "Hacker News",
         "published": "2026-09-11T20:06:00Z",
         "importance_hint": 3,
@@ -715,7 +616,7 @@
         "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
         "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
         "normalized_url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11",
-        "summary": "HN points: 75, comments: 47",
+        "summary": "HN points: 96, comments: 53",
         "source": "Hacker News",
         "published": "2026-09-11T18:30:07Z",
         "importance_hint": 4,
@@ -726,7 +627,7 @@
         "title": "GPT-6 Astra does 3D camera tracking and VFX in Blender",
         "url": "https://twitter.com/ryanvogel/status/2098477000843211081",
         "normalized_url": "https://twitter.com/ryanvogel/status/2098477000843211081",
-        "summary": "HN points: 18, comments: 2",
+        "summary": "HN points: 19, comments: 3",
         "source": "Hacker News",
         "published": "2026-09-11T18:21:58Z",
         "importance_hint": 3,
@@ -737,7 +638,7 @@
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "normalized_url": "https://github.com/kennethwolters/litelm",
-        "summary": "HN points: 78, comments: 26",
+        "summary": "HN points: 83, comments: 34",
         "source": "Hacker News",
         "published": "2026-09-11T18:10:20Z",
         "importance_hint": 3,
@@ -770,7 +671,7 @@
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "normalized_url": "https://mathandai.org",
-        "summary": "HN points: 479, comments: 545",
+        "summary": "HN points: 560, comments: 622",
         "source": "Hacker News, Hacker News",
         "published": "2026-09-11T17:45:12Z",
         "importance_hint": 3,
@@ -792,33 +693,9 @@
         "title": "Show HN: Extension to filter LLM written articles",
         "url": "https://hnslop.nilsherzig.com/",
         "normalized_url": "https://hnslop.nilsherzig.com",
-        "summary": "HN points: 11, comments: 0",
+        "summary": "HN points: 14, comments: 0",
         "source": "Hacker News",
         "published": "2026-09-11T17:14:49Z",
-        "importance_hint": 3,
-        "metadata": {}
-      },
-      {
-        "category": "news",
-        "title": "Feeling sad about AI",
-        "url": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
-        "normalized_url": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai",
-        "summary": "My comment on Feeling sad about AI — Hacker News. I'm not sure how useful it is to say this, but I think a lot of people (myself included, a few years ago now) have been through this moment of existential crisis and come out the other side. The initial reaction, when some coding agent does a piece of work that would have taken you a week in an hour and does it well , is to be very disheartened by it. Once you come to terms with the idea that translating an exact specification into decent code is",
-        "source": "Hacker News, Simon Willison",
-        "published": "2026-09-11T17:28:37+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Show HN: Hacker News, Without AI",
-        "url": "https://www.unslop.news/",
-        "normalized_url": "https://www.unslop.news",
-        "summary": "HN points: 163, comments: 73",
-        "source": "Hacker News",
-        "published": "2026-09-11T16:08:50Z",
         "importance_hint": 3,
         "metadata": {}
       },
@@ -832,7 +709,7 @@
         "published": "2026-09-11T13:21:26+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -845,7 +722,7 @@
         "published": "2026-09-11T13:21:13+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -858,7 +735,7 @@
         "published": "2026-09-11T13:15:44+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -871,7 +748,7 @@
         "published": "2026-09-11T13:14:49+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -884,7 +761,7 @@
         "published": "2026-09-11T13:14:06+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -897,7 +774,7 @@
         "published": "2026-09-11T13:11:51+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -910,7 +787,7 @@
         "published": "2026-09-11T13:11:08+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -923,7 +800,7 @@
         "published": "2026-09-11T13:10:32+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -936,7 +813,7 @@
         "published": "2026-09-11T13:09:55+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -949,7 +826,7 @@
         "published": "2026-09-11T13:09:34+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
@@ -1227,10 +1104,23 @@
       },
       {
         "category": "news",
+        "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+        "url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
+        "normalized_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data",
+        "summary": "The round for the two-year-old startup is coming together months after Mecka announced its Series A.",
+        "source": "TechCrunch AI",
+        "published": "2026-09-11T22:58:17+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+        }
+      },
+      {
+        "category": "news",
         "title": "Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill’ frontier models, too",
         "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
         "normalized_url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too",
-        "summary": "Tan argues that frontier models themselves trained on public human knowledge so access to capable AI should be \"a form of public good.\"",
+        "summary": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
         "source": "TechCrunch AI",
         "published": "2026-09-11T20:59:47+00:00",
         "importance_hint": 4,
@@ -1338,19 +1228,6 @@
         "source": "TechCrunch AI",
         "published": "2026-09-10T21:35:00+00:00",
         "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "OpenAI puts Pro subscriptions on hold due to Astra demand",
-        "url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand/",
-        "normalized_url": "https://techcrunch.com/2026/09/10/openai-puts-pro-subscriptions-on-hold-due-to-astra-demand",
-        "summary": "The company said Pro subscriptions put the most strain on its systems, so it's pausing sign-ups while adding more capacity.",
-        "source": "TechCrunch AI",
-        "published": "2026-09-10T20:59:51+00:00",
-        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
         }
@@ -1903,12 +1780,38 @@
       },
       {
         "category": "news",
+        "title": "So you want to use OpenRouter?",
+        "url": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter/",
+        "normalized_url": "https://simonwillison.net/2026/Sep/11/so-you-want-to-use-openrouter",
+        "summary": "So you want to use OpenRouter? One of OpenRouter's selling points is that it \"handles fallbacks automatically and picks the most cost-effective option for each request\", so you can call a single API endpoint for a model and get routed to the best available backend provider. Mohamed Moustafa points out a whole set of ways that this can cause you problems. Different providers run different serving software with different optimizations and settings, which means that the same OpenRouter endpoint can",
+        "source": "Simon Willison",
+        "published": "2026-09-11T22:49:18+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
         "title": "Quoting Boris Cherny",
         "url": "https://simonwillison.net/2026/Sep/11/boris-cherny/",
         "normalized_url": "https://simonwillison.net/2026/Sep/11/boris-cherny",
         "summary": "Production code written by Claude should have a higher bar than if it was written by a human. At Anthropic, we have many guardrails in place to make sure this is happening: lots of lint rules, lots of tests, Claude-driven end to end tests, Claude-powered fuzzers running daily, automated code reviews and security reviews, automated code refactoring, and so on. Without these, you can end up with a mess that is hard to maintain down the line. — Boris Cherny Tags: claude , ai , claude-code , llms , ",
         "source": "Simon Willison",
         "published": "2026-09-11T17:47:11+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Feeling sad about AI",
+        "url": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai/",
+        "normalized_url": "https://simonwillison.net/2026/Sep/11/feeling-sad-about-ai",
+        "summary": "My comment on Feeling sad about AI — Hacker News. I'm not sure how useful it is to say this, but I think a lot of people (myself included, a few years ago now) have been through this moment of existential crisis and come out the other side. The initial reaction, when some coding agent does a piece of work that would have taken you a week in an hour and does it well , is to be very disheartened by it. Once you come to terms with the idea that translating an exact specification into decent code is",
+        "source": "Simon Willison",
+        "published": "2026-09-11T17:28:37+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://simonwillison.net/atom/everything/"
@@ -1968,26 +1871,13 @@
       },
       {
         "category": "news",
-        "title": "Any Nix package, live in your browser",
-        "url": "https://simonwillison.net/2026/Sep/10/trynix/",
-        "normalized_url": "https://simonwillison.net/2026/Sep/10/trynix",
-        "summary": "Any Nix package, live in your browser Farid Zakaria calls this his \" magnum opus of Nix work\", and I can see why. trynix.dev provides a qemu-wasm powered x86_64 Linux virtual machine running entirely in your browser through WebAssembly. That VM can then be booted with any Nix package from the past 13 years. They are URL addressable, so you can navigate to this page: https://trynix.dev/?pkg=python3%403.6.2 Then click \"Load\" and get an interactive shell against a virtual machine running Python 3.6",
+        "title": "datasette-publish-fly 1.4",
+        "url": "https://simonwillison.net/2026/Sep/11/datasette-publish-fly/",
+        "normalized_url": "https://simonwillison.net/2026/Sep/11/datasette-publish-fly",
+        "summary": "Release: datasette-publish-fly 1.4 Sets force_https=true in fly.toml . #31 Fix for Volume could not be found bug. #32 Compatible with app-scoped deploy tokens. #34 Tags: datasette , fly",
         "source": "Simon Willison",
-        "published": "2026-09-10T23:44:15+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Native is now the future of mobile at Shopify",
-        "url": "https://simonwillison.net/2026/Sep/10/shopify-react-native/",
-        "normalized_url": "https://simonwillison.net/2026/Sep/10/shopify-react-native",
-        "summary": "Native is now the future of mobile at Shopify Shopify are moving from React Native back to separate Swift and Kotlin codebases for their native apps, for the exact reason you would expect: We decided to switch from native to React Native in 2020 for three reasons: Stop building the same features twice Allow developers to work across the stack Spend less time chasing feature parity and more time shipping value [...] Native still means building and maintaining software on two platforms, that cost ",
-        "source": "Simon Willison",
-        "published": "2026-09-10T21:11:15+00:00",
-        "importance_hint": 3,
+        "published": "2026-09-11T02:58:52+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://simonwillison.net/atom/everything/"
         }
@@ -2189,10 +2079,10 @@
       },
       {
         "category": "news",
-        "title": "Build more natural voice experiences with GPT‑Live‑1 in the API",
-        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
-        "normalized_url": "https://openai.com/index/introducing-gpt-live-1-in-the-api",
-        "summary": "GPT‑Live‑1 brings natural, full-duplex voice conversations to the API, with stronger instruction following, custom voices, and telephony support.",
+        "title": "Introducing the Agents API",
+        "url": "https://openai.com/index/introducing-the-agents-api",
+        "normalized_url": "https://openai.com/index/introducing-the-agents-api",
+        "summary": "Build and launch cloud agents with the Agents API, a managed service powered by the Codex harness for orchestration, long-running sessions, and tool use.",
         "source": "OpenAI",
         "published": "2026-09-10T00:00:00+00:00",
         "importance_hint": 5,
@@ -2221,19 +2111,6 @@
         "summary": "",
         "source": "TLDR AI",
         "published": "2026-09-10T00:00:00+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://tldr.tech/api/rss/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Images 2.5 🎨, OpenAI solves Navier-Stokes 🧮, AlphaGenome Atlas 🧬",
-        "url": "https://tldr.tech/ai/2026-09-09",
-        "normalized_url": "https://tldr.tech/ai/2026-09-09",
-        "summary": "",
-        "source": "TLDR AI",
-        "published": "2026-09-09T00:00:00+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://tldr.tech/api/rss/ai"
@@ -2306,19 +2183,6 @@
       },
       {
         "category": "news",
-        "title": "Nex N2.5 Pro (407GB) released",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdbd0b/nex_n25_pro_407gb_released/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdbd0b/nex_n25_pro_407gb_released",
-        "summary": "submitted by /u/jinnyjuice [link] [comments]",
-        "source": "r/LocalLLaMA",
-        "published": "2026-09-11T09:31:48+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
-        }
-      },
-      {
-        "category": "news",
         "title": "Orukeet, new ASR model based on Parakeet",
         "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdk2he/orukeet_new_asr_model_based_on_parakeet/",
         "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdk2he/orukeet_new_asr_model_based_on_parakeet",
@@ -2326,6 +2190,19 @@
         "source": "r/LocalLLaMA",
         "published": "2026-09-11T15:50:53+00:00",
         "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Nex N2.5 Pro (407GB) released",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdbd0b/nex_n25_pro_407gb_released/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wdbd0b/nex_n25_pro_407gb_released",
+        "summary": "submitted by /u/jinnyjuice [link] [comments]",
+        "source": "r/LocalLLaMA",
+        "published": "2026-09-11T09:31:48+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }

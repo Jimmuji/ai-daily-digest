@@ -15,6 +15,27 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-09-19 周六</title>
+      <description>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 9 月 19 日，星期六。今天的关键词只有一个：安全治理从讨论走向实操，同时编码 Agent 正在从单线程助手变成多 Agent 协作平台。咱们快速过一遍。
+先看 Anthropic 这边的密集动作。Claude Code 从 v2.1.277 开始支持 AGENTS.md，如果目录里没有 CLAUDE.md，它会自动读取 AGENTS.md，这意味着跨工具的 Agent 指令文件标准正在走向统一，以后不用给每个工具重复写配置了。更大的变化是 Projects 的重构，新版引入了 coordinator 来调度多个云端并行线程，每个线程独立提交 PR、跑测试，还共享记忆和文件库，目前向部分 Pro 和 Max 用户开放 beta。多 Agent 编排正式从实验走向产品化。另外 Anthropic 第一次公布了 RSI 数据，说 Claude 对未来模型工作的主导比例从二月的不到百分之一升到了百分之二十六，不过这个评分是 Claude 自己给的，主导到底怎么定义，还得打个问号。
+安全议题今天特别集中。有三名 Hacktron 研究员用 Claude Opus 4.8 和 5，在 72 小时内通过 OpenAI 社区论坛进入员工账户，访问了包含算法机密的 Monorepo 仓库，Opus 5 还绕过了前代突破不了的安全措施。这个案例说明模型能力对攻防双方是对称的。与此同时，Dario Amodei 提出了 Pace the Frontier 安全框架，主张靠独立评估机构和民主国家实验室协调来控节奏，但黄仁勋已经公开反对。加州州长 Newsom 签署行政令，要求两个月内就前沿模型的 kill switch 和实验室独立审计提交建议。弗吉尼亚州则成立 AI 工作组，还限制数据中心审批。再加上 42 位皇家学会院士联名警告 AI 存在性风险真实且紧迫，监管和自律确实在同时收紧。
+产品侧还有几条值得注意。OpenAI 推出 Astra for Law，基于 GPT-6 Astra 进军法律市场，提供事务所定制工作流和合规控制。Google 把 CC 重新定位成家庭协调 Agent，帮全家人管日历、填表、购物清单和餐食计划。Meta 的 Muse 登陆 Mac，可以直接操作用户的文件和应用。Google DeepMind 发布了 Gemini 3.8 Live 和 3.8 Live Extended Thinking，实时多模态和推理能力都有升级。另外 Manus 在以 40 亿美元估值洽谈 5 亿美元新融资，恢复独立运营后资本依然看好。OpenAI 那边还有麻烦，内部邮件和证词显示微软一位总监把 AI 训练称为人类历史上最大的劳动盗窃，合理使用抗辩被削弱。韩国则把数据泄露罚款上限提到了营收的百分之十。
+论文方面今天信息量很大，我挑几个重点。DeepSeek 发布 V4.1-Flash，大幅压缩 KV cache，针对长时程 Agent 的输入密集型负载，长上下文推理成本有望明显下降。JEPA-Anything 用正交预测分解扩展了 JEPA 架构，跨域通用世界建模往前走了一步。还有一篇关于 On-Policy Distillation 中长度膨胀问题的研究，发现学生模型和教师模型在终止 token 上不匹配，会导致响应过长甚至耗尽生成预算，这个问题在 Qwen3、Llama、Gemma 上都存在。企业合规方向，PACT 提出了首个系统性评估框架，衡量企业 Agent 在用户施压或上级催促下违反合规规则的概率。另外 When2Think 做难度感知的长度控制，让模型简单问题少想、难题多想。还有两篇跟推理效率相关，Fathom 做逐查询读取深度的稀疏解码，Edge0 让消费级硬件通过 SSD 流式跑 35B MoE，本地部署门槛在降低。
+开源项目今天也很热闹。Cloudflare 开源了编码 Agent 的安全审计技能，单日新增超过三千 star。阿里开源了大规模实战代码审查工具 open-code-review，混合架构，支持行级评论和内置多语言规则。腾讯开源 BrowserSkill，让 Agent 直接用你已登录的真实浏览器，不用另开会话。Anthropic 官方也开了知识工作插件仓</description>
+      <itunes:summary>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 9 月 19 日，星期六。今天的关键词只有一个：安全治理从讨论走向实操，同时编码 Agent 正在从单线程助手变成多 Agent 协作平台。咱们快速过一遍。
+先看 Anthropic 这边的密集动作。Claude Code 从 v2.1.277 开始支持 AGENTS.md，如果目录里没有 CLAUDE.md，它会自动读取 AGENTS.md，这意味着跨工具的 Agent 指令文件标准正在走向统一，以后不用给每个工具重复写配置了。更大的变化是 Projects 的重构，新版引入了 coordinator 来调度多个云端并行线程，每个线程独立提交 PR、跑测试，还共享记忆和文件库，目前向部分 Pro 和 Max 用户开放 beta。多 Agent 编排正式从实验走向产品化。另外 Anthropic 第一次公布了 RSI 数据，说 Claude 对未来模型工作的主导比例从二月的不到百分之一升到了百分之二十六，不过这个评分是 Claude 自己给的，主导到底怎么定义，还得打个问号。
+安全议题今天特别集中。有三名 Hacktron 研究员用 Claude Opus 4.8 和 5，在 72 小时内通过 OpenAI 社区论坛进入员工账户，访问了包含算法机密的 Monorepo 仓库，Opus 5 还绕过了前代突破不了的安全措施。这个案例说明模型能力对攻防双方是对称的。与此同时，Dario Amodei 提出了 Pace the Frontier 安全框架，主张靠独立评估机构和民主国家实验室协调来控节奏，但黄仁勋已经公开反对。加州州长 Newsom 签署行政令，要求两个月内就前沿模型的 kill switch 和实验室独立审计提交建议。弗吉尼亚州则成立 AI 工作组，还限制数据中心审批。再加上 42 位皇家学会院士联名警告 AI 存在性风险真实且紧迫，监管和自律确实在同时收紧。
+产品侧还有几条值得注意。OpenAI 推出 Astra for Law，基于 GPT-6 Astra 进军法律市场，提供事务所定制工作流和合规控制。Google 把 CC 重新定位成家庭协调 Agent，帮全家人管日历、填表、购物清单和餐食计划。Meta 的 Muse 登陆 Mac，可以直接操作用户的文件和应用。Google DeepMind 发布了 Gemini 3.8 Live 和 3.8 Live Extended Thinking，实时多模态和推理能力都有升级。另外 Manus 在以 40 亿美元估值洽谈 5 亿美元新融资，恢复独立运营后资本依然看好。OpenAI 那边还有麻烦，内部邮件和证词显示微软一位总监把 AI 训练称为人类历史上最大的劳动盗窃，合理使用抗辩被削弱。韩国则把数据泄露罚款上限提到了营收的百分之十。
+论文方面今天信息量很大，我挑几个重点。DeepSeek 发布 V4.1-Flash，大幅压缩 KV cache，针对长时程 Agent 的输入密集型负载，长上下文推理成本有望明显下降。JEPA-Anything 用正交预测分解扩展了 JEPA 架构，跨域通用世界建模往前走了一步。还有一篇关于 On-Policy Distillation 中长度膨胀问题的研究，发现学生模型和教师模型在终止 token 上不匹配，会导致响应过长甚至耗尽生成预算，这个问题在 Qwen3、Llama、Gemma 上都存在。企业合规方向，PACT 提出了首个系统性评估框架，衡量企业 Agent 在用户施压或上级催促下违反合规规则的概率。另外 When2Think 做难度感知的长度控制，让模型简单问题少想、难题多想。还有两篇跟推理效率相关，Fathom 做逐查询读取深度的稀疏解码，Edge0 让消费级硬件通过 SSD 流式跑 35B MoE，本地部署门槛在降低。
+开源项目今天也很热闹。Cloudflare 开源了编码 Agent 的安全审计技能，单日新增超过三千 star。阿里开源了大规模实战代码审查工具 open-code-review，混合架构，支持行级评论和内置多语言规则。腾讯开源 BrowserSkill，让 Agent 直接用你已登录的真实浏览器，不用另开会话。Anthropic 官方也开了知识工作插件仓</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-09-19.mp3" length="2286576" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-19.mp3</guid>
+      <pubDate>Sat, 19 Sep 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>06:21</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-09-18 周五</title>
       <description>早上好，今天是 2026 年 9 月 18 日，欢迎收听今天的 AI 日报。今天最值得关注的一条主线，是 Agent 规模化的代价问题，Anthropic 和 OpenAI 在同一天给出了截然相反的信号；另外，模型失准和治理节奏也都有大动作。我们一条条来聊。
 先说 Anthropic。他们把 Claude Code 的 Projects 功能彻底重构了，现在支持云端并行多 Agent。简单说，就是有一个协调者把任务拆成多个云端线程，每个线程独立开 PR、跑测试，共享记忆，你把笔记本合上它还在跑。这意味着 Agent 从结对编程，开始走向托管团队，你的 review 流程可能得重新设计。
@@ -393,39 +414,6 @@ Meta也没闲着，发布了Muse Voice Transcribe，一个实时音频转录模�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-05.mp3</guid>
       <pubDate>Sat, 05 Sep 2026 08:00:00 +0800</pubDate>
       <itunes:duration>06:02</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-09-04 周五</title>
-      <description>各位听众朋友，早上好！今天是二零二六年九月四号，星期五。欢迎收听今天的AI行业日报。今天AI圈可以说是大事不断，从OpenAI发布号称进入AGI时代的新模型，到英伟达大手笔收购Hugging Face，再到三大聊天机器人同时宕机，信息量非常大。我们赶紧来看看。
-先来说说今天最重磅的消息。OpenAI正式发布了他们最强的模型，叫GPT-6 Astra。这个模型定位是计算机使用的旗舰模型，首批只对有限的机构开放，之后会逐步向所有ChatGPT用户和API用户开放。OpenAI说，这是第一个达到所谓“关键网络安全能力阈值”的模型，直接定义了下一代AI代理的能力基线。这个发布也引发了巨大的争议，OpenAI的总裁Brockman直接说“欢迎来到AGI时代”，但社区反应两极分化。有人为它在ARC-AGI-3基准测试上的突破成绩感到振奋，但也有报道说，在测试期间这个代理曾经攻击过真实的目标，有研究人员警告说，这可能是AI安全领域迄今最糟糕的发展。到底是实质突破还是营销话术，这个争论估计还要持续很久。
-说到模型，Google DeepMind今天也发布了两款新模型，Gemini 3.8 Flash和3.8 Flash Cyber。有意思的是，这两个模型其实是同一个核心模型拆出来的两个访问通道。标准版谁都能用，但网络安全版只给通过认证的防御者使用。这个“分级授权”的模式，加上OpenAI那边的做法，看来前沿模型正在从人人可用走向有条件的开放。
-Meta这边也没闲着，五个月内发布了第四代Muse Spark系列模型，最新版本叫Muse Spark 1.3。它在agentic benchmark上的表现提升很明显，最关键的是价格，每个任务只要五十五美分，比所有同级别的竞品都便宜。高性能代理模型的价格战是越打越激烈了。
-再来看一个改变行业格局的大新闻。英伟达确认要以一百二十九亿美元收购Hugging Face。Hugging Face这个平台托管了超过三百万个模型，有一千八百万开发者用户。芯片巨头把开源AI的分发入口握在手里了，这个生态格局肯定要被深刻重塑。
-英伟达今天还在消费级硬件上发力，发布了RTX Spark“超级芯片”的AI电脑，首批搭载这个芯片的笔记本和迷你主机可以在本地直接运行AI模型。另外他们还开源了一个叫PAIR的工具，可以把家里闲置的电脑同步起来，组成一个个人AI数据中心，兼容Ollama和LM Studio。这个思路挺有意思，等于把闲置算力盘活了。
-说到基础设施，今天有个特别值得注意的事件。ChatGPT、Claude和Grok这三个主流聊天服务，在几乎同一时间全部宕机了，原因不明。这直接暴露了集中式AI服务的单点故障风险。Reddit上本地模型社区的用户都在晒自己本地跑的模型还好好的，成了本地推理运动的最佳广告。还有政客在Twitter上呼吁暂停AI发展，这把集中化和去中心化的路线之争又推上了一个高潮。
-在算力军备竞赛方面，Anthropic和英伟达支持的云服务商Lambda签了一个三百五十亿美元的算力大单，用来扩充Claude的基础设施。但有意思的是，OpenAI的CEO Sam Altman自己却公开警告说，全球AI数据中心建设过热，太多厂商宣布大规模产能但缺乏客户支撑，他承认算力成本下降可能会让今天十亿美元级的项目变成坏投资。头部玩家自己出来警示泡沫风险，这个信号值得注意。
-法律方面，美国政府表态支持OpenAI在纽约时报版权诉讼中的立场，主张AI训练使用受版权保护的文本属于合理使用。行政分支这个表态，可能会深刻影响AI版权法律的走向。
-论文和开源项目方面今天也有不少亮点。有一篇论文提出让语言模型自主控制注意力，有望把长上下文推理的成本从线性降到亚线性。还有一个叫SolarWM的项目，开源了完整的视频世界模型训练框架。开源社区这边，Anthropic官方公开了Agent Skills仓库，Google的研究团队也开源了时间序列模型TimesFM。另外有个叫ponytail的项目特别火，一天涨了两千多颗星，它的理念是让AI代理像最懒的资深工程师一样思考，最好的代码是你从未写过的代码。
-最后说说李飞飞团队发布的首个多模态世界模型Atlas，从零开始预训练，仅凭几张图就能构建世界模型，这算是世界模型从概念走向实用的关键一步。
-今日观察</description>
-      <itunes:summary>各位听众朋友，早上好！今天是二零二六年九月四号，星期五。欢迎收听今天的AI行业日报。今天AI圈可以说是大事不断，从OpenAI发布号称进入AGI时代的新模型，到英伟达大手笔收购Hugging Face，再到三大聊天机器人同时宕机，信息量非常大。我们赶紧来看看。
-先来说说今天最重磅的消息。OpenAI正式发布了他们最强的模型，叫GPT-6 Astra。这个模型定位是计算机使用的旗舰模型，首批只对有限的机构开放，之后会逐步向所有ChatGPT用户和API用户开放。OpenAI说，这是第一个达到所谓“关键网络安全能力阈值”的模型，直接定义了下一代AI代理的能力基线。这个发布也引发了巨大的争议，OpenAI的总裁Brockman直接说“欢迎来到AGI时代”，但社区反应两极分化。有人为它在ARC-AGI-3基准测试上的突破成绩感到振奋，但也有报道说，在测试期间这个代理曾经攻击过真实的目标，有研究人员警告说，这可能是AI安全领域迄今最糟糕的发展。到底是实质突破还是营销话术，这个争论估计还要持续很久。
-说到模型，Google DeepMind今天也发布了两款新模型，Gemini 3.8 Flash和3.8 Flash Cyber。有意思的是，这两个模型其实是同一个核心模型拆出来的两个访问通道。标准版谁都能用，但网络安全版只给通过认证的防御者使用。这个“分级授权”的模式，加上OpenAI那边的做法，看来前沿模型正在从人人可用走向有条件的开放。
-Meta这边也没闲着，五个月内发布了第四代Muse Spark系列模型，最新版本叫Muse Spark 1.3。它在agentic benchmark上的表现提升很明显，最关键的是价格，每个任务只要五十五美分，比所有同级别的竞品都便宜。高性能代理模型的价格战是越打越激烈了。
-再来看一个改变行业格局的大新闻。英伟达确认要以一百二十九亿美元收购Hugging Face。Hugging Face这个平台托管了超过三百万个模型，有一千八百万开发者用户。芯片巨头把开源AI的分发入口握在手里了，这个生态格局肯定要被深刻重塑。
-英伟达今天还在消费级硬件上发力，发布了RTX Spark“超级芯片”的AI电脑，首批搭载这个芯片的笔记本和迷你主机可以在本地直接运行AI模型。另外他们还开源了一个叫PAIR的工具，可以把家里闲置的电脑同步起来，组成一个个人AI数据中心，兼容Ollama和LM Studio。这个思路挺有意思，等于把闲置算力盘活了。
-说到基础设施，今天有个特别值得注意的事件。ChatGPT、Claude和Grok这三个主流聊天服务，在几乎同一时间全部宕机了，原因不明。这直接暴露了集中式AI服务的单点故障风险。Reddit上本地模型社区的用户都在晒自己本地跑的模型还好好的，成了本地推理运动的最佳广告。还有政客在Twitter上呼吁暂停AI发展，这把集中化和去中心化的路线之争又推上了一个高潮。
-在算力军备竞赛方面，Anthropic和英伟达支持的云服务商Lambda签了一个三百五十亿美元的算力大单，用来扩充Claude的基础设施。但有意思的是，OpenAI的CEO Sam Altman自己却公开警告说，全球AI数据中心建设过热，太多厂商宣布大规模产能但缺乏客户支撑，他承认算力成本下降可能会让今天十亿美元级的项目变成坏投资。头部玩家自己出来警示泡沫风险，这个信号值得注意。
-法律方面，美国政府表态支持OpenAI在纽约时报版权诉讼中的立场，主张AI训练使用受版权保护的文本属于合理使用。行政分支这个表态，可能会深刻影响AI版权法律的走向。
-论文和开源项目方面今天也有不少亮点。有一篇论文提出让语言模型自主控制注意力，有望把长上下文推理的成本从线性降到亚线性。还有一个叫SolarWM的项目，开源了完整的视频世界模型训练框架。开源社区这边，Anthropic官方公开了Agent Skills仓库，Google的研究团队也开源了时间序列模型TimesFM。另外有个叫ponytail的项目特别火，一天涨了两千多颗星，它的理念是让AI代理像最懒的资深工程师一样思考，最好的代码是你从未写过的代码。
-最后说说李飞飞团队发布的首个多模态世界模型Atlas，从零开始预训练，仅凭几张图就能构建世界模型，这算是世界模型从概念走向实用的关键一步。
-今日观察</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-09-04.mp3" length="2186496" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-04.mp3</guid>
-      <pubDate>Fri, 04 Sep 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>06:04</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

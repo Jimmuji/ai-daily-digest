@@ -1,13 +1,39 @@
 {
   "date": "2026-09-29",
-  "generated_at": "2026-09-29T08:28:25.667585+08:00",
+  "generated_at": "2026-09-29T09:42:36.592083+08:00",
   "counts": {
     "papers": 30,
     "projects": 5,
-    "news": 126
+    "news": 117
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "EmbodiedMemory-Bench: Benchmarking Embodied Memory for Long-Horizon Embodied Tasks",
+        "url": "https://huggingface.co/papers/2609.28236",
+        "normalized_url": "https://huggingface.co/papers/2609.28236",
+        "summary": "Long-horizon embodied interaction requires agents to retain and continually update information about the environment as they observe, act, and encounter change. Yet current agents struggle to maintain such memory reliably. Our analysis traces this limitation to four key deficiencies: weak fine-grained visual memory, unreliable dynamic world-state tracking, failing to record world state revealed by interaction outcomes, and limited generalization from prior experience. However, existing benchmark",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-23T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.28236"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Rethinking Training-Inference Mismatch in LLM Reinforcement Learning: Where It Arises and How to Correct It",
+        "url": "https://huggingface.co/papers/2609.32444",
+        "normalized_url": "https://huggingface.co/papers/2609.32444",
+        "summary": "We study training-inference mismatch in reinforcement learning with verifiable rewards (RLVR) for large language models, where rollouts are sampled by an inference engine while gradients are computed by a training engine, and the two engines assign different probabilities to the same tokens. To account for this discrepancy in policy updates, we introduce calibrated importance sampling (CIS). CIS is motivated by an empirically supported logit-displacement characterization that expresses the misma",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-26T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.32444"
+        }
+      },
       {
         "category": "papers",
         "title": "LastOPD: Taming Collapse in Latent On-Policy Distillation",
@@ -371,32 +397,6 @@
         "metadata": {
           "paper_id": "2609.31590"
         }
-      },
-      {
-        "category": "papers",
-        "title": "SLCA-GRPO: Resolving Cross-Segment Credit Misattribution in Tool-Calling RL",
-        "url": "https://huggingface.co/papers/2609.29050",
-        "normalized_url": "https://huggingface.co/papers/2609.29050",
-        "summary": "Tool-calling agents produce heterogeneous outputs, interleaving structured tool invocations with user-facing natural language summaries. This output heterogeneity presents a structural failure mode in standard on-policy Reinforcement Learning (RL): algorithms like GRPO indiscriminately broadcast a homogeneous trajectory-level scalar advantage to all tokens. Consequently, gradient noise from summary generation leaks into tool-decision tokens, causing cross-segment credit misattribution and brittl",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-24T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.29050"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "InternW0-Δ: A World Action Model Bridging Predictive Dynamics and Actions with 20K+ Hours of Open Data",
-        "url": "https://huggingface.co/papers/2609.31394",
-        "normalized_url": "https://huggingface.co/papers/2609.31394",
-        "summary": "World Action Models (WAMs) jointly model visual dynamics and action generation for generalist robot manipulation. A central challenge is to integrate priors from large-scale pretrained models---including visual dynamics, scene semantics, geometry, and motion---into a unified framework for robot action generation. We introduce InternW0-Δ, a unified WAM pretrained on a heterogeneous corpus that outperforms prior methods across simulation benchmarks and real-robot platforms. InternW0-Δ combines pre",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-25T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.31394"
-        }
       }
     ],
     "projects": [
@@ -469,10 +469,21 @@
     "news": [
       {
         "category": "news",
+        "title": "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns",
+        "url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
+        "normalized_url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
+        "summary": "HN points: 34, comments: 32",
+        "source": "Hacker News",
+        "published": "2026-09-29T00:34:27Z",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "Anthropic's IPO prospectus shows AI vision, surging costs",
         "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
         "normalized_url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28",
-        "summary": "HN points: 30, comments: 16",
+        "summary": "HN points: 68, comments: 61",
         "source": "Hacker News",
         "published": "2026-09-28T23:40:59Z",
         "importance_hint": 4,
@@ -483,7 +494,7 @@
         "title": "OpenAI Scraps Release of New AI Model over Safety Concerns",
         "url": "https://www.wsj.com/tech/ai/openai-chatgpt-model-release-cancel-safety-5a2f9f42",
         "normalized_url": "https://www.wsj.com/tech/ai/openai-chatgpt-model-release-cancel-safety-5a2f9f42",
-        "summary": "HN points: 13, comments: 3",
+        "summary": "HN points: 17, comments: 5",
         "source": "Hacker News",
         "published": "2026-09-28T22:07:59Z",
         "importance_hint": 5,
@@ -494,9 +505,20 @@
         "title": "Who should be held accountable when an AI Agent (accidentally) acts maliciously?",
         "url": "https://blog.greenpants.net/ai-accountability/",
         "normalized_url": "https://blog.greenpants.net/ai-accountability",
-        "summary": "HN points: 32, comments: 56",
+        "summary": "HN points: 33, comments: 66",
         "source": "Hacker News",
         "published": "2026-09-28T22:05:46Z",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "news",
+        "title": "ESP32S3 cluster running 1.58-bit (BitNet) Language model",
+        "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
+        "normalized_url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
+        "summary": "HN points: 20, comments: 2",
+        "source": "Hacker News",
+        "published": "2026-09-28T21:26:41Z",
         "importance_hint": 4,
         "metadata": {}
       },
@@ -505,7 +527,7 @@
         "title": "Flock Wants the Most Detailed Map of Its Surveillance Cameras Taken Offline",
         "url": "https://theintercept.com/2026/09/24/how-many-flock-devices-in-united-states-300000/",
         "normalized_url": "https://theintercept.com/2026/09/24/how-many-flock-devices-in-united-states-300000",
-        "summary": "HN points: 158, comments: 72",
+        "summary": "HN points: 168, comments: 76",
         "source": "Hacker News",
         "published": "2026-09-28T21:08:10Z",
         "importance_hint": 3,
@@ -516,7 +538,7 @@
         "title": "Pacing the Frontier is not the actual goal for AI labs",
         "url": "https://www.lesswrong.com/posts/Nm4ewbYovtjq69dvH/pacing-the-frontier-is-not-the-actual-goal-for-ai-labs",
         "normalized_url": "https://www.lesswrong.com/posts/Nm4ewbYovtjq69dvH/pacing-the-frontier-is-not-the-actual-goal-for-ai-labs",
-        "summary": "HN points: 70, comments: 72",
+        "summary": "HN points: 73, comments: 77",
         "source": "Hacker News",
         "published": "2026-09-28T20:47:26Z",
         "importance_hint": 3,
@@ -527,7 +549,7 @@
         "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
         "url": "https://github.com/firelex/jeff",
         "normalized_url": "https://github.com/firelex/jeff",
-        "summary": "HN points: 222, comments: 71",
+        "summary": "HN points: 267, comments: 107",
         "source": "Hacker News",
         "published": "2026-09-28T20:23:36Z",
         "importance_hint": 4,
@@ -538,7 +560,7 @@
         "title": "It's Time to Investigate the AI Labs",
         "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
         "normalized_url": "https://calnewport.com/its-time-to-investigate-the-ai-labs",
-        "summary": "HN points: 235, comments: 77",
+        "summary": "HN points: 287, comments: 105",
         "source": "Hacker News",
         "published": "2026-09-28T19:53:35Z",
         "importance_hint": 3,
@@ -549,7 +571,7 @@
         "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
         "url": "https://stateofutopia.com/experiments/microllmlab/",
         "normalized_url": "https://stateofutopia.com/experiments/microllmlab",
-        "summary": "HN points: 112, comments: 55",
+        "summary": "HN points: 124, comments: 60",
         "source": "Hacker News",
         "published": "2026-09-28T18:58:53Z",
         "importance_hint": 3,
@@ -560,7 +582,7 @@
         "title": "Schools are experimenting with AI with little evidence or policy to guide them",
         "url": "https://www.npr.org/2026/09/28/nx-s1-5759718/ai-schools-experiment-research",
         "normalized_url": "https://www.npr.org/2026/09/28/nx-s1-5759718/ai-schools-experiment-research",
-        "summary": "HN points: 17, comments: 9",
+        "summary": "HN points: 18, comments: 9",
         "source": "Hacker News",
         "published": "2026-09-28T18:31:44Z",
         "importance_hint": 3,
@@ -571,7 +593,7 @@
         "title": "I made a visual workspace for AI Automations",
         "url": "https://www.biom.dev/",
         "normalized_url": "https://www.biom.dev",
-        "summary": "HN points: 27, comments: 22",
+        "summary": "HN points: 27, comments: 23",
         "source": "Hacker News",
         "published": "2026-09-28T17:53:14Z",
         "importance_hint": 3,
@@ -606,7 +628,7 @@
         "title": "How Pew Research Center is – and is not – using AI in our work",
         "url": "https://www.pewresearch.org/decoded/2026/09/28/how-pew-research-center-is-and-is-not-using-ai-in-our-work-2/",
         "normalized_url": "https://www.pewresearch.org/decoded/2026/09/28/how-pew-research-center-is-and-is-not-using-ai-in-our-work-2",
-        "summary": "HN points: 20, comments: 3",
+        "summary": "HN points: 21, comments: 3",
         "source": "Hacker News",
         "published": "2026-09-28T17:08:06Z",
         "importance_hint": 3,
@@ -614,154 +636,15 @@
       },
       {
         "category": "news",
-        "title": "Driver Ticketed for No Insurance Just Because Flock (YC 2017) Said She Didn't",
-        "url": "https://www.techdirt.com/2026/09/28/driver-ticketed-for-no-insurance-despite-having-insurance-just-because-flock-said-she-didnt/",
-        "normalized_url": "https://www.techdirt.com/2026/09/28/driver-ticketed-for-no-insurance-despite-having-insurance-just-because-flock-said-she-didnt",
-        "summary": "HN points: 74, comments: 33",
-        "source": "Hacker News",
-        "published": "2026-09-28T16:58:25Z",
-        "importance_hint": 3,
-        "metadata": {}
-      },
-      {
-        "category": "news",
-        "title": "We Can't Let Enormous Weirdos Regulate AI",
-        "url": "https://little-flying-robots.ghost.io/why-we-cant-let-enormous-weirdos-regulate-ai/",
-        "normalized_url": "https://little-flying-robots.ghost.io/why-we-cant-let-enormous-weirdos-regulate-ai",
-        "summary": "HN points: 38, comments: 4",
-        "source": "Hacker News",
-        "published": "2026-09-28T16:55:50Z",
-        "importance_hint": 3,
-        "metadata": {}
-      },
-      {
-        "category": "news",
-        "title": "羲禾科技冲刺科创板：上半年营收5.7亿，净利1.6亿，拟募资18亿",
-        "url": "https://www.36kr.com/p/4003235595734918",
-        "normalized_url": "https://www.36kr.com/p/4003235595734918",
-        "summary": "相比于3个月前第一次交表，羲禾科技计划募资减少了6亿元。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:24:46+00:00",
-        "importance_hint": 3,
+        "title": "李飞飞创业公司被苏姿丰550亿收购！世界模型最大交易落地",
+        "url": "https://www.qbitai.com/2026/09/499098.html",
+        "normalized_url": "https://www.qbitai.com/2026/09/499098.html",
+        "summary": "李飞飞将入职AMD首席科学家",
+        "source": "量子位",
+        "published": "2026-09-29T00:49:30+00:00",
+        "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "还想靠中国送电？越南明年缺420万千瓦电，还在压低电价抢外资",
-        "url": "https://www.36kr.com/p/4003249670541184",
-        "normalized_url": "https://www.36kr.com/p/4003249670541184",
-        "summary": "越南电力体系畸形，拖累制造业发展。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:24:27+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "裁掉700人后，这家公司又把客服招回来了",
-        "url": "https://www.36kr.com/p/4003111829458816",
-        "normalized_url": "https://www.36kr.com/p/4003111829458816",
-        "summary": "这才是下一个5年，最好的管理方式。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:22:00+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Swipe式聊天，迎来第二春？",
-        "url": "https://www.36kr.com/p/4003111544688777",
-        "normalized_url": "https://www.36kr.com/p/4003111544688777",
-        "summary": "不要误会，还是一款 AI 陪伴。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:17:14+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "当AI音乐进入“无限供给”时代，虚拟歌手的下一场竞赛开始了",
-        "url": "https://www.36kr.com/p/4003051837984896",
-        "normalized_url": "https://www.36kr.com/p/4003051837984896",
-        "summary": "什么样的AI音乐，值得被听见？",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:13:20+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "定价最低，荣耀Magic9系列为IPO拼了",
-        "url": "https://www.36kr.com/p/4003187308861064",
-        "normalized_url": "https://www.36kr.com/p/4003187308861064",
-        "summary": "最大的诚意，能否换来好销量？",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:06:22+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "“国产外语剧”风起：各省的AI留子，抢着去韩美日谈恋爱",
-        "url": "https://www.36kr.com/p/4003157643974533",
-        "normalized_url": "https://www.36kr.com/p/4003157643974533",
-        "summary": "没有丑男丑女的AI短剧，成为偶像剧最适配的打开方式",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:05:38+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "350亿机器人3D视觉一哥，冲刺港交所，蚂蚁是股东",
-        "url": "https://www.36kr.com/p/4003083020865408",
-        "normalized_url": "https://www.36kr.com/p/4003083020865408",
-        "summary": "2025年营收9.4亿。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:04:08+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "韩漫启示录：中国AI漫剧出海正在积聚风险",
-        "url": "https://www.36kr.com/p/4003039857055617",
-        "normalized_url": "https://www.36kr.com/p/4003039857055617",
-        "summary": "韩漫出海盛极而衰，警示中国AI漫剧需做好本土化。",
-        "source": "36Kr AI",
-        "published": "2026-09-29T00:02:28+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "8点1氪丨遭实名举报偷税漏税，罗永浩回应；段永平买入3万股贵州茅台；比尔盖茨发出严厉警告：AI或足以造成“10亿人死亡”",
-        "url": "https://www.36kr.com/p/4003721627455616",
-        "normalized_url": "https://www.36kr.com/p/4003721627455616",
-        "summary": "锤子科技前投资人郑刚在韩国实名举报罗永浩偷税漏税。",
-        "source": "36Kr AI",
-        "published": "2026-09-28T23:58:59+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+          "feed_url": "https://www.qbitai.com/rss"
         }
       },
       {
@@ -883,19 +766,6 @@
       },
       {
         "category": "news",
-        "title": "在云栖大会，我终于看懂了米哈游千亿AI野心",
-        "url": "https://www.qbitai.com/2026/09/497613.html",
-        "normalized_url": "https://www.qbitai.com/2026/09/497613.html",
-        "summary": "大伟哥：如果做不到，一年两年之后过来打我脸",
-        "source": "量子位",
-        "published": "2026-09-26T07:18:05+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
         "title": "Cloudflare 推出智能体开发栈生命周期，以取代传统 SDLC",
         "url": "https://www.infoq.cn/article/OooAe7xY816xAdLrkv8V?utm_source=rss&utm_medium=article",
         "normalized_url": "https://www.infoq.cn/article/OooAe7xY816xAdLrkv8V",
@@ -1000,6 +870,19 @@
       },
       {
         "category": "news",
+        "title": "Peak XV ups Surge seed investment ceiling to $5M, unveils 18-startup cohort",
+        "url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises/",
+        "normalized_url": "https://techcrunch.com/2026/09/28/peak-xv-goes-bigger-at-seed-with-new-surge-cohort-as-series-a-bar-rises",
+        "summary": "Thirteen of the 18 startups in Peak XV’s latest Surge cohort are targeting global markets, while more than half are based in India.",
+        "source": "TechCrunch AI",
+        "published": "2026-09-29T00:30:00+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+        }
+      },
+      {
+        "category": "news",
         "title": "OpenAI reportedly ditches model over safety concerns",
         "url": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns/",
         "normalized_url": "https://techcrunch.com/2026/09/28/openai-reportedly-ditches-model-over-safety-concerns",
@@ -1097,19 +980,6 @@
         "summary": "As all-in-one AI agents like Meta's Muse and Instinct take off, Google is opting to end a feature that built task-specific agents.",
         "source": "TechCrunch AI",
         "published": "2026-09-28T17:29:50+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Meta launches enterprise AI platform, hires MongoDB CEO to lead new initiative",
-        "url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative/",
-        "normalized_url": "https://techcrunch.com/2026/09/28/meta-launches-enterprise-ai-platform-hires-mongodb-ceo-to-lead-new-initiative",
-        "summary": "Meta says it will focus on bringing its full technology stack, including Muse, Meta Business Agent, Muse API, Muse Code, and more to businesses and developers.",
-        "source": "TechCrunch AI",
-        "published": "2026-09-28T16:52:38+00:00",
         "importance_hint": 5,
         "metadata": {
           "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
@@ -1321,6 +1191,19 @@
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.wired.com/feed/tag/ai/latest/rss"
+        }
+      },
+      {
+        "category": "news",
+        "title": "A Day in the Life of a Roboticist: Charlie Kemp",
+        "url": "https://robotsguide.com/learn/a-day-in-the-life-of-a-roboticist-charlie-kemp",
+        "normalized_url": "https://robotsguide.com/learn/a-day-in-the-life-of-a-roboticist-charlie-kemp",
+        "summary": "Building useful robots starts with understanding the people who use them. For Charlie Kemp, cofounder and chief technology officer of Hello Robot, that means developing assistive robots that can help people with everyday tasks and support greater independence. In this Robots Guide profile, Kemp shares his path from studying artificial intelligence at MIT to building Stretch, explains how working with people with disabilities has shaped his approach, and offers advice for aspiring roboticists. Re",
+        "source": "IEEE Spectrum AI",
+        "published": "2026-09-28T21:48:56+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss"
         }
       },
       {
@@ -1806,6 +1689,19 @@
       },
       {
         "category": "news",
+        "title": "How we will do better for Australia",
+        "url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "normalized_url": "https://openai.com/index/how-we-will-do-better-for-australia",
+        "summary": "OpenAI apologizes for incidents involving Australian government websites and outlines stronger safeguards and support to strengthen Australia’s cyber defences.",
+        "source": "OpenAI",
+        "published": "2026-09-29T01:00:00+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://openai.com/news/rss.xml"
+        }
+      },
+      {
+        "category": "news",
         "title": "The Lenfest Institute grows landmark program with expanded OpenAI support",
         "url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
         "normalized_url": "https://openai.com/index/lenfest-ai-collaborative-expansion",
@@ -1864,19 +1760,6 @@
         "summary": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
         "source": "OpenAI",
         "published": "2026-09-23T16:00:00+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://openai.com/news/rss.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "OpenAI extends cyber access to Ukraine for civilian defense",
-        "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-        "normalized_url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
-        "summary": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
-        "source": "OpenAI",
-        "published": "2026-09-23T13:00:00+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://openai.com/news/rss.xml"
@@ -1988,13 +1871,13 @@
       },
       {
         "category": "news",
-        "title": "3090 for $1500???",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ws8f1r/3090_for_1500/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1ws8f1r/3090_for_1500",
-        "summary": "A couple weeks ago, I thought they were selling for 1200. On eBay now, the cheapest \"buy it now\" seems to be just shy of 1500. It feels like we're in a game of GPU musical chairs now. submitted by /u/sleight42 [link] [comments]",
+        "title": "Qwen next 3.8 and 3.8 27b Vs Sonnet 5.5 low and Sonnet 5.5 medium.",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wsq6r5/qwen_next_38_and_38_27b_vs_sonnet_55_low_and/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wsq6r5/qwen_next_38_and_38_27b_vs_sonnet_55_low_and",
+        "summary": "Six months ago, a result like this was unthinkable. But now we can say it loud and clear: local models are at the cutting edge, and the gap of just a few months has been confirmed. Personally, I use Qwen-Next 3.8 for complex tasks; today, GPT-Sol-6-High was messing up a project, but Qwen-Next got it back on track. I consider it a reliable benchmark. What’s your take? submitted by /u/LegacyRemaster [link] [comments]",
         "source": "r/LocalLLaMA",
-        "published": "2026-09-28T07:52:16+00:00",
-        "importance_hint": 3,
+        "published": "2026-09-28T20:38:40+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }

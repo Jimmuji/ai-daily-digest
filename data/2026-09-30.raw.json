@@ -1,13 +1,91 @@
 {
   "date": "2026-09-30",
-  "generated_at": "2026-09-30T07:52:06.579320+08:00",
+  "generated_at": "2026-09-30T09:10:47.545329+08:00",
   "counts": {
     "papers": 42,
     "projects": 9,
-    "news": 122
+    "news": 121
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "Approximating Softmax in Pretrained LLMs: Model Sensitivity and Kernel Acceleration",
+        "url": "https://huggingface.co/papers/2609.33586",
+        "normalized_url": "https://huggingface.co/papers/2609.33586",
+        "summary": "On NVIDIA Blackwell B200, tensor-core throughput outpaces special-function exponential throughput by more than two orders of magnitude, exposing exponential evaluation in fused attention kernels. A pretrained Transformer, however, may not need it evaluated accurately at every element. We characterize what a pretrained model does need by approximating softmax at inference in ten frozen decoder-only models (0.5B-72B). The number of positions the softmax map assigns probability to and within-row re",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-27T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.33586"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "CineSubBench: Evaluating LLMs on Long-Form Narrative and Cultural Understanding from Multilingual Movie Subtitles",
+        "url": "https://huggingface.co/papers/2609.36218",
+        "normalized_url": "https://huggingface.co/papers/2609.36218",
+        "summary": "Large language models are increasingly evaluated in specialized domains such as law, medicine, software engineering, and cybersecurity, yet film remains comparatively underexplored despite requiring long-form narrative integration, multilingual interpretation, and culturally situated audience judgments. We introduce CineSubBench, a benchmark for evaluating long-context film understanding from multilingual movie subtitles. A subtitle track represents a film as thousands of short, temporally order",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-28T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.36218"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "LeRF: Learning Reference Coordinate Frames for Perspective Taking Reasoning",
+        "url": "https://huggingface.co/papers/2609.36219",
+        "normalized_url": "https://huggingface.co/papers/2609.36219",
+        "summary": "Perspective taking is a fundamental component of spatial intelligence, requiring models interpret spatial relations from a specified viewpoint, such as that of another entity or an imagined observer. Despite the increasing spatial reasoning capabilities of Vision-Language Models (VLMs), they still struggle with perspective taking, often defaulting to the camera viewpoint when a query requires reasoning from a different perspective. We introduce Learning Reference Coordinate Frames for Perspectiv",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-28T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.36219"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Selecting Diverse SFT Traces Improves Post-RL Generalization",
+        "url": "https://huggingface.co/papers/2609.33780",
+        "normalized_url": "https://huggingface.co/papers/2609.33780",
+        "summary": "Verified solutions are not equally useful for preparing reasoning models for reinforcement learning (RL). We present a comprehensive study of route diversity, the variation in the sequences of reasoning steps in supervised fine-tuning (SFT) data, and propose a lightweight, rule-based fingerprint to select for it. From one pool at one budget, with matched training recipes and checkpoints, selecting diverse rather than similar routes improves post-RL problem coverage across puzzles and mathematics",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-27T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.33780"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Self-Play Search Distillation for Large Language Model Reasoning",
+        "url": "https://huggingface.co/papers/2609.30936",
+        "normalized_url": "https://huggingface.co/papers/2609.30936",
+        "summary": "Improving reasoning abilities in Large Language Models (LLMs) requires high-quality data that exposes difficult decisions, competing alternatives, and their consequences. Data scarcity is driven by the low quality of synthetic data and the cost of human labeling. We introduce Self-Play Search Distillation (SPSD), a framework for generating superhuman synthetic data via self-play of MuZero-like networks trained on board games. SPSD uses executable environments to turn search into structured reaso",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-25T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2609.30936"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Learning from Teacher Continuations at Student States",
+        "url": "https://huggingface.co/papers/2609.36246",
+        "normalized_url": "https://huggingface.co/papers/2609.36246",
+        "summary": "We present OLIVE (OnLine InterVEntion). At each iteration, the evolving student policy generates a new prefix, the teacher continues it autoregressively, and the student is updated using cross-entropy computed on the teacher-generated tokens. Each design choice targets a corresponding limitation of existing distillation methods: (1) sequential covariate shift in offline supervised fine-tuning (SFT) on fixed teacher trajectories, (2) fragmented supervision under prefix failure in token-level on-p",
+        "source": "HuggingFace Papers",
+        "published": "2026-09-28T00:00:00.000Z",
+        "importance_hint": 4,
+        "metadata": {
+          "paper_id": "2609.36246"
+        }
+      },
       {
         "category": "papers",
         "title": "Specification Before Generation: A Pre-Registered, Five-Model Paired Evaluation of a Specification Frame for LLM-Generated Code in Money, Time, Idempotency, and Access Tasks",
@@ -322,84 +400,6 @@
       },
       {
         "category": "papers",
-        "title": "FlowTool: Controlling Tool Parameter in Image Retouching via Flow Matching",
-        "url": "https://huggingface.co/papers/2609.35673",
-        "normalized_url": "https://huggingface.co/papers/2609.35673",
-        "summary": "Tool-based image editing (image retouching) is commonly formulated with autoregressive multimodal large language models (MLLMs) that sequentially generate reasoning, tool selections, and parameter values. In this work, we present a novel approach to tool-based image editing by framing the task as a flow matching problem. We introduce FlowTool, a framework that directly models the distribution of high-quality tool parameters conditioned on the input image and user instruction using conditional re",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-28T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.35673"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Recursive Harness Distillation across Agents for Robot Manipulation",
-        "url": "https://huggingface.co/papers/2609.33378",
-        "normalized_url": "https://huggingface.co/papers/2609.33378",
-        "summary": "A central goal in robotics is to enable manipulation across changing tasks and environments. Vision-language-action (VLA) models provide broad manipulation capabilities but can struggle when execution requires diagnosing failures and adapting behavior. Strong agents can discover effective interventions through interaction with these policies. We propose Recursive Harness Distillation to accumulate this experience as reusable guidance across agents. A strong agent distills its experience into a p",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-27T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.33378"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "SMAT: Simple and Efficient Merge-Aware Training",
-        "url": "https://huggingface.co/papers/2609.33437",
-        "normalized_url": "https://huggingface.co/papers/2609.33437",
-        "summary": "Model merging integrates the capabilities of multiple experts without joint retraining, but standard expert training optimizes task loss alone and does not guarantee good performance after merging. Merge-aware training (MAT) aims to improve merged performance, but existing methods do not fully account for common merging operations and add training cost. We observe that, from an expert's perspective, common merging methods can be described by three operations: Scale reweights its own update, Mask",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-27T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.33437"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "What masking geometry works best for EEG foundation models?",
-        "url": "https://huggingface.co/papers/2609.33487",
-        "normalized_url": "https://huggingface.co/papers/2609.33487",
-        "summary": "EEG foundation models hold promise for scalable brain-signal decoding across clinical and cognitive neuroscience applications, yet their pre-training pipelines remain poorly understood. Among design choices, the masking strategy is particularly critical: it determines what the network must predict and from which context. Yet it has never been ablated in isolation, as each new model bundles a new masking strategy with a new backbone and objective. In this paper, we formalize the design choices fo",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-27T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.33487"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "KernelZero: Co-Evolving Proposer and Coder for Continuously Improved GPU Kernel Generation",
-        "url": "https://huggingface.co/papers/2609.33074",
-        "normalized_url": "https://huggingface.co/papers/2609.33074",
-        "summary": "High-performance GPU kernels are essential to modern machine learning systems, yet automatically generating kernels that are both correct and efficient remains challenging. Existing LLM-based approaches face two major limitations: the scarcity of high-quality training data aligned with the model's current capabilities, and the inherent trade-off between kernel correctness and performance. To address these challenges, we propose KernelZero, a co-evolution framework that continuously improves GPU ",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-27T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.33074"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Change the Product, Keep the Parameters: Associative Algebra Layers for Transformers",
-        "url": "https://huggingface.co/papers/2609.32814",
-        "normalized_url": "https://huggingface.co/papers/2609.32814",
-        "summary": "Fast matrix multiplication algorithms keep the product fixed and search for a cheaper way to evaluate it. We instead ask whether a Transformer's learned projections can use a different, cheaper product altogether. Building on an associative-algebra construction that replaces ordinary matrix multiplication with a sparser interaction table over the same weight blocks, we construct a family with quadratic arithmetic in the matrix dimension when the physical block size remains fixed, and derive fini",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-26T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.32814"
-        }
-      },
-      {
-        "category": "papers",
         "title": "FurE: Efficient Instance-Specific 3D Fur Reconstruction without Animal-Fur Datasets",
         "url": "https://arxiv.org/abs/2609.35770v1",
         "normalized_url": "https://arxiv.org/abs/2609.35770v1",
@@ -534,119 +534,119 @@
     "projects": [
       {
         "category": "projects",
-        "title": "NVIDIA/OpenShell ⭐+978/天",
+        "title": "NVIDIA/OpenShell ⭐+990/天",
         "url": "https://github.com/NVIDIA/OpenShell",
         "normalized_url": "https://github.com/NVIDIA/OpenShell",
-        "summary": "OpenShell is the safe, private runtime for autonomous AI agents. （GitHub Trending · 今日 +978 star）",
+        "summary": "OpenShell is the safe, private runtime for autonomous AI agents. （GitHub Trending · 今日 +990 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "978"
+          "stars_today": "990"
         }
       },
       {
         "category": "projects",
-        "title": "vectorize-io/hindsight ⭐+2,541/天",
+        "title": "vectorize-io/hindsight ⭐+2,575/天",
         "url": "https://github.com/vectorize-io/hindsight",
         "normalized_url": "https://github.com/vectorize-io/hindsight",
-        "summary": "Hindsight: Agent Memory That Learns （GitHub Trending · 今日 +2,541 star）",
+        "summary": "Hindsight: Agent Memory That Learns （GitHub Trending · 今日 +2,575 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "2,541"
+          "stars_today": "2,575"
         }
       },
       {
         "category": "projects",
-        "title": "paperclipai/paperclip ⭐+2,412/天",
+        "title": "paperclipai/paperclip ⭐+2,458/天",
         "url": "https://github.com/paperclipai/paperclip",
         "normalized_url": "https://github.com/paperclipai/paperclip",
-        "summary": "The open-source app everyone uses to manage agents at work （GitHub Trending · 今日 +2,412 star）",
+        "summary": "The open-source app everyone uses to manage agents at work （GitHub Trending · 今日 +2,458 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "2,412"
+          "stars_today": "2,458"
         }
       },
       {
         "category": "projects",
-        "title": "t8y2/dbx ⭐+349/天",
+        "title": "t8y2/dbx ⭐+232/天",
         "url": "https://github.com/t8y2/dbx",
         "normalized_url": "https://github.com/t8y2/dbx",
-        "summary": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。 （GitHub Trending · 今日 +349 star）",
+        "summary": "25 MB lightweight cross-platform database client for 100+ databases, including MySQL, PostgreSQL, SQLite, Redis, MongoDB, DuckDB, SQL Server, and Dameng. Built-in AI, MCP Server, CLI, desktop and Docker. | 轻量级跨平台数据库管理工具，支持 MySQL、PostgreSQL、SQLite、Redis、MongoDB、达梦等 100+ 数据库，提供桌面端、Docker、CLI、内置 AI 助手和 MCP。 （GitHub Trending · 今日 +232 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "349"
+          "stars_today": "232"
         }
       },
       {
         "category": "projects",
-        "title": "mvschwarz/openrig ⭐+733/天",
+        "title": "mvschwarz/openrig ⭐+737/天",
         "url": "https://github.com/mvschwarz/openrig",
         "normalized_url": "https://github.com/mvschwarz/openrig",
-        "summary": "Multi-agent harness that runs Claude Code and Codex together as one system （GitHub Trending · 今日 +733 star）",
+        "summary": "Multi-agent harness that runs Claude Code and Codex together as one system （GitHub Trending · 今日 +737 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "733"
+          "stars_today": "737"
         }
       },
       {
         "category": "projects",
-        "title": "rohitg00/ai-engineering-from-scratch ⭐+855/天",
+        "title": "rohitg00/ai-engineering-from-scratch ⭐+786/天",
         "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
         "normalized_url": "https://github.com/rohitg00/ai-engineering-from-scratch",
-        "summary": "Learn it. Build it. Ship it for others. （GitHub Trending · 今日 +855 star）",
+        "summary": "Learn it. Build it. Ship it for others. （GitHub Trending · 今日 +786 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "855"
+          "stars_today": "786"
         }
       },
       {
         "category": "projects",
-        "title": "VectifyAI/PageIndex ⭐+822/天",
+        "title": "VectifyAI/PageIndex ⭐+835/天",
         "url": "https://github.com/VectifyAI/PageIndex",
         "normalized_url": "https://github.com/VectifyAI/PageIndex",
-        "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG （GitHub Trending · 今日 +822 star）",
+        "summary": "📑 PageIndex: Document Index for Vectorless, Reasoning-based RAG （GitHub Trending · 今日 +835 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "822"
+          "stars_today": "835"
         }
       },
       {
         "category": "projects",
-        "title": "willfaust/Madeira ⭐+85/天",
+        "title": "willfaust/Madeira ⭐+81/天",
         "url": "https://github.com/willfaust/Madeira",
         "normalized_url": "https://github.com/willfaust/Madeira",
-        "summary": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT （GitHub Trending · 今日 +85 star）",
+        "summary": "Run x86-64 Windows PC games on jailed iOS via FEX-Emu + Wine + DXMT （GitHub Trending · 今日 +81 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "85"
+          "stars_today": "81"
         }
       },
       {
         "category": "projects",
-        "title": "dream-num/univer ⭐+692/天",
+        "title": "dream-num/univer ⭐+696/天",
         "url": "https://github.com/dream-num/univer",
         "normalized_url": "https://github.com/dream-num/univer",
-        "summary": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime. （GitHub Trending · 今日 +692 star）",
+        "summary": "The Office Harness for AI Agents — Spreadsheets, Docs, Slides, Canvas, Relational Tables, and PDF in one runtime. （GitHub Trending · 今日 +696 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "692"
+          "stars_today": "696"
         }
       }
     ],
@@ -656,7 +656,7 @@
         "title": "McDonald's Is Using AI to Dynamically Price Its Burgers",
         "url": "https://www.rnz.co.nz/news/world/1656965/inside-mcdonald-s-push-to-have-ai-price-your-big-mac",
         "normalized_url": "https://www.rnz.co.nz/news/world/1656965/inside-mcdonald-s-push-to-have-ai-price-your-big-mac",
-        "summary": "HN points: 11, comments: 3",
+        "summary": "HN points: 13, comments: 6",
         "source": "Hacker News",
         "published": "2026-09-29T22:52:30Z",
         "importance_hint": 3,
@@ -667,7 +667,7 @@
         "title": "McDonald's push to have AI price your Big Mac",
         "url": "https://www.cnbc.com/2026/09/29/inside-mcdonalds-push-ai-price-big-mac.html",
         "normalized_url": "https://www.cnbc.com/2026/09/29/inside-mcdonalds-push-ai-price-big-mac.html",
-        "summary": "HN points: 35, comments: 11",
+        "summary": "HN points: 41, comments: 13",
         "source": "Hacker News",
         "published": "2026-09-29T19:58:50Z",
         "importance_hint": 3,
@@ -678,7 +678,7 @@
         "title": "AI needs $6T in annual revenue to justify data centre boom",
         "url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres/",
         "normalized_url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres",
-        "summary": "HN points: 187, comments: 262",
+        "summary": "HN points: 191, comments: 273",
         "source": "Hacker News",
         "published": "2026-09-29T19:21:25Z",
         "importance_hint": 3,
@@ -689,7 +689,7 @@
         "title": "Show HN: TurboGPT: train 22KiB transformer in 13s",
         "url": "https://github.com/lostmsu/TurboGPT",
         "normalized_url": "https://github.com/lostmsu/TurboGPT",
-        "summary": "HN points: 41, comments: 5",
+        "summary": "HN points: 43, comments: 8",
         "source": "Hacker News",
         "published": "2026-09-29T19:20:02Z",
         "importance_hint": 3,
@@ -700,7 +700,7 @@
         "title": "The End of a Fair Price: Dynamic Pricing and the Normalization of Gouging",
         "url": "https://prospect.org/2026/09/29/oct-2026-battling-an-army-of-price-setters-owens-review/",
         "normalized_url": "https://prospect.org/2026/09/29/oct-2026-battling-an-army-of-price-setters-owens-review",
-        "summary": "HN points: 81, comments: 103",
+        "summary": "HN points: 82, comments: 104",
         "source": "Hacker News",
         "published": "2026-09-29T18:09:50Z",
         "importance_hint": 3,
@@ -711,7 +711,7 @@
         "title": "OpenAI Targets $30B in New Funding at $1.4T Value",
         "url": "https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value",
         "normalized_url": "https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value",
-        "summary": "HN points: 36, comments: 13",
+        "summary": "HN points: 40, comments: 13",
         "source": "Hacker News",
         "published": "2026-09-29T17:44:21Z",
         "importance_hint": 5,
@@ -722,7 +722,7 @@
         "title": "ChatGPT Pro 500",
         "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
         "normalized_url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
-        "summary": "HN points: 184, comments: 205",
+        "summary": "HN points: 189, comments: 216",
         "source": "Hacker News",
         "published": "2026-09-29T17:26:27Z",
         "importance_hint": 3,
@@ -733,7 +733,7 @@
         "title": "Show HN: A working 3D model of an Enigma machine",
         "url": "https://enigma.design",
         "normalized_url": "https://enigma.design",
-        "summary": "HN points: 14, comments: 1",
+        "summary": "HN points: 31, comments: 3",
         "source": "Hacker News",
         "published": "2026-09-29T17:15:56Z",
         "importance_hint": 4,
@@ -744,7 +744,7 @@
         "title": "Introducing dots",
         "url": "https://openai.com/index/introducing-dots",
         "normalized_url": "https://openai.com/index/introducing-dots",
-        "summary": "Dots by OpenAI are a proactive assistant that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
+        "summary": "Dots by OpenAI are proactive assistants that can keep working across complex projects and everyday tasks. Learn how dots help you stay in control while work moves forward.",
         "source": "Hacker News, OpenAI",
         "published": "2026-09-29T00:00:00+00:00",
         "importance_hint": 4,
@@ -754,15 +754,15 @@
       },
       {
         "category": "news",
-        "title": "Introducing GPT-6.1 Sol",
-        "url": "https://openai.com/index/introducing-gpt-6-1-sol",
-        "normalized_url": "https://openai.com/index/introducing-gpt-6-1-sol",
-        "summary": "Meet GPT-6.1 Sol: near-Astra intelligence for coding, computer use, and professional work at one-fifth of Astra’s standard API input and output token prices.",
-        "source": "Hacker News, OpenAI",
-        "published": "2026-09-29T10:00:00+00:00",
+        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "url": "https://simonwillison.net/2026/Sep/29/hn-49898129/",
+        "normalized_url": "https://simonwillison.net/2026/Sep/29/hn-49898129",
+        "summary": "My comment on GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price — Hacker News. I'm a bit late with the pelicans because I was live-blogging the keynote: https://simonwillison.net/2026/Sep/29/openai-devday-2026-liv... Here they are for GPT-6.1-Sol: https://tools.simonwillison.net/markdown-svg-renderer?url=ht... They're not notably different from the GPT-6 family pelicans: https://static.simonwillison.net/static/2026/gpt-pelicans-gr... Tags: ai , openai , generative-ai , llms , pelican",
+        "source": "Hacker News, Simon Willison, OpenAI",
+        "published": "2026-09-29T18:27:48+00:00",
         "importance_hint": 5,
         "metadata": {
-          "feed_url": "https://openai.com/news/rss.xml"
+          "feed_url": "https://simonwillison.net/atom/everything/"
         }
       },
       {
@@ -770,7 +770,7 @@
         "title": "DraftKings is using AI to behaviorally target chronic gamblers",
         "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
         "normalized_url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
-        "summary": "HN points: 521, comments: 366",
+        "summary": "HN points: 528, comments: 376",
         "source": "Hacker News",
         "published": "2026-09-29T16:30:48Z",
         "importance_hint": 3,
@@ -819,6 +819,19 @@
         "published": "2026-09-29T14:25:41Z",
         "importance_hint": 3,
         "metadata": {}
+      },
+      {
+        "category": "news",
+        "title": "OpenAI光速上新GPT-6.1 Sol！一晚上25项更新，都在这里了",
+        "url": "https://www.qbitai.com/2026/09/499246.html",
+        "normalized_url": "https://www.qbitai.com/2026/09/499246.html",
+        "summary": "今年devday牙膏挤爆",
+        "source": "量子位",
+        "published": "2026-09-29T23:01:05+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://www.qbitai.com/rss"
+        }
       },
       {
         "category": "news",
@@ -939,15 +952,15 @@
       },
       {
         "category": "news",
-        "title": "又快又能打！匿名模型玉兔模型杀上双榜第一，Coding实测全记录",
-        "url": "https://www.qbitai.com/2026/09/498584.html",
-        "normalized_url": "https://www.qbitai.com/2026/09/498584.html",
-        "summary": "中秋假期文具OpenRouter调用日榜榜首",
-        "source": "量子位",
-        "published": "2026-09-27T13:40:02+00:00",
-        "importance_hint": 4,
+        "title": "Uber 使用子集群重新设计 M3DB 分片策略，降低故障影响",
+        "url": "https://www.infoq.cn/article/dbOwzu6l6Tr8NAhCQRC8?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/article/dbOwzu6l6Tr8NAhCQRC8",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-09-30T09:00:00+00:00",
+        "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
+          "feed_url": "https://www.infoq.cn/feed.xml"
         }
       },
       {
@@ -1043,19 +1056,6 @@
       },
       {
         "category": "news",
-        "title": "大模型下沉车规芯片：超六成的车企座舱，为何选中了同一个“端侧大脑”？",
-        "url": "https://www.infoq.cn/article/O5pKYU5hfR2DgrXP6zRE?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/O5pKYU5hfR2DgrXP6zRE",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-09-29T15:49:30+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
         "title": "America.gov gets really weird when you ask it about Minecraft, but it’s not a glitch",
         "url": "https://techcrunch.com/2026/09/29/america-gov-gets-really-weird-when-you-ask-it-about-minecraft-but-its-not-a-glitch/",
         "normalized_url": "https://techcrunch.com/2026/09/29/america-gov-gets-really-weird-when-you-ask-it-about-minecraft-but-its-not-a-glitch",
@@ -1095,9 +1095,9 @@
       },
       {
         "category": "news",
-        "title": "OpenAI repotedly in talks to raise $30B round at $1.4T valuation",
-        "url": "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation/",
-        "normalized_url": "https://techcrunch.com/2026/09/29/openai-repotedly-in-talks-to-raise-30b-round-at-1-4t-valuation",
+        "title": "OpenAI reportedly in talks to raise $30B round at $1.4T valuation",
+        "url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation/",
+        "normalized_url": "https://techcrunch.com/2026/09/29/openai-reportedly-in-talks-to-raise-30b-round-at-1-4t-valuation",
         "summary": "The new round is anticipated to be the company's last before its delayed 2027 public debut.",
         "source": "TechCrunch AI",
         "published": "2026-09-29T19:52:37+00:00",
@@ -1182,6 +1182,19 @@
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Sam Altman says OpenAI won’t go public until its models are safe",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "normalized_url": "https://www.theverge.com/ai-artificial-intelligence/1002505/sam-altman-openai-ipo-devday-ai-safety",
+        "summary": "For months, people have wondered when OpenAI will go public. CEO Sam Altman says it won't happen until the company can make better promises about model safety, with no firm timeline in sight. \"We intend to continue with AI progress … but as the models have had this surge forward in capability, and we see […]",
+        "source": "The Verge AI",
+        "published": "2026-09-30T00:19:13+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
         }
       },
       {
@@ -1297,19 +1310,6 @@
         "source": "The Verge AI",
         "published": "2026-09-29T11:48:27+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "AMD is acquiring AI company World Labs in a deal worth more than $8 billion",
-        "url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal",
-        "normalized_url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal",
-        "summary": "AMD announced today that it's acquiring World Labs, an AI research lab co-founded by the prominent researcher Dr. Fei-Fei Li, in an all-stock deal worth approximately $8.2 billion. World Labs launched in 2024 and was valued at $1 billion in a matter of months. The startup launched its first commercial product, a world generation model […]",
-        "source": "The Verge AI",
-        "published": "2026-09-28T21:31:35+00:00",
-        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
         }
@@ -1817,19 +1817,6 @@
         "source": "Simon Willison",
         "published": "2026-09-27T23:09:19+00:00",
         "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Bluesky reply bot checker",
-        "url": "https://simonwillison.net/2026/Sep/27/bluesky-bot-check/",
-        "normalized_url": "https://simonwillison.net/2026/Sep/27/bluesky-bot-check",
-        "summary": "Tool: Bluesky reply bot checker Automated reply bots on Twitter are a scourge - as someone with a decent number of followers I attract a swarm of these, such that anything I post there attracts dozens of mindless automated replies. They've started manifesting on Bluesky as well. Unlike Twitter, Bluesky still has a freely available and useful API. The lack of such a thing doesn't slow down the bots, but it does make investigating them a lot more frustrating. So I had Opus 5.5 vibe code this tool ",
-        "source": "Simon Willison",
-        "published": "2026-09-27T18:41:44+00:00",
-        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://simonwillison.net/atom/everything/"
         }

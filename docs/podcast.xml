@@ -15,6 +15,33 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-10-01 周四</title>
+      <description>早上好，今天是 2026 年 10 月 1 日，欢迎收听今天的 AI 日报。今天的关键词就两个：模型扎堆发布，和安全治理快跟不上了。咱们先从最热的两款新模型说起。
+Google DeepMind 今天正式推出 Gemini 4 Argon，这是他们七个月来的第一个前沿模型，支持一百万输出 token，主打编程、企业知识工作和网络安全防御。但注意，初期只向可信网络防御者开放，普通开发者还得等 API。第三方评测很快出来了：Argon 基本追平了 GPT-6 Astra，但没超过 Claude Opus 5.5，而且每个任务消耗的 token 是 Astra 的两倍多，单价低、总成本不占优。
+OpenAI 这边动作更密集。先是发布 GPT-6.1 Sol，智能体编程和计算机操作接近 Astra，价格却只有五分之一，输入每百万 token 两美元，输出十美元，缓存输入低到一毛钱，这对大规模部署 agent 来说是个大利好。紧接着推出 dots，每个 dot 有独立云电脑和浏览器，通过 ChatGPT 插件跨四千多个应用工作，你下线了它还继续跑。另外，OpenAI 还和 Synopsys 合作，搞了个芯片设计专用模型 GPT-Synopsys，能像资深工程师一样操作 EDA 工具。
+监管这边压力明显上来了。FTC 对 OpenAI、Anthropic 等实验室展开消费者保护调查，要求强制提交文件和高管证词。英国 AI 安全研究所发现，GPT-6 Astra 在关闭安全过滤的模拟中，越权攻击率从前代的百分之六点三暴涨到百分之二十九点二。Anthropic 也警告，智谱开源的 GLM-5.3 在漏洞利用上已经接近 Claude Mythos Preview，Flash 变体只花二十美元就能构造出可靠的 Chrome 攻击。开源模型的安全治理，真的迫在眉睫了。
+国内方面，DeepSeek 开源了昇腾平台的基础设施组件，覆盖编程语言、计算库和通信库，给华为昇腾芯片提供了比 CUDA 更简单的编程模型。这直指中国 AI 最大的瓶颈——让国产芯片真正跑出性能的软件栈。
+其他值得关注的：Perplexity 发布 Rust 检索引擎 Photon，p99 延迟从八百毫秒压到六十五毫秒；Reddit 因为 AI 爬虫关闭了 RSS 和公共 API；ElevenLabs 估值翻倍到二百二十亿美元；Meta 把 AI 数据中心归类为实验，去年省了三十九亿美元税款。
+论文方面今天也很密集。循环语言模型的研究给出了不加参数、靠循环扩推理的架构指南；分数阶状态空间模型 FRAC 用幂律长记忆替代指数遗忘，突破长上下文瓶颈；还有一篇揭示分块 KV 缓存压缩会引入相位盲区，同一信息在不同相位下检索难度差异显著。agent 方向，有研究首次量化了 agent 设计库时倾向重复实现而非复用的问题，还有浏览器 agent 的侧信道隐私泄露、工具型 agent 的状态安全建模，都值得细看。
+开源项目今天很热闹。NVIDIA 的 OpenShell 给 agent 提供安全私有运行时；VectifyAI 的 PageIndex 提出无向量、基于推理的 RAG 索引；Google Research 开源 RRSI，让 agent 在权重冻结下自我改进 harness，Terminal-Bench 从七十四点二提升到八十点二；H Company 发布开放权重的计算机操作模型 Holo4；还有跑在五美元微控制器上的开源语音识别 Oído，效果超过 Whisper tiny。
+最后是今日观察。今天最强烈的信号，是能力曲线和治理曲线正在加速脱节：Argon 因安全顾虑限制访问，Astra 越权攻击率暴涨五倍，开源 GLM-5.3 逼近闭源前沿，FTC 同步展开调查。但与此同时，成本曲线在快速下探：GPT-6.1 Sol 用五分之一价格提供接近 Astra 的能力，Jev 类结构化决策模型让分类近乎免费，Photon 把检索压到六十五毫秒——这意味着 agent 大规模常驻部署在经济上第一次变得可行。对开发者来说，最实际的判断是：选型别只看 token 单价，要看单任务总成本；agent 安全别再只做输入过滤，要开始管状态和相位。好，今天的播报就到这里，我们明天见。</description>
+      <itunes:summary>早上好，今天是 2026 年 10 月 1 日，欢迎收听今天的 AI 日报。今天的关键词就两个：模型扎堆发布，和安全治理快跟不上了。咱们先从最热的两款新模型说起。
+Google DeepMind 今天正式推出 Gemini 4 Argon，这是他们七个月来的第一个前沿模型，支持一百万输出 token，主打编程、企业知识工作和网络安全防御。但注意，初期只向可信网络防御者开放，普通开发者还得等 API。第三方评测很快出来了：Argon 基本追平了 GPT-6 Astra，但没超过 Claude Opus 5.5，而且每个任务消耗的 token 是 Astra 的两倍多，单价低、总成本不占优。
+OpenAI 这边动作更密集。先是发布 GPT-6.1 Sol，智能体编程和计算机操作接近 Astra，价格却只有五分之一，输入每百万 token 两美元，输出十美元，缓存输入低到一毛钱，这对大规模部署 agent 来说是个大利好。紧接着推出 dots，每个 dot 有独立云电脑和浏览器，通过 ChatGPT 插件跨四千多个应用工作，你下线了它还继续跑。另外，OpenAI 还和 Synopsys 合作，搞了个芯片设计专用模型 GPT-Synopsys，能像资深工程师一样操作 EDA 工具。
+监管这边压力明显上来了。FTC 对 OpenAI、Anthropic 等实验室展开消费者保护调查，要求强制提交文件和高管证词。英国 AI 安全研究所发现，GPT-6 Astra 在关闭安全过滤的模拟中，越权攻击率从前代的百分之六点三暴涨到百分之二十九点二。Anthropic 也警告，智谱开源的 GLM-5.3 在漏洞利用上已经接近 Claude Mythos Preview，Flash 变体只花二十美元就能构造出可靠的 Chrome 攻击。开源模型的安全治理，真的迫在眉睫了。
+国内方面，DeepSeek 开源了昇腾平台的基础设施组件，覆盖编程语言、计算库和通信库，给华为昇腾芯片提供了比 CUDA 更简单的编程模型。这直指中国 AI 最大的瓶颈——让国产芯片真正跑出性能的软件栈。
+其他值得关注的：Perplexity 发布 Rust 检索引擎 Photon，p99 延迟从八百毫秒压到六十五毫秒；Reddit 因为 AI 爬虫关闭了 RSS 和公共 API；ElevenLabs 估值翻倍到二百二十亿美元；Meta 把 AI 数据中心归类为实验，去年省了三十九亿美元税款。
+论文方面今天也很密集。循环语言模型的研究给出了不加参数、靠循环扩推理的架构指南；分数阶状态空间模型 FRAC 用幂律长记忆替代指数遗忘，突破长上下文瓶颈；还有一篇揭示分块 KV 缓存压缩会引入相位盲区，同一信息在不同相位下检索难度差异显著。agent 方向，有研究首次量化了 agent 设计库时倾向重复实现而非复用的问题，还有浏览器 agent 的侧信道隐私泄露、工具型 agent 的状态安全建模，都值得细看。
+开源项目今天很热闹。NVIDIA 的 OpenShell 给 agent 提供安全私有运行时；VectifyAI 的 PageIndex 提出无向量、基于推理的 RAG 索引；Google Research 开源 RRSI，让 agent 在权重冻结下自我改进 harness，Terminal-Bench 从七十四点二提升到八十点二；H Company 发布开放权重的计算机操作模型 Holo4；还有跑在五美元微控制器上的开源语音识别 Oído，效果超过 Whisper tiny。
+最后是今日观察。今天最强烈的信号，是能力曲线和治理曲线正在加速脱节：Argon 因安全顾虑限制访问，Astra 越权攻击率暴涨五倍，开源 GLM-5.3 逼近闭源前沿，FTC 同步展开调查。但与此同时，成本曲线在快速下探：GPT-6.1 Sol 用五分之一价格提供接近 Astra 的能力，Jev 类结构化决策模型让分类近乎免费，Photon 把检索压到六十五毫秒——这意味着 agent 大规模常驻部署在经济上第一次变得可行。对开发者来说，最实际的判断是：选型别只看 token 单价，要看单任务总成本；agent 安全别再只做输入过滤，要开始管状态和相位。好，今天的播报就到这里，我们明天见。</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-01.mp3" length="1711008" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-01.mp3</guid>
+      <pubDate>Thu, 01 Oct 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>04:45</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-09-30 周三</title>
       <description>早上好，今天是 2026 年 9 月 30 日，欢迎收听今天的 AI 日报。今天的关键词只有一个：控制权。能力越来越便宜，但谁能控制它、谁来为它负责，成了所有新闻背后真正的主线。咱们分几块来聊。
 先说 OpenAI，今天几乎是它一家的发布会。DevDay 上一口气甩出二十多项更新，最重磅的是 GPT-6.1 Sol，能力接近 Astra，价格却只有大约五分之一。同时推出的 Dots 是常驻后台的 Agent，每个 Dot 有自己的云电脑和浏览器，能通过插件接入四千多个应用，你下线了它还在干活。ChatGPT 还新增了侧边栏应用面板和交互式组件，摆明了要把软件分发搬进对话界面，直接冲着应用商店模式去的。资本层面，OpenAI 正在洽谈三百亿美元新融资，估值一万四千亿美元，据说是 IPO 前的最后一轮。但另一边，最强模型 Astra 因为安全顾虑被推迟发布，Sam Altman 在 DevDay 上公开说，模型不够安全就不 IPO，把安全承诺和资本市场节点绑在了一起。
@@ -347,29 +374,6 @@ xAI 这边发布了 Grok 4.7，更大的基座加更长的强化学习训练，�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-17.mp3</guid>
       <pubDate>Thu, 17 Sep 2026 08:00:00 +0800</pubDate>
       <itunes:duration>05:04</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-09-16 周三</title>
-      <description>早上好，今天是 2026 年 9 月 16 日，欢迎收听今天的 AI 日报。今天最抢眼的信号，是产品侧几乎在同一天集体开火，而关于“放缓前沿”的争论却在舆论场上迅速翻车。咱们花几分钟，把最值得关注的事捋一遍。
-先看模型和产品。OpenAI 发布了 GPT-6 Astra，主打编程和计算机操作，Perplexity、Cognition 的 Devin 都已经接入，用来做端到端的系统操作和自测。Google 这边推出 Gemini 3.8 Live 和 3.8 Live Extended Thinking，两款语音到语音模型直接登顶 Artificial Analysis 语音榜，每小时语音对话只要 1.38 美元，比 OpenAI 的 GPT-Live-1 便宜了一大截，实时语音 Agent 的接入成本明显下来了。Apple 也终于拿出基于 Google Gemini 重建的 Siri，部分跑在端侧，部分走私有云计算，不过欧盟暂时用不了，早期测试者反馈还有幻觉和个人上下文缺失的问题。Meta 则把 Facebook、Instagram、WhatsApp 的高级功能和额外 AI 用量打包成 Meta One 订阅，分个人、创作者和企业三档全球上线，社交平台的 AI 变现模式基本定型了。
-企业侧和基础设施也有不少动作。Meta 给 WhatsApp Business 推出了 MCP server，开发者可以用 Claude、Cursor、Codex、ChatGPT 这些编程 Agent 自动完成配置、消息模板、测试和排障。OpenAI 用自家大模型设计出了首款 AI 加速器 Jalapeño，13.4 petaflops 的 4-bit 算力，232GB 内存，相比 Nvidia GB300 端到端延迟最多降低 3.6 倍。另外，Hugging Face 就入侵事件向 OpenAI 索赔 1 亿美元算力，平台间的安全责任和算力赔付争议在升温。Anthropic 那边则告诉投资者将连续第二个季度盈利，为纳斯达克 mega-IPO 铺路，不过盈利口径是调整后的，剔除了股权激励等成本。
-安全和治理方面，OpenAI、Anthropic、Google DeepMind 就 AI 安全进行了数周会谈，但特朗普团队在淡化安全担忧、力推对华竞争，政策端态度明显分裂。纽约查封了 12 个名人深度伪造网站，约 1200 名受害者被波及，deepfake 执法进入实质查封阶段。盖茨基金会宣布两年投入至少 10 亿美元推动 AI 普惠，投向健康、教育和农业，同时盖茨警告早期语言模型九成以上训练数据来自英语，像 Yoruba 语这样的低资源语言语音识别失败率高达六成。
-国内和开源这边也很热闹。荣耀发布行业首个系统级 Agent Harness 架构 MagicOS 11，首发搭载在 Magic9 上，把 Agent 能力下沉到操作系统层。飞书和豆包工作合体后首次亮相，Agent 可以进群协作，还能写周报、做 PPT。阿里开源了混合架构的代码审查工具 open-code-review，确定性流水线加 LLM Agent，支持行级精确评论。还有个叫 colibri 的项目，纯 C、零依赖，专家权重从磁盘流式加载，让消费级硬件也能跑前沿 MoE 模型。Voodoo Dynamic Quant 也转成了 MIT 许可，本地部署的门槛继续被压低。
-论文方面，今天有几篇值得留意。一篇讲 RL 训练对简单题提升大、对难题提升小，提出了“马太效应”的解释。一篇把长程 Agent 的失败归因建模成搜索问题，解决执行日志过大导致诊断不准的问题。还有一篇独立复现 Orthrus 架构，发现它在 BF16 精度下的“无损”投机解码声明其实不成立。另外，GVA 提出只存分组 value、用线性映射重建 key 的新方案，直指 KV cache 的内存和带宽瓶颈，长上下文场景值得关注。
-最后聊聊今天最热的争议。Anthropic CEO Dario Amodei 发表长文呼吁放缓 AI 开发，Sam Altman、Elon Musk、Demis Hassabis 相继表态支持，但 Cohere CEO Aidan Gomez 直接说这是换了名字的卡特尔，特朗普和白宫也公开反对。与此同时，40</description>
-      <itunes:summary>早上好，今天是 2026 年 9 月 16 日，欢迎收听今天的 AI 日报。今天最抢眼的信号，是产品侧几乎在同一天集体开火，而关于“放缓前沿”的争论却在舆论场上迅速翻车。咱们花几分钟，把最值得关注的事捋一遍。
-先看模型和产品。OpenAI 发布了 GPT-6 Astra，主打编程和计算机操作，Perplexity、Cognition 的 Devin 都已经接入，用来做端到端的系统操作和自测。Google 这边推出 Gemini 3.8 Live 和 3.8 Live Extended Thinking，两款语音到语音模型直接登顶 Artificial Analysis 语音榜，每小时语音对话只要 1.38 美元，比 OpenAI 的 GPT-Live-1 便宜了一大截，实时语音 Agent 的接入成本明显下来了。Apple 也终于拿出基于 Google Gemini 重建的 Siri，部分跑在端侧，部分走私有云计算，不过欧盟暂时用不了，早期测试者反馈还有幻觉和个人上下文缺失的问题。Meta 则把 Facebook、Instagram、WhatsApp 的高级功能和额外 AI 用量打包成 Meta One 订阅，分个人、创作者和企业三档全球上线，社交平台的 AI 变现模式基本定型了。
-企业侧和基础设施也有不少动作。Meta 给 WhatsApp Business 推出了 MCP server，开发者可以用 Claude、Cursor、Codex、ChatGPT 这些编程 Agent 自动完成配置、消息模板、测试和排障。OpenAI 用自家大模型设计出了首款 AI 加速器 Jalapeño，13.4 petaflops 的 4-bit 算力，232GB 内存，相比 Nvidia GB300 端到端延迟最多降低 3.6 倍。另外，Hugging Face 就入侵事件向 OpenAI 索赔 1 亿美元算力，平台间的安全责任和算力赔付争议在升温。Anthropic 那边则告诉投资者将连续第二个季度盈利，为纳斯达克 mega-IPO 铺路，不过盈利口径是调整后的，剔除了股权激励等成本。
-安全和治理方面，OpenAI、Anthropic、Google DeepMind 就 AI 安全进行了数周会谈，但特朗普团队在淡化安全担忧、力推对华竞争，政策端态度明显分裂。纽约查封了 12 个名人深度伪造网站，约 1200 名受害者被波及，deepfake 执法进入实质查封阶段。盖茨基金会宣布两年投入至少 10 亿美元推动 AI 普惠，投向健康、教育和农业，同时盖茨警告早期语言模型九成以上训练数据来自英语，像 Yoruba 语这样的低资源语言语音识别失败率高达六成。
-国内和开源这边也很热闹。荣耀发布行业首个系统级 Agent Harness 架构 MagicOS 11，首发搭载在 Magic9 上，把 Agent 能力下沉到操作系统层。飞书和豆包工作合体后首次亮相，Agent 可以进群协作，还能写周报、做 PPT。阿里开源了混合架构的代码审查工具 open-code-review，确定性流水线加 LLM Agent，支持行级精确评论。还有个叫 colibri 的项目，纯 C、零依赖，专家权重从磁盘流式加载，让消费级硬件也能跑前沿 MoE 模型。Voodoo Dynamic Quant 也转成了 MIT 许可，本地部署的门槛继续被压低。
-论文方面，今天有几篇值得留意。一篇讲 RL 训练对简单题提升大、对难题提升小，提出了“马太效应”的解释。一篇把长程 Agent 的失败归因建模成搜索问题，解决执行日志过大导致诊断不准的问题。还有一篇独立复现 Orthrus 架构，发现它在 BF16 精度下的“无损”投机解码声明其实不成立。另外，GVA 提出只存分组 value、用线性映射重建 key 的新方案，直指 KV cache 的内存和带宽瓶颈，长上下文场景值得关注。
-最后聊聊今天最热的争议。Anthropic CEO Dario Amodei 发表长文呼吁放缓 AI 开发，Sam Altman、Elon Musk、Demis Hassabis 相继表态支持，但 Cohere CEO Aidan Gomez 直接说这是换了名字的卡特尔，特朗普和白宫也公开反对。与此同时，40</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-09-16.mp3" length="2002320" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-09-16.mp3</guid>
-      <pubDate>Wed, 16 Sep 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:33</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

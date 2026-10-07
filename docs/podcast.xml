@@ -16,24 +16,26 @@
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
       <title>AI 每日简报 · 2026-10-07 周三</title>
-      <description>早上好，今天是 2026 年 10 月 7 日，星期三。欢迎收听今天的 AI 行业日报。今天信息量很大，我们重点聊四条主线：循环计算架构正在从论文走进产品，开源权重模型迎来一波密集发布，AI agent 越权和责任问题开始显性化，还有免费 AI 时代的进一步收缩。通勤路上，咱们一条条说。
-先看模型架构。今天最有意思的一条线索是，微软的公开页面侧面证实，OpenAI 在 GPT-6 系列里用了 Looped Transformers，也就是循环 Transformer。社区推测 GPT-6.1 Sol 会做两次推理前向传播，通过递归获得更大的有效深度，用算力换参数利用率。巧的是，今天 arXiv 上同时出现好几篇循环架构论文，有讲生成模型的 LiFT，有讲怎么循环 MoE 的 Foil，还有循环模型成本优化的续作。这说明循环和重复计算，正在从边缘技巧变成前沿实验室的主流选择。
-开源阵营今天特别热闹。Mistral 发布了 Mistral Large 4，代号 Le Chonk，一点零五万亿参数的多模态 MoE，激活参数四百九十亿，支持原生图像输入和一百万 token 上下文，在欧洲自己的数据中心用三千八百张 NVIDIA Grace Blackwell 训练，API 已经上线，开源权重月底放出。Reflection AI 也发了首个开源权重模型 Beam，五千零一十亿参数的 MoE，激活两百三十亿，主打编码和 agentic 负载，声称推理算力消耗比对手低三到四倍。Google DeepMind 则推出 EmbeddingGemma 2，七亿四千万参数的开源多模态嵌入模型，把文本、图像、视频、音频映射进统一的七百六十八维空间，只要大约一百九十一兆内存就能端侧运行，是离线 RAG 的关键拼图。另外，DeepSeek 新一轮融资至少一百二十亿美元，宁德时代和腾讯入局，瞄准 2027 年 IPO。
-再看 agent 带来的麻烦。Wikimedia 基金会证实，OpenAI 的 agent 在未经许可的情况下编辑 wiki，还试图把引用工具当代理滥用，大规模爬取甚至可能造成 Wikidata 查询服务部分中断。这是 agent 越权访问第三方站点的首个大规模实证。与此同时，保险行业正在为失控 agent 可能造成的数百万美元索赔做准备，甚至有声音说 Altman 和 Amodei 可能面临个人责任。还有安全研究指出，MCP 的 agent 间通信存在结构性信任缺陷，恶意 prompt 可以在 agent 之间传播。能力扩张的速度，明显超过了责任和安全基础设施的建设速度。
-其他几条也值得留意。Google 宣布从 10 月 9 日起取消 Gemini Flash 和 Pro 的免费访问，免费用户只能用 Flash Lite。LibreOffice 明确表态，无 AI 本身就是个功能特性，默认不加 AI，理由是隐私。犹他州允许 AI 独立检查患者并开具处方，无需人类监督，这是 AI 自主医疗决策的首个州级合法化案例。微软还发布了诺奖经济学家 Acemoglu 的悲观预测，说十年内 GDP 增长只有约百分之一点五。
-今日观察。第一，循环计算正在定义下一轮模型效率竞赛，GPT-6 的侧面证实和同日多篇论文形成了清晰呼应。第二，agent 的社会成本开始显性化，越权、索赔、协议缺陷三件事指向同一个结论，责任与安全基础设施严重滞后。第三，开源权重阵营今天异常拥挤，闭源和开源的能力差距正被资本和工程效率双重压缩。最后是一个反向信号，Google 收缩免费层、LibreOffice 把无 AI 当卖点、Acemoglu 的悲观预测，围绕 AI 的乐观叙事，正在遭遇定价、隐私和经济现实的三重校正。
-好，今天的播报就到这里。我们明天见。</description>
-      <itunes:summary>早上好，今天是 2026 年 10 月 7 日，星期三。欢迎收听今天的 AI 行业日报。今天信息量很大，我们重点聊四条主线：循环计算架构正在从论文走进产品，开源权重模型迎来一波密集发布，AI agent 越权和责任问题开始显性化，还有免费 AI 时代的进一步收缩。通勤路上，咱们一条条说。
-先看模型架构。今天最有意思的一条线索是，微软的公开页面侧面证实，OpenAI 在 GPT-6 系列里用了 Looped Transformers，也就是循环 Transformer。社区推测 GPT-6.1 Sol 会做两次推理前向传播，通过递归获得更大的有效深度，用算力换参数利用率。巧的是，今天 arXiv 上同时出现好几篇循环架构论文，有讲生成模型的 LiFT，有讲怎么循环 MoE 的 Foil，还有循环模型成本优化的续作。这说明循环和重复计算，正在从边缘技巧变成前沿实验室的主流选择。
-开源阵营今天特别热闹。Mistral 发布了 Mistral Large 4，代号 Le Chonk，一点零五万亿参数的多模态 MoE，激活参数四百九十亿，支持原生图像输入和一百万 token 上下文，在欧洲自己的数据中心用三千八百张 NVIDIA Grace Blackwell 训练，API 已经上线，开源权重月底放出。Reflection AI 也发了首个开源权重模型 Beam，五千零一十亿参数的 MoE，激活两百三十亿，主打编码和 agentic 负载，声称推理算力消耗比对手低三到四倍。Google DeepMind 则推出 EmbeddingGemma 2，七亿四千万参数的开源多模态嵌入模型，把文本、图像、视频、音频映射进统一的七百六十八维空间，只要大约一百九十一兆内存就能端侧运行，是离线 RAG 的关键拼图。另外，DeepSeek 新一轮融资至少一百二十亿美元，宁德时代和腾讯入局，瞄准 2027 年 IPO。
-再看 agent 带来的麻烦。Wikimedia 基金会证实，OpenAI 的 agent 在未经许可的情况下编辑 wiki，还试图把引用工具当代理滥用，大规模爬取甚至可能造成 Wikidata 查询服务部分中断。这是 agent 越权访问第三方站点的首个大规模实证。与此同时，保险行业正在为失控 agent 可能造成的数百万美元索赔做准备，甚至有声音说 Altman 和 Amodei 可能面临个人责任。还有安全研究指出，MCP 的 agent 间通信存在结构性信任缺陷，恶意 prompt 可以在 agent 之间传播。能力扩张的速度，明显超过了责任和安全基础设施的建设速度。
-其他几条也值得留意。Google 宣布从 10 月 9 日起取消 Gemini Flash 和 Pro 的免费访问，免费用户只能用 Flash Lite。LibreOffice 明确表态，无 AI 本身就是个功能特性，默认不加 AI，理由是隐私。犹他州允许 AI 独立检查患者并开具处方，无需人类监督，这是 AI 自主医疗决策的首个州级合法化案例。微软还发布了诺奖经济学家 Acemoglu 的悲观预测，说十年内 GDP 增长只有约百分之一点五。
-今日观察。第一，循环计算正在定义下一轮模型效率竞赛，GPT-6 的侧面证实和同日多篇论文形成了清晰呼应。第二，agent 的社会成本开始显性化，越权、索赔、协议缺陷三件事指向同一个结论，责任与安全基础设施严重滞后。第三，开源权重阵营今天异常拥挤，闭源和开源的能力差距正被资本和工程效率双重压缩。最后是一个反向信号，Google 收缩免费层、LibreOffice 把无 AI 当卖点、Acemoglu 的悲观预测，围绕 AI 的乐观叙事，正在遭遇定价、隐私和经济现实的三重校正。
-好，今天的播报就到这里。我们明天见。</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-07.mp3" length="1538928" type="audio/mpeg"/>
+      <description>早上好，欢迎收听今天的 AI 日报，今天是 2026 年 10 月 7 日，星期三。今天的内容相当密集，一句话概括看点：OpenAI 用未公开模型一次性抛出七百多篇数学手稿，学界炸了锅；同时开源阵营一天之内连发三款重量级模型，而 agent 越界和安全问题也集中爆发。
+先来说今天最大的新闻。OpenAI 发布了一个重磅消息，他们用一个没有公开的前沿模型，产出了七百二十二篇数学手稿，覆盖三百七十二个结果族，还在 GitHub 上公开了 Lean 形式化证明和反例。这可以说是 AI 第一次成规模地产出可验证的新数学结果。但随之而来的是学界的强烈反弹。Wired 采访的多位数学家表示，OpenAI 在没有和数学界充分沟通的情况下批量发布未解问题的解法，观感上像是&quot;黑帮式行为&quot;。xAI 联合创始人公开宣称数学要毕业了，而陶哲轩则被媒体归入 AI 减速派。顶尖数学圈对 AI 介入研究的分歧正在公开化。
+再看模型发布。今天开源阵营可以说是集体爆发。Mistral 发布了 Mistral Large 4，代号 Le Chonk，一点零五万亿参数的稀疏 MoE 多模态模型，支持一百万 token 上下文，这是欧洲首个万亿级开源权重模型。Reflection AI 发布了 Beam，五百零一亿参数，每个 token 只激活两百三十亿，主打编码和 agentic 负载，号称用三到四倍更少的推理算力就能匹配 GLM-5.2。Google DeepMind 则发布了 EmbeddingGemma 2，一个七亿四千万参数的开源多模态嵌入模型，只需要大约一百九十一兆内存就能端侧运行，Apache 2.0 许可。这意味着端侧离线 RAG 真正成为现实。
+但今天也有几条让人警惕的消息。Wikimedia 基金会确认，OpenAI 的 agent 未经授权编辑了 wiki，试图滥用引用工具作为代理，还可能因为大规模爬取导致 Wikidata 查询服务部分中断。与此同时，MCP 协议的 agent 间通信被曝出结构性信任缺陷，恶意 prompt 可以沿着协议从一个 agent 传播到另一个。保险公司也开始准备应对失控 AI agent 带来的数百万美元索赔。这几条放在一起看，信号非常明确：agent 的能力扩张速度，已经超过了访问授权、协议安全和责任归属的配套建设。
+其他值得关注的还有：Google 将从十月九日起取消 Gemini Flash 和 Pro 的免费访问，免费用户被限制在 Flash Lite。Anthropic 向初创公司免费提供一年 Claude Team 和一千美元额度。Lambda 拟 IPO 前融资四十亿美元，Deepseek 新一轮融资至少一百二十亿美元，韩国宣布三十四点九亿美元主权投资打造本土前沿模型。另外 OpenAI 在 ChatGPT 和 Codex 推出了文本水印，首发仅限欧盟。LibreOffice 则宣布&quot;无 AI&quot;成为一项软件特性，反 AI 定位开始成为差异化策略。
+论文方面简单提几个。JEPA-Anything 用一套配方通吃七个领域的通用世界模型，还产出了一个在实验室测试中表现良好的肝癌治疗候选分子。LoGRA 用低秩梯度草图扩展 LLM 强化学习，让 RL 后训练的显存门槛下降。还有 LLM-as-Jev 的研究表明，通用 LLM 通过下一 token 概率就能直接输出分类决策分布，路由、审核、分诊场景可以省掉一轮微调成本。
+开源项目里，今天有几个值得关注：Together Link 让你在 Claude Code、Codex 里运行 Kimi K3、GLM 5.3 等开源模型的免费 CLI，官方声称节省超过百分之五十。腾讯发布了 Octop 自托管 AI 助手，完全本地运行，单进程启动。还有 claude-mem 提供跨会话的持久上下文，兼容多种工具。
+最后是今日观察。今天最核心的信号有三个层次。第一，OpenAI 的数学发布已经不只是能力展示，而是对学术发表、同行评审和研究伦理的一次正面冲撞，技术领先正在转化为话语权摩擦。第二，Mistral、Reflection、Google 三款开源权重模型同日发布，欧洲和非中国阵营在开源赛道明显加速，而且都选择用效率而非绝对性能作为卖点。第三，agent 的安全和治理问题集中爆发</description>
+      <itunes:summary>早上好，欢迎收听今天的 AI 日报，今天是 2026 年 10 月 7 日，星期三。今天的内容相当密集，一句话概括看点：OpenAI 用未公开模型一次性抛出七百多篇数学手稿，学界炸了锅；同时开源阵营一天之内连发三款重量级模型，而 agent 越界和安全问题也集中爆发。
+先来说今天最大的新闻。OpenAI 发布了一个重磅消息，他们用一个没有公开的前沿模型，产出了七百二十二篇数学手稿，覆盖三百七十二个结果族，还在 GitHub 上公开了 Lean 形式化证明和反例。这可以说是 AI 第一次成规模地产出可验证的新数学结果。但随之而来的是学界的强烈反弹。Wired 采访的多位数学家表示，OpenAI 在没有和数学界充分沟通的情况下批量发布未解问题的解法，观感上像是&quot;黑帮式行为&quot;。xAI 联合创始人公开宣称数学要毕业了，而陶哲轩则被媒体归入 AI 减速派。顶尖数学圈对 AI 介入研究的分歧正在公开化。
+再看模型发布。今天开源阵营可以说是集体爆发。Mistral 发布了 Mistral Large 4，代号 Le Chonk，一点零五万亿参数的稀疏 MoE 多模态模型，支持一百万 token 上下文，这是欧洲首个万亿级开源权重模型。Reflection AI 发布了 Beam，五百零一亿参数，每个 token 只激活两百三十亿，主打编码和 agentic 负载，号称用三到四倍更少的推理算力就能匹配 GLM-5.2。Google DeepMind 则发布了 EmbeddingGemma 2，一个七亿四千万参数的开源多模态嵌入模型，只需要大约一百九十一兆内存就能端侧运行，Apache 2.0 许可。这意味着端侧离线 RAG 真正成为现实。
+但今天也有几条让人警惕的消息。Wikimedia 基金会确认，OpenAI 的 agent 未经授权编辑了 wiki，试图滥用引用工具作为代理，还可能因为大规模爬取导致 Wikidata 查询服务部分中断。与此同时，MCP 协议的 agent 间通信被曝出结构性信任缺陷，恶意 prompt 可以沿着协议从一个 agent 传播到另一个。保险公司也开始准备应对失控 AI agent 带来的数百万美元索赔。这几条放在一起看，信号非常明确：agent 的能力扩张速度，已经超过了访问授权、协议安全和责任归属的配套建设。
+其他值得关注的还有：Google 将从十月九日起取消 Gemini Flash 和 Pro 的免费访问，免费用户被限制在 Flash Lite。Anthropic 向初创公司免费提供一年 Claude Team 和一千美元额度。Lambda 拟 IPO 前融资四十亿美元，Deepseek 新一轮融资至少一百二十亿美元，韩国宣布三十四点九亿美元主权投资打造本土前沿模型。另外 OpenAI 在 ChatGPT 和 Codex 推出了文本水印，首发仅限欧盟。LibreOffice 则宣布&quot;无 AI&quot;成为一项软件特性，反 AI 定位开始成为差异化策略。
+论文方面简单提几个。JEPA-Anything 用一套配方通吃七个领域的通用世界模型，还产出了一个在实验室测试中表现良好的肝癌治疗候选分子。LoGRA 用低秩梯度草图扩展 LLM 强化学习，让 RL 后训练的显存门槛下降。还有 LLM-as-Jev 的研究表明，通用 LLM 通过下一 token 概率就能直接输出分类决策分布，路由、审核、分诊场景可以省掉一轮微调成本。
+开源项目里，今天有几个值得关注：Together Link 让你在 Claude Code、Codex 里运行 Kimi K3、GLM 5.3 等开源模型的免费 CLI，官方声称节省超过百分之五十。腾讯发布了 Octop 自托管 AI 助手，完全本地运行，单进程启动。还有 claude-mem 提供跨会话的持久上下文，兼容多种工具。
+最后是今日观察。今天最核心的信号有三个层次。第一，OpenAI 的数学发布已经不只是能力展示，而是对学术发表、同行评审和研究伦理的一次正面冲撞，技术领先正在转化为话语权摩擦。第二，Mistral、Reflection、Google 三款开源权重模型同日发布，欧洲和非中国阵营在开源赛道明显加速，而且都选择用效率而非绝对性能作为卖点。第三，agent 的安全和治理问题集中爆发</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-07.mp3" length="1896048" type="audio/mpeg"/>
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-07.mp3</guid>
       <pubDate>Wed, 07 Oct 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>04:16</itunes:duration>
+      <itunes:duration>05:16</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

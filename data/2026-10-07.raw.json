@@ -1,13 +1,52 @@
 {
   "date": "2026-10-07",
-  "generated_at": "2026-10-07T07:58:44.064200+08:00",
+  "generated_at": "2026-10-07T09:23:16.506405+08:00",
   "counts": {
     "papers": 42,
     "projects": 10,
-    "news": 125
+    "news": 131
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "SEER: Self-Evolving Event Reasoning and Retrieval for Time Series Forecasting",
+        "url": "https://huggingface.co/papers/2610.04109",
+        "normalized_url": "https://huggingface.co/papers/2610.04109",
+        "summary": "Real-world time series are frequently driven by exogenous events and structural shifts, rendering conventional forecasting based solely on historical numerical observations insufficient. While language models can retrieve external news, standard retrieval-augmented approaches struggle with high noise, missing signals, and an inability to reason causally about event impacts. We propose SEER (Self-Evolving Event Reasoning and Retrieval), a closed-loop framework that dynamically optimizes event con",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-02T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.04109"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "LoGRA: Scaling LLM Reinforcement Learning with Low-Rank Gradient Sketches",
+        "url": "https://huggingface.co/papers/2610.06647",
+        "normalized_url": "https://huggingface.co/papers/2610.06647",
+        "summary": "Reinforcement learning (RL) has greatly advanced the capabilities of large language models (LLMs), but its memory demands remain a barrier to broader adoption. We introduce LoGRA, an approach to RL post-training that reduces memory by retaining useful learning signals in low-rank gradient sketches. These compact representations support both model updates and efficient policy synchronization. To prevent overly large updates from disrupting learning, we complement gradient compression with predict",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-05T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.06647"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "Capability-Driven Self-Evolution of Agent Memory",
+        "url": "https://huggingface.co/papers/2610.06361",
+        "normalized_url": "https://huggingface.co/papers/2610.06361",
+        "summary": "Memory self-evolution uses task feedback to iteratively improve executable memory programs that store and retrieve information from past interactions. Existing approaches typically adopt holistic evolution, deriving revision directions from mixed feedback and judging progress by overall performance. This can obscure optimization directions and hide capability-specific gains offset by regressions elsewhere, leaving promising directions underexplored. We introduce capability-driven evolution, whic",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-05T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.06361"
+        }
+      },
       {
         "category": "papers",
         "title": "When Does Selection Replace Extraction? A Pre-Registered Test of Agent Memory with a Typed Decision Model",
@@ -361,279 +400,240 @@
       },
       {
         "category": "papers",
-        "title": "LiFT: Loop Flow Transformers",
-        "url": "https://huggingface.co/papers/2610.05538",
-        "normalized_url": "https://huggingface.co/papers/2610.05538",
-        "summary": "We introduce Loop Flow Transformers (LiFT), a family of looped generative models that scales computation by repeatedly applying a shared Diffusion Transformer (DiT) core, with only light changes to the standard architecture. Rather than asking every recurrent step for the final prediction, LiFT trains each step with a single regression target: a point on a straight path from the model's initial estimate to the flow-matching target. Because we index these targets by a continuous depth coordinate,",
-        "source": "HuggingFace Papers",
-        "published": "2026-10-04T00:00:00.000Z",
+        "title": "Partially Observable Zero-shot coordination by Predicting Intention of Partner",
+        "url": "https://arxiv.org/abs/2610.08142v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08142v1",
+        "summary": "Zero-shot coordination in embodied settings requires acting while the partner is intermittently out of view, leaving existing methods with ambiguous partner representations and uncertainty over hidden partner states. We propose Predicting Intention of Partner (PIP) to jointly address these challenges. PIP uses a Joint-view VAE to distill richer training-time evidence from the union of both agents' local observations into a partner representation available from local observations alone. Partner-s",
+        "source": "arXiv",
+        "published": "2026-10-06T10:55:06+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.05538"
-        }
+        "metadata": {}
       },
       {
         "category": "papers",
-        "title": "How to Loop MoE: Flatten the Experts, Untie the Attention",
-        "url": "https://huggingface.co/papers/2609.35751",
-        "normalized_url": "https://huggingface.co/papers/2609.35751",
-        "summary": "Looped Transformers reuse one block of layers several times: by spending extra computation they push a model of fixed size further, and so use its parameters more fully; while sparse mixture-of-experts (MoE) models activate only a few of many experts for each token. Looped MoE bridges these two design philosophies and gives MoE models new potential for better expert usage, but it raises a question: how to loop a MoE? We answer it with Foil. With the expert parameters and the expert compute per t",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-28T00:00:00.000Z",
+        "title": "Test-Time Agent Evolution for Long-Horizon Legal Reasoning",
+        "url": "https://arxiv.org/abs/2610.08138v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08138v1",
+        "summary": "Legal intelligence aims to support reliable decision-making across long-horizon legal processes involving evolving case states and multiple roles. However, real-world legal deployment exhibits substantial case heterogeneity in facts, evidence, and procedural contexts, exposing the limitations of static agent strategies. Moreover, legal reasoning is inherently interdependent across roles and procedural stages, making global reliability fundamentally different from isolated role competence. To add",
+        "source": "arXiv",
+        "published": "2026-10-06T10:53:25+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.35751"
-        }
+        "metadata": {}
       },
       {
         "category": "papers",
-        "title": "SoK: Semantic Decision Engines in Network Control Loops",
-        "url": "https://huggingface.co/papers/2610.06425",
-        "normalized_url": "https://huggingface.co/papers/2610.06425",
-        "summary": "A semantic decision engine such as Jev can return a valid answer and still miss a network deadline, select an infeasible action or leave the service unverified. We systematize 139 paper families by decision interface, execution path and check ownership. Fifty families claim that their engine fits a control loop or time budget, but only four support the claim with matched measurement. Across all 139, four report deadline attainment. The gap concentrates where the decision has no deterministic com",
-        "source": "HuggingFace Papers",
-        "published": "2026-10-05T00:00:00.000Z",
+        "title": "Rethinking Visual Provenance: Detection and Watermarking Across Direct Visual Generation and LLM-Driven Code Rendering",
+        "url": "https://arxiv.org/abs/2610.08137v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08137v1",
+        "summary": "AI systems create images and videos with image/video generation models or by writing code and graphics descriptions that are then rendered. These routes can produce similar visible artifacts but expose different representations, intervention points, and provenance evidence. We develop a production-centered framework that compares detection and watermarking across both routes. An explicit verification specification distinguishes passive inference, message recovery, and authenticated provenance. W",
+        "source": "arXiv",
+        "published": "2026-10-06T10:53:19+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models",
+        "url": "https://arxiv.org/abs/2610.08133v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08133v1",
+        "summary": "Vision-Language-Action (VLA) models achieve strong robotic manipulation performance but incur high computational costs from processing long token sequences at every control step, limiting real-time deployment. Visual token pruning offers a direct solution, as visual patches dominate the input sequence and contain considerable redundancy. Existing approaches, however, either rely on indirect training-free heuristics, such as attention scores and motion thresholds, or require costly fine-tuning of",
+        "source": "arXiv",
+        "published": "2026-10-06T10:47:43+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Beyond Marginal Monitoring: Distributed Joint-Distribution Testing for Data Concept Drift in Large Scale E-Commerce Operations",
+        "url": "https://arxiv.org/abs/2610.08132v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08132v1",
+        "summary": "Concept drift threatens production machine learning, yet the empirical behavior of multivariate two-sample drift detectors at scale remains under-characterized. Existing benchmarks rarely address the hundreds of millions of rows and high-cardinality features typical of industrial-operational datasets. We evaluate five multi-column two-sample tests (marginal, projection-based, and kernel embedding methods) across three complementary environments: the Harvard Dataverse, a validated Failing Loudly ",
+        "source": "arXiv",
+        "published": "2026-10-06T10:47:26+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Mu-DisCoCat: A Variational Pipeline for Compositional Generalization on Quantum Processors",
+        "url": "https://arxiv.org/abs/2610.08131v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08131v1",
+        "summary": "Achieving compositional concept generalization (CoCoGen), the ability to understand novel situations by recombining learned primitives, remains a fundamental challenge in artificial intelligence. Compositional semantic models such as Compositional Distributional Semantics (DisCoCat) offer solutions by generalising vectors to tensors, but suffer from scaling bottlenecks when learning the tensors. Mapping DisCoCat onto Variational Quantum Circuits (VQCs) resolves this limitation for text, yet the ",
+        "source": "arXiv",
+        "published": "2026-10-06T10:45:43+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Do LLMs Act on What They Know? From Partner Representations to Cooperative Actions",
+        "url": "https://arxiv.org/abs/2610.08129v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08129v1",
+        "summary": "Cooperation with unfamiliar partners requires adapting to communication conventions that are not known in advance. We study this problem in a controlled Hanabi-derived environment with scripted hint generation, LLM-controlled receiving decisions, and frozen model weights. Across eight LLMs, linear probes recover intent conventions substantially more accurately than target conventions, yet receiving choices do not consistently agree with the sender's convention. We compare probe-predicted and gro",
+        "source": "arXiv",
+        "published": "2026-10-06T10:44:55+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Supermarket Product Detection and Recognition: Utilizing Deep Learning with Rectified Imagery",
+        "url": "https://arxiv.org/abs/2610.08126v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08126v1",
+        "summary": "Product Identification has sprung up to become one of the most challenging problems in the automation of the retail industry. With the new industry 5.0 standards, automated inventory management, and catalog creation tasks are vitally important. Object identification models have emerged as a viable answer with their unprecedented identification and localization accuracy. However, the close-knit rack design of supermarkets generates the problem of angle variation in capturing images. The angle-var",
+        "source": "arXiv",
+        "published": "2026-10-06T10:44:33+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Conversation Is a Two-Body Problem: Dyadic Evaluation of Full-Duplex Dialogue Models",
+        "url": "https://arxiv.org/abs/2610.08125v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08125v1",
+        "summary": "Full-duplex spoken dialogue models listen and speak at the same time, enabling voice agents to have natural, low-latency interactions that turn-based systems cannot offer. However, they are commonly evaluated against single-sided interlocutors: pre-recorded audio that cannot react, or an automated examiner that reacts in real time but only administers a fixed sequence of tests and is never graded. These single-sided frameworks evaluate only half of a two-body problem, where turn-taking, overlap,",
+        "source": "arXiv",
+        "published": "2026-10-06T10:44:15+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Beyond Waypoint Regression: Query-Based Cost Learning over Reachable Ego Futures for End-to-End Driving",
+        "url": "https://arxiv.org/abs/2610.08123v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08123v1",
+        "summary": "End-to-end planners based on waypoint regression achieve strong open-loop accuracy, but they primarily learn to mimic expert geometry and remain difficult to adapt to deployment-time safety constraints. We propose a query-based cost-learning framework that estimates bounded costs for dynamically reachable ego trajectory queries, rather than dense BEV cells or a small regressed trajectory set. Compact joint scene tokens capture coherent multimodal agent futures, while contingency-aware cost aggre",
+        "source": "arXiv",
+        "published": "2026-10-06T10:43:13+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Attenuated in-context identification in time-series foundation models: diagnosis under counterfactual inputs and repair by synthetic forced-system fine-tuning",
+        "url": "https://arxiv.org/abs/2610.08118v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08118v1",
+        "summary": "Covariate-aware time-series foundation models (TSFMs) promise training-free what-if answers for instrumented plants: the change in output that a different future input would cause. We test this on forced engineering systems with exact counterfactuals, comparing Chronos-2, TimesFM-2.5 and TabPFN-TS with classical system identification fitted to the same context. Through their default covariate interfaces, TimesFM-2.5 and TabPFN-TS are memoryless: the predicted effect of an input change is a same-",
+        "source": "arXiv",
+        "published": "2026-10-06T10:39:04+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Energy-Aware Path Following: Comparative Analysis of Reinforcement Learning and NMPC for Electric Vehicles",
+        "url": "https://arxiv.org/abs/2610.08112v1",
+        "normalized_url": "https://arxiv.org/abs/2610.08112v1",
+        "summary": "Path-following control strategies typically follow the bi-objective optimization dilemma: minimizing deviations from a reference path while maintaining smooth speed profiles. The latter objective is especially relevant for Electric Vehicles (EVs), since their limited driving range can be extended by recovering energy through regenerative braking, a feature that has not yet been sufficiently studied in the literature. In this work, we perform a comparative analysis of four controllers under one c",
+        "source": "arXiv",
+        "published": "2026-10-06T10:35:13+00:00",
         "importance_hint": 4,
-        "metadata": {
-          "paper_id": "2610.06425"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "One Figure, Every Canvas: Editable Flowchart Relayout via Agentic Pipeline",
-        "url": "https://arxiv.org/abs/2610.06852v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06852v1",
-        "summary": "Pipeline figures in ML papers must be repurposed across many canvases, including paper columns, 16:9 slides, portrait posters, 1:1 social teasers, 9:16 phone previews. Each format imposes a different aspect ratio on the same computational graph, where any silently broken connection misrepresents the method. We formulate aspect-ratio-adaptive flowchart relayout as a distinct task: given a raster flowchart and a target ratio, produce a structurally faithful, hallucination-free, editable layout. Ex",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:54+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Base Models Can Reason By Taking a Cue From Training Data",
-        "url": "https://arxiv.org/abs/2610.06851v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06851v1",
-        "summary": "In this paper, we study how training data creates associations between the tokens at the start of a base model's response and the reasoning behavior that follows. First, we demonstrate that fixing particular starting token cues makes a base model's performance competitive with that of its reinforcement learning (RL)-trained counterparts on math and coding. For instance, the cue \".\\n\\nOkay\" raises Olmo-3-7B's MATH-500 pass@1 accuracy from 42% to 78%, while \"Alright,\" raises Qwen3-14B's from 72% t",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:52+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
-        "url": "https://arxiv.org/abs/2610.06850v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06850v1",
-        "summary": "Captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. We introduce InterMimicGen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. First, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relat",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:50+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "S2PD: Serial-to-Parallel Diffusion for Physically and Logically Consistent Video Generation",
-        "url": "https://arxiv.org/abs/2610.06847v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06847v1",
-        "summary": "Bidirectional video diffusion models denoise entire videos in parallel, yet when trained on effectively unlimited in-distribution data from procedural generators, continue to violate physical laws and simple symbolic rules. We introduce Serial-to-Parallel Diffusion (S2PD), which performs autoregressive diffusion at high noise before switching to parallel diffusion at low noise. The autoregressive phase provides the serial computation needed to coordinate interdependent events and produce valid s",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:35+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "BiasFlow: Geometric Monitoring and Backbone Regularization for Spurious Feature Reliance",
-        "url": "https://arxiv.org/abs/2610.06846v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06846v1",
-        "summary": "Worst-group accuracy (WGA) evaluates a trained predictor but does not characterize how its frozen backbone behaves when a new head is learned. We introduce BiasFlow, a hook-based toolkit for monitoring class-attribute centroid alignment (IBMI), within-class centroid separation (W-IBMI), and feature-projection sensitivity. IBMI is confounded by class-attribute correlation and is not a measure of causal feature reliance. We pair these diagnostics with BiasFlow Regularization (BFR), a supervised, c",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:28+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
-        "url": "https://arxiv.org/abs/2610.06844v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06844v1",
-        "summary": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a framework for reading this contextual space through natural-language interrogation. We train a lightweight bottleneck network that maps intermediate contextual tokens into the input space of a frozen Lar",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:17+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Recursive Video In-Context Learning for Agentic Robot",
-        "url": "https://arxiv.org/abs/2610.06843v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06843v1",
-        "summary": "LLM agents that orchestrate frozen vision-language-action (VLA) policies improve across episodes through text memory, which records what the agent did but not how the task is done. A demonstration video shows it, but fits poorly into an agent's context. The full video slows every turn, fixed keyframes lose the contact detail that decides whether a grasp holds, and what the agent needs shifts from the task's structure while planning to the frames around each contact. We introduce Recursive Video ",
-        "source": "arXiv",
-        "published": "2026-10-05T17:59:11+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Anatomy-aware Fine-grained Multimodal Fusion for Laryngopharyngeal Cancer T-Staging Prediction Using CT and Radiology Report",
-        "url": "https://arxiv.org/abs/2610.06837v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06837v1",
-        "summary": "Accurate T-staging is crucial for guiding personalized treatment strategies for laryngopharyngeal cancer. However, current clinical practice relies on invasive biopsy procedures, whereas CT-based staging remains challenging due to the complex patterns of tumor invasion. Recent computer-aided approaches face two key challenges: 1) Structural relationship modeling: existing methods underrepresent anatomically structured patterns of tumor invasion, as they either process whole CT volumes without tu",
-        "source": "arXiv",
-        "published": "2026-10-05T17:58:28+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Direct Intermediate Initialization for Tilted Diffusion Samplers",
-        "url": "https://arxiv.org/abs/2610.06834v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06834v1",
-        "summary": "Some diffusion posterior samplers construct Gaussian-tilted intermediate distributions along the reverse process. We observe that these targets can be pulled back to clean-space posteriors with weaker conditioning, with samples transported analytically to the corresponding noisy-space target through a Gaussian bridge. For the sequential Monte Carlo (SMC) sampler MCGDiff, the effective observation variance of this pulled-back problem is up to twice the diffusion-noise variance. We exploit this st",
-        "source": "arXiv",
-        "published": "2026-10-05T17:58:18+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Towards Looped Models Done Right, Part II: Rethinking at Fixed Points",
-        "url": "https://arxiv.org/abs/2610.06833v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06833v1",
-        "summary": "Every recurrence of a looped language model adds cost in training, decoding, prefill, and reinforcement learning (RL). The closer recurrent states get to fixed points, the less the path to them matters. This enables truncated backpropagation in training; terminal key-value (KV) sharing for decoding with almost no loss in accuracy; a distilled student that prefills up to 1.79x faster; and RL updates that compute gradients from saved rollout states, 2x faster than backpropagating through the repla",
-        "source": "arXiv",
-        "published": "2026-10-05T17:58:15+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "UniSlider: Perceptually Uniform Sliders for Continuous Image Editing",
-        "url": "https://arxiv.org/abs/2610.06831v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06831v1",
-        "summary": "Sliders provide an intuitive interface for continuous image editing. In current generative approaches, however, the slider is simply a rescaling of the method's strength parameter, such as an adapter coefficient, a prompt weight, or an interpolation factor. This strength relates poorly to perceptual change. The image can partially revert as the slider moves, long stretches of the range produce no visible difference, and short intervals transform the image abruptly. Remapping the strength could f",
-        "source": "arXiv",
-        "published": "2026-10-05T17:58:11+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "MemPilot: Orchestrating On-Demand Multimodal Memory Curation for LLM Agents",
-        "url": "https://arxiv.org/abs/2610.06830v1",
-        "normalized_url": "https://arxiv.org/abs/2610.06830v1",
-        "summary": "Memory has become integral to the LLM agent ecosystem, supporting information retention and reuse across interactions. However, most existing agent memory systems construct memory in a query-agnostic manner, which can incur unnecessary preprocessing cost and discard details that later prove essential. Recent studies have begun shifting memory processing toward runtime adaptation, but typically specialize in particular operations or fixed processing schemes, leaving flexible control over performa",
-        "source": "arXiv",
-        "published": "2026-10-05T17:58:06+00:00",
-        "importance_hint": 5,
         "metadata": {}
       }
     ],
     "projects": [
       {
         "category": "projects",
-        "title": "mattpocock/skills ⭐+972/天",
+        "title": "mattpocock/skills ⭐+889/天",
         "url": "https://github.com/mattpocock/skills",
         "normalized_url": "https://github.com/mattpocock/skills",
-        "summary": "Skills for Real Engineers. Straight from my .agents directory. （GitHub Trending · 今日 +972 star）",
+        "summary": "Skills for Real Engineers. Straight from my .agents directory. （GitHub Trending · 今日 +889 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "972"
+          "stars_today": "889"
         }
       },
       {
         "category": "projects",
-        "title": "earthtojake/text-to-cad ⭐+620/天",
+        "title": "earthtojake/text-to-cad ⭐+619/天",
         "url": "https://github.com/earthtojake/text-to-cad",
         "normalized_url": "https://github.com/earthtojake/text-to-cad",
-        "summary": "Give your agent CAD superpowers. （GitHub Trending · 今日 +620 star）",
+        "summary": "Give your agent CAD superpowers. （GitHub Trending · 今日 +619 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "620"
+          "stars_today": "619"
         }
       },
       {
         "category": "projects",
-        "title": "pbakaus/impeccable ⭐+609/天",
+        "title": "pbakaus/impeccable ⭐+616/天",
         "url": "https://github.com/pbakaus/impeccable",
         "normalized_url": "https://github.com/pbakaus/impeccable",
-        "summary": "The design language that makes your AI harness better at design. （GitHub Trending · 今日 +609 star）",
+        "summary": "The design language that makes your AI harness better at design. （GitHub Trending · 今日 +616 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "609"
+          "stars_today": "616"
         }
       },
       {
         "category": "projects",
-        "title": "thedotmack/claude-mem ⭐+536/天",
+        "title": "thedotmack/claude-mem ⭐+534/天",
         "url": "https://github.com/thedotmack/claude-mem",
         "normalized_url": "https://github.com/thedotmack/claude-mem",
-        "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More （GitHub Trending · 今日 +536 star）",
+        "summary": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More （GitHub Trending · 今日 +534 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "536"
+          "stars_today": "534"
         }
       },
       {
         "category": "projects",
-        "title": "ayghri/i-have-adhd ⭐+318/天",
+        "title": "ayghri/i-have-adhd ⭐+326/天",
         "url": "https://github.com/ayghri/i-have-adhd",
         "normalized_url": "https://github.com/ayghri/i-have-adhd",
-        "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output. （GitHub Trending · 今日 +318 star）",
+        "summary": "A skill to stop your coding agent from burying the answer. ADHD-friendly output. （GitHub Trending · 今日 +326 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "318"
+          "stars_today": "326"
         }
       },
       {
         "category": "projects",
-        "title": "morluto/rea ⭐+2,963/天",
+        "title": "morluto/rea ⭐+2,956/天",
         "url": "https://github.com/morluto/rea",
         "normalized_url": "https://github.com/morluto/rea",
-        "summary": "Reverse engineer anything with agents, from app behavior down to native binaries. （GitHub Trending · 今日 +2,963 star）",
+        "summary": "Reverse engineer anything with agents, from app behavior down to native binaries. （GitHub Trending · 今日 +2,956 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "2,963"
+          "stars_today": "2,956"
         }
       },
       {
         "category": "projects",
-        "title": "deepseek-ai/DeepGEMM ⭐+363/天",
+        "title": "deepseek-ai/DeepGEMM ⭐+199/天",
         "url": "https://github.com/deepseek-ai/DeepGEMM",
         "normalized_url": "https://github.com/deepseek-ai/DeepGEMM",
-        "summary": "DeepGEMM: clean and efficient BLAS kernel library on GPU （GitHub Trending · 今日 +363 star）",
+        "summary": "DeepGEMM: clean and efficient BLAS kernel library on GPU （GitHub Trending · 今日 +199 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "363"
+          "stars_today": "199"
         }
       },
       {
         "category": "projects",
-        "title": "msitarzewski/agency-agents ⭐+621/天",
+        "title": "msitarzewski/agency-agents ⭐+623/天",
         "url": "https://github.com/msitarzewski/agency-agents",
         "normalized_url": "https://github.com/msitarzewski/agency-agents",
-        "summary": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. （GitHub Trending · 今日 +621 star）",
+        "summary": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables. （GitHub Trending · 今日 +623 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 5,
         "metadata": {
-          "stars_today": "621"
+          "stars_today": "623"
         }
       },
       {
@@ -651,25 +651,36 @@
       },
       {
         "category": "projects",
-        "title": "cathrynlavery/diagram-design ⭐+227/天",
+        "title": "cathrynlavery/diagram-design ⭐+228/天",
         "url": "https://github.com/cathrynlavery/diagram-design",
         "normalized_url": "https://github.com/cathrynlavery/diagram-design",
-        "summary": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. （GitHub Trending · 今日 +227 star）",
+        "summary": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Factory Droid, and Pi. 42 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop. （GitHub Trending · 今日 +228 star）",
         "source": "GitHub Trending",
         "published": null,
         "importance_hint": 4,
         "metadata": {
-          "stars_today": "227"
+          "stars_today": "228"
         }
       }
     ],
     "news": [
       {
         "category": "news",
+        "title": "South Korea says AI agents appear to have been used to hack the country's banks",
+        "url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
+        "normalized_url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06",
+        "summary": "HN points: 23, comments: 2",
+        "source": "Hacker News",
+        "published": "2026-10-06T23:50:33Z",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "OpenAI just dropped 700 preprints of mathematical proofs and counterexamples",
         "url": "https://github.com/openai/math/tree/main/preprints",
         "normalized_url": "https://github.com/openai/math/tree/main/preprints",
-        "summary": "HN points: 27, comments: 10",
+        "summary": "HN points: 39, comments: 2",
         "source": "Hacker News",
         "published": "2026-10-06T23:37:02Z",
         "importance_hint": 4,
@@ -684,6 +695,17 @@
         "source": "Hacker News",
         "published": "2026-10-06T22:22:48Z",
         "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "news",
+        "title": "An Open Letter to Steven Pinker on AI",
+        "url": "https://www.astralcodexten.com/p/an-open-letter-to-steven-pinker-on",
+        "normalized_url": "https://www.astralcodexten.com/p/an-open-letter-to-steven-pinker-on",
+        "summary": "HN points: 15, comments: 1",
+        "source": "Hacker News",
+        "published": "2026-10-06T22:19:38Z",
+        "importance_hint": 3,
         "metadata": {}
       },
       {
@@ -704,7 +726,7 @@
         "title": "Penguin Mail – open-source Rust email client for Linux with AI",
         "url": "https://penguin-mail.com/",
         "normalized_url": "https://penguin-mail.com",
-        "summary": "HN points: 22, comments: 5",
+        "summary": "HN points: 59, comments: 17",
         "source": "Hacker News",
         "published": "2026-10-06T21:59:43Z",
         "importance_hint": 3,
@@ -726,7 +748,7 @@
         "title": "Tumbler Ridge shooter's ChatGPT use \"more disturbing\" than known: reporter",
         "url": "https://www.cbc.ca/news/canada/british-columbia/mother-jones-chatgpt-safeguards-tumbler-ridge-bc-shooter-9.7358031",
         "normalized_url": "https://www.cbc.ca/news/canada/british-columbia/mother-jones-chatgpt-safeguards-tumbler-ridge-bc-shooter-9.7358031",
-        "summary": "HN points: 24, comments: 18",
+        "summary": "HN points: 25, comments: 18",
         "source": "Hacker News",
         "published": "2026-10-06T20:44:29Z",
         "importance_hint": 3,
@@ -759,7 +781,7 @@
         "title": "A sustainable web career, for when all this blows over",
         "url": "https://dbushell.com/2026/10/07/sustainable-web-career/",
         "normalized_url": "https://dbushell.com/2026/10/07/sustainable-web-career",
-        "summary": "HN points: 52, comments: 104",
+        "summary": "HN points: 53, comments: 105",
         "source": "Hacker News",
         "published": "2026-10-06T19:31:24Z",
         "importance_hint": 3,
@@ -770,7 +792,7 @@
         "title": "Claude Code’s suggested message feature: I think the real customer is the model",
         "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
         "normalized_url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
-        "summary": "HN points: 70, comments: 38",
+        "summary": "HN points: 88, comments: 49",
         "source": "Hacker News",
         "published": "2026-10-06T18:00:34Z",
         "importance_hint": 4,
@@ -792,7 +814,7 @@
         "title": "Utah to let AI examine patients and prescribe medication without human oversight",
         "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
         "normalized_url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
-        "summary": "HN points: 48, comments: 80",
+        "summary": "HN points: 64, comments: 89",
         "source": "Hacker News",
         "published": "2026-10-06T17:01:52Z",
         "importance_hint": 3,
@@ -811,27 +833,133 @@
       },
       {
         "category": "news",
-        "title": "LibreOffice says ‘no AI’ is now a software feature",
-        "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
-        "normalized_url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature",
-        "summary": "The maker of the open source document editor says it has no plans to add AI to its software's default configuration, citing user privacy.",
-        "source": "Hacker News, TechCrunch AI",
-        "published": "2026-10-06T15:25:00+00:00",
-        "importance_hint": 4,
+        "title": "AI几年内或超越所有人类，Claude核心研究员预测",
+        "url": "https://www.36kr.com/p/4014585839210629",
+        "normalized_url": "https://www.36kr.com/p/4014585839210629",
+        "summary": "人类领跑智能的时代进入倒计",
+        "source": "36Kr AI",
+        "published": "2026-10-07T01:00:16+00:00",
+        "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-        "url": "https://github.com/FeSens/openTPU",
-        "normalized_url": "https://github.com/FeSens/openTPU",
-        "summary": "HN points: 210, comments: 274",
-        "source": "Hacker News",
-        "published": "2026-10-06T16:23:25Z",
+        "title": "河南老板，让素人当主角，一天3980元",
+        "url": "https://www.36kr.com/p/4015085008768897",
+        "normalized_url": "https://www.36kr.com/p/4015085008768897",
+        "summary": "干了快20年影视生意，我决定把镜头对准普通人。",
+        "source": "36Kr AI",
+        "published": "2026-10-07T00:58:54+00:00",
         "importance_hint": 3,
-        "metadata": {}
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "当米哈游仔细研究「过日子」",
+        "url": "https://www.36kr.com/p/4015104146428038",
+        "normalized_url": "https://www.36kr.com/p/4015104146428038",
+        "summary": "当米哈游仔细研究「过日子」",
+        "source": "36Kr AI",
+        "published": "2026-10-07T00:57:38+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "2026的游戏行业，遍地都是埋人的天坑陷阱？",
+        "url": "https://www.36kr.com/p/4013873369829512",
+        "normalized_url": "https://www.36kr.com/p/4013873369829512",
+        "summary": "谁跟谁亏。",
+        "source": "36Kr AI",
+        "published": "2026-10-06T09:00:00+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "数学要「毕业」了，xAI联创宣判：两千年英雄史彻底落幕",
+        "url": "https://www.36kr.com/p/4013928129122184",
+        "normalized_url": "https://www.36kr.com/p/4013928129122184",
+        "summary": "数学要「毕业」了！xAI联创宣判：两千年英雄史彻底落幕",
+        "source": "36Kr AI",
+        "published": "2026-10-06T07:00:00+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "比起核电站，美国人为什么更反感数据中心？",
+        "url": "https://www.36kr.com/p/4013845198507910",
+        "normalized_url": "https://www.36kr.com/p/4013845198507910",
+        "summary": "美国的“阿喀琉斯之踵”：自下而上难以实现有力统合。",
+        "source": "36Kr AI",
+        "published": "2026-10-06T06:00:05+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "重塑苹果设计团队核心地位，特努斯瞄准下一个十年竞争",
+        "url": "https://www.36kr.com/p/4013644466262144",
+        "normalized_url": "https://www.36kr.com/p/4013644466262144",
+        "summary": "特努斯此番欲重塑苹果设计团队核心地位，本质上对苹果核心竞争力的重新复盘与回归，瞄准的是下一个十年的竞争。",
+        "source": "36Kr AI",
+        "published": "2026-10-06T04:30:54+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "雷军重仓一位31岁女将",
+        "url": "https://www.36kr.com/p/4012727395618692",
+        "normalized_url": "https://www.36kr.com/p/4012727395618692",
+        "summary": "人的流动。",
+        "source": "36Kr AI",
+        "published": "2026-10-06T04:00:10+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "顶级VC办大学，开抢18岁高中生",
+        "url": "https://www.36kr.com/p/4013787287507076",
+        "normalized_url": "https://www.36kr.com/p/4013787287507076",
+        "summary": "“君子见几而作，不俟终日。”",
+        "source": "36Kr AI",
+        "published": "2026-10-06T03:14:17+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "华为与高通，重新算一笔专利账",
+        "url": "https://www.36kr.com/p/4013794732691328",
+        "normalized_url": "https://www.36kr.com/p/4013794732691328",
+        "summary": "2026年10月5日，华为与高通宣布达成多年期专利交叉许可协议，高通还将购买华为部分美国专利。一家公司使用另一家公司的技术，需要支付什么代价；一家公司的技术被另一家公司认可，又能获得什么回报——这两笔账，现在被放到了一张谈判桌上。",
+        "source": "36Kr AI",
+        "published": "2026-10-06T03:09:29+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+        }
       },
       {
         "category": "news",
@@ -933,19 +1061,6 @@
         "source": "量子位",
         "published": "2026-10-04T06:05:35+00:00",
         "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "GPT-6要“吃掉”3D公司？这家公司不到2年ARR翻百倍，破1亿美元",
-        "url": "https://www.qbitai.com/2026/10/501451.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501451.html",
-        "summary": "专业3D模型反而更稀缺了",
-        "source": "量子位",
-        "published": "2026-10-04T00:53:29+00:00",
-        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.qbitai.com/rss"
         }
@@ -1056,45 +1171,6 @@
       },
       {
         "category": "news",
-        "title": "我做了一个 AI 老师，但我不想让它只是一个聊天框",
-        "url": "https://sspai.com/post/115398",
-        "normalized_url": "https://sspai.com/post/115398",
-        "summary": "现在的 AI 已经很擅长回答问题了。 不会做一道题？把题目扔给 AI。 看不懂一个知识点？让 AI 解释。 写代码遇到问题？继续问。 但如果把 AI 放到学习场景里，我总觉得还缺了一点东西： 它很会回答问题，却不一定真的会教你。 这也是我最近做 knoa 的原因。 AI 学习工具为什么总是聊天框？ 我自己使用 AI 学习的时候，经常会遇到这样的流程： 我不会这道题。 AI：给你完整讲解。 我：这里没看懂。 AI：换一种方式解释。 我：还是不太理解。 整个过程没有什么明显的问题。 AI 也确实回答得很好。 但它始终是一问一答。 真正的课堂并不是这样的。 老师可能先在黑板上写下一个公式，然后画一张图，再举一个简单的例子。如果发现学生没有理解，老师会退回去，从更基础的知识开始讲。 教学不是把答案说出来，而是不断判断学生现在应该学什么。 所以我开始思考，如果 AI 真的是一个老师，它的界面是不是也应该更像课堂？ 我把白板放进了 AI 课堂 于是 knoa 最核心的一个设计，就是白板。 AI 不再只是生成一段聊天消息，而是可以在白板上逐步进行讲解。 比如讲一个数学知识点，可以先写公式，再解释公式",
-        "source": "SSPAI AI",
-        "published": "2026-10-06T09:03:47+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/sspai/tag/AI"
-        }
-      },
-      {
-        "category": "news",
-        "title": "AI时代我们究竟在追赶什么",
-        "url": "https://sspai.com/post/115368",
-        "normalized_url": "https://sspai.com/post/115368",
-        "summary": "AI 时代我们究竟在追赶什么 AI 带来的变化，最先表现为一种兴奋：过去做不了的事情，现在可以试了；过去需要花很长时间才能掌握的操作，现在能够在提示和反馈中完成。写作、设计、编程、整理资料，越来越多工作开始有了新的完成方式。 紧接着，兴奋里又混入了一种不安。 我们刚学会一种方法，工具就更新了；刚做出一个过去需要多人配合的作品，就发现别人也能做出来。曾经值得写进简历的能力，可能正在成为软件默认提供的功能。 眼前的产出更多了，我们却越来越无法确定，自己脚下究竟是坚实的土地，还是一片随波漂流的浮萍。 这种感受不只属于技术从业者。Pew Research Center 在 2026 年 9 月发布了一项调查。调查覆盖了 37 个国家。其中有 34 个国家，担心 AI 会减少工作机会的人，比期待它创造更多岗位的人更多。这是人们对未来二十年的预期，也反映了广泛的就业焦虑。 调查报告 不过，工作受到影响，也不等于岗位一定会消失。国际劳工组织与 NASK 在 2025 年的研究中指出，很多工作仍然需要人参与，AI 更可能改变工作的内容，而不是让整个岗位消失。 研究说明 但“工作转型”也不能让人真正安心",
-        "source": "SSPAI AI",
-        "published": "2026-10-05T03:41:07+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/sspai/tag/AI"
-        }
-      },
-      {
-        "category": "news",
-        "title": "我测了一遍中文“去 AI 味”的规则，一半是错的",
-        "url": "https://sspai.com/post/115346",
-        "normalized_url": "https://sspai.com/post/115346",
-        "summary": "我在医院工作，业余写给家长看的科普。这两年初稿很多是让 Claude 先起的，改稿时最花时间的就是把那股 AI 味去掉。今年想干脆做一个 Claude Code 的 skill 来干这件事，动手之前先去 GitHub 上看了看别人怎么做的。 中文的同类项目我读了 13 个，星数最多的一万八千多。读下来发现两个问题。 很多规则没被验证过 这些项目的规则清单大同小异：句子要长短参差，少用“首先、其次、最后”，删掉设问，少用比喻和排比，多加口语词，“值得注意的是”换成“说白了”。 其中只有一个项目认真测过。lieflat-less-ai-tone 的作者找了五个模型各写 60 篇，一共 300 篇，对照 329 篇人写的公开文章，总共 283 万字，把网上流传的 26 条判据挨个算了频率。 站得住的只有 11 条。 被推翻的那 15 条里，有几条是大家最爱引用的。句长均匀度人机没差别，早先“AI 均匀度是人的 51 倍”的说法，是程序把 Markdown 表格切成了一句话。正文里的设问，人类用得是 AI 的 17 倍，比喻是 2.4 倍。倒是“说白了”开头的句子，AI 多用 3.2 倍。 也",
-        "source": "SSPAI AI",
-        "published": "2026-10-04T13:56:52+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/sspai/tag/AI"
-        }
-      },
-      {
-        "category": "news",
         "title": "Ex-Ramp engineers raise $20M for platform Melius after scrapping their first product",
         "url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product/",
         "normalized_url": "https://techcrunch.com/2026/10/06/ex-ramp-engineers-raise-20m-for-platform-melius-after-scrapping-their-first-product",
@@ -1180,6 +1256,19 @@
         "source": "TechCrunch AI",
         "published": "2026-10-06T16:00:00+00:00",
         "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
+        }
+      },
+      {
+        "category": "news",
+        "title": "LibreOffice says ‘no AI’ is now a software feature",
+        "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/",
+        "normalized_url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature",
+        "summary": "The maker of the open source document editor says it has no plans to add AI to its software's default configuration, citing user privacy.",
+        "source": "TechCrunch AI",
+        "published": "2026-10-06T15:25:00+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
         }
@@ -1758,6 +1847,45 @@
       },
       {
         "category": "news",
+        "title": "OpenAI “rogue” agent activities found on Wikimedia projects",
+        "url": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia/",
+        "normalized_url": "https://simonwillison.net/2026/Oct/7/openai-rogue-agents-wikimedia",
+        "summary": "OpenAI “rogue” agent activities found on Wikimedia projects Given how tempting a target wikis are for rogue agent swarms, it's not a huge surprise that Wikipedia found evidence of that activity once they went looking: The Wikimedia Foundation conducted its own investigation to see whether Wikimedia websites had been similarly affected by AI agents, focusing on those operated by OpenAI. We can confirm that we have discovered some activity by these “rogue” OpenAI agents on Wikimedia platforms. The",
+        "source": "Simon Willison",
+        "published": "2026-10-07T00:16:45+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Quoting Victoria Kim",
+        "url": "https://simonwillison.net/2026/Oct/6/victoria-kim/",
+        "normalized_url": "https://simonwillison.net/2026/Oct/6/victoria-kim",
+        "summary": "Since the Medicare breach, OpenAI has put in place additional monitoring to allow “immediate intervention” by staff to stop training if the company’s models access the internet in ways they’re not supposed to, Mr. Kwon [chief strategy officer at OpenAI] said. — Victoria Kim , Reporting from the Australian parliament Tags: accidental-cyberattacks , generative-ai , ai-security-research , openai , ai , llms",
+        "source": "Simon Willison",
+        "published": "2026-10-06T23:58:56+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
+        "title": "llm-openai-decisions 0.1a0",
+        "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
+        "normalized_url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions",
+        "summary": "Release: llm-openai-decisions 0.1a0 OpenAI released their new Jev-style Decisions API , as previously announced at last week's DevDay. Since I already have an llm-typesafe plugin for talking to Jev, I had GPT-6 Astra read the new OpenAI API documentation and build an llm-openai-decisions plugin inspired by llm-typesafe . Unlike Jev, the new gpt-6-luna decision model supports image input in addition to text. Both models charge for input it and not for output: OpenAI's is 10 cents per million inpu",
+        "source": "Simon Willison",
+        "published": "2026-10-06T23:04:13+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
         "title": "llm-mistral 0.16",
         "url": "https://simonwillison.net/2026/Oct/6/llm-mistral/",
         "normalized_url": "https://simonwillison.net/2026/Oct/6/llm-mistral",
@@ -1823,45 +1951,6 @@
       },
       {
         "category": "news",
-        "title": "datasette-atom 0.11a0",
-        "url": "https://simonwillison.net/2026/Oct/6/datasette-atom/",
-        "normalized_url": "https://simonwillison.net/2026/Oct/6/datasette-atom",
-        "summary": "Release: datasette-atom 0.11a0 A minor fix for compatibility with the latest Datasette alphas. This meant we could upgrade the datasette.io site to Datasette 1.0a41. Tags: atom , datasette",
-        "source": "Simon Willison",
-        "published": "2026-10-06T17:35:39+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Scrimshaw Jukebox",
-        "url": "https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox/",
-        "normalized_url": "https://simonwillison.net/2026/Oct/6/scrimshaw-jukebox",
-        "summary": "Tool: Scrimshaw Jukebox I wanted to see if Claude Opus 5.5 could compose music, so I tried this : I want you to write some computer game music for me. First design simple text based format for the music and build an artifact that can play it out loud - include some example tracks in that artifact I am looking for music of the quality of the original secret of Monkey Island It leaned a lot harder into the Monkey Island theme than I had intended, but the results are surprisingly good. I wonder if ",
-        "source": "Simon Willison",
-        "published": "2026-10-06T15:17:39+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Quoting Felix Rieseberg",
-        "url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg/",
-        "normalized_url": "https://simonwillison.net/2026/Oct/5/felix-rieseberg",
-        "summary": "The \"old\" version of Cowork runs model inference in the cloud, executing tool calls in an Anthropic-provided VM we shipped to your computer. We added the VM for capability, safety, and security reasons - mapping in just the data you explicitly added to your session. People loved what they were able to do with Claude but didn't love the disk, battery, and performance cost of running the VM locally. Also, people didn't love that closing your laptop means the work stops. The \"new\" version of Cowork",
-        "source": "Simon Willison",
-        "published": "2026-10-05T23:56:47+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
         "title": "Falcon-Emirati: When an LLM Learns the Dialect, the Culture, and the Nuance",
         "url": "https://huggingface.co/blog/tiiuae/falcon-emirati",
         "normalized_url": "https://huggingface.co/blog/tiiuae/falcon-emirati",
@@ -1907,19 +1996,6 @@
         "summary": "",
         "source": "Hugging Face Blog",
         "published": "2026-10-02T04:01:31+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://huggingface.co/blog/feed.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Open TTS Leaderboard: Scalable Evaluation for Multilingual Text-to-Speech and Voice Cloning",
-        "url": "https://huggingface.co/blog/open-tts-leaderboard",
-        "normalized_url": "https://huggingface.co/blog/open-tts-leaderboard",
-        "summary": "",
-        "source": "Hugging Face Blog",
-        "published": "2026-09-30T00:00:00+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://huggingface.co/blog/feed.xml"
@@ -2083,19 +2159,6 @@
       },
       {
         "category": "news",
-        "title": "Microsoft confirms OpenAI has been using Looped Transformers in the GPT-6 series",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz00vv/microsoft_confirms_openai_has_been_using_looped/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz00vv/microsoft_confirms_openai_has_been_using_looped",
-        "summary": "Microsoft confirms on publicly accessible web page that OpenAI has been using Looped Transformers in the GPT-6 series, proving The Information's reporting was correct all along. GPT-6.1 Sol uses 2 inference passes, with a passing mention of \"instead of three\". For those confused by \"same base model weights as GPT-6 Sol\", I think Microsoft meant 6 & 6.1 are both post-trained models on top of the same pre-trained \"base model\", not that the final weights are identical So different post-training (+ ",
-        "source": "r/LocalLLaMA",
-        "published": "2026-10-06T11:21:30+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
-        }
-      },
-      {
-        "category": "news",
         "title": "54gb vram for 35$",
         "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz6ist/54gb_vram_for_35/",
         "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz6ist/54gb_vram_for_35",
@@ -2103,6 +2166,19 @@
         "source": "r/LocalLLaMA",
         "published": "2026-10-06T16:06:58+00:00",
         "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Microsoft confirms OpenAI has been using Looped Transformers in the GPT-6 series",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz00vv/microsoft_confirms_openai_has_been_using_looped/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wz00vv/microsoft_confirms_openai_has_been_using_looped",
+        "summary": "Microsoft confirms on publicly accessible web page that OpenAI has been using Looped Transformers in the GPT-6 series, proving The Information's reporting was correct all along. GPT-6.1 Sol uses 2 inference passes, with a passing mention of \"instead of three\". For those confused by \"same base model weights as GPT-6 Sol\", I think Microsoft meant 6 & 6.1 are both post-trained models on top of the same pre-trained \"base model\", not that the final weights are identical So different post-training (+ ",
+        "source": "r/LocalLLaMA",
+        "published": "2026-10-06T11:21:30+00:00",
+        "importance_hint": 5,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }

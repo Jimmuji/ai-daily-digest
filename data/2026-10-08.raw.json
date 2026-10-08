@@ -1,13 +1,52 @@
 {
   "date": "2026-10-08",
-  "generated_at": "2026-10-08T08:18:36.069374+08:00",
+  "generated_at": "2026-10-08T09:42:11.813325+08:00",
   "counts": {
-    "papers": 40,
+    "papers": 42,
     "projects": 10,
-    "news": 137
+    "news": 119
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "WebFovea: When the Model Is Right but the Click Is Wrong -- Reliable Round Trips for Vision-Based Web Agents on Live Websites",
+        "url": "https://huggingface.co/papers/2610.03036",
+        "normalized_url": "https://huggingface.co/papers/2610.03036",
+        "summary": "We present WebFovea, a vision-based web agent that placed 2nd in the WebRetriever Challenge 2026 with a final score of 57.0 out of 100. The challenge evaluates agents end to end on Protocol III of the WebRetriever benchmark (arXiv:2607.06118): starting from an entry URL on a live website, the agent must operate the site's own interface and return a verifiable answer. A capable multimodal large language model (LLM) is necessary for this, but not sufficient. The model's decisions reach the browser",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-07T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.03036"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning",
+        "url": "https://huggingface.co/papers/2610.09455",
+        "normalized_url": "https://huggingface.co/papers/2610.09455",
+        "summary": "Recently, approaches that leverage human video datasets for robot policy training have become increasingly prevalent. However, most existing hand trackers regress pose from cropped frames with limited priors on hand motion and object interaction, resulting in inaccurate and physically inconsistent estimates. Moreover, the lack of physical cues, e.g., contact and force, limits the use of human videos for robot policy training. To this end, we propose RLHND, a video foundation model-based hand tra",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-07T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.09455"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "We Query, Therefore We Compute: On Oracle Computation beyond the Machine, with an Application to Agents",
+        "url": "https://huggingface.co/papers/2610.09243",
+        "normalized_url": "https://huggingface.co/papers/2610.09243",
+        "summary": "Agentic systems use large language models (LLMs) to carry out concrete tasks. Prior work often borrows abstractions such as scheduling, caching or isolation piecemeal from operating systems, so the mechanisms it builds share little common ground, and the shared view of the two forms of agentic system, Workflows and Agents, is limited. We construct an abstract machine that provides both. We treat the LLM as an Oracle and extend a two-stack pushdown automaton with one instruction, which hands the ",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-07T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.09243"
+        }
+      },
       {
         "category": "papers",
         "title": "TimeBraid: Unifying Time Series and Language for Understanding and Forecasting",
@@ -131,7 +170,7 @@
         "url": "https://huggingface.co/papers/2610.08778",
         "normalized_url": "https://huggingface.co/papers/2610.08778",
         "summary": "Large language models (LLMs) have become increasingly capable problem solvers, but being able to solve a problem is not the same as being able to teach it. Existing approaches to training LLMs as teachers rely on demonstrations, preference data, or predefined pedagogical criteria that specify what good teaching looks like. However, these signals are often not grounded in individual student learning outcomes, where effective teaching strategies can vary substantially across learners. To address t",
-        "source": "HuggingFace Papers, arXiv",
+        "source": "HuggingFace Papers",
         "published": "2026-10-06T00:00:00.000Z",
         "importance_hint": 5,
         "metadata": {
@@ -361,150 +400,133 @@
       },
       {
         "category": "papers",
-        "title": "Accent Analogy Guidance: More Speaker Similarity at Equal Accent in Cross-Lingual Voice Cloning",
-        "url": "https://huggingface.co/papers/2609.29123",
-        "normalized_url": "https://huggingface.co/papers/2609.29123",
-        "summary": "In cross-lingual zero-shot text-to-speech, the accent of the reference leaks into the target speech. We propose accent analogy guidance (AAG), a training-free sampler term that subtracts an accent direction estimated from the model's own predictions for one synthetic voice rendered in both languages, so the voice cancels and only the accent remains. By a blind LLM accent judge on real dubbing data, reweighting classifier-free guidance between reference and text, and its variants, stay near one i",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-24T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2609.29123"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "Source Identification Is Not Fitness Testing: Measuring the Limits of Synthetic-Data Attribution",
-        "url": "https://huggingface.co/papers/2610.00417",
-        "normalized_url": "https://huggingface.co/papers/2610.00417",
-        "summary": "Repeated training on model-generated data can degrade later models. One possible response is to use provenance when deciding which generated examples to reuse. We test both how reliably that provenance can be recovered and whether it helps identify better training data. Using financial-risk text, we first identify the source of generated passages and then repeat the test after rewriting them. Generator attribution is 98.7% accurate on the original passages but falls to 53.1% after paraphrasing a",
-        "source": "HuggingFace Papers",
-        "published": "2026-09-30T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.00417"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "CtrlCache: Accelerating Interactive Video World Models with Control-Aware Caching",
-        "url": "https://huggingface.co/papers/2610.08777",
-        "normalized_url": "https://huggingface.co/papers/2610.08777",
-        "summary": "Interactive video world models need to generate each video chunk efficiently while responding faithfully to user controls. Many systems use chunk-wise autoregressive generation with few-step denoising, but each chunk still requires several costly denoising iterations. Training-free caching can reduce this cost, yet existing policies make reuse decisions primarily from model-internal denoising dynamics and do not explicitly account for control transitions. Actually, interactive generation explici",
-        "source": "HuggingFace Papers, arXiv",
-        "published": "2026-10-06T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.08777"
-        }
-      },
-      {
-        "category": "papers",
-        "title": "World Models' Last Exam in Physics",
-        "url": "https://arxiv.org/abs/2610.08791v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08791v1",
-        "summary": "Video world models can produce visually convincing yet physically inconsistent sequences, raising concerns about their reliability for prediction and planning in embodied AI systems. Existing evaluations often rely on model-based judgments or reference videos, while direct physical tests largely focus on mechanics. We introduce World Models' Last Exam in Physics, a measurement-based benchmark for evaluating physical consistency in video world models. The benchmark comprises 40 controlled tasks s",
+        "title": "MSU Team at the Explainable Deepfake Detection Challenge 2026: Grounded Artifact Evidence for Deepfake Detection",
+        "url": "https://arxiv.org/abs/2610.09952v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09952v1",
+        "summary": "Recent advances in generative image models have made many manipulated images highly realistic, raising the need for detectors that are not only accurate but also able to provide visual evidence for their decisions. In this paper, we present our solution to the Explainable Deepfake Detection Challenge [2] on the XPlainVerse dataset [1], where systems are required to predict whether an image is real or fake and generate both complex and simple explanations grounded in visible forensic cues. Our me",
         "source": "arXiv",
-        "published": "2026-10-06T17:59:56+00:00",
+        "published": "2026-10-07T12:30:04+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Building Rome from a Single Image",
-        "url": "https://arxiv.org/abs/2610.08790v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08790v1",
-        "summary": "Single-image scene generation aims to produce a complete 3D scene mesh from a single image, including surfaces the camera did not observe. While pretrained 3D object generators encode a strong shape prior, they are mainly designed for isolated objects in a fixed canonical volume and focus mostly on indoor scenes, since diverse 3D data for outdoor scenes are quite limited. In this work, we present a method that redesigns such an object-centric generator, e.g., Trellis 2, to work on both indoor an",
+        "title": "Learning Traffic Flow Dynamics with Stochastic Physics-Informed Neural Cellular Automata",
+        "url": "https://arxiv.org/abs/2610.09946v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09946v1",
+        "summary": "Traffic flow modeling is essential for understanding and predicting the collective dynamics of vehicles on road networks. Cellular automata provide a simple, interpretable yet powerful framework for representing these dynamics via local interaction rules, while retaining the ability to reproduce complex macroscopic traffic phenomena. However, learning local transition rules from data while preserving physically meaningful constraints remains challenging, particularly for stochastic models. In th",
         "source": "arXiv",
-        "published": "2026-10-06T17:59:50+00:00",
+        "published": "2026-10-07T12:27:22+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "AgentTime: Can Agents Estimate and Control Their Own Runtime?",
+        "url": "https://arxiv.org/abs/2610.09944v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09944v1",
+        "summary": "An essential control of AI agents is their ability to manage runtime. This ability requires a sense of time-awareness, to predict and estimate wall-clock time and to control their own actions. Prior work has focused on time-awareness, but duration-following and control in native agent harnesses remain unexplored. We present AgentTime, a benchmark for testing whether agents can work for a requested duration, predict their runtime, and estimate elapsed time afterward. It comprises 222 tasks from 1",
+        "source": "arXiv",
+        "published": "2026-10-07T12:26:24+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Many Ways to Succeed: Diversity-Driven RL Fine-Tuning for VLA Generalization",
+        "url": "https://arxiv.org/abs/2610.09943v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09943v1",
+        "summary": "Reinforcement learning (RL) fine-tuning improves vision-language-action (VLA) policies through closed-loop experience, yet generalization beyond the fine-tuning distribution remains limited. Our analysis reveals a selective reshaping of exploration: RL contracts behavior globally, yet diversifies successful trajectories, elicits success with fewer rollouts, and covers more of the latent task-valid solution space than supervised fine-tuning. Broader successful-mode coverage may provide alternativ",
+        "source": "arXiv",
+        "published": "2026-10-07T12:26:21+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Purifying Backdoored Large Vision-Language Models by Removing Hijacked Directions",
+        "url": "https://arxiv.org/abs/2610.09941v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09941v1",
+        "summary": "Large vision-language models (LVLMs) are increasingly deployed in safety-critical applications, yet they remain vulnerable to backdoor attacks. Defending against such attacks remains costly, as existing methods require either extensive retraining on clean data or per-query intervention at inference time. To address this limitation, we propose OrthoPurify, a more efficient method to purify backdoored model weights via one-step orthogonal projection. Specifically, through structural analysis of ba",
+        "source": "arXiv",
+        "published": "2026-10-07T12:25:47+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Juno: Taming Predictive Latents for Vision-Language-Action Models",
+        "url": "https://arxiv.org/abs/2610.09940v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09940v1",
+        "summary": "Joint-embedding predictive architectures (JEPAs) predict masked or future observations in representation space, offering a natural source of predictive latents for vision-language-action (VLA) models. Yet making these latents useful across pretraining, policy learning, and deployment requires addressing three failures: mismatch with embodiment-specific control, interference with action learning, and teacher miscalibration under distribution shifts. We introduce Juno, a unified framework built ar",
+        "source": "arXiv",
+        "published": "2026-10-07T12:24:17+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Fast holographic inversion of superconducting domes",
+        "url": "https://arxiv.org/abs/2610.09938v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09938v1",
+        "summary": "A holographic superconductor whose scalar mass depends on the gauge field strength, $M(\\Fsq)$, reproduces a superconducting dome for a suitable $M$, and recovering that $M$ from a given dome has so far taken days for a single training run. We propose a new way of training this model, with which an inversion takes from about ten minutes to an hour. Training needs the gradient of the condition that fixes the critical temperature, which the earlier method obtains by finite differences, repeating th",
+        "source": "arXiv",
+        "published": "2026-10-07T12:24:00+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Where Can a Decision Model Diagnose HVAC Faults? Reasoning Demand, Physical Representation, and Robustness Under Shift",
+        "url": "https://arxiv.org/abs/2610.09937v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09937v1",
+        "summary": "Artificial intelligence supports building operations in several forms, each with its own barrier. Expert rules must be tuned for every system, supervised models need labeled data that buildings rarely record, and language models return free text that requires human-in-the-loop checking, since their stated confidence is unreliable. A newer kind of pretrained model, here called a decision model, returns a probability for every allowed answer, so one model could serve many decisions without trainin",
+        "source": "arXiv",
+        "published": "2026-10-07T12:23:55+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Itgan at NADI 2026 shared task: Parameter-Efficient Whisper Adaptation for Robust, Mixed-Dialect and Code-Switched Arabic ASR",
+        "url": "https://arxiv.org/abs/2610.09934v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09934v1",
+        "summary": "We describe the Itgan systems for the three ASR subtasks of NADI 2026, namely robust country-level ASR (1.1), mixed-dialect ASR (1.2), and Tunisian code-switched ASR (1.3). All three share one recipe, Whisper adapted with LoRA on consumer GPUs, and each was carried by a different addition to it. On 1.1, where the dialect label is given at test time, per-dialect specialists continued from a pooled adapter gave the largest gain, and the submitted system reached 57.1% country-average WER. A post-ev",
+        "source": "arXiv",
+        "published": "2026-10-07T12:18:40+00:00",
         "importance_hint": 4,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "QF3: Fast Flow RL with Filtered Q-Gradients",
-        "url": "https://arxiv.org/abs/2610.08789v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08789v1",
-        "summary": "Flow policies have become a standard policy class for learning robot behaviors from demonstrations, but reinforcement learning is still critical for improving pre-trained flow policies or learning them from scratch through interaction. We introduce QF3 (Fast Flow RL with Filtered Q-Gradients), an online off-policy RL algorithm that trains a flow policy with flow matching plus the critic's action gradient, backpropagated through a one-step prediction of the flow's output. To keep updates where th",
+        "title": "Expected Sample Complexity in Multi-Armed Bandits",
+        "url": "https://arxiv.org/abs/2610.09929v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09929v1",
+        "summary": "Sample complexity is a widely used metric in sequential decision-making problems, defined as the number of suboptimal decisions during the interaction between the agent and an environment. We study the sample complexity of stochastic multi-armed bandit problems and introduce the expected sample complexity performance measure, analyzing it in a novel framework called approximately correct in expectation (ACE). We show that ACE guarantees imply almost sure convergence to the optimal expected rewar",
         "source": "arXiv",
-        "published": "2026-10-06T17:59:34+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Conformal Prediction Sets Quantify Information Gain: A Theoretical Perspective",
-        "url": "https://arxiv.org/abs/2610.08785v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08785v1",
-        "summary": "Conformal prediction is a popular tool for uncertainty quantification that outputs prediction sets with finite-sample coverage guarantees. While prediction set size is commonly used as a heuristic measure of uncertainty, the information-theoretic basis for this interpretation remains poorly understood. In this work, we provide such a foundation using a decision-theoretic generalization of entropy tailored to set-valued prediction. In particular, we introduce a family of generalized information m",
-        "source": "arXiv",
-        "published": "2026-10-06T17:59:11+00:00",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "4D-HOF: Hand-Object Flow Matching for Feed-Forward 4D Interaction Reconstruction",
-        "url": "https://arxiv.org/abs/2610.08782v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08782v1",
-        "summary": "Existing methods for 4D hand-object reconstruction often rely on costly per-sequence optimization, while generative approaches typically synthesize interactions from random noise, which can lead to unstable interaction prediction. We introduce 4D-HOF, a feed-forward framework that reconstructs 4D hand-object interactions from coarse but informative estimates produced by vision foundation models. Concretely, we learn a conditional flow matching model that transports foundation-model-derived hand-",
-        "source": "arXiv",
-        "published": "2026-10-06T17:59:02+00:00",
+        "published": "2026-10-07T12:16:27+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "IdeaAnchor: Teaching LLMs to Turn Literature into Research Ideas",
-        "url": "https://arxiv.org/abs/2610.08781v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08781v1",
-        "summary": "Scientific research often begins by synthesizing ideas from a set of related papers to identify gaps and formulate new directions. However, training language models to perform this form of literature-grounded ideation remains challenging, as existing approaches based on prompting or feedback lack structured supervision for how papers should be synthesized. We introduce IdeaAnchor, a paradigm for training LLMs to perform research ideation using structured specifications as privileged signals. Eac",
+        "title": "Do Generative Priors Align with Human Naturalness Perception?",
+        "url": "https://arxiv.org/abs/2610.09928v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09928v1",
+        "summary": "Visual generative models are trained to capture the probability distributions of natural images, yet whether their native priors reflect the regularities governing human perception of image naturalness remains an open question. Here, we probe these priors through native prediction errors across 25 open image and video generators. Because raw single-image losses are dominated by scene content and visual complexity, we evaluate directional loss differences using content-preserving, paired relation",
         "source": "arXiv",
-        "published": "2026-10-06T17:59:01+00:00",
+        "published": "2026-10-07T12:16:08+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "DepthWorld: 3D World Model for Robot Manipulation",
-        "url": "https://arxiv.org/abs/2610.08780v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08780v1",
-        "summary": "World models offer a data-driven alternative to traditional simulators for robotics, with applications spanning policy evaluation, improvement, and planning. All of these uses depend on faithful 3D geometry, yet current video-based world models are trained on RGB alone and produce rollouts that look correct frame-by-frame but do not compose into a consistent 3D world. Closing this gap requires progress on two fronts: large-scale 3D supervision for manipulation, and an architecture that can absor",
+        "title": "KGATE : a Knowledge Graph Embedding Training Environment",
+        "url": "https://arxiv.org/abs/2610.09927v1",
+        "normalized_url": "https://arxiv.org/abs/2610.09927v1",
+        "summary": "Knowledge graph embedding (KGE) models encode the entities and relations of a knowledge graph into a low-dimensional latent space, enabling tasks such as classification or link prediction. Most KGE models follow an autoencoder architecture, in which an encoder projects the knowledge graph into the latent space and a decoder reconstruct it. Combining both encoder and decoder components is increasingly needed, yet existing libraries rarely support complete autoencoders, are often unmaintained, rel",
         "source": "arXiv",
-        "published": "2026-10-06T17:59:00+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "ALIVE: Interaction-Aligned Object Insertion for First-Frame-Guided Video Editing",
-        "url": "https://arxiv.org/abs/2610.08779v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08779v1",
-        "summary": "Current video editors can insert objects but often struggle to make them participate in interactions such as being picked up or manipulated. We introduce ALIVE, a framework that makes inserted objects \"alive\" through coherent interactions with the source video's contents, using an edited first frame and an instruction naming only the added object. We curate 35,800 editing pairs combining 3D-rendered, model-generated, and real-world videos with general editing pairs from ROSE. Each pair differs i",
-        "source": "arXiv",
-        "published": "2026-10-06T17:58:51+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
-        "url": "https://arxiv.org/abs/2610.08775v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08775v1",
-        "summary": "Large language models (LLMs) can solve many narrow tasks, but querying them separately for millions of related instances can be prohibitively expensive. Can LLM agents autonomously create cheaper solutions for such workloads? We call this ability \"bottling\": the ability to turn general capabilities into task-specific solutions that balance answer quality and amortised cost. We introduce BOTTLED, a benchmark in which agents receive an entire unlabelled workload and must complete it under fixed ti",
-        "source": "arXiv",
-        "published": "2026-10-06T17:57:19+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
-        "url": "https://arxiv.org/abs/2610.08773v1",
-        "normalized_url": "https://arxiv.org/abs/2610.08773v1",
-        "summary": "Web agents complete user requests by reading and acting on pages that third parties write, so an instruction planted on a page can redirect the agent away from the user's goal. The agent cannot simply ignore the page, because the page also holds the values and controls the task requires. Current defenses fine-tune the agent on injections fixed before training, and attackers that adapt to the trained model bypass them. Adversarial training lets the attacker adapt but keeps the tasks fixed, so a t",
-        "source": "arXiv",
-        "published": "2026-10-06T17:56:43+00:00",
+        "published": "2026-10-07T12:14:50+00:00",
         "importance_hint": 5,
         "metadata": {}
       }
@@ -647,7 +669,7 @@
         "title": "Man took his own life after 'sextortion' blackmail involving AI-generated woman",
         "url": "https://www.rnz.co.nz/news/crime-and-justice/1787553/man-took-his-own-life-after-paying-money-to-sextortion-blackmail-involving-ai-generated-woman",
         "normalized_url": "https://www.rnz.co.nz/news/crime-and-justice/1787553/man-took-his-own-life-after-paying-money-to-sextortion-blackmail-involving-ai-generated-woman",
-        "summary": "HN points: 14, comments: 2",
+        "summary": "HN points: 15, comments: 2",
         "source": "Hacker News",
         "published": "2026-10-07T21:22:14Z",
         "importance_hint": 3,
@@ -666,10 +688,21 @@
       },
       {
         "category": "news",
+        "title": "Claude: Monthly API credits for Max and Team plans",
+        "url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
+        "normalized_url": "https://support.claude.com/en/articles/17154008-monthly-api-credits-for-max-and-team-plans",
+        "summary": "HN points: 11, comments: 0",
+        "source": "Hacker News",
+        "published": "2026-10-07T18:52:15Z",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
         "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
         "normalized_url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai",
-        "summary": "HN points: 253, comments: 248",
+        "summary": "HN points: 273, comments: 272",
         "source": "Hacker News",
         "published": "2026-10-07T18:49:40Z",
         "importance_hint": 4,
@@ -680,7 +713,7 @@
         "title": "I'm not paying $20 for ChatGPT or Claude because a free local LLM does",
         "url": "https://www.xda-developers.com/im-not-paying-20-for-chatgpt-claude-or-gemini-because-a-free-local-llm-does-everything-i-need/",
         "normalized_url": "https://www.xda-developers.com/im-not-paying-20-for-chatgpt-claude-or-gemini-because-a-free-local-llm-does-everything-i-need",
-        "summary": "HN points: 37, comments: 16",
+        "summary": "HN points: 39, comments: 16",
         "source": "Hacker News",
         "published": "2026-10-07T18:19:03Z",
         "importance_hint": 3,
@@ -691,7 +724,7 @@
         "title": "AI Model Groupthink",
         "url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink/",
         "normalized_url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink",
-        "summary": "HN points: 21, comments: 7",
+        "summary": "HN points: 23, comments: 7",
         "source": "Hacker News",
         "published": "2026-10-07T18:08:38Z",
         "importance_hint": 4,
@@ -728,7 +761,7 @@
         "title": "Docker Agent",
         "url": "https://github.com/docker/docker-agent",
         "normalized_url": "https://github.com/docker/docker-agent",
-        "summary": "HN points: 165, comments: 80",
+        "summary": "HN points: 179, comments: 82",
         "source": "Hacker News",
         "published": "2026-10-07T17:48:38Z",
         "importance_hint": 4,
@@ -761,7 +794,7 @@
         "title": "Zed Editor, Docker Agent, ACP, but in a sandbox: running the agent with sbx",
         "url": "https://k33g.org/p/20261004-acp-sbx-docker-agent",
         "normalized_url": "https://k33g.org/p/20261004-acp-sbx-docker-agent",
-        "summary": "HN points: 11, comments: 0",
+        "summary": "HN points: 12, comments: 0",
         "source": "Hacker News",
         "published": "2026-10-07T17:36:25Z",
         "importance_hint": 4,
@@ -772,7 +805,7 @@
         "title": "AI, Work, and the Next Downturn",
         "url": "https://watch.wilsoniumite.com/",
         "normalized_url": "https://watch.wilsoniumite.com",
-        "summary": "HN points: 13, comments: 4",
+        "summary": "HN points: 13, comments: 5",
         "source": "Hacker News",
         "published": "2026-10-07T17:36:02Z",
         "importance_hint": 3,
@@ -783,7 +816,7 @@
         "title": "Show HN: Terse, a Claude Code plugin that halves reply length by cutting filler",
         "url": "https://github.com/lowenbjer/claude-terse",
         "normalized_url": "https://github.com/lowenbjer/claude-terse",
-        "summary": "HN points: 12, comments: 0",
+        "summary": "HN points: 13, comments: 0",
         "source": "Hacker News",
         "published": "2026-10-07T17:16:48Z",
         "importance_hint": 3,
@@ -791,273 +824,145 @@
       },
       {
         "category": "news",
-        "title": "Show HN: Pinrail – A desktop inbox where coding agents wait for your review",
-        "url": "https://github.com/forgeplane/pinrail",
-        "normalized_url": "https://github.com/forgeplane/pinrail",
-        "summary": "HN points: 19, comments: 2",
-        "source": "Hacker News",
-        "published": "2026-10-07T17:15:03Z",
-        "importance_hint": 4,
-        "metadata": {}
-      },
-      {
-        "category": "news",
-        "title": "Claude、GPT“跨界”做视频，Seedance们的护城河还牢吗？",
-        "url": "https://www.36kr.com/p/4015232553129865",
-        "normalized_url": "https://www.36kr.com/p/4015232553129865",
-        "summary": "未来的胜负手，不在于谁的参数更高，而在于谁能更深地融入真实的创作生产流程，成为创作者离不开的生产工具。",
+        "title": "Claude打通谷歌办公三件套，文档表格PPT直接改",
+        "url": "https://www.36kr.com/p/4016435965071233",
+        "normalized_url": "https://www.36kr.com/p/4016435965071233",
+        "summary": "Claude打通谷歌办公三件套！文档表格PPT直接改",
         "source": "36Kr AI",
-        "published": "2026-10-08T00:17:52+00:00",
+        "published": "2026-10-08T01:42:18+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "Mac用户警惕，这个权限别乱给AI，小心隐私曝光",
-        "url": "https://www.36kr.com/p/4014283730769796",
-        "normalized_url": "https://www.36kr.com/p/4014283730769796",
-        "summary": "Mac用户需要注意了。",
+        "title": "这个国庆节，中国人更能飞了",
+        "url": "https://www.36kr.com/p/4016501054394244",
+        "normalized_url": "https://www.36kr.com/p/4016501054394244",
+        "summary": "今年中秋国庆不一样：外国人涌了进来，中国人走得更远",
         "source": "36Kr AI",
-        "published": "2026-10-08T00:16:04+00:00",
+        "published": "2026-10-08T01:40:11+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "AI博主圈，正被「中戏北电」挤满",
-        "url": "https://www.36kr.com/p/4014221438242951",
-        "normalized_url": "https://www.36kr.com/p/4014221438242951",
-        "summary": "AI创作圈，正在变成一场“影视专业大聚会”。",
+        "title": "闪充的军备竞赛，还差一把充电枪",
+        "url": "https://www.36kr.com/p/4016503562817408",
+        "normalized_url": "https://www.36kr.com/p/4016503562817408",
+        "summary": "质疑声不断，入局者却越来越多。",
         "source": "36Kr AI",
-        "published": "2026-10-08T00:15:34+00:00",
+        "published": "2026-10-08T01:31:12+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "交大师姐，估值700亿",
-        "url": "https://www.36kr.com/p/4014104565862272",
-        "normalized_url": "https://www.36kr.com/p/4014104565862272",
-        "summary": "Jev爆红，估值10天涨50倍。",
+        "title": "逃离景区，我在成都泡了一天茶馆",
+        "url": "https://www.36kr.com/p/4016551988367236",
+        "normalized_url": "https://www.36kr.com/p/4016551988367236",
+        "summary": "在国庆节的成都，相比挤在大熊猫基地、堵在去川西的公路上，泡在茶馆里，是最舒服的选项。",
         "source": "36Kr AI",
-        "published": "2026-10-08T00:10:46+00:00",
+        "published": "2026-10-08T01:31:09+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "8点1氪丨中国航协回应东航空姐跪地道歉事件；DeepSeek新一轮融资逼近1000亿；安踏集团正式成为彪马最大股东",
-        "url": "https://www.36kr.com/p/4016467711316101",
-        "normalized_url": "https://www.36kr.com/p/4016467711316101",
-        "summary": "中国航协表示，乘务员人格尊严和履职权益受法律保护，旅客辱骂、恐吓工作人员已超出正常维权边界。",
+        "title": "国庆每天3亿人出游，旅行社却撑不住了",
+        "url": "https://www.36kr.com/p/4015945832599687",
+        "normalized_url": "https://www.36kr.com/p/4015945832599687",
+        "summary": "“老登”旅行社，被年轻人抛弃了。",
         "source": "36Kr AI",
-        "published": "2026-10-08T00:04:11+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "华尔街不打烊，即将开启24小时工作制",
-        "url": "https://www.36kr.com/p/4015772948008836",
-        "normalized_url": "https://www.36kr.com/p/4015772948008836",
-        "summary": "当市场24小时营业，AI成为新的参与者。",
-        "source": "36Kr AI",
-        "published": "2026-10-07T12:18:33+00:00",
+        "published": "2026-10-08T01:20:01+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "今年最火00后诞生",
-        "url": "https://www.36kr.com/p/4015533152309124",
-        "normalized_url": "https://www.36kr.com/p/4015533152309124",
-        "summary": "AI正在杀死App。",
+        "title": "一个万人小岛，靠.ai年赚7000万美元",
+        "url": "https://www.36kr.com/p/4015821594103687",
+        "normalized_url": "https://www.36kr.com/p/4015821594103687",
+        "summary": "天降横财，始于 30 年前的一场“意外”。",
         "source": "36Kr AI",
-        "published": "2026-10-07T09:03:02+00:00",
+        "published": "2026-10-08T01:11:58+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "可灵上市，快手如何自洽",
-        "url": "https://www.36kr.com/p/4015326443329157",
-        "normalized_url": "https://www.36kr.com/p/4015326443329157",
-        "summary": "可灵的“去宿华化”",
+        "title": "Haiku 5.5发布，Anthropic开始撒钱",
+        "url": "https://www.36kr.com/p/4016459049310080",
+        "normalized_url": "https://www.36kr.com/p/4016459049310080",
+        "summary": "模型砍到一折，API额度直接白送。",
         "source": "36Kr AI",
-        "published": "2026-10-07T07:08:21+00:00",
+        "published": "2026-10-08T01:09:04+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Utopai Studios，全球最大AI影视公司的“皮克斯野心”",
+        "url": "https://www.36kr.com/p/4016436660818053",
+        "normalized_url": "https://www.36kr.com/p/4016436660818053",
+        "summary": "当多数AI视频仍停留在单镜头生成时，Utopai做了一条影视级别的生产线。",
+        "source": "36Kr AI",
+        "published": "2026-10-08T01:07:16+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "突发，Claude拿下概率论「圣杯」，AI跨过菲尔兹奖终点线",
-        "url": "https://www.36kr.com/p/4015346980278153",
-        "normalized_url": "https://www.36kr.com/p/4015346980278153",
-        "summary": "困扰人类近70年的「概率论圣杯」，究竟是什么？",
+        "title": "谁在捧杀Utopai X？",
+        "url": "https://www.36kr.com/p/4015614519564160",
+        "normalized_url": "https://www.36kr.com/p/4015614519564160",
+        "summary": "把一个后训练模型吹成原生独立AI模型，是一场巨大的公关灾难。",
         "source": "36Kr AI",
-        "published": "2026-10-07T06:59:49+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "谷歌深夜偷袭OpenAI，白菜价打赢Pro",
-        "url": "https://www.36kr.com/p/4015347171233921",
-        "normalized_url": "https://www.36kr.com/p/4015347171233921",
-        "summary": "Flash打赢Pro，Nano Banana主打性价比？",
-        "source": "36Kr AI",
-        "published": "2026-10-07T06:29:10+00:00",
+        "published": "2026-10-08T01:06:45+00:00",
         "importance_hint": 4,
         "metadata": {
-          "feed_url": "https://hub.slarker.me/36kr/search/articles/ai"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "迟到25年！诺贝尔化学奖揭晓，95岁法国教授圆梦",
-        "url": "https://www.qbitai.com/2026/10/501825.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501825.html",
-        "summary": "",
-        "source": "量子位",
-        "published": "2026-10-07T14:10:33+00:00",
+        "title": "腾讯四次出手短剧皆未果，微信“绿泡泡”这次能成吗？",
+        "url": "https://www.36kr.com/p/4015588297414536",
+        "normalized_url": "https://www.36kr.com/p/4015588297414536",
+        "summary": "未来绿泡泡能否承载腾讯给它的使命，还需要时间来验证。",
+        "source": "36Kr AI",
+        "published": "2026-10-08T01:03:31+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
       },
       {
         "category": "news",
-        "title": "《怪物史莱克》编剧也来了！这家AI影视公司，视频模型全球第二！",
-        "url": "https://www.qbitai.com/2026/10/501803.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501803.html",
-        "summary": "",
-        "source": "量子位",
-        "published": "2026-10-07T11:34:47+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "晕…这年头还有说人话的AI不",
-        "url": "https://www.qbitai.com/2026/10/501796.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501796.html",
-        "summary": "",
-        "source": "量子位",
-        "published": "2026-10-07T08:41:13+00:00",
+        "title": "代码交给AI，心流却回来了：Codex负责人不再怀念手写时代",
+        "url": "https://www.infoq.cn/article/rLaX4DEMuRxqW135ZSSC?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/article/rLaX4DEMuRxqW135ZSSC",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-10-08T09:35:11+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Meshy 跻身 a16z 消费级 AI 应用月收入 Top 50，为榜单唯一 AI 3D 公司",
-        "url": "https://www.qbitai.com/2026/10/501791.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501791.html",
-        "summary": "在 a16z 首份消费级 AI 应用月收入榜单中，Meshy 位列第 31 名，与 OpenAI、Anthropic、Canva、Superhuman、Higgsfield 等共同上榜",
-        "source": "量子位",
-        "published": "2026-10-07T06:39:36+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "OpenAI一夜甩出722篇数学论文！黎曼霍奇BSD全上阵，数学家：读不过来",
-        "url": "https://www.qbitai.com/2026/10/501749.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501749.html",
-        "summary": "三位菲尔兹奖得主：不代表认可",
-        "source": "量子位",
-        "published": "2026-10-07T01:05:13+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "刚刚，诺贝尔物理奖一人独揽！",
-        "url": "https://www.qbitai.com/2026/10/501746.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501746.html",
-        "summary": "南极洲甚至有一座高地以他名字命名",
-        "source": "量子位",
-        "published": "2026-10-06T10:44:58+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "不er，咋陶哲轩也成AI减速派了？？",
-        "url": "https://www.qbitai.com/2026/10/501736.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501736.html",
-        "summary": "",
-        "source": "量子位",
-        "published": "2026-10-06T07:59:17+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "OpenAI「疯狂28天」首日，这都发了些啥啊…",
-        "url": "https://www.qbitai.com/2026/10/501726.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501726.html",
-        "summary": "",
-        "source": "量子位",
-        "published": "2026-10-06T06:45:40+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "刚刚，诺贝尔奖颁给光遗传学！",
-        "url": "https://www.qbitai.com/2026/10/501720.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501720.html",
-        "summary": "从绿藻里的光开关，到控制神经元",
-        "source": "量子位",
-        "published": "2026-10-05T10:37:01+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
-        }
-      },
-      {
-        "category": "news",
-        "title": "刚刚，Hinton发了首篇RSI论文",
-        "url": "https://www.qbitai.com/2026/10/501705.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501705.html",
-        "summary": "AI已经开始真正进入「造下一代AI」的流水线",
-        "source": "量子位",
-        "published": "2026-10-05T04:42:52+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
+          "feed_url": "https://www.infoq.cn/feed.xml"
         }
       },
       {
@@ -1153,15 +1058,28 @@
       },
       {
         "category": "news",
-        "title": "Cloudflare 将 1.1.1.1 DNS 缓存的内存占用削减了 100TB",
-        "url": "https://www.infoq.cn/article/XWJ8G6GaFmNL74xpSgjU?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/XWJ8G6GaFmNL74xpSgjU",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-10-05T10:00:00+00:00",
+        "title": "我做了一个 AI 老师，但我不想让它只是一个聊天框",
+        "url": "https://sspai.com/post/115398",
+        "normalized_url": "https://sspai.com/post/115398",
+        "summary": "现在的 AI 已经很擅长回答问题了。 不会做一道题？把题目扔给 AI。 看不懂一个知识点？让 AI 解释。 写代码遇到问题？继续问。 但如果把 AI 放到学习场景里，我总觉得还缺了一点东西： 它很会回答问题，却不一定真的会教你。 这也是我最近做 knoa 的原因。 AI 学习工具为什么总是聊天框？ 我自己使用 AI 学习的时候，经常会遇到这样的流程： 我不会这道题。 AI：给你完整讲解。 我：这里没看懂。 AI：换一种方式解释。 我：还是不太理解。 整个过程没有什么明显的问题。 AI 也确实回答得很好。 但它始终是一问一答。 真正的课堂并不是这样的。 老师可能先在黑板上写下一个公式，然后画一张图，再举一个简单的例子。如果发现学生没有理解，老师会退回去，从更基础的知识开始讲。 教学不是把答案说出来，而是不断判断学生现在应该学什么。 所以我开始思考，如果 AI 真的是一个老师，它的界面是不是也应该更像课堂？ 我把白板放进了 AI 课堂 于是 knoa 最核心的一个设计，就是白板。 AI 不再只是生成一段聊天消息，而是可以在白板上逐步进行讲解。 比如讲一个数学知识点，可以先写公式，再解释公式",
+        "source": "SSPAI AI",
+        "published": "2026-10-06T09:03:47+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
+          "feed_url": "https://hub.slarker.me/sspai/tag/AI"
+        }
+      },
+      {
+        "category": "news",
+        "title": "AI时代我们究竟在追赶什么",
+        "url": "https://sspai.com/post/115368",
+        "normalized_url": "https://sspai.com/post/115368",
+        "summary": "AI 时代我们究竟在追赶什么 AI 带来的变化，最先表现为一种兴奋：过去做不了的事情，现在可以试了；过去需要花很长时间才能掌握的操作，现在能够在提示和反馈中完成。写作、设计、编程、整理资料，越来越多工作开始有了新的完成方式。 紧接着，兴奋里又混入了一种不安。 我们刚学会一种方法，工具就更新了；刚做出一个过去需要多人配合的作品，就发现别人也能做出来。曾经值得写进简历的能力，可能正在成为软件默认提供的功能。 眼前的产出更多了，我们却越来越无法确定，自己脚下究竟是坚实的土地，还是一片随波漂流的浮萍。 这种感受不只属于技术从业者。Pew Research Center 在 2026 年 9 月发布了一项调查。调查覆盖了 37 个国家。其中有 34 个国家，担心 AI 会减少工作机会的人，比期待它创造更多岗位的人更多。这是人们对未来二十年的预期，也反映了广泛的就业焦虑。 调查报告 不过，工作受到影响，也不等于岗位一定会消失。国际劳工组织与 NASK 在 2025 年的研究中指出，很多工作仍然需要人参与，AI 更可能改变工作的内容，而不是让整个岗位消失。 研究说明 但“工作转型”也不能让人真正安心",
+        "source": "SSPAI AI",
+        "published": "2026-10-05T03:41:07+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://hub.slarker.me/sspai/tag/AI"
         }
       },
       {
@@ -1764,136 +1682,6 @@
       },
       {
         "category": "news",
-        "title": "Liquid AI Releases Open-Weight d1-3B and d1-omni-600M: Multimodal Decision Models With Zero Output Tokens",
-        "url": "https://www.marktechpost.com/2026/10/07/liquid-ai-releases-open-weight-d1-3b-and-d1-omni-600m-multimodal-decision-models-with-zero-output-tokens/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/07/liquid-ai-releases-open-weight-d1-3b-and-d1-omni-600m-multimodal-decision-models-with-zero-output-tokens",
-        "summary": "Liquid AI has released Open d1, two open-weight multimodal models in its d1 decision model family. d1-3B reads text and images. d1-omni-600M reads text with an image, or text with audio. Neither model writes text. Each returns calibrated, typed answers in one forward pass with zero output tokens. The target is real-time decisions on the […] The post Liquid AI Releases Open-Weight d1-3B and d1-omni-600M: Multimodal Decision Models With Zero Output Tokens appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-07T18:23:45+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day",
-        "url": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/06/meta-ai-open-sources-rebalancer-a-c-assignment-solver-that-runs-about-40-million-placement-problems-a-day",
-        "summary": "Meta has open-sourced Rebalancer, the C++ and Python library it has used for over 9 years to place shards, servers and traffic. It handles about 40 million assignment problems a day, using local search or MIP solvers like Gurobi, FICO Xpress and HiGHS. It is pip-installable under Apache 2.0. The post Meta AI Open-Sources Rebalancer: A C++ Assignment Solver That Runs About 40 Million Placement Problems a Day appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-07T06:29:14+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration",
-        "url": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/06/a-developers-guide-to-laya-zero-shot-decisions-and-calibration",
-        "summary": "Explore a comprehensive coding guide to Laya, the open-source zero-shot decision engine. Learn how to implement typed decisions, fit custom temperatures, and build reliable abstention gates using real-world CLINC150 banking data. The post A Developer’s Guide to Laya: Zero-Shot Decisions and Calibration appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-07T00:53:03+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4",
-        "url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/06/google-deepmind-releases-embeddinggemma-2-a-740m-open-multimodal-embedding-model-built-on-gemma-4",
-        "summary": "Google DeepMind's EmbeddingGemma 2 maps 5 input types into one 768d space and ships today under Apache 2.0. The post Google DeepMind Releases EmbeddingGemma 2, a 740M Open Multimodal Embedding Model Built on Gemma 4 appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-06T18:36:08+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
-        "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe",
-        "summary": "Mistral AI has released Mistral Large 4, nicknamed Le Chonk, as a public preview. It is a 1.05 trillion parameter Mixture of Experts model with 49 billion active parameters, native image input, and a 1 million token context window, trained on 3,800 NVIDIA Grace Blackwell GPUs in Mistral's own European datacenters. The API is live now; open weights ship end of October 2026. The post Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model appeared first on MarkTechPo",
-        "source": "MarkTechPost",
-        "published": "2026-10-06T17:30:46+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One",
-        "url": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/05/reka-releases-rho-1-a-19b-omni-reasoning-model-that-understands-generates-video-and-outputs-robot-actions-in-one",
-        "summary": "Reka has released Rho-1, a 19B omni-reasoning model trained from scratch. One network reads and generates text, images, video and robot actions over a shared KV cache. A distilled variant returns a 5.3-second clip in about a second. It is a research preview with no public weights yet. The post Reka Releases Rho-1: A 19B Omni-Reasoning Model That Understands, Generates Video and Outputs Robot Actions in One appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-06T06:45:31+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields",
-        "url": "https://www.marktechpost.com/2026/10/05/beyond-domain-specific-world-models-jepa-anything-uses-1-recipe-for-7-fields/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/05/beyond-domain-specific-world-models-jepa-anything-uses-1-recipe-for-7-fields",
-        "summary": "JEPA-Anything splits a JEPA's single latent target into 4 orthogonal factors, each with its own predictor. Tested across 7 domains, it beat matched JEPA baselines on all 10 dynamics tasks and cut Interventional Pong intervention error by 34.8%. The post Beyond Domain-Specific World Models: JEPA-Anything Uses 1 Recipe for 7 Fields appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-06T05:12:01+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode",
-        "url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/05/meet-together-link-a-free-cli-that-runs-open-models-like-kimi-k3-and-glm-5-3-inside-claude-code-codex-and-opencode",
-        "summary": "Together AI has released Together Link, a free, MIT-licensed CLI that connects Claude Code, Codex, OpenCode, Pi, and the Claude and ChatGPT desktop apps to open models like Kimi K3 and GLM 5.3. One install command sets it up, and an Auto router picks a model for each session. Together claims savings of over 50%. The post Meet Together Link: A Free CLI That Runs Open Models Like Kimi K3 and GLM 5.3 Inside Claude Code, Codex, and OpenCode appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-05T22:51:05+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Building a Streaming Robotics Learning Pipeline Using NVIDIA Cosmos3-DROID",
-        "url": "https://www.marktechpost.com/2026/10/05/building-a-streaming-robotics-learning-pipeline-using-nvidia-cosmos3-droid/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/05/building-a-streaming-robotics-learning-pipeline-using-nvidia-cosmos3-droid",
-        "summary": "Discover how to construct an end-to-end streaming robotics learning pipeline using the NVIDIA Cosmos3-DROID dataset without local downloads, leveraging byte-range Parquet reads, behavior cloning, and temporal ensembling. The post Building a Streaming Robotics Learning Pipeline Using NVIDIA Cosmos3-DROID appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-05T21:41:14+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads",
-        "url": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads/",
-        "normalized_url": "https://www.marktechpost.com/2026/10/05/reflection-ai-introduces-beam-a-501b-open-weight-moe-model-with-23b-active-parameters-for-coding-and-agentic-workloads",
-        "summary": "Reflection AI has introduced Beam, its first open-weight model. It is a 501B sparse Mixture-of-Experts model with 23B active parameters, built for coding and agentic work. Reflection says it matches GLM-5.2 on reasoning with 3 to 4x less inference compute. Apache 2.0 weights are due later in October 2026. The post Reflection AI Introduces Beam: A 501B Open-Weight MoE Model With 23B Active Parameters for Coding and Agentic Workloads appeared first on MarkTechPost .",
-        "source": "MarkTechPost",
-        "published": "2026-10-05T21:04:20+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.marktechpost.com/feed/"
-        }
-      },
-      {
-        "category": "news",
         "title": "Quoting Ben Affleck",
         "url": "https://simonwillison.net/2026/Oct/7/ben-affleck/",
         "normalized_url": "https://simonwillison.net/2026/Oct/7/ben-affleck",
@@ -2219,19 +2007,6 @@
       },
       {
         "category": "news",
-        "title": "New LFM to be released today",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzuto0/new_lfm_to_be_released_today/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzuto0/new_lfm_to_be_released_today",
-        "summary": "https://x.com/ramin_m_h/status/2107780594264600801 What size do you want? https://huggingface.co/LiquidAI submitted by /u/jacek2023 [link] [comments]",
-        "source": "r/LocalLLaMA",
-        "published": "2026-10-07T12:08:41+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
-        }
-      },
-      {
-        "category": "news",
         "title": "llama.cpp on the stage",
         "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x079wc/llamacpp_on_the_stage/",
         "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x079wc/llamacpp_on_the_stage",
@@ -2239,6 +2014,19 @@
         "source": "r/LocalLLaMA",
         "published": "2026-10-07T20:25:51+00:00",
         "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
+        }
+      },
+      {
+        "category": "news",
+        "title": "New LFM to be released today",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzuto0/new_lfm_to_be_released_today/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzuto0/new_lfm_to_be_released_today",
+        "summary": "https://x.com/ramin_m_h/status/2107780594264600801 What size do you want? https://huggingface.co/LiquidAI submitted by /u/jacek2023 [link] [comments]",
+        "source": "r/LocalLLaMA",
+        "published": "2026-10-07T12:08:41+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }
@@ -2284,12 +2072,12 @@
       },
       {
         "category": "news",
-        "title": "Ugh I didn't want to post this... Back to Qwen3.8 27B",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzj990/ugh_i_didnt_want_to_post_this_back_to_qwen38_27b/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzj990/ugh_i_didnt_want_to_post_this_back_to_qwen38_27b",
-        "summary": "I don't know if anyone else has ran into these issues but when using Qwen Flash Next, my confidence in it at iq4_xs is high but not 100%. I notice it not following instructions, hallucinating more often and surprisingly it uses way less tokens than 27b. After using Strata.... yes i know.... I thought it was a breath of the next step in Ai. I was mistaken, yes it is good, yes it is fast. Yes it can do better than 27b in some circumstances... but overall 27b just felt like that ex girlfriend you s",
+        "title": "LiquidAI/d1-3B · Hugging Face",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x01xg3/liquidaid13b_hugging_face/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x01xg3/liquidaid13b_hugging_face",
+        "summary": "submitted by /u/iamn0 [link] [comments]",
         "source": "r/LocalLLaMA",
-        "published": "2026-10-07T00:51:13+00:00",
+        "published": "2026-10-07T17:00:23+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
@@ -2297,12 +2085,12 @@
       },
       {
         "category": "news",
-        "title": "LiquidAI/d1-3B · Hugging Face",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x01xg3/liquidaid13b_hugging_face/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x01xg3/liquidaid13b_hugging_face",
-        "summary": "submitted by /u/iamn0 [link] [comments]",
+        "title": "A week in Beijing and Shanghai with the people building AI in China",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzxttk/a_week_in_beijing_and_shanghai_with_the_people/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1wzxttk/a_week_in_beijing_and_shanghai_with_the_people",
+        "summary": "I thought this was a very interesting article, of relevance to the readers here. submitted by /u/uutnt [link] [comments]",
         "source": "r/LocalLLaMA",
-        "published": "2026-10-07T17:00:23+00:00",
+        "published": "2026-10-07T14:22:00+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"

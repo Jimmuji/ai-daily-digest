@@ -1,13 +1,26 @@
 {
   "date": "2026-10-09",
-  "generated_at": "2026-10-09T08:32:49.883996+08:00",
+  "generated_at": "2026-10-09T09:54:47.714613+08:00",
   "counts": {
-    "papers": 40,
+    "papers": 42,
     "projects": 5,
-    "news": 128
+    "news": 138
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "V-CoLA: Vision Token Compression with Linear Attention",
+        "url": "https://huggingface.co/papers/2610.11251",
+        "normalized_url": "https://huggingface.co/papers/2610.11251",
+        "summary": "Vision-language models (VLMs) have demonstrated impressive capabilities but suffer from substantial computational overhead, as vision tokens dominate the input sequence. This motivates vision token compression as a key direction to alleviate the burden. However, with the emergence of hybrid architectures incorporating linear attention (\\eg, Qwen3.5), prior methods designed for softmax attention struggle to generalize. Our analysis reveals that both attention- and similarity-based approaches suff",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-08T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.11251"
+        }
+      },
       {
         "category": "papers",
         "title": "Self-Retrospection Distillation: Turning Post-hoc Experiences into Prior Foresight",
@@ -92,7 +105,7 @@
         "url": "https://huggingface.co/papers/2610.10515",
         "normalized_url": "https://huggingface.co/papers/2610.10515",
         "summary": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. In this work we present RoboJEPA, a world model based on the Joint Embedding Predictive Architecture (JEPA) and trained on a large-scale dataset spanning 12 robotic embodiments. We show that RoboJEPA's imagination erro",
-        "source": "HuggingFace Papers, arXiv",
+        "source": "HuggingFace Papers",
         "published": "2026-10-07T00:00:00.000Z",
         "importance_hint": 5,
         "metadata": {
@@ -387,124 +400,133 @@
       },
       {
         "category": "papers",
-        "title": "EngramEdit: Decoupled Knowledge Updates in LLMs through Conditional Memory",
-        "url": "https://huggingface.co/papers/2610.10533",
-        "normalized_url": "https://huggingface.co/papers/2610.10533",
-        "summary": "Conditional memory architectures such as DeepSeek Engram use input n-grams to look up learned embeddings, expanding the capacity of large language models (LLMs) with limited additional computation. Beyond model scaling, this architecture has demonstrated the potential to decouple factual knowledge storage from general-purpose computation, offering a promising route to updating factual knowledge while keeping the Transformer backbone fixed. Realizing this potential is challenging because differen",
-        "source": "HuggingFace Papers, arXiv",
-        "published": "2026-10-07T00:00:00.000Z",
+        "title": "DeltaReplay: Task-Relative Memory Reuse for Mobile GUI Agents",
+        "url": "https://arxiv.org/abs/2610.11707v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11707v1",
+        "summary": "Memory-augmented mobile GUI agents store successful execution trajectories and reuse them in later tasks, but a stored trajectory rarely matches a new task exactly. The new task may use different parameters, share only some of its steps with a stored trajectory, or have no relevant record in memory. Forcing the agent to use irrelevant memory can mislead it, whereas discarding memory that may still be useful deprives it of guidance from past experience. To address this dilemma, we propose DeltaRe",
+        "source": "arXiv",
+        "published": "2026-10-08T11:12:57+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.10533"
-        }
+        "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Tetris3D: 3D Scene Generation With Objects That Fit Together",
-        "url": "https://arxiv.org/abs/2610.10539v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10539v1",
-        "summary": "We propose Tetris3D, a generative framework for single-image 3D scene reconstruction that recovers objects which are physically and geometrically coherent as a scene. Existing methods often generate objects independently or couple them implicitly, providing limited guidance for ensuring fine-grained spatial compatibility between neighboring objects that interact with one another. To address this, we explicitly condition the generation of each object on the geometry of surrounding objects and the",
+        "title": "Does an Illumination Prior Help Face-Swap Detection? A Controlled Study of Temporal Self-Blended Images",
+        "url": "https://arxiv.org/abs/2610.11706v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11706v1",
+        "summary": "Self-blended images are widely used to train face-swap detectors, but primarily capture blending artifacts. We investigate whether adding illumination inconsistencies improves detection. Temporal Self-Blended Images (T-SBI) transfer lighting statistics between frames of the same video, with the mismatch controlled by luminance difference (ΔL). Using five training regimes and a three-seed comparison of high- and low-ΔL training, we find no evidence of illumination-specific improvements. AUC diffe",
         "source": "arXiv",
-        "published": "2026-10-07T17:59:48+00:00",
+        "published": "2026-10-08T11:12:45+00:00",
         "importance_hint": 4,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Never Look Back: Understanding Persistence in 3D Object Memory from Egocentric Videos",
-        "url": "https://arxiv.org/abs/2610.10538v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10538v1",
-        "summary": "As we move through the world and carry out everyday tasks, we encounter objects that may become relevant only later. We are capable of recalling where we left something or what was inside a container, even without knowing we would need it later. Here, we study how an embodied assistant can build a similar memory from egocentric videos, by observing a person's day-to-day activities. We present Ledger, a persistent 3D object memory that combines object locations, their histories, and contextual de",
+        "title": "Intervention anchors and scientific verification in synthetic vascular predictive representations",
+        "url": "https://arxiv.org/abs/2610.11704v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11704v1",
+        "summary": "Complete orthogonal predictive coordinates do not by themselves bind a latent direction to a named intervention. We present a mathematical and synthetic audit motivated by vascular device-vessel suitcordance. Capacity-matched least-squares predictors were exactly equivalent under complete fixed output transforms, whereas an anchor-only observer recovered interpretations only within the span of known perturbation signatures. Six three-dimensional configurations across 64 seeds gave a maximum pair",
         "source": "arXiv",
-        "published": "2026-10-07T17:59:41+00:00",
+        "published": "2026-10-08T11:10:56+00:00",
         "importance_hint": 4,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Decoupling Exploration from Optimization in RLVR",
-        "url": "https://arxiv.org/abs/2610.10536v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10536v1",
-        "summary": "Modern language models undergo reinforcement learning with verifiable rewards (RLVR) on top of already-trained checkpoints. A key promise of RLVR is the discovery of new reasoning strategies. In principle, a model can sample novel ideas absent from its prior training data. In practice, however, augmenting RLVR with strong novelty incentives has seen limited success and can degrade model quality. Because verifiable rewards supervise only a narrow slice of the model's knowledge and behavior, such ",
+        "title": "What is the goal of unsupervised machine learning?",
+        "url": "https://arxiv.org/abs/2610.11697v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11697v1",
+        "summary": "Unsupervised learning is one of the main branches of machine learning. Here I argue that unlike the other branches of machine learning (supervised and reinforcement learning), unsupervised learning is a rather heterogenous field that can serve several different goals. It seems futile to try to define one single goal for unsupervised learning. I identify four different goals for unsupervised learning: 1) Estimating the distribution, 2) Generating new data points, 3) Extracting features for downst",
         "source": "arXiv",
-        "published": "2026-10-07T17:59:26+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Long-WAM: Scaling the Context of World-Action Models",
-        "url": "https://arxiv.org/abs/2610.10528v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10528v1",
-        "summary": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (AR). We first learn causal prediction from robot and egocentr",
-        "source": "arXiv",
-        "published": "2026-10-07T17:58:04+00:00",
-        "importance_hint": 5,
-        "metadata": {}
-      },
-      {
-        "category": "papers",
-        "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
-        "url": "https://arxiv.org/abs/2610.10527v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10527v1",
-        "summary": "Heavy-tailed noise has been widely observed in modern machine learning, motivating the use of methods like gradient clipping and normalization. While these methods are well understood in centralized settings, much less is known in decentralized ones, where applying a nonlinearity to local gradients affects both optimization and consensus. Recent works on decentralized non-convex optimization have studied both clipping and normalization under heavy-tailed noise, with clipping yielding suboptimal ",
-        "source": "arXiv",
-        "published": "2026-10-07T17:57:58+00:00",
+        "published": "2026-10-08T11:07:04+00:00",
         "importance_hint": 4,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models",
-        "url": "https://arxiv.org/abs/2610.10526v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10526v1",
-        "summary": "Vision-language-action models (VLAs) are strikingly sensitive to instruction phrasing and do not inherit the language robustness of the vision-language models they are built on. A one-word edit can move success by tens of points: $π_{0.5}$ turns on a LIBERO stove 100% of the time for \"switch on the stove\" and 2% for \"switch on the hot plate\", and a $π_0$ checkpoint finetuned with rephrase augmentation still shows swings of up to 61 points. We characterize this sensitivity with statistically test",
+        "title": "A 3D Characterization Framework for Intelligent Sequential Decision Making",
+        "url": "https://arxiv.org/abs/2610.11696v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11696v1",
+        "summary": "Puzzles are widely used to evaluate the reasoning capabilities of artificial intelligence (AI) systems for sequential decision making, yet approaches originating from different paradigms are rarely compared under unified conditions. To address this gap, we introduce a three-dimensional characterization framework that enables the analysts of AI methods by 1) projecting them to the Markov decision process (MDP) sequential decision making formalism, 2) degree of autonomy through human prior ranking",
         "source": "arXiv",
-        "published": "2026-10-07T17:57:38+00:00",
+        "published": "2026-10-08T11:06:51+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "GRACE: Generation-aware latent compression for efficient video generation",
-        "url": "https://arxiv.org/abs/2610.10524v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10524v1",
-        "summary": "Highly compressed video autoencoders offer an effective way to accelerate video diffusion models, as the Diffusion Transformer (DiT) operates on far fewer tokens. However, such autoencoders are challenging to train, since a higher compression ratio degrades reconstruction quality and recovering it requires more channels, which is known to slow the convergence of the DiT. The compressed latent also differs from the one the DiT was trained on, so the pretrained DiT must be either retrained from sc",
+        "title": "Structured Sentiment Analysis Using Sequence Labeling as Dependency Graph Parsing",
+        "url": "https://arxiv.org/abs/2610.11695v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11695v1",
+        "summary": "This study addresses the problem of structured sentiment analysis, whose goal is to obtain a fine-grained sentiment graph where the nodes represent spans of sentiment holders, targets, and expressions, while the arcs define the relationships among them. Our proposed approach casts the task as dependency graph parsing, but departs from traditional parsing methods by solving it through sequence labeling. To do so, we leverage recent advances in linearized graph encodings that allow each word in th",
         "source": "arXiv",
-        "published": "2026-10-07T17:57:34+00:00",
+        "published": "2026-10-08T11:06:29+00:00",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Elucidating the Space of Enzymatic Reaction: A Unified Benchmark and Pretrained Model",
+        "url": "https://arxiv.org/abs/2610.11694v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11694v1",
+        "summary": "Existing reaction models primarily learn molecular transformations, whereas enzy- matic reactions depend jointly on molecular structure and catalytic function. We formulate this problem as learning an enzymatic reaction space linking reactants, products, and Enzyme Commission (EC) annotations. To characterize this space, we introduce VenusRX-Bench, a unified benchmark for forward reaction prediction, single-step retrosynthesis, and EC-number prediction. VenusRX-Bench integrates reactions from mu",
+        "source": "arXiv",
+        "published": "2026-10-08T11:05:48+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Distilling Graph Geometry: Knowledge Gap from GNNs to MLPs",
-        "url": "https://arxiv.org/abs/2610.10520v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10520v1",
-        "summary": "GNN-to-MLP distillation aims to retain the predictive accuracy of a message-passing teacher while deploying a graph-free MLP at inference. Existing methods mainly transfer node-wise predictions or use confidence-based reweighting, but they do not specify where the student should preserve the teacher's graph-induced geometry. We show that this omission leads to two spectral failure modes in the student's representation space. On sparse graphs, the student suffers from spectral underfit, missing h",
+        "title": "Can Jev be Your Q or Policy in Reinforcement Learning?",
+        "url": "https://arxiv.org/abs/2610.11692v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11692v1",
+        "summary": "Foundation models supply reinforcement learning (RL) with priors that mitigate its longstanding weaknesses in sample efficiency and transfer, but their token-by-token generation makes queries sequential and costly. Jev, a recently released decision model, generates nothing and returns calibrated, typed answers in a single forward pass. Existing work studies foundation models in RL either as models to be trained or as generators to be prompted, and Jev belongs to neither category, having so far s",
         "source": "arXiv",
-        "published": "2026-10-07T17:56:01+00:00",
+        "published": "2026-10-08T11:02:14+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Why Forget-Only Unlearning Needs Memorization",
-        "url": "https://arxiv.org/abs/2610.10519v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10519v1",
-        "summary": "Machine unlearning asks for a deletion algorithm whose output is close to retraining from scratch without the selected forget examples. In this work, we study forget-only unlearning, where the deletion algorithm receives only the trained model and the examples to forget, with no retained data or extra training information. We ask whether forget-only unlearning is always possible. We first show that this depends on the learning method: different datasets can produce the same trained model but req",
+        "title": "Epistemic Disturbance in the Graph Model for Conflict Resolution: State-Preserving Actions, Four-Valued Assessments, and the Distinction between Capability and Intention",
+        "url": "https://arxiv.org/abs/2610.11690v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11690v1",
+        "summary": "In the graph model for conflict resolution (GMCR), a decision maker (DM) either moves the conflict to another state or does nothing. The basic definitions leave inaction implicit, so every action that leaves the state unchanged is treated as doing nothing. Yet announcements, exercises, leaks and selective disclosures are neither moves nor inaction: they leave the state unchanged but change what other DMs believe about which moves are available and which moves others would want to make. We introd",
         "source": "arXiv",
-        "published": "2026-10-07T17:55:46+00:00",
+        "published": "2026-10-08T11:00:34+00:00",
         "importance_hint": 5,
         "metadata": {}
       },
       {
         "category": "papers",
-        "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
-        "url": "https://arxiv.org/abs/2610.10513v1",
-        "normalized_url": "https://arxiv.org/abs/2610.10513v1",
-        "summary": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for El Nino-Southern Oscillation (SciExam for ENSO) is a benchmark in which agents build low-order stochastic models of ENSO, the dominant mode of interannual climate variability, from real observations. Within a six-hour bud",
+        "title": "HI3D 3.0 (Twinkle3D): Object-specific 3D Asset Generation with High Resolution",
+        "url": "https://arxiv.org/abs/2610.11685v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11685v1",
+        "summary": "Image-to-3D generation has become increasingly capable of producing objects that closely resemble the input image, and an outstanding challenge is to reproduce the depicted object itself, including the specific geometry that defines it. Inscriptions, brand marks, and repeated structures are frequently distorted or lost, despite being critical to object identity. We present Hi3D 3.0, an image-to-3D generation system targeting object-specific fidelity, with Twinkle3D as its geometry model for gene",
         "source": "arXiv",
-        "published": "2026-10-07T17:52:52+00:00",
+        "published": "2026-10-08T10:57:06+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Camera-Noise Residuals for Face-Swap Detection: Redundant, Not Complementary, and Why",
+        "url": "https://arxiv.org/abs/2610.11683v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11683v1",
+        "summary": "Fusing a learned camera-noise fingerprint with an RGB appearance backbone is an appealing route to generator-independent deepfake detection, because the noise residual is grounded in image-formation physics rather than in the texture statistics of a particular generator. We test, on FaceForensics++, whether a Noiseprint++ residual channel carries information \\emph{complementary} to an RGB Xception backbone for face-swap detection. A three-model ablation (RGB-only, residual-only, late-fusion) sho",
+        "source": "arXiv",
+        "published": "2026-10-08T10:55:41+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "TRACE: Diagnosing Verifier Brittleness in Agentic Evaluation",
+        "url": "https://arxiv.org/abs/2610.11678v1",
+        "normalized_url": "https://arxiv.org/abs/2610.11678v1",
+        "summary": "Verifier scores now serve as both benchmark metrics and training rewards for large language model (LLM) agents, and a change in score is routinely read as a change in capability. It may instead reflect a change in the evaluation. We introduce TRACE, a protocol that turns a score change from a verdict into a testable diagnosis: it applies a targeted change to one part of an evaluation, compares paired runs, checks whether the agent's behavior changed, and rescores unchanged trajectories to test w",
+        "source": "arXiv",
+        "published": "2026-10-08T10:52:26+00:00",
         "importance_hint": 5,
         "metadata": {}
       }
@@ -579,10 +601,21 @@
     "news": [
       {
         "category": "news",
+        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
+        "url": "https://github.com/edrisranjbar/lifeos",
+        "normalized_url": "https://github.com/edrisranjbar/lifeos",
+        "summary": "HN points: 16, comments: 2",
+        "source": "Hacker News",
+        "published": "2026-10-09T00:02:19Z",
+        "importance_hint": 3,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "OpenAI, the Partition Principle, and Mathematics",
         "url": "https://karagila.org/2026/openai-pp/",
         "normalized_url": "https://karagila.org/2026/openai-pp",
-        "summary": "HN points: 42, comments: 26",
+        "summary": "HN points: 85, comments: 99",
         "source": "Hacker News",
         "published": "2026-10-08T23:29:43Z",
         "importance_hint": 4,
@@ -593,7 +626,7 @@
         "title": "Google Is Pushing Scam Videos on Elderly and Cognitively Impaired People",
         "url": "https://www.currentaffairs.org/news/how-google-is-pushing-scam-videos-on-elderly-and-cognitively-impaired-people",
         "normalized_url": "https://www.currentaffairs.org/news/how-google-is-pushing-scam-videos-on-elderly-and-cognitively-impaired-people",
-        "summary": "HN points: 13, comments: 4",
+        "summary": "HN points: 15, comments: 4",
         "source": "Hacker News",
         "published": "2026-10-08T22:48:13Z",
         "importance_hint": 4,
@@ -604,7 +637,7 @@
         "title": "The Gemini Agent",
         "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
         "normalized_url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
-        "summary": "HN points: 11, comments: 1",
+        "summary": "HN points: 12, comments: 1",
         "source": "Hacker News",
         "published": "2026-10-08T21:26:28Z",
         "importance_hint": 4,
@@ -615,7 +648,7 @@
         "title": "Show HN: Free open source Adobe Lightroom alternative, completely local with AI",
         "url": "https://github.com/thesnarkitecht/rembrandt",
         "normalized_url": "https://github.com/thesnarkitecht/rembrandt",
-        "summary": "HN points: 39, comments: 45",
+        "summary": "HN points: 42, comments: 48",
         "source": "Hacker News",
         "published": "2026-10-08T21:00:55Z",
         "importance_hint": 4,
@@ -626,7 +659,7 @@
         "title": "AI-ready biological data: $1.8B global commitment",
         "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
         "normalized_url": "https://biohub.org/news/virtual-biology-initiative-expansion",
-        "summary": "HN points: 56, comments: 4",
+        "summary": "HN points: 70, comments: 7",
         "source": "Hacker News",
         "published": "2026-10-08T20:46:25Z",
         "importance_hint": 3,
@@ -648,7 +681,7 @@
         "title": "Ukrainian drones hit Russia's Yandex data centers housing two top supercomputers",
         "url": "https://www.tomshardware.com/tech-industry/data-centers/ukrainian-drones-hit-russias-yandex-data-centers-housing-two-top-supercomputers-major-outage-follows-retaliatory-strike",
         "normalized_url": "https://www.tomshardware.com/tech-industry/data-centers/ukrainian-drones-hit-russias-yandex-data-centers-housing-two-top-supercomputers-major-outage-follows-retaliatory-strike",
-        "summary": "HN points: 12, comments: 0",
+        "summary": "HN points: 12, comments: 1",
         "source": "Hacker News",
         "published": "2026-10-08T20:07:08Z",
         "importance_hint": 3,
@@ -670,7 +703,7 @@
         "title": "License update: AI derivation prohibited on all my art, lore, stories, comics",
         "url": "https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics",
         "normalized_url": "https://www.davidrevoy.com/article1178/license-update-ai-derivation-prohibited-on-all-my-art-lore-stories-and-comics",
-        "summary": "HN points: 37, comments: 25",
+        "summary": "HN points: 38, comments: 25",
         "source": "Hacker News",
         "published": "2026-10-08T19:43:59Z",
         "importance_hint": 3,
@@ -681,7 +714,7 @@
         "title": "We have LLMs now. Why are the docs still wrong?",
         "url": "https://amendary.com/blog/keeping-docs-in-sync-with-code",
         "normalized_url": "https://amendary.com/blog/keeping-docs-in-sync-with-code",
-        "summary": "HN points: 11, comments: 2",
+        "summary": "HN points: 11, comments: 7",
         "source": "Hacker News",
         "published": "2026-10-08T19:38:41Z",
         "importance_hint": 3,
@@ -692,7 +725,7 @@
         "title": "Vitalik Buterin backs crypto ‘bunker mode’ amid rapid AI math advances",
         "url": "https://cointelegraph.com/news/justin-drake-urges-crypto-bunker-mode-as-ai-could-break-wallet-security-within-months",
         "normalized_url": "https://cointelegraph.com/news/justin-drake-urges-crypto-bunker-mode-as-ai-could-break-wallet-security-within-months",
-        "summary": "HN points: 57, comments: 47",
+        "summary": "HN points: 60, comments: 50",
         "source": "Hacker News",
         "published": "2026-10-08T19:17:51Z",
         "importance_hint": 4,
@@ -703,7 +736,7 @@
         "title": "OpenAI cannot make AI safe on its own [pdf]",
         "url": "https://mikitabalesni.com/letter/letter.pdf",
         "normalized_url": "https://mikitabalesni.com/letter/letter.pdf",
-        "summary": "HN points: 16, comments: 7",
+        "summary": "HN points: 17, comments: 7",
         "source": "Hacker News",
         "published": "2026-10-08T19:12:38Z",
         "importance_hint": 4,
@@ -714,7 +747,7 @@
         "title": "LGTM (Looks Good to Me) – Claude Opus 5.5 Music Video",
         "url": "https://www.youtube.com/watch?v=3TNpOD6bov8",
         "normalized_url": "https://www.youtube.com/watch?v=3TNpOD6bov8",
-        "summary": "HN points: 40, comments: 10",
+        "summary": "HN points: 42, comments: 10",
         "source": "Hacker News",
         "published": "2026-10-08T18:55:18Z",
         "importance_hint": 3,
@@ -733,14 +766,146 @@
       },
       {
         "category": "news",
-        "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked",
-        "url": "https://pocketty.app/",
-        "normalized_url": "https://pocketty.app",
-        "summary": "HN points: 13, comments: 6",
-        "source": "Hacker News",
-        "published": "2026-10-08T18:11:52Z",
+        "title": "大厂借钱，买断未来",
+        "url": "https://www.36kr.com/p/4017926316412800",
+        "normalized_url": "https://www.36kr.com/p/4017926316412800",
+        "summary": "现金流再好，也怕AI开销",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:54:19+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "5集播放量破1.5亿，国产AI韩剧热度能否持续？",
+        "url": "https://www.36kr.com/p/4017946664865664",
+        "normalized_url": "https://www.36kr.com/p/4017946664865664",
+        "summary": "这些AI高颜值脸能撑多久",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:53:05+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "这类不起眼的材料，正在成为AI光模块的新瓶颈",
+        "url": "https://www.36kr.com/p/4017931349528453",
+        "normalized_url": "https://www.36kr.com/p/4017931349528453",
+        "summary": "为什么是氮化铝？",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:48:58+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "722份数学手稿，OpenAI藏了10个值得看懂的细节",
+        "url": "https://www.36kr.com/p/4017976429907840",
+        "normalized_url": "https://www.36kr.com/p/4017976429907840",
+        "summary": "OpenAI称，绝大多数结果来自同一流程、同一个内部模型。",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:48:43+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "王东升的第三个IPO",
+        "url": "https://www.36kr.com/p/4017982030745477",
+        "normalized_url": "https://www.36kr.com/p/4017982030745477",
+        "summary": "刚刚，半导体芯片领域又诞生了一个“第一股”。",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:47:39+00:00",
         "importance_hint": 4,
-        "metadata": {}
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "腾讯账上躺着5000亿，为啥还要借钱？",
+        "url": "https://www.36kr.com/p/4017863149440905",
+        "normalized_url": "https://www.36kr.com/p/4017863149440905",
+        "summary": "AI烧钱有点猛了...",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:46:22+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "OpenAI搞崩了全部AI股，到底发生了什么？",
+        "url": "https://www.36kr.com/p/4017933553438598",
+        "normalized_url": "https://www.36kr.com/p/4017933553438598",
+        "summary": "OpenAI收入异动，AI股下跌，需关注现金流与盈利兑现",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:34:36+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "机器人“Figure 02退役记”：纵身跳进炼钢炉，化成1900美元限量版手办",
+        "url": "https://www.36kr.com/p/4017963519397766",
+        "normalized_url": "https://www.36kr.com/p/4017963519397766",
+        "summary": "随着“Hasta la Vista, Figure 02”的道别声落下，Figure 02的历史使命正式宣告完成。而属于下一代人形机器人的赛道攻坚战，才刚刚拉开序幕。",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:29:54+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "PwC娱乐展望：现场音乐到2030年将超过415亿美元规模",
+        "url": "https://www.36kr.com/p/4017188406087808",
+        "normalized_url": "https://www.36kr.com/p/4017188406087808",
+        "summary": "娱乐及媒体行业的内核仍然是人的技艺和人的体验。",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:28:52+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Anthropic重磅新规：辱骂Claude直接封号",
+        "url": "https://www.36kr.com/p/4017915543310468",
+        "normalized_url": "https://www.36kr.com/p/4017915543310468",
+        "summary": "Anthropic联创：怕Claude一直在受苦",
+        "source": "36Kr AI",
+        "published": "2026-10-09T01:22:56+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "陶哲轩带头宣战！人类数学家联合抵制OpenAI",
+        "url": "https://www.qbitai.com/2026/10/502089.html",
+        "normalized_url": "https://www.qbitai.com/2026/10/502089.html",
+        "summary": "彻底撕破脸了",
+        "source": "量子位",
+        "published": "2026-10-09T00:35:57+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://www.qbitai.com/rss"
+        }
       },
       {
         "category": "news",
@@ -861,15 +1026,15 @@
       },
       {
         "category": "news",
-        "title": "GPT-6今起免费用！拒答变少，话变多了",
-        "url": "https://www.qbitai.com/2026/10/501834.html",
-        "normalized_url": "https://www.qbitai.com/2026/10/501834.html",
-        "summary": "ChatGPT聊天框长出界面",
-        "source": "量子位",
-        "published": "2026-10-08T01:07:19+00:00",
+        "title": "在生产环境中保护MCP：超越网关的纵深防御",
+        "url": "https://www.infoq.cn/article/HZIW4QjEfV66I9CGr52R?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/article/HZIW4QjEfV66I9CGr52R",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-10-09T09:05:00+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://www.qbitai.com/rss"
+          "feed_url": "https://www.infoq.cn/feed.xml"
         }
       },
       {
@@ -965,19 +1130,6 @@
       },
       {
         "category": "news",
-        "title": "海外开源模型重新提速：“美版 DeepSeek”第一次交卷，Mistral同时亮牌",
-        "url": "https://www.infoq.cn/article/0wk4G4cZwbHgYdeNoQPV?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/0wk4G4cZwbHgYdeNoQPV",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-10-08T10:35:29+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
         "title": "我做了一个 AI 老师，但我不想让它只是一个聊天框",
         "url": "https://sspai.com/post/115398",
         "normalized_url": "https://sspai.com/post/115398",
@@ -986,7 +1138,7 @@
         "published": "2026-10-06T09:03:47+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/sspai/tag/AI"
+          "feed_url": "https://hub.slarker.me/sspai/tag/AI"
         }
       },
       {
@@ -1680,6 +1832,19 @@
       },
       {
         "category": "news",
+        "title": "ttok 0.4",
+        "url": "https://simonwillison.net/2026/Oct/8/ttok/",
+        "normalized_url": "https://simonwillison.net/2026/Oct/8/ttok",
+        "summary": "Release: ttok 0.4 ttok is my CLI tool for counting tokens, using OpenAI's open source tiktoken library. It hasn't been in updated in a couple of years, but I finally fixed a Click warning, updated CI, and added a --list-models command to list available models. It works with uvx , so you can count tokens in anything like this: cat file.txt | uvx ttok Tags: projects , ai , openai , generative-ai , llms , tokenization",
+        "source": "Simon Willison",
+        "published": "2026-10-08T23:34:28+00:00",
+        "importance_hint": 5,
+        "metadata": {
+          "feed_url": "https://simonwillison.net/atom/everything/"
+        }
+      },
+      {
+        "category": "news",
         "title": "Quoting Carson Gross",
         "url": "https://simonwillison.net/2026/Oct/8/carson-gross/",
         "normalized_url": "https://simonwillison.net/2026/Oct/8/carson-gross",
@@ -1764,19 +1929,6 @@
         "summary": "Since the Medicare breach, OpenAI has put in place additional monitoring to allow “immediate intervention” by staff to stop training if the company’s models access the internet in ways they’re not supposed to, Mr. Kwon [chief strategy officer at OpenAI] said. — Victoria Kim , Reporting from the Australian parliament Tags: accidental-cyberattacks , generative-ai , ai-security-research , openai , ai , llms",
         "source": "Simon Willison",
         "published": "2026-10-06T23:58:56+00:00",
-        "importance_hint": 5,
-        "metadata": {
-          "feed_url": "https://simonwillison.net/atom/everything/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "llm-openai-decisions 0.1a0",
-        "url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions/",
-        "normalized_url": "https://simonwillison.net/2026/Oct/6/llm-openai-decisions",
-        "summary": "Release: llm-openai-decisions 0.1a0 OpenAI released their new Jev-style Decisions API , as previously announced at last week's DevDay. Since I already have an llm-typesafe plugin for talking to Jev, I had GPT-6 Astra read the new OpenAI API documentation and build an llm-openai-decisions plugin inspired by llm-typesafe . Unlike Jev, the new gpt-6-luna decision model supports image input in addition to text. Both models charge for input it and not for output: OpenAI's is 10 cents per million inpu",
-        "source": "Simon Willison",
-        "published": "2026-10-06T23:04:13+00:00",
         "importance_hint": 5,
         "metadata": {
           "feed_url": "https://simonwillison.net/atom/everything/"
@@ -2057,6 +2209,19 @@
       },
       {
         "category": "news",
+        "title": "Strata rewrote their Github history to wipe evidence of Claude-authoring",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe",
+        "summary": "Just noticed this today when I went to run the built-in \"UPDATE\" script and git failed because there was no common ancestor. Looked into why, and apparently every historical commit has been re-written to strip the \"Co-Authored by Claude\" text from the descriptions. Personally I think that's pretty gross. I'm struggling to think of any reason to do this other than an intention to be dishonest about the origins of the project. submitted by /u/dasbin [link] [comments]",
+        "source": "r/LocalLLaMA",
+        "published": "2026-10-08T22:52:03+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
+        }
+      },
+      {
+        "category": "news",
         "title": "$2800 rig with 8x Radeon Pro V620 (256 GB VRAM) + custom vLLM fork = Qwen3.8-Flash-Next at 60 to 100 t/s decode and 3000+ t/s prefill",
         "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wnz1/2800_rig_with_8x_radeon_pro_v620_256_gb_vram/",
         "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wnz1/2800_rig_with_8x_radeon_pro_v620_256_gb_vram",
@@ -2083,13 +2248,13 @@
       },
       {
         "category": "news",
-        "title": "Strata rewrote their Github history to wipe evidence of Claude-authoring",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe",
-        "summary": "Just noticed this today when I went to run the built-in \"UPDATE\" script and git failed because there was no common ancestor. Looked into why, and apparently every historical commit has been re-written to strip the \"Co-Authored by Claude\" text from the descriptions. Personally I think that's pretty gross. I'm struggling to think of any reason to do this other than an intention to be dishonest about the origins of the project. submitted by /u/dasbin [link] [comments]",
+        "title": "Running decision model locally on an RTX 4090 to find out which one is the fastest",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to",
+        "summary": "recently saw a bunch of open decision models pop out of nowhere in the last two weeks (laya, liquid's d1, cloudflare's clef-flash, interfaze's lev), so I wanted to see how far apart they actually are on the same GPU(yes, model size is a huge factor, but still isn't the only factor). all four had the same task of reading nine wikipedia articles about centipedes (9,534 words) word by word and flag every word that names a centipede. one /v1/systemone call per word, the next word goes out the second",
         "source": "r/LocalLLaMA",
-        "published": "2026-10-08T22:52:03+00:00",
-        "importance_hint": 3,
+        "published": "2026-10-08T17:04:32+00:00",
+        "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }
@@ -2109,25 +2274,12 @@
       },
       {
         "category": "news",
-        "title": "Same prompts to 371 models since May 2024, all the answers in one place",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0ejor/same_prompts_to_371_models_since_may_2024_all_the/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0ejor/same_prompts_to_371_models_since_may_2024_all_the",
-        "summary": "Made this (free, no signup). One shot per model, no system prompt, temp 0.7. Lots of open weights in there, plus 93 models you can't run anymore. museumofmodels.com submitted by /u/sirjoaco [link] [comments]",
+        "title": "[audio.cpp] Recent updates you might have missed: Higgs Audio TTS use 48% less VRAM (< 6GB), HTDemucs 2.2× faster, PocketTTS 2.2× faster on CPU, and WebUI generation history feature",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0q91x/audiocpp_recent_updates_you_might_have_missed/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0q91x/audiocpp_recent_updates_you_might_have_missed",
+        "summary": "Hi all, a bunch of performance improvements have been landed in audio.cpp. The biggest highlight is Higgs Audio TTS, which now runs with around 6 GB VRAM , a 48% reduction in peak memory usage compared to the previous implementation. Thanks to https://github.com/mirek190 We also made some models significantly faster, especially HTDemucs on GPU and PocketTTS on CPU. No compromises in parity and correctness. Here's a summary of the improvements: Model Peak memory reduction Speedup Higgs Audio TTS ",
         "source": "r/LocalLLaMA",
-        "published": "2026-10-08T01:46:37+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Running decision model locally on an RTX 4090 to find out which one is the fastest",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to",
-        "summary": "recently saw a bunch of open decision models pop out of nowhere in the last two weeks (laya, liquid's d1, cloudflare's clef-flash, interfaze's lev), so I wanted to see how far apart they actually are on the same GPU(yes, model size is a huge factor, but still isn't the only factor). all four had the same task of reading nine wikipedia articles about centipedes (9,534 words) word by word and flag every word that names a centipede. one /v1/systemone call per word, the next word goes out the second",
-        "source": "r/LocalLLaMA",
-        "published": "2026-10-08T17:04:32+00:00",
+        "published": "2026-10-08T12:58:35+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"

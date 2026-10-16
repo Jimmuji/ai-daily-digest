@@ -4,7 +4,8 @@ Backfill English digests that are missing or were cut off.
 Before the two-pass summarize, the English half shared one 8192-token reply with
 the Chinese digest and often got truncated (or never written). This re-translates
 the recent days whose daily/<date>.en.md is missing or has fewer items than the
-Chinese file, then rebuilds the site.
+Chinese file, then rebuilds the site (always, so it also republishes
+site-only fixes).
 
 Usage: python translate_missing.py --days 7
 """
@@ -54,9 +55,9 @@ def main():
         fixed.append(date_str)
 
     print(f"[backfill] re-translated: {', '.join(fixed) or 'nothing'}")
-    if fixed:
-        generate_site(root=ROOT)
-        print("[backfill] site rebuilt → docs/")
+    # Rebuild even when nothing was re-translated, so site-only fixes go live too.
+    generate_site(root=ROOT)
+    print("[backfill] site rebuilt → docs/")
 
 
 if __name__ == "__main__":

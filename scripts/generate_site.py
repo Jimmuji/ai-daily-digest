@@ -926,7 +926,7 @@ def parse_digest(text: str) -> dict:
 
         stripped = line.strip()
 
-        star_match = re.match(r'^-\s+重要性[：:]\s*(.+)', stripped)
+        star_match = re.match(r'^-\s+(?:重要性|Importance)[：:]\s*(.+)', stripped)
         if star_match:
             raw = star_match.group(1)
             filled = raw.count('★')
@@ -935,12 +935,12 @@ def parse_digest(text: str) -> dict:
             current_item["star_count"] = filled
             continue
 
-        val_match = re.match(r'^-\s+核心价值[：:]\s*(.+)', stripped)
+        val_match = re.match(r'^-\s+(?:核心价值|Why it matters)[：:]\s*(.+)', stripped)
         if val_match:
             current_item["value"] = val_match.group(1).strip()
             continue
 
-        src_match = re.match(r'^-\s+来源[：:]\s*(.+)', stripped)
+        src_match = re.match(r'^-\s+(?:来源|Sources?)[：:]\s*(.+)', stripped)
         if src_match:
             links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', src_match.group(1))
             current_item["sources"] = [{"name": n, "url": u} for n, u in links]

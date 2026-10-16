@@ -1092,7 +1092,11 @@ def render_digest_dual(zh_digest: dict, en_digest: dict | None) -> str:
         en_body = build_digest_body(en_digest, "en")
         return (f'<div data-lang-content="zh">{zh_body}</div>'
                 f'<div data-lang-content="en">{en_body}</div>')
-    return zh_body
+    # No English for this day: say so in English mode instead of silently showing Chinese
+    note = ('<p data-lang-content="en" style="margin:0 0 20px;padding:12px 16px;border-radius:10px;'
+            'border:1px solid rgba(88,166,255,.35);color:#8b949e;font-size:14px">'
+            "There's no English version for this day, so the Chinese digest is shown below.</p>")
+    return note + zh_body
 
 
 def weekday_of(date_str: str, lang: str = "zh") -> str:

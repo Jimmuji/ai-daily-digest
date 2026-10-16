@@ -1,15 +1,18 @@
 """
 AI summarization - supports DeepSeek / OpenAI / any OpenAI-compatible API.
+
+Two passes: one call writes the Chinese digest, then the English version is
+translated from it section by section. Asking for both languages in a single
+call overflowed the model's 8192-token output cap once digests grew past ~30
+items: the English half got cut off mid-item (or never started).
 """
 
 import os
+import re
 import requests
 
 
-DELIMITER = "===ENGLISH==="
-
-
-SYSTEM_PROMPT = f"""你是一位 AI 领域的资深编辑，面向 AI 从业者、研究者和开发者输出每日简报。
+SYSTEM_PROMPT = """你是一位 AI 领域的资深编辑，面向 AI 从业者、研究者和开发者输出每日简报。
 
 【筛选标准】优先选择以下类型的内容，其余的直接丢弃：
 - 重大模型/产品发布（GPT、Claude、Gemini、Llama、Mistral 等）
@@ -28,9 +31,7 @@ SYSTEM_PROMPT = f"""你是一位 AI 领域的资深编辑，面向 AI 从业者�
 【务必保留】重大模型 / 研究发布（新模型、新架构、刷新 SOTA 的论文、重要开源）即使**只有单一来源**报道、或来自 arXiv / 实验室官博等不够"热门"的渠道，也必须纳入，不要因为来源少或热度低而丢弃。
 
 【输出要求】
-你需要输出**两份**简报：先输出中文版，然后**单独一行**写 `{DELIMITER}`，再输出与中文版逐条对应、结构完全一致的英文版。
-
-中文版格式（严格遵守）：
+只输出中文版简报（英文版之后另行翻译），格式严格遵守：
 1. 总计 12-18 条，按类别分组：## 📰 行业新闻 / ## 📄 重要论文 / ## 🔧 开源项目 / ## 🐦 AI 圈热议
 2. 每条格式固定如下：
 - **[标题]**：一句话说清楚发生了什么。
@@ -40,18 +41,74 @@ SYSTEM_PROMPT = f"""你是一位 AI 领域的资深编辑，面向 AI 从业者�
 3. `## 🐦 AI 圈热议` 板块**务必输出**，固定 1-2 条：从 smol.ai AINews、TLDR AI、Reddit、Hacker News 等聚合源里，提炼当下技术圈/Twitter 上正在被热议的话题、争论或知名研究者/创始人的明确观点（来源用聚合源链接即可）。即使当天较平淡，也挑出最值得一提的 1 条；严禁编造。
 4. 末尾用 `### 今日观察`：3-4 句话，点出今天最值得关注的趋势或信号，有观点，不废话
 5. 严格基于原文，不编造，专有名词保留英文，其余用中文
+"""
 
-英文版要求：
-1. 是中文版的**忠实翻译**，条目数量、顺序、分组、重要性星级、来源链接完全一致
-2. 分类标题保留相同 emoji：## 📰 Industry News / ## 📄 Papers / ## 🔧 Open Source / ## 🐦 AI Discourse
-3. 每条字段用英文标签：
+
+TRANSLATE_PROMPT = """You translate one section of a Chinese AI news digest into English.
+
+Rules:
+1. Faithful, item-for-item translation: same number of items, same order, same star ratings, same URLs (copy every URL exactly).
+2. Headings keep their emoji: ## 📰 Industry News / ## 📄 Papers / ## 🔧 Open Source / ## 🐦 AI Discourse; "### 今日观察" becomes "### Today's Take".
+3. Each item uses English field labels, exactly in this shape:
 - **[Title]**: one sentence on what happened.
   - Importance: ★★★★☆ / 5
   - Why it matters: concrete impact (under ~15 words)
   - Source: [Source Name](URL)
-4. 结尾用 `### Today's Take`，对应中文的今日观察
-5. 来源链接 URL 与中文版保持完全相同
+4. Keep proper nouns as they are. Output only the translated Markdown, nothing before or after it.
 """
+
+
+def _chat(system, user, max_tokens=8192, temperature=0.7):
+    """One chat call. Returns (text, finish_reason)."""
+    api_key = os.environ.get("API_KEY")
+    if not api_key:
+        raise ValueError("API_KEY environment variable is required")
+    base_url = os.environ.get("API_BASE_URL", "https://api.deepseek.com")
+    model = os.environ.get("API_MODEL", "deepseek-chat")
+    resp = requests.post(
+        f"{base_url}/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={
+            "model": model,
+            "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        },
+        timeout=180,
+    )
+    resp.raise_for_status()
+    choice = resp.json()["choices"][0]
+    return choice["message"]["content"], choice.get("finish_reason")
+
+
+def _trim_partial(text, finish_reason, label):
+    """If the output hit the token cap, drop the item that was cut off mid-way."""
+    if finish_reason != "length":
+        return text.strip()
+    cut = max(text.rfind("\n- **"), text.rfind("\n### "))
+    print(f"[summarize] WARNING: {label} hit the output cap; dropping the unfinished last item.")
+    return (text[:cut] if cut > 0 else text).strip()
+
+
+def split_sections(markdown):
+    """Split a digest body at its '## ' headings ('### 今日观察' stays with the last one)."""
+    return [s.strip() for s in re.split(r"(?m)^(?=## )", markdown) if s.strip()]
+
+
+def translate_digest(zh_text):
+    """Translate a Chinese digest body to English, one section per call.
+
+    A section that fails to translate is left out rather than failing the whole
+    run; returns None only when nothing could be translated."""
+    parts = []
+    for section in split_sections(zh_text):
+        try:
+            text, reason = _chat(TRANSLATE_PROMPT, section, temperature=0.3)
+        except Exception as e:  # network / API error on one section
+            print(f"[summarize] WARNING: translating a section failed ({e}); skipping it.")
+            continue
+        parts.append(_trim_partial(text, reason, "English translation"))
+    return "\n\n".join(parts) if parts else None
 
 
 def format_raw_content(data):
@@ -106,14 +163,9 @@ def _wrap(text, date_str, model, title):
 def summarize(data, date_str):
     """Generate daily digest via OpenAI-compatible API (DeepSeek by default).
 
-    Returns (zh_markdown, en_markdown). en_markdown is None if the model
-    didn't produce a parseable English section.
+    Returns (zh_markdown, en_markdown). en_markdown is None if the English
+    translation failed entirely.
     """
-    api_key = os.environ.get("API_KEY")
-    if not api_key:
-        raise ValueError("API_KEY environment variable is required")
-
-    base_url = os.environ.get("API_BASE_URL", "https://api.deepseek.com")
     model = os.environ.get("API_MODEL", "deepseek-chat")
 
     raw_content = format_raw_content(data)
@@ -130,34 +182,14 @@ def summarize(data, date_str):
 
 {raw_content}"""
 
-    url = f"{base_url}/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json",
-    }
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": user_prompt},
-        ],
-        "temperature": 0.7,
-        "max_tokens": 8192,
-    }
+    print(f"Calling {model} for the Chinese digest...")
+    zh_text, reason = _chat(SYSTEM_PROMPT, user_prompt)
+    zh_text = _trim_partial(zh_text, reason, "Chinese digest")
 
-    print(f"Calling {model}...")
-    resp = requests.post(url, headers=headers, json=payload, timeout=180)
-    resp.raise_for_status()
-
-    result = resp.json()
-    text = result["choices"][0]["message"]["content"]
-
-    if DELIMITER in text:
-        zh_text, en_text = text.split(DELIMITER, 1)
-        zh_text, en_text = zh_text.strip(), en_text.strip()
-    else:
-        print("[summarize] WARNING: no English section in response; zh only.")
-        zh_text, en_text = text.strip(), None
+    print("Translating to English, one section at a time...")
+    en_text = translate_digest(zh_text)
+    if not en_text:
+        print("[summarize] WARNING: English translation failed; zh only.")
 
     zh_md = _wrap(zh_text, date_str, model, "AI Daily Digest")
     en_md = _wrap(en_text, date_str, model, "AI Daily Digest") if en_text else None

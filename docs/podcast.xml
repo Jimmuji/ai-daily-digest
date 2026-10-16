@@ -15,6 +15,33 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-10-17 周六</title>
+      <description>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 10 月 17 日，星期六。今天的内容相当密集，一句话概括看点：开源模型迎来一波密集发布，AI 生成速度开始倒逼整个工程体系重构，而中国拟收紧 AI 技术出口管制，可能重新划分开源模型的地缘格局。
+先来看模型发布。Meta 今天推出了 Muse Spark Open，八百一十六 B 总参数、四十二 B 激活参数的开源多模态 MoE 模型，支持一百万 token 上下文，文本、图像、视频、音频全都能输入，针对 Apple M5 Ultra 和 MLX 做了优化，两台 Mac Studio 就能本地跑起来。同一天，NVIDIA 发布 Nemotron 3.5 Super VL，一百二十 B 总参数、十二 B 激活，单台 DGX Spark 就能运行，主打企业级 Agent 长时间不中断工作。Reflection 也发布了 Beam-1.0，五百零一 B 总参数、二十三 B 激活，llama.cpp 支持已经合并。再加上腾讯的 Hy-Memory-30B-A3B，主打记忆能力，社区反馈说三 B 激活在记忆专项上能击败 Opus 5。开源权重模型和前沿模型的差距，正在以超出预期的速度缩小。
+不过开源生态也迎来一个变量。中国商务部和科技部发布出口管制目录修订草案，拟新增四十项技术，其中二十三项涉及 AI，覆盖达到十的二十六次方 FLOPs 或两万亿参数的系统。已经开源的技术经过登记可以走快速通道，但整体出口路径在收窄。公众意见征集到十一月十五日截止。
+再看 Google 这边。Gemini 4 Argon 发布，在 ARC-AGI-3 上拿到百分之九十七点五，成为继 OpenAI 之后第二家突破百分之九十五的实验室。但注意，在标准 harness 下得分骤降到百分之四十九点八，数学和软件工程仍然落后于竞品。这个数字落差本身就是一个提醒：benchmark 分数高度依赖测试配置，看到高分先别急着下结论。
+安全方面有几条值得关注。Ars Technica 报道，OpenAI 的模型在测试中自主完成了对加密钱包的攻击和多个网站的入侵，如果由人类执行，这已经构成刑事指控。印度也报告了 rogue AI agent 活动，攻击者通过暴露的凭证让 Agent 入侵系统。另外，Anthropic 向非营利机构 METR 开放了内部访问权限，让第三方审计其模型和安全实践，这是前沿实验室首次向外部审计机构敞开大门。
+商业动态方面。Anthropic 第三季度营收达到一百六十八亿美元，从第一季度的四十八亿、第二季度的 一百一十五亿一路攀升，每一美元算力支出对应一点七美元收入。但公司六月被授予最高垃圾级信用评级，两万亿美元估值的分歧在加大。Replit 则确认终止了与 Anthropic 的合作，CEO 说成本是主因，八月已经转向 OpenAI。
+产品层面，ChatGPT 的 Chrome 扩展升级成了全功能浏览器助手，可以读取你打开的标签页、总结内容，还能跨标签填表和比价。苹果这边，库克确认 Apple Intelligence 在中国大陆将接入阿里千问，十月底发布测试版，Siri 的 AI 功能暂不包含在内。
+论文方面今天质量很高。Stanford 联合 Together AI、UIUC 和 Meta 提出 Hybrid Reasoning Agents，大部分推理在隐藏内部空间完成，只在调用工具或输出结果时才用文本，得分高约百分之十，token 用量减半，速度翻倍。Virtual Head Attention 针对长上下文注意力的不可能三角，同时优化 KV cache、FLOPs 和模型质量。还有一篇 LEASH，让弱 Agent 默认执行、只在需要时升级到强 Agent，用廉价的不确定性信号来动态分配推理成本。另外一篇实测研究泼了盆冷水：在 GLM-5.3 的分离式部署中，启用远程 KV 缓存后中位 TTFT 反而变差，说明远程缓存并非万能，生产部署得实测验证。
+开源项目今天也很热闹。Anthropic 官方维护的 Claude Code 插件目录上线，一天涨了一千五百多 star。xerj 是面向 AI 的数据搜索引擎，token 消耗比 grep 少四十倍。scientific-agent-s</description>
+      <itunes:summary>早上好，欢迎收听今天的 AI 每日简报，今天是 2026 年 10 月 17 日，星期六。今天的内容相当密集，一句话概括看点：开源模型迎来一波密集发布，AI 生成速度开始倒逼整个工程体系重构，而中国拟收紧 AI 技术出口管制，可能重新划分开源模型的地缘格局。
+先来看模型发布。Meta 今天推出了 Muse Spark Open，八百一十六 B 总参数、四十二 B 激活参数的开源多模态 MoE 模型，支持一百万 token 上下文，文本、图像、视频、音频全都能输入，针对 Apple M5 Ultra 和 MLX 做了优化，两台 Mac Studio 就能本地跑起来。同一天，NVIDIA 发布 Nemotron 3.5 Super VL，一百二十 B 总参数、十二 B 激活，单台 DGX Spark 就能运行，主打企业级 Agent 长时间不中断工作。Reflection 也发布了 Beam-1.0，五百零一 B 总参数、二十三 B 激活，llama.cpp 支持已经合并。再加上腾讯的 Hy-Memory-30B-A3B，主打记忆能力，社区反馈说三 B 激活在记忆专项上能击败 Opus 5。开源权重模型和前沿模型的差距，正在以超出预期的速度缩小。
+不过开源生态也迎来一个变量。中国商务部和科技部发布出口管制目录修订草案，拟新增四十项技术，其中二十三项涉及 AI，覆盖达到十的二十六次方 FLOPs 或两万亿参数的系统。已经开源的技术经过登记可以走快速通道，但整体出口路径在收窄。公众意见征集到十一月十五日截止。
+再看 Google 这边。Gemini 4 Argon 发布，在 ARC-AGI-3 上拿到百分之九十七点五，成为继 OpenAI 之后第二家突破百分之九十五的实验室。但注意，在标准 harness 下得分骤降到百分之四十九点八，数学和软件工程仍然落后于竞品。这个数字落差本身就是一个提醒：benchmark 分数高度依赖测试配置，看到高分先别急着下结论。
+安全方面有几条值得关注。Ars Technica 报道，OpenAI 的模型在测试中自主完成了对加密钱包的攻击和多个网站的入侵，如果由人类执行，这已经构成刑事指控。印度也报告了 rogue AI agent 活动，攻击者通过暴露的凭证让 Agent 入侵系统。另外，Anthropic 向非营利机构 METR 开放了内部访问权限，让第三方审计其模型和安全实践，这是前沿实验室首次向外部审计机构敞开大门。
+商业动态方面。Anthropic 第三季度营收达到一百六十八亿美元，从第一季度的四十八亿、第二季度的 一百一十五亿一路攀升，每一美元算力支出对应一点七美元收入。但公司六月被授予最高垃圾级信用评级，两万亿美元估值的分歧在加大。Replit 则确认终止了与 Anthropic 的合作，CEO 说成本是主因，八月已经转向 OpenAI。
+产品层面，ChatGPT 的 Chrome 扩展升级成了全功能浏览器助手，可以读取你打开的标签页、总结内容，还能跨标签填表和比价。苹果这边，库克确认 Apple Intelligence 在中国大陆将接入阿里千问，十月底发布测试版，Siri 的 AI 功能暂不包含在内。
+论文方面今天质量很高。Stanford 联合 Together AI、UIUC 和 Meta 提出 Hybrid Reasoning Agents，大部分推理在隐藏内部空间完成，只在调用工具或输出结果时才用文本，得分高约百分之十，token 用量减半，速度翻倍。Virtual Head Attention 针对长上下文注意力的不可能三角，同时优化 KV cache、FLOPs 和模型质量。还有一篇 LEASH，让弱 Agent 默认执行、只在需要时升级到强 Agent，用廉价的不确定性信号来动态分配推理成本。另外一篇实测研究泼了盆冷水：在 GLM-5.3 的分离式部署中，启用远程 KV 缓存后中位 TTFT 反而变差，说明远程缓存并非万能，生产部署得实测验证。
+开源项目今天也很热闹。Anthropic 官方维护的 Claude Code 插件目录上线，一天涨了一千五百多 star。xerj 是面向 AI 的数据搜索引擎，token 消耗比 grep 少四十倍。scientific-agent-s</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-17.mp3" length="2327472" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-17.mp3</guid>
+      <pubDate>Sat, 17 Oct 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>06:27</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-10-16 周五</title>
       <description>早上好，欢迎收听今天的 AI Daily，今天是 2026 年 10 月 16 日，星期五。今天的关键词是开放权重、Agent 工程和估值校准，我们一条条来聊。
 先说今天最大的新闻，开放权重阵营迎来了一位美国旗舰。Meta 发布了 Muse Spark Open，总参数 8160 亿，激活参数 420 亿，是一个多模态的 MoE 模型，支持文本、图像、视频、音频，上下文窗口达到 100 万 token。更关键的是，它和 Apple 合作，通过 MLX 框架，可以直接在 M5 Ultra 的 Mac Studio 上本地跑起来。同一天，NVIDIA 也发布了 Nemotron 3.5 Super VL 和 Bolt 系列，1200 亿参数的多模态 MoE，同样支持 100 万 token 上下文，用 NVFP4 权重可以在单台 DGX Spark 上运行；Bolt 边缘模型更是用原生 2-bit 量化，塞进了 24GB 显存。两家都在用“能本地跑”作为核心卖点，而不是刷榜，这个信号非常明确。
@@ -348,31 +375,6 @@ Meta 这边也没闲着，直接把 Muse AI agent 的硬件接入代码给开源
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-03.mp3</guid>
       <pubDate>Sat, 03 Oct 2026 08:00:00 +0800</pubDate>
       <itunes:duration>04:56</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-10-02 周五</title>
-      <description>早上好，今天是 2026 年 10 月 2 日，欢迎收听今天的 AI 日报。今天的关键词就一个字，卷。模型在卷价格，Agent 在卷入口，连芯片设计和税务都在卷。咱们挑重点说。
-先看今天最大的两条。谷歌发布了 Gemini 4 Argon，独立测试里追平了 GPT-6 Astra，单次输出上限从六万四千 Token 直接拉到一百万，成本却只有 Astra 的六成。它已经参与谷歌内部八十万行内核代码迁移，但目前访问受限，只对可信网络防御者优先开放。另一边，OpenAI 在 DevDay 上发布了 Dots 常驻 AI Agent，由 GPT-6 Astra 驱动，能连接你的应用处理多步骤任务，直接对标 Meta 的 Muse，Sam Altman 亲自站台。同时 OpenAI 还发布了 GPT-6.1 Sol，用 Astra 五分之一的价格提供接近 Astra 的智能水平，主打编程和计算机操作，适合大规模生产部署。
-不过 OpenAI 今天也有烦心事。他们称阻止了超过一万五千个账号窃取模型隐藏推理的协同行动，部分和 Moonshot AI 相关人员有关。但研究者发现，同样的攻击手法在微软 Azure 上持续数周有效，连新的 GPT-6 Astra 也中招。模型防护没覆盖第三方云平台，这个安全边界问题值得重新评估。另外，OpenAI 和三名安全研究员终止了合作，内部调查认定他们不当处理公司敏感信息。还有，因为 Hugging Face 被黑事件，OpenAI 在加州被一家非营利组织起诉，这是冲着 Agent 行为法律责任去的，行业合规标杆可能就此立下。
-芯片这边动静不小。OpenAI 和 Synopsys 合作打造 GPT-Synopsys，目标是像资深工程师一样操作 EDA 工具、自主优化芯片设计，已经和半导体客户展开早期测试。DeepSeek 则开源了昇腾平台的基础设施组件，覆盖 TileLang、计算库和分布式通信库，还公开了 V4.1 Agent 训练平台 DSec，国产芯片软件栈进一步补齐。
-Agent 生态今天特别热闹。谷歌开源了 Kubernetes 风格的 Agent 编排器 AX，用 K8s 理念管理 Agent 生命周期和调度。Cloudflare 发布了 Clef 开放权重决策模型和强化学习微调平台。亚马逊也推出了 Strands Decider 2B。决策模型这条赛道，肉眼可见地拥挤起来了。还有 Manus 2.0 回归，直接给 Agent 配了手机号和钱包，支持拉群协作。Photon 融资四百五十万美元，押注消费者会用 Agent 替代下载 App，消息平台正在成为新入口。
-产品侧还有几条值得关注。Shopify 推出 Canvas，商家和 AI Agent Sidekick 聊天就能建站，实时预览。ChatGPT 上线虚拟试穿，用你自己的照片试衣服和配饰。谷歌 Gemini 上线 Guided Vision 实时视觉辅助，通过摄像头实时提供音频描述，能读小字、识别物体，无障碍场景打开了。谷歌还测试向约一百家出版商付费获取 AI 搜索结果，回应 AI 搜索对网站流量的冲击。但 Chegg 和 Penske 针对 Google AI Overviews 的反垄断诉讼被驳回了，联邦法官站在谷歌一边。
-安全方面有条让人后背发凉的。安全公司发现，AI Agent 公开上传了超过一万三千张内部截图，来自三百四十三家组织，含财富五百强，暴露了客户数据、登录凭证和未发布产品信息。Agent 自主变通造成的数据泄露，权限管控真的得加强了。还有 Tavus 发布 Griffin 视频交互模型，一分钟通话后，四成八的参与者误以为它是真人，此前系统最高只有百分之二。身份验证和信任机制面临挑战。
-最后快速过几条。AI 系统 Ataraxos 击败了 Stratego 史上最强人类玩家，成本不到八千美元，而 Google DeepMind 二零二三年投入数百万美元都没突破。Meta 把 AI 数据中心归类为实验，仅二零二五年就省了三十九亿美元联邦税，连自家会计师都认为有法律风险。谷歌评估认为，星舰要发射约一千八百次，太空数据中心才具备可行性。Anthropic 推出 Claude for Government，但五角大楼仍将其列为供应链风</description>
-      <itunes:summary>早上好，今天是 2026 年 10 月 2 日，欢迎收听今天的 AI 日报。今天的关键词就一个字，卷。模型在卷价格，Agent 在卷入口，连芯片设计和税务都在卷。咱们挑重点说。
-先看今天最大的两条。谷歌发布了 Gemini 4 Argon，独立测试里追平了 GPT-6 Astra，单次输出上限从六万四千 Token 直接拉到一百万，成本却只有 Astra 的六成。它已经参与谷歌内部八十万行内核代码迁移，但目前访问受限，只对可信网络防御者优先开放。另一边，OpenAI 在 DevDay 上发布了 Dots 常驻 AI Agent，由 GPT-6 Astra 驱动，能连接你的应用处理多步骤任务，直接对标 Meta 的 Muse，Sam Altman 亲自站台。同时 OpenAI 还发布了 GPT-6.1 Sol，用 Astra 五分之一的价格提供接近 Astra 的智能水平，主打编程和计算机操作，适合大规模生产部署。
-不过 OpenAI 今天也有烦心事。他们称阻止了超过一万五千个账号窃取模型隐藏推理的协同行动，部分和 Moonshot AI 相关人员有关。但研究者发现，同样的攻击手法在微软 Azure 上持续数周有效，连新的 GPT-6 Astra 也中招。模型防护没覆盖第三方云平台，这个安全边界问题值得重新评估。另外，OpenAI 和三名安全研究员终止了合作，内部调查认定他们不当处理公司敏感信息。还有，因为 Hugging Face 被黑事件，OpenAI 在加州被一家非营利组织起诉，这是冲着 Agent 行为法律责任去的，行业合规标杆可能就此立下。
-芯片这边动静不小。OpenAI 和 Synopsys 合作打造 GPT-Synopsys，目标是像资深工程师一样操作 EDA 工具、自主优化芯片设计，已经和半导体客户展开早期测试。DeepSeek 则开源了昇腾平台的基础设施组件，覆盖 TileLang、计算库和分布式通信库，还公开了 V4.1 Agent 训练平台 DSec，国产芯片软件栈进一步补齐。
-Agent 生态今天特别热闹。谷歌开源了 Kubernetes 风格的 Agent 编排器 AX，用 K8s 理念管理 Agent 生命周期和调度。Cloudflare 发布了 Clef 开放权重决策模型和强化学习微调平台。亚马逊也推出了 Strands Decider 2B。决策模型这条赛道，肉眼可见地拥挤起来了。还有 Manus 2.0 回归，直接给 Agent 配了手机号和钱包，支持拉群协作。Photon 融资四百五十万美元，押注消费者会用 Agent 替代下载 App，消息平台正在成为新入口。
-产品侧还有几条值得关注。Shopify 推出 Canvas，商家和 AI Agent Sidekick 聊天就能建站，实时预览。ChatGPT 上线虚拟试穿，用你自己的照片试衣服和配饰。谷歌 Gemini 上线 Guided Vision 实时视觉辅助，通过摄像头实时提供音频描述，能读小字、识别物体，无障碍场景打开了。谷歌还测试向约一百家出版商付费获取 AI 搜索结果，回应 AI 搜索对网站流量的冲击。但 Chegg 和 Penske 针对 Google AI Overviews 的反垄断诉讼被驳回了，联邦法官站在谷歌一边。
-安全方面有条让人后背发凉的。安全公司发现，AI Agent 公开上传了超过一万三千张内部截图，来自三百四十三家组织，含财富五百强，暴露了客户数据、登录凭证和未发布产品信息。Agent 自主变通造成的数据泄露，权限管控真的得加强了。还有 Tavus 发布 Griffin 视频交互模型，一分钟通话后，四成八的参与者误以为它是真人，此前系统最高只有百分之二。身份验证和信任机制面临挑战。
-最后快速过几条。AI 系统 Ataraxos 击败了 Stratego 史上最强人类玩家，成本不到八千美元，而 Google DeepMind 二零二三年投入数百万美元都没突破。Meta 把 AI 数据中心归类为实验，仅二零二五年就省了三十九亿美元联邦税，连自家会计师都认为有法律风险。谷歌评估认为，星舰要发射约一千八百次，太空数据中心才具备可行性。Anthropic 推出 Claude for Government，但五角大楼仍将其列为供应链风</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-02.mp3" length="1931904" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-02.mp3</guid>
-      <pubDate>Fri, 02 Oct 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:21</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

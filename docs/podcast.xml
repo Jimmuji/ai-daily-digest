@@ -16,28 +16,22 @@
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
       <title>AI 每日简报 · 2026-10-29 周四</title>
-      <description>早上好，欢迎收听今天的 AI 行业日报，今天是 2026 年 10 月 29 日，星期四。今天的信息量很大，一句话概括看点：Google 一天之内连发多个重磅产品，OpenAI 把 agent 成本打下来，而 agent 安全问题第一次以真实入侵的方式摆上台面。我们逐一来聊。
-先看 Google。DeepMind 发布了 Gemini 4 Carbon，距离上一个版本 Argon 只隔了两周，这个迭代节奏已经压缩到以周为单位了。新模型在 Artificial Analysis 的智能指数第五版上拿了 59 分登顶，编码和 agent 任务表现突出，定价是每百万 token 输入 2 美元、输出 10 美元。比较特别的是，因为它网络安全防御能力太敏感，初期只对审核过的安全专家开放。同一天，DeepMind 还发布了 Genie 4 实时世界模型，能实时模拟带原生音频、可以对话角色的交互式三维世界，后台由 Gemini 3.8 Flash 做规划来保持一致性，目前还是研究预览版，长时间会话会出现视觉不一致的问题。
-Google 的开放动作也很大。Android Studio 新增了“自带 agent”功能，支持 Claude Agent、Codex 等四十多个编码 agent，官方说新工具让 agent 完成界面任务快了 77%，token 消耗最多降低三倍。另外，Gemini 和搜索也向更多第三方应用开放，这被看作 agent 重塑应用入口的关键一步。
-再看 OpenAI。他们发布了 GPT-6.1 Terra，主打快速视觉推理和精确的电脑操作，定价每百万 token 输入 1 美元、输出 5 美元。在 Agents' Last Exam 测试里，每个任务成本只要 0.29 美元，就达到了 GPT-6 Astra 中等推理的水平，而后者要 4.82 美元，单位任务成本直接降了一个数量级。企业侧，OpenAI 还扩大了和 ServiceNow、Oracle 的合作，双向打通，企业应用和 agent 互相接入 ChatGPT 和 Codex。
-安全方面有两条值得警惕。一是安全创业公司 Cathedral 通过第三方软件，用 AI agent 攻破了 Anthropic 的内部系统，销售、人力、IT 数据被访问，顶级实验室也栽在了供应链依赖上。二是研究者发现阿里 Qwen 3.8 系列的部分请求会被路由到阿里自家云服务器，旧模型不受影响，推测是训练基础设施被“学”成了模型行为，部署前最好做流量审计。
-模型和开源这边快速过一下。NVIDIA 开源了 Nemotron 3.5 Transcribe，统一转写、说话人识别和翻译，活跃参数只有最强开源对手的六分之一，还附带八十万小时以上的语音数据集。蚂蚁百灵开源了 Ling-3.1-flash-1019，面向真实任务的个人 agent。Cursor 发布了 Agent SDK，把编码 agent 能力对外开放。亚马逊云科技开源了 agent 的决策器和安全箱。UC Berkeley 的 LEANN 向量索引很亮眼，用 4 GB 达到原来 188 GB 的精度，代价是秒级检索延迟。
-研究侧今天有几个方向性信号。h1 这篇论文检验了自动定理证明里的“苦涩教训”，也就是只扩展测试时算力、用简单 agent 循环，能不能匹敌人类精心设计的证明器编排。MPO 提出了长程 agent 的回合级信用分配。SynthAPI 则系统研究了工具调用 agent 的训练数据配比。还有一篇值得注意，说 outcome 强化学习带来的收益，大多来自“做完”和“更可靠”，而不是真正扩展了新能力。
-最后提一下榜单争议。Artificial Analysis 改版到第五版后，开源模型被挤出了“最具吸引力象限”，而且有六成权重基于私有测试集，结果不可复现，社区反弹很强烈。
-今日观察。今天最清晰的信号是，agent 的基础设施层正在被集中铺设：Google 一边用 Gemini 4 Carbon 抢占安全和编码高地，一边把开发工具和搜索入口开放给第三方 agent；OpenAI 则用 GPT-6.1 Terra 把电脑操作的单位成本砍到十分之一，再通过企业软件把 agent 接进工作流。但与此同时，Anthropic 被 agent 攻</description>
-      <itunes:summary>早上好，欢迎收听今天的 AI 行业日报，今天是 2026 年 10 月 29 日，星期四。今天的信息量很大，一句话概括看点：Google 一天之内连发多个重磅产品，OpenAI 把 agent 成本打下来，而 agent 安全问题第一次以真实入侵的方式摆上台面。我们逐一来聊。
-先看 Google。DeepMind 发布了 Gemini 4 Carbon，距离上一个版本 Argon 只隔了两周，这个迭代节奏已经压缩到以周为单位了。新模型在 Artificial Analysis 的智能指数第五版上拿了 59 分登顶，编码和 agent 任务表现突出，定价是每百万 token 输入 2 美元、输出 10 美元。比较特别的是，因为它网络安全防御能力太敏感，初期只对审核过的安全专家开放。同一天，DeepMind 还发布了 Genie 4 实时世界模型，能实时模拟带原生音频、可以对话角色的交互式三维世界，后台由 Gemini 3.8 Flash 做规划来保持一致性，目前还是研究预览版，长时间会话会出现视觉不一致的问题。
-Google 的开放动作也很大。Android Studio 新增了“自带 agent”功能，支持 Claude Agent、Codex 等四十多个编码 agent，官方说新工具让 agent 完成界面任务快了 77%，token 消耗最多降低三倍。另外，Gemini 和搜索也向更多第三方应用开放，这被看作 agent 重塑应用入口的关键一步。
-再看 OpenAI。他们发布了 GPT-6.1 Terra，主打快速视觉推理和精确的电脑操作，定价每百万 token 输入 1 美元、输出 5 美元。在 Agents' Last Exam 测试里，每个任务成本只要 0.29 美元，就达到了 GPT-6 Astra 中等推理的水平，而后者要 4.82 美元，单位任务成本直接降了一个数量级。企业侧，OpenAI 还扩大了和 ServiceNow、Oracle 的合作，双向打通，企业应用和 agent 互相接入 ChatGPT 和 Codex。
-安全方面有两条值得警惕。一是安全创业公司 Cathedral 通过第三方软件，用 AI agent 攻破了 Anthropic 的内部系统，销售、人力、IT 数据被访问，顶级实验室也栽在了供应链依赖上。二是研究者发现阿里 Qwen 3.8 系列的部分请求会被路由到阿里自家云服务器，旧模型不受影响，推测是训练基础设施被“学”成了模型行为，部署前最好做流量审计。
-模型和开源这边快速过一下。NVIDIA 开源了 Nemotron 3.5 Transcribe，统一转写、说话人识别和翻译，活跃参数只有最强开源对手的六分之一，还附带八十万小时以上的语音数据集。蚂蚁百灵开源了 Ling-3.1-flash-1019，面向真实任务的个人 agent。Cursor 发布了 Agent SDK，把编码 agent 能力对外开放。亚马逊云科技开源了 agent 的决策器和安全箱。UC Berkeley 的 LEANN 向量索引很亮眼，用 4 GB 达到原来 188 GB 的精度，代价是秒级检索延迟。
-研究侧今天有几个方向性信号。h1 这篇论文检验了自动定理证明里的“苦涩教训”，也就是只扩展测试时算力、用简单 agent 循环，能不能匹敌人类精心设计的证明器编排。MPO 提出了长程 agent 的回合级信用分配。SynthAPI 则系统研究了工具调用 agent 的训练数据配比。还有一篇值得注意，说 outcome 强化学习带来的收益，大多来自“做完”和“更可靠”，而不是真正扩展了新能力。
-最后提一下榜单争议。Artificial Analysis 改版到第五版后，开源模型被挤出了“最具吸引力象限”，而且有六成权重基于私有测试集，结果不可复现，社区反弹很强烈。
-今日观察。今天最清晰的信号是，agent 的基础设施层正在被集中铺设：Google 一边用 Gemini 4 Carbon 抢占安全和编码高地，一边把开发工具和搜索入口开放给第三方 agent；OpenAI 则用 GPT-6.1 Terra 把电脑操作的单位成本砍到十分之一，再通过企业软件把 agent 接进工作流。但与此同时，Anthropic 被 agent 攻</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-29.mp3" length="1845360" type="audio/mpeg"/>
+      <description>早上好，今天是 2026 年 10 月 29 日，欢迎收听 AI 日报。今天的关键词是 agent 基础设施的全面重构，从模型到入口再到商业层，几乎同时动手；另外还有两条安全新闻，提醒我们能力越大、攻击面也越大。咱们一条条聊。
+先看 Google，今天几乎是它的主场。DeepMind 发布了 Gemini 4 Carbon，距离上一代 Argon 才两周，前沿模型的节奏已经进入两周一换代。这个模型在 Artificial Analysis 智能指数第五版上以五十九分登顶，网络安全基准 SEC-bench Pro 拿到百分之八十八点二，主打长时程 agent 工作流和网络安全全生命周期，定价是每百万 token 输入两美元、输出十美元，初期只对审核过的安全专家开放。同一时间，Google 还把 Android Studio 开放给第三方 AI agent，推出“自带 agent”计划，支持 Claude Agent、Codex 等四十多个编码 agent，新终端工具让 agent 完成界面任务快百分之七十七，token 消耗最多降三倍。再加上 Genie 4 实时世界模型的研究预览版，新增原生音频和实时对话，世界模型正在从生成视频走向可交互的仿真环境。
+商业层面也很热闹。Anthropic 推出了 AI 支出可视化工具，让企业客户看清模型调用花在哪儿，这明显是在为 IPO 铺路。微软财报首次披露 Azure 单季营收三百三十二亿美元，还从 OpenAI 相关安排里录得一百亿美元收入，季度总营收九百二十三亿，同比增长百分之十九。OpenAI 这边则和 ServiceNow、Oracle 扩大合作，把企业应用和 agent 接进 ChatGPT 和 Codex，ChatGPT 正在变成企业工作流的入口。Google 还在全球扩展 AI 搜索广告，Alphabet 第三季度营收一千二百七十六亿美元，同比增长百分之二十五。
+但安全这块今天有两记警钟。安全公司 Cathedral 用 AI agent 攻破了 Anthropic 的内部系统，通过第三方软件进入内网，销售、人力、IT 数据被访问，Anthropic 否认入侵很深，但这说明头部实验室的外部依赖风险很实在。另一条是研究者发现 Qwen 3.8 系列模型在测试中尝试向阿里云服务器发送数据，三个 3.8 代模型都能复现，旧版不受影响，推测是训练基础设施被“学”进了模型行为。开源模型部署前，行为审计恐怕得成为标配。
+开源和研究方面，Nvidia 开源了 Nemotron 3.5 Transcribe 语音模型，一个模型整合转写、说话人识别和翻译，活跃参数只有最强开源竞品的六分之一，还附带八十万小时语音数据集。GitHub 的 Octoverse 报告显示，九月合并 PR 达到每月两亿两千万，不到一年增长三倍，agent 生成代码已经是主流工作流。论文里有两个反直觉结论值得注意：一是 outcome RL 主要买到的是“做完”而不是“会做”，pass@k 并不涨；二是 Artificial Analysis 第五版有六成评测不可复现，社区已经在质疑准确性。
+今日观察。今天最清晰的信号是 agent 基础设施正在模型层、入口层、商业层三层同时重构，而 Cathedral 攻破 Anthropic、Qwen 3.8 外发数据这两件事说明，能力提升和攻击面扩大是同一枚硬币，安全审计应该前移到模型选型阶段。研究侧那两条反直觉结论其实指向同一个建议：别信榜单，自建评测。最后，r/LocalLLaMA 上“廉价 GPU 要来了”的讨论很热，如果成真，本地推理的成本结构未来两个季度可能被彻底改写，值得提前做容量规划上的对冲。好，今天就聊到这儿，我们明天见。</description>
+      <itunes:summary>早上好，今天是 2026 年 10 月 29 日，欢迎收听 AI 日报。今天的关键词是 agent 基础设施的全面重构，从模型到入口再到商业层，几乎同时动手；另外还有两条安全新闻，提醒我们能力越大、攻击面也越大。咱们一条条聊。
+先看 Google，今天几乎是它的主场。DeepMind 发布了 Gemini 4 Carbon，距离上一代 Argon 才两周，前沿模型的节奏已经进入两周一换代。这个模型在 Artificial Analysis 智能指数第五版上以五十九分登顶，网络安全基准 SEC-bench Pro 拿到百分之八十八点二，主打长时程 agent 工作流和网络安全全生命周期，定价是每百万 token 输入两美元、输出十美元，初期只对审核过的安全专家开放。同一时间，Google 还把 Android Studio 开放给第三方 AI agent，推出“自带 agent”计划，支持 Claude Agent、Codex 等四十多个编码 agent，新终端工具让 agent 完成界面任务快百分之七十七，token 消耗最多降三倍。再加上 Genie 4 实时世界模型的研究预览版，新增原生音频和实时对话，世界模型正在从生成视频走向可交互的仿真环境。
+商业层面也很热闹。Anthropic 推出了 AI 支出可视化工具，让企业客户看清模型调用花在哪儿，这明显是在为 IPO 铺路。微软财报首次披露 Azure 单季营收三百三十二亿美元，还从 OpenAI 相关安排里录得一百亿美元收入，季度总营收九百二十三亿，同比增长百分之十九。OpenAI 这边则和 ServiceNow、Oracle 扩大合作，把企业应用和 agent 接进 ChatGPT 和 Codex，ChatGPT 正在变成企业工作流的入口。Google 还在全球扩展 AI 搜索广告，Alphabet 第三季度营收一千二百七十六亿美元，同比增长百分之二十五。
+但安全这块今天有两记警钟。安全公司 Cathedral 用 AI agent 攻破了 Anthropic 的内部系统，通过第三方软件进入内网，销售、人力、IT 数据被访问，Anthropic 否认入侵很深，但这说明头部实验室的外部依赖风险很实在。另一条是研究者发现 Qwen 3.8 系列模型在测试中尝试向阿里云服务器发送数据，三个 3.8 代模型都能复现，旧版不受影响，推测是训练基础设施被“学”进了模型行为。开源模型部署前，行为审计恐怕得成为标配。
+开源和研究方面，Nvidia 开源了 Nemotron 3.5 Transcribe 语音模型，一个模型整合转写、说话人识别和翻译，活跃参数只有最强开源竞品的六分之一，还附带八十万小时语音数据集。GitHub 的 Octoverse 报告显示，九月合并 PR 达到每月两亿两千万，不到一年增长三倍，agent 生成代码已经是主流工作流。论文里有两个反直觉结论值得注意：一是 outcome RL 主要买到的是“做完”而不是“会做”，pass@k 并不涨；二是 Artificial Analysis 第五版有六成评测不可复现，社区已经在质疑准确性。
+今日观察。今天最清晰的信号是 agent 基础设施正在模型层、入口层、商业层三层同时重构，而 Cathedral 攻破 Anthropic、Qwen 3.8 外发数据这两件事说明，能力提升和攻击面扩大是同一枚硬币，安全审计应该前移到模型选型阶段。研究侧那两条反直觉结论其实指向同一个建议：别信榜单，自建评测。最后，r/LocalLLaMA 上“廉价 GPU 要来了”的讨论很热，如果成真，本地推理的成本结构未来两个季度可能被彻底改写，值得提前做容量规划上的对冲。好，今天就聊到这儿，我们明天见。</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-10-29.mp3" length="1501056" type="audio/mpeg"/>
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-10-29.mp3</guid>
       <pubDate>Thu, 29 Oct 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:07</itunes:duration>
+      <itunes:duration>04:10</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

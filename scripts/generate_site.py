@@ -1828,7 +1828,6 @@ def build_api(parsed_by_date: dict, parsed_by_date_en: dict, dates: list[str],
     index = {
         "api_version": API_VERSION,
         "site": SITE_URL,
-        "generated_at": datetime.now(timezone(timedelta(hours=8))).isoformat(),
         "count": len(issues),
         "latest": issues[0]["date"] if issues else None,
         "podcast": SITE_URL + "podcast.xml",

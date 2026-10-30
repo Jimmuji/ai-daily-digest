@@ -33,6 +33,19 @@ SYSTEM_PROMPT = """你是一位 AI 领域的资深编辑，面向 AI 从业者�
 
 【输出要求】
 只输出中文版简报（英文版之后另行翻译），格式严格遵守：
+0. **最开头两行**（在所有分类之前，不加任何标题层级）：
+```
+**今日标题**：<一句话，不超过 20 个汉字>
+**备选标题**：<另一句> ｜ <再一句>
+```
+   这一行会被直接用作社交媒体标题，要求如下：
+   - 概括当天最重要的那件事；若当天没有单一大事，则概括整体态势
+   - 权威、克制、可信，像严肃媒体的头条，而不是自媒体标题
+   - **严禁**使用「震惊」「炸了」「杀疯了」「重磅」「王炸」「彻底改变」这类标题党词汇
+   - 有信息量：只看这一句也能知道今天发生了什么，优先「谁做了什么」
+   - 可以用真实存在的反差或冲突增加张力，但必须能在当天条目中找到依据，严禁编造
+   - 长度不超过 20 个汉字（数字与英文缩写各按 1 个字计）
+   - 两条备选风格要区分开：一条偏事实陈述，一条偏影响或视角
 1. 总计 12-18 条，按类别分组：## 📰 行业新闻 / ## 📄 重要论文 / ## 🔧 开源项目 / ## 🐦 AI 圈热议
 2. 每条格式固定如下：
 - **[标题]**：一句话说清楚发生了什么。
@@ -55,7 +68,10 @@ Rules:
   - Importance: ★★★★☆ / 5
   - Why it matters: concrete impact (under ~15 words)
   - Source: [Source Name](URL)
-4. Keep proper nouns as they are. Output only the translated Markdown, nothing before or after it.
+4. If the section is the opening headline block, translate it to exactly:
+**Headline**: <one line, under 12 words>
+**Alt headlines**: <another> | <another>
+5. Keep proper nouns as they are. Output only the translated Markdown, nothing before or after it.
 """
 
 

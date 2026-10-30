@@ -389,6 +389,126 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
   text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px;
 }
 .day-hero h1 { font-size: 28px; font-weight: 700; }
+.day-lead {
+  margin-top: 10px; font-size: 19px; line-height: 1.5;
+  font-weight: 600; color: var(--text-soft);
+  border-left: 3px solid #58a6ff; padding-left: 12px;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.filter-bar .tab {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 5px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.filter-bar .tab:hover { color: var(--text); border-color: #58a6ff; }
+.filter-bar .tab.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.filter-bar .star-toggle {
+  margin-left: auto;
+  font-size: 13px;
+  color: #e3b341;
+  padding: 5px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.filter-bar .star-toggle:hover { border-color: #e3b341; }
+.filter-bar .star-toggle.active { background: rgba(227,179,65,.15); border-color: #e3b341; }
+
+/* ── Category section ── */
+.category { margin-bottom: 40px; }
+.category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.category-header h2 { font-size: 18px; font-weight: 700; }
+.cat-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── Item card ── */
+.item-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  transition: border-color .2s;
+}
+.item-card:hover { border-color: var(--border-strong); }
+.item-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
+.item-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
+.item-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.stars { font-size: 13px; color: #e3b341; letter-spacing: 1px; }
+.item-value {
+  font-size: 13px; color: #7ee787;
+  background: rgba(46,160,67,.1); padding: 2px 10px; border-radius: 999px;
+}
+.item-sources { font-size: 13px; color: var(--text-muted); margin-left: auto; }
+.item-sources a { color: #58a6ff; margin-left: 6px; }
+.item-sources a:first-child { margin-left: 0; }
+
+/* ── Observation box ── */
+.observation {
+  background: linear-gradient(135deg, rgba(31,111,235,.12), rgba(188,140,255,.08));
+  border: 1px solid rgba(88,166,255,.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+}
+.observation h2 { font-size: 16px; font-weight: 700; color: #58a6ff; margin-bottom: 12px; }
+.observation p { font-size: 14px; color: var(--text-soft); line-height: 1.8; }
+
+.empty-filter { display: none; color: var(--text-muted); font-size: 14px; text-align: center; padding: 32px; }
+
+/* ── Day nav ── */
+.day-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+}
+.nav-btn {
+  font-size: 14px; color: #58a6ff;
+  padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px;
+  transition: background .15s;
+}
+.nav-btn:hover { background: var(--card); text-decoration: none; }
+
+/* ── Back to top ── */
+#backToTop {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  z-index: 120;
+}
+#backToTop.visible { opacity: 1; pointer-events: auto; }
+#backToTop:hover { transform: translateY(-2px); }
+
+/* ── Footer ── */
+.site-footer {
+  text-align: center; padding: 24px;
+  color: #484f58; font-size: 13px; border-top: 1px solid var(--border);
+}
 
 /* ── Filter bar ── */
 .filter-bar {
@@ -865,6 +985,10 @@ def bi(zh: str, en: str) -> str:
 
 # ── Markdown parser ─────────────────────────────────────────────────────────────
 
+_HEADLINE_RE = re.compile(r'^\*\*(?:今日标题|Headline)\*\*\s*[：:]\s*(.+)')
+_ALT_HEADLINE_RE = re.compile(r'^\*\*(?:备选标题|Alt headlines?)\*\*\s*[：:]\s*(.+)')
+
+
 def parse_digest(text: str) -> dict:
     lines = text.splitlines()
     categories = []
@@ -872,8 +996,22 @@ def parse_digest(text: str) -> dict:
     in_observation = False
     current_cat = None
     current_item = None
+    headline = ""
+    alt_headlines = []
 
     for line in lines:
+        # The one-line editorial headline sits above every category.
+        if current_cat is None and not in_observation:
+            hl = _HEADLINE_RE.match(line.strip())
+            if hl:
+                headline = hl.group(1).strip().strip('*')
+                continue
+            alt = _ALT_HEADLINE_RE.match(line.strip())
+            if alt:
+                alt_headlines = [p.strip() for p in
+                                 re.split(r'[|｜]', alt.group(1)) if p.strip()]
+                continue
+
         cat_match = re.match(r'^#{2,3}\s+([\U00010000-\U0010ffff☀-⛿✀-➿])\s*(.+)', line)
         plain_match = re.match(r'^#{2,3}\s+([^#\U00010000-\U0010ffff].+)', line) if not cat_match else None
         if cat_match:
@@ -946,7 +1084,22 @@ def parse_digest(text: str) -> dict:
             current_item["sources"] = [{"name": n, "url": u} for n, u in links]
             continue
 
-    return {"categories": categories, "observation": " ".join(observation_lines)}
+    return {"categories": categories, "observation": " ".join(observation_lines),
+            "headline": headline, "alt_headlines": alt_headlines}
+
+
+def digest_headline(digest: dict) -> str:
+    """The day's one-line headline, falling back to its highest-rated item.
+
+    Digests published before the headline field existed have no headline of
+    their own, so the top story stands in for one.
+    """
+    if digest.get("headline"):
+        return digest["headline"]
+    items = [i for c in digest["categories"] for i in c["items"]]
+    if not items:
+        return ""
+    return max(items, key=lambda x: x["star_count"])["title"]
 
 
 # ── HTML builders ───────────────────────────────────────────────────────────────
@@ -1129,11 +1282,16 @@ def build_day_html(date_str: str, digest: dict, dates: list[str],
                  f"{weekday_of(date_str, 'en')} · {date_str}")
     title = bi("AI 每日简报", "AI Daily Digest")
     audio_html = build_audio_player(date_str, "../") if has_audio else ""
+    zh_headline = digest.get("headline", "")
+    en_headline = (en_digest or {}).get("headline", "")
+    lead = (f'<p class="day-lead">{bi(zh_headline, en_headline or zh_headline)}</p>'
+            if zh_headline else "")
     body = f"""
     <div class="container">
       <div class="day-hero">
         <div class="date-str">{weekday}</div>
         <h1>{title}</h1>
+        {lead}
       </div>
       {audio_html}
       {render_digest_dual(digest, en_digest)}
@@ -1296,8 +1454,13 @@ def build_index_html(dates: list[str], latest_digest: dict,
         latest_label = bi(f"📅 最新一期 · {latest} {weekday_of(latest)}",
                           f"📅 Latest · {latest} {weekday_of(latest, 'en')}")
         latest_audio = build_audio_player(latest, "") if latest in audio_dates else ""
+        zh_headline = latest_digest.get("headline", "")
+        en_headline = (latest_en_digest or {}).get("headline", "")
+        latest_lead = (f'<p class="day-lead">{bi(zh_headline, en_headline or zh_headline)}</p>'
+                       if zh_headline else "")
         latest_section = f"""
       <div class="section-title">{latest_label}</div>
+      {latest_lead}
       {latest_audio}
       {render_digest_dual(latest_digest, latest_en_digest)}"""
 

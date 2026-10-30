@@ -1,13 +1,52 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30T08:05:24.337171+08:00",
+  "generated_at": "2026-10-30T09:46:41.600596+08:00",
   "counts": {
-    "papers": 30,
+    "papers": 42,
     "projects": 9,
-    "news": 137
+    "news": 136
   },
   "items": {
     "papers": [
+      {
+        "category": "papers",
+        "title": "PreView: Enhancing GUI Grounding with Preprocessed Views and Cues",
+        "url": "https://huggingface.co/papers/2610.33645",
+        "normalized_url": "https://huggingface.co/papers/2610.33645",
+        "summary": "GUI grounding requires locating small controls in cluttered screenshots and identifying which control a natural-language instruction refers to. Cropping and enlargement can expose local detail, but the resulting image may still leave ambiguity about the intended target. We propose PreView, an auxiliary preprocessor that improves the inputs to an existing grounding model without further training that model. PreView prepares two complementary types of input features: task-relevant views for locali",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-24T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.33645"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "PersonaCUABench: Benchmarking Computer-Use Agents Serving Diverse Personas",
+        "url": "https://huggingface.co/papers/2610.22990",
+        "normalized_url": "https://huggingface.co/papers/2610.22990",
+        "summary": "Computer-use agents (CUAs) are commonly evaluated against fixed task specifications, but users may omit requirements, add constraints, or require approval before consequential actions. Completing the benchmark instruction does not guarantee serving the person who asked. We introduce PersonaCUABench, which holds 74 tasks across 11 domains fixed and varies only who asks. A persona agent, playing one of 44 personas in four groups, rewrites each instruction in that user's own words and answers the C",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-16T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.22990"
+        }
+      },
+      {
+        "category": "papers",
+        "title": "LOB-Impact Benchmark: Emergent Market Impact in Generative Limit Order Book Models",
+        "url": "https://huggingface.co/papers/2610.27100",
+        "normalized_url": "https://huggingface.co/papers/2610.27100",
+        "summary": "Realistic market impact is essential for generative limit order book (LOB) models to serve as world models for trading agents. If a simulator misprices this mechanism, agents learn policies that are optimal in the simulator but wrong in the real market. Existing metrics assess generated streams purely through distributional comparison with historical data, leaving counterfactual response to an agent's own orders largely unexplored. Here, we show that market impact emerges naturally in neural LOB",
+        "source": "HuggingFace Papers",
+        "published": "2026-10-19T00:00:00.000Z",
+        "importance_hint": 5,
+        "metadata": {
+          "paper_id": "2610.27100"
+        }
+      },
       {
         "category": "papers",
         "title": "Know, then Draw: A New Learning Paradigm for Visual Generation",
@@ -361,42 +400,135 @@
       },
       {
         "category": "papers",
-        "title": "The Lexical Imprint of Pre-training Data",
-        "url": "https://huggingface.co/papers/2602.10657",
-        "normalized_url": "https://huggingface.co/papers/2602.10657",
-        "summary": "How much of zero-shot benchmark accuracy is captured by word-level alignment between a pre-training corpus and the benchmark target? We study this question through word-level unigram cross-entropy (UCE), a tokenizer-agnostic, model-free measure of lexical alignment between a reference corpus and a target benchmark. Likelihood training shapes the model's predictive distribution from the pre-training corpus, and zero-shot scores under likelihood-based evaluation depend in part on the lexical align",
-        "source": "HuggingFace Papers",
-        "published": "2026-10-26T00:00:00.000Z",
+        "title": "ETA-Motion: Efficient Topology-Agnostic Motion Diffusion via Sparse Joint Learning",
+        "url": "https://arxiv.org/abs/2610.38259v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38259v1",
+        "summary": "Topology-agnostic motion generation aims to synthesize motions for diverse characters with arbitrary skeletons. Unlike conventional motion generation, which assumes a fixed skeletal template, this setting must handle diverse joint configurations and inconsistent joint semantics across characters. Existing methods address this challenge through dense full-joint modeling, which incurs substantial computational cost and hinders learning transferable motion patterns across diverse skeletal topologie",
+        "source": "arXiv",
+        "published": "2026-10-28T04:18:55+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2602.10657"
-        }
+        "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Zooming without Zooming v2: From Seeing Details to Connecting Evidence for Generalizable Multimodal Perception",
-        "url": "https://huggingface.co/papers/2610.37037",
-        "normalized_url": "https://huggingface.co/papers/2610.37037",
-        "summary": "Multimodal perception forms the foundation of multimodal intelligence. In particular, spatial perception and multimodal long-context understanding are two pivotal tasks that underpin embodied AI and multimodal agents. However, synthesizing targeted, high-quality training data for these tasks remains difficult and costly. Our key insight is that these tasks share an underlying capability, which we call connecting evidence: identifying relevant visual facts, binding them to the correct entities, r",
-        "source": "HuggingFace Papers",
-        "published": "2026-10-27T00:00:00.000Z",
-        "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.37037"
-        }
+        "title": "ParaTTT: Parallelizing Test-Time Training Layers with Deep Memories",
+        "url": "https://arxiv.org/abs/2610.38255v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38255v1",
+        "summary": "Test-time training (TTT) layers replace the linear fast-weight memory of modern recurrent architectures with a small neural network trained online by gradient descent. This nonlinear memory is more expressive than the linear memories of Gated DeltaNet and Mamba-2, but is difficult to parallelize: existing implementations such as TTT-MLP rely on sequential, block-wise weight updates that run several times slower than chunkwise-parallel linear recurrences. Moreover, their block-wise execution only",
+        "source": "arXiv",
+        "published": "2026-10-28T04:08:50+00:00",
+        "importance_hint": 4,
+        "metadata": {}
       },
       {
         "category": "papers",
-        "title": "Can Discrete Tokens Serve as Semantically Lossless Representations of Visual Signals?",
-        "url": "https://huggingface.co/papers/2610.37662",
-        "normalized_url": "https://huggingface.co/papers/2610.37662",
-        "summary": "Discrete visual tokens represent vision in a discrete form analogous to language, offering a native interface for multimodal modeling under a shared next-token prediction objective. However, quantization error is widely assumed to cause unavoidable semantic loss, fundamentally limiting the semantic fidelity of discrete visual tokens and positioning continuous visual representations as an intrinsic upper bound. Using multimodal understanding as a proxy for semantic fidelity, we revisit this assum",
-        "source": "HuggingFace Papers",
-        "published": "2026-10-27T00:00:00.000Z",
+        "title": "Transportable Offline Reinforcement Learning in Presence of Unmeasured Confounding",
+        "url": "https://arxiv.org/abs/2610.38253v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38253v1",
+        "summary": "Offline reinforcement learning seeks to learn decision policies from previously collected data, but deployment environments may differ from the domains in which the data were collected, and logged variables may omit confounders that affected both historical actions and outcomes. We study offline policy learning under the joint challenges of domain discrepancy and unmeasured confounding, where multiple heterogeneous source datasets provide complementary information about a target domain. We devel",
+        "source": "arXiv",
+        "published": "2026-10-28T04:07:01+00:00",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "A Tutorial on Generative Models for Music Audio",
+        "url": "https://arxiv.org/abs/2610.38252v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38252v1",
+        "summary": "Music audio generation spans instrumental clips, full songs with vocals, edits of existing recordings, and systems that play alongside a musician in real time. This monograph explains the methods behind these systems for readers familiar with neural-network training who are new to music generation. It introduces neural audio codecs and autoencoders, autoregressive and masked token models, diffusion and flow matching, sampling acceleration, and preference optimization in a shared notation. Worked",
+        "source": "arXiv",
+        "published": "2026-10-28T04:04:24+00:00",
         "importance_hint": 5,
-        "metadata": {
-          "paper_id": "2610.37662"
-        }
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Keepace.ai: A Technical Report on a Large Language Model for Sports and Health",
+        "url": "https://arxiv.org/abs/2610.38249v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38249v1",
+        "summary": "Large language models hold promise for delivering safe, scientifically grounded, and personalized exercise guidance at scale, yet the sports-and-health domain still lacks curated training corpora and rigorous evaluation benchmarks. Keepace.ai is a domain-specialized LLM built on Qwen3.5-27B through post-training, currently optimized for Chinese-language exercise guidance across three tasks: workout plan generation, sports-and-health knowledge QA, and personal sports data analysis. In internal ru",
+        "source": "arXiv",
+        "published": "2026-10-28T04:00:29+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Verification-Guided Retrosynthesis: Reaction Feedback and Evidence Timing",
+        "url": "https://arxiv.org/abs/2610.38245v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38245v1",
+        "summary": "Retrosynthesis planning seeks synthesis routes from purchasable starting materials to a target molecule. Search over predicted reactions can connect a target to available materials, yet an infeasible reaction can invalidate the resulting route. Evaluating route quality only after search has finished cannot correct errors made during search. We introduce Verification-Guided Reflow (VGR), incorporating reaction verification as a decision action in AND/OR search. Verification results are represente",
+        "source": "arXiv",
+        "published": "2026-10-28T03:50:35+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Precedent or Intent? What Coding Agents Follow When Evolving Existing Code",
+        "url": "https://arxiv.org/abs/2610.38244v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38244v1",
+        "summary": "Existing code reveals past implementation decisions but rarely explains the reasoning behind them. When coding agents implement new features or modify existing functionality, past decisions may conflict with new task instructions. This raises a fundamental question for agentic software evolution: when multiple implementations satisfy the same functional requirements, how do coding agents decide whether to follow existing code or new task instructions? We investigate this question through bidirec",
+        "source": "arXiv",
+        "published": "2026-10-28T03:50:17+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Nearly Minimax Optimal Regret for Adversarial Linear Bandits with Strong Corruptions",
+        "url": "https://arxiv.org/abs/2610.38243v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38243v1",
+        "summary": "We study adversarial linear bandits with strong corruption, in which an adaptive adversary chooses the reward vectors and a strong adversary corrupts each observed reward after seeing the learner's action, subject to a known total corruption budget $C$. Strong corruption breaks the importance-weighted reward estimates used by adversarial bandit algorithms: by corrupting only the rounds in which a rarely sampled action is drawn, the adversary amplifies each unit of corruption by the inverse of it",
+        "source": "arXiv",
+        "published": "2026-10-28T03:48:29+00:00",
+        "importance_hint": 4,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "MEV: A Multi-Event Video Dataset for Long-Take Generation",
+        "url": "https://arxiv.org/abs/2610.38241v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38241v1",
+        "summary": "Current datasets for text-to-video generation are largely limited to short clips depicting a single event or coarse-grained captions. As a result, they provide limited supervision for modeling long-take temporal dependencies, often leading to temporally inconsistent generations when describing multiple events. In this paper, we introduce MEV, a multi-event video dataset designed for long-take video generation. MEV provides high-quality real-world videos where subjects can perform a sequence of d",
+        "source": "arXiv",
+        "published": "2026-10-28T03:43:19+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "The Indian Financial Automated Advice Bias (IFAAB) Dataset : Auditing Socioeconomic and Demographic Disparities in LLM-Generated Financial Advice in India",
+        "url": "https://arxiv.org/abs/2610.38239v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38239v1",
+        "summary": "Large language models are increasingly used for financial guidance, yet little is known about whether their advice changes across social identities in Global South contexts. We introduce the Indian Financial Automated Advice Bias (IFAAB) benchmark, a counterfactual audit dataset of 31,734 GPT-4o-generated financial-advice responses for synthetic Indian personas varying by gender, caste, education, employment, residence, age, and district. Holding the underlying request fixed, we evaluate dispari",
+        "source": "arXiv",
+        "published": "2026-10-28T03:39:59+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "Variational Consequence-Driven Offline Reinforcement Learning",
+        "url": "https://arxiv.org/abs/2610.38238v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38238v1",
+        "summary": "Offline reinforcement learning (RL) typically mitigates distribution shift by imposing divergence constraints on the action distributions of the learned and behavior policies. However, this paradigm cannot ensure the underlying dynamic consistency structure: even minor action deviations can lead to drastically different transitions, inadvertently driving the agent away from the offline dataset. To address this, we explore policy constraints through their induced state-consequence distributions r",
+        "source": "arXiv",
+        "published": "2026-10-28T03:39:19+00:00",
+        "importance_hint": 5,
+        "metadata": {}
+      },
+      {
+        "category": "papers",
+        "title": "3DCodeEdit: Benchmarking Instruction-Guided 3D Program Editing",
+        "url": "https://arxiv.org/abs/2610.38231v1",
+        "normalized_url": "https://arxiv.org/abs/2610.38231v1",
+        "summary": "Language models increasingly create 3D content through code, with practical workflows often relying on editing existing programs rather than regenerating them, for speed and precise control. Such edits require understanding what a program builds and foreseeing how a change reshapes it, yet prior benchmarks mostly evaluate generation or simple edits against a reference. In this paper, we introduce 3DCodeEdit, a benchmark of 2,592 instruction-guided editing tasks over 108 Blender programs that con",
+        "source": "arXiv",
+        "published": "2026-10-28T03:29:59+00:00",
+        "importance_hint": 5,
+        "metadata": {}
       }
     ],
     "projects": [
@@ -521,10 +653,21 @@
     "news": [
       {
         "category": "news",
+        "title": "Show HN: I Turned DOOM into a Transformer",
+        "url": "https://github.com/mottopanikeiku/doomformer",
+        "normalized_url": "https://github.com/mottopanikeiku/doomformer",
+        "summary": "HN points: 32, comments: 8",
+        "source": "Hacker News",
+        "published": "2026-10-29T23:25:46Z",
+        "importance_hint": 3,
+        "metadata": {}
+      },
+      {
+        "category": "news",
         "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
         "url": "https://journal.animationstudies.org/article/id/66/",
         "normalized_url": "https://journal.animationstudies.org/article/id/66",
-        "summary": "HN points: 24, comments: 1",
+        "summary": "HN points: 44, comments: 7",
         "source": "Hacker News",
         "published": "2026-10-29T22:26:38Z",
         "importance_hint": 3,
@@ -535,7 +678,7 @@
         "title": "Google value plunges by $500B as AI fears rattle Wall Street",
         "url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
         "normalized_url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
-        "summary": "HN points: 21, comments: 2",
+        "summary": "HN points: 34, comments: 8",
         "source": "Hacker News",
         "published": "2026-10-29T22:22:13Z",
         "importance_hint": 4,
@@ -546,7 +689,7 @@
         "title": "Proton goes all in on using AI",
         "url": "https://convo.casa/@b/117525936178835007",
         "normalized_url": "https://convo.casa/@b/117525936178835007",
-        "summary": "HN points: 26, comments: 8",
+        "summary": "HN points: 76, comments: 67",
         "source": "Hacker News",
         "published": "2026-10-29T21:49:28Z",
         "importance_hint": 3,
@@ -557,7 +700,7 @@
         "title": "We ran AI agent swarms in Minecraft and Mindustry",
         "url": "https://labs.ycombinator.com/projects/games/index.html",
         "normalized_url": "https://labs.ycombinator.com/projects/games/index.html",
-        "summary": "HN points: 102, comments: 37",
+        "summary": "HN points: 156, comments: 60",
         "source": "Hacker News",
         "published": "2026-10-29T21:40:28Z",
         "importance_hint": 4,
@@ -568,7 +711,7 @@
         "title": "Polymarket Halted International Trading After Hackers Drained Accounts",
         "url": "https://www.wired.com/story/polymarket-flagship-platform-hack-traders-lose-money/",
         "normalized_url": "https://www.wired.com/story/polymarket-flagship-platform-hack-traders-lose-money",
-        "summary": "HN points: 16, comments: 3",
+        "summary": "HN points: 19, comments: 3",
         "source": "Hacker News",
         "published": "2026-10-29T21:28:43Z",
         "importance_hint": 3,
@@ -590,7 +733,7 @@
         "title": "Binance hot wallet drained of about $2.5B in tokens on Ethereum",
         "url": "https://etherscan.io/address/0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c",
         "normalized_url": "https://etherscan.io/address/0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c",
-        "summary": "HN points: 18, comments: 6",
+        "summary": "HN points: 19, comments: 6",
         "source": "Hacker News",
         "published": "2026-10-29T21:22:31Z",
         "importance_hint": 3,
@@ -612,7 +755,7 @@
         "title": "Apple bullied flash memory suppliers, and why AI datacenters changed the game",
         "url": "https://www.msn.com/en-us/news/other/the-beleaguered-chip-sellers-getting-their-revenge-on-apple/ar-AA2ghTPi",
         "normalized_url": "https://www.msn.com/en-us/news/other/the-beleaguered-chip-sellers-getting-their-revenge-on-apple/ar-AA2ghTPi",
-        "summary": "HN points: 11, comments: 0",
+        "summary": "HN points: 12, comments: 0",
         "source": "Hacker News",
         "published": "2026-10-29T20:52:44Z",
         "importance_hint": 3,
@@ -623,7 +766,7 @@
         "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
         "url": "https://github.com/SheepSeb/tinyworldformer",
         "normalized_url": "https://github.com/SheepSeb/tinyworldformer",
-        "summary": "HN points: 82, comments: 7",
+        "summary": "HN points: 125, comments: 8",
         "source": "Hacker News",
         "published": "2026-10-29T20:32:28Z",
         "importance_hint": 4,
@@ -634,7 +777,7 @@
         "title": "AI Made Me Homeless",
         "url": "https://medium.com/effortless-programming/ai-made-me-homeless-a7266d716e59",
         "normalized_url": "https://medium.com/effortless-programming/ai-made-me-homeless-a7266d716e59",
-        "summary": "HN points: 12, comments: 7",
+        "summary": "HN points: 13, comments: 8",
         "source": "Hacker News",
         "published": "2026-10-29T20:19:09Z",
         "importance_hint": 3,
@@ -656,7 +799,7 @@
         "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
         "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
         "normalized_url": "https://divergencelabs.com/publications/ige-preprint.pdf",
-        "summary": "HN points: 33, comments: 21",
+        "summary": "HN points: 38, comments: 28",
         "source": "Hacker News",
         "published": "2026-10-29T19:25:48Z",
         "importance_hint": 3,
@@ -675,36 +818,12 @@
       },
       {
         "category": "news",
-        "title": "How Elon Musk Turned on Ukraine",
-        "url": "https://www.theatlantic.com/national-security/2026/10/elon-musk-ukraine-starlink-alternative/689192/",
-        "normalized_url": "https://www.theatlantic.com/national-security/2026/10/elon-musk-ukraine-starlink-alternative/689192",
-        "summary": "HN points: 11, comments: 0",
-        "source": "Hacker News",
-        "published": "2026-10-29T19:00:20Z",
-        "importance_hint": 3,
-        "metadata": {}
-      },
-      {
-        "category": "news",
-        "title": "36氪出海·活动 | 2026北京国际投资贸易洽谈会在京举办",
-        "url": "https://www.36kr.com/p/4047063490755074",
-        "normalized_url": "https://www.36kr.com/p/4047063490755074",
-        "summary": "10月29日至30日，2026北京国际投资贸易洽谈会在北京昆仑饭店举办。大会吸引来自20余个国家和地区的31家境外机构，150余名境外代表参会，围绕跨境投融资、数字经济、绿色能源、人工智能与机器人等前沿领域开展深度研讨。",
+        "title": "AI进入细胞工厂，资本等的「大结果」快到了？",
+        "url": "https://www.36kr.com/p/4046754792543106",
+        "normalized_url": "https://www.36kr.com/p/4046754792543106",
+        "summary": "“对比盲筛，AI能使研发周期缩短大约80%。”",
         "source": "36Kr AI",
-        "published": "2026-10-29T14:46:53+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
-        }
-      },
-      {
-        "category": "news",
-        "title": "部署态加速，智元要打通物理AI全链路",
-        "url": "https://www.36kr.com/p/4047032889800965",
-        "normalized_url": "https://www.36kr.com/p/4047032889800965",
-        "summary": "“万台下线，只是制造业的胜利，万台上岗，才是物理AI的胜利”。",
-        "source": "36Kr AI",
-        "published": "2026-10-29T14:25:57+00:00",
+        "published": "2026-10-30T01:31:17+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -712,12 +831,12 @@
       },
       {
         "category": "news",
-        "title": "Netflix的中年危机：巨头抱团围堵，短剧疯狂抢滩",
-        "url": "https://www.36kr.com/p/4046839035221891",
-        "normalized_url": "https://www.36kr.com/p/4046839035221891",
-        "summary": "好莱坞巨头、YouTube、AI短剧，“流媒体之王”遭遇四面夹击",
+        "title": "好消息：我们能多活9年了",
+        "url": "https://www.36kr.com/p/4047676161047046",
+        "normalized_url": "https://www.36kr.com/p/4047676161047046",
+        "summary": "坏消息：生病的日子就有2年！",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:28:27+00:00",
+        "published": "2026-10-30T01:21:36+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -725,12 +844,12 @@
       },
       {
         "category": "news",
-        "title": "月薪最高8万元，FDE为何如此抢手？",
-        "url": "https://www.36kr.com/p/4046888827894272",
-        "normalized_url": "https://www.36kr.com/p/4046888827894272",
-        "summary": "AI落地“最后一公里”瞄准FDE",
+        "title": "苹果，与闪存供应商的恩怨往事",
+        "url": "https://www.36kr.com/p/4047676880009732",
+        "normalized_url": "https://www.36kr.com/p/4047676880009732",
+        "summary": "AI巨头闪存需求暴涨，彻底逆转苹果与供应商议价格局",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:27:34+00:00",
+        "published": "2026-10-30T01:13:13+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -738,12 +857,12 @@
       },
       {
         "category": "news",
-        "title": "阿里云、火山引擎市占率数据把人搞懵了，到底谁才是真第一？",
-        "url": "https://www.36kr.com/p/4046815194617478",
-        "normalized_url": "https://www.36kr.com/p/4046815194617478",
-        "summary": "各有各的口径，而蛋糕只有一块。",
+        "title": "山东，为什么没有大型房企？",
+        "url": "https://www.36kr.com/p/4046906868463872",
+        "normalized_url": "https://www.36kr.com/p/4046906868463872",
+        "summary": "一件好事",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:23:51+00:00",
+        "published": "2026-10-30T00:33:49+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -751,12 +870,12 @@
       },
       {
         "category": "news",
-        "title": "腾讯 AI Lab 又一核心骨干去向确认，“王者绝悟”前技术负责人叶德珩加入字节 Seed",
-        "url": "https://www.36kr.com/p/4046831060898944",
-        "normalized_url": "https://www.36kr.com/p/4046831060898944",
-        "summary": "腾讯 AI Lab 在今年3月成为历史，原有研究骨干的去向正陆续浮出水面。",
+        "title": "财通基金为什么清仓金梓才的两只基金？",
+        "url": "https://www.36kr.com/p/4046916250908932",
+        "normalized_url": "https://www.36kr.com/p/4046916250908932",
+        "summary": "财通基金正经历资金、管理层、投资风格深度调整",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:23:01+00:00",
+        "published": "2026-10-30T00:33:08+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -764,12 +883,12 @@
       },
       {
         "category": "news",
-        "title": "字节猫箱火爆背后：有人为爱充值，有人嫌AI恋人太假",
-        "url": "https://www.36kr.com/p/4046812071614084",
-        "normalized_url": "https://www.36kr.com/p/4046812071614084",
-        "summary": "有人为“纸片人”花了近万元。",
+        "title": "资本抢投、大厂押注，AI眼镜最大赢家是售价50的华强北？",
+        "url": "https://www.36kr.com/p/4047556524292358",
+        "normalized_url": "https://www.36kr.com/p/4047556524292358",
+        "summary": "出货量不到手机零头，AI眼镜的“iPhone时刻”还有多远？",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:06:58+00:00",
+        "published": "2026-10-30T00:29:47+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -777,12 +896,12 @@
       },
       {
         "category": "news",
-        "title": "千问办公的第一场行业战，选在了阿里最不能丢的地方",
-        "url": "https://www.36kr.com/p/4046794503754889",
-        "normalized_url": "https://www.36kr.com/p/4046794503754889",
-        "summary": "电商是先锋也是保底",
+        "title": "龙虾尸骸，SaaS残梦，大厂焦虑：AI办公究竟是什么？",
+        "url": "https://www.36kr.com/p/4046972364421635",
+        "normalized_url": "https://www.36kr.com/p/4046972364421635",
+        "summary": "龙虾蜕下的壳，已经被大厂穿上了",
         "source": "36Kr AI",
-        "published": "2026-10-29T13:06:37+00:00",
+        "published": "2026-10-30T00:29:14+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -790,12 +909,12 @@
       },
       {
         "category": "news",
-        "title": "三位百亿基金经理，“悄悄”买入宇树科技",
-        "url": "https://www.36kr.com/p/4046847150871685",
-        "normalized_url": "https://www.36kr.com/p/4046847150871685",
-        "summary": "机器人板块进入业绩验证期",
+        "title": "Kimi半年三次道歉：偷跑、降智、海外营销疑云",
+        "url": "https://www.36kr.com/p/4047614811486729",
+        "normalized_url": "https://www.36kr.com/p/4047614811486729",
+        "summary": "跑分全球第四，Kimi为何会栽在“烧额度”上？",
         "source": "36Kr AI",
-        "published": "2026-10-29T12:40:24+00:00",
+        "published": "2026-10-30T00:28:45+00:00",
         "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
@@ -803,13 +922,26 @@
       },
       {
         "category": "news",
-        "title": "小米智元加持，“清华系”芯片公司换道启动IPO",
-        "url": "https://www.36kr.com/p/4046852728330114",
-        "normalized_url": "https://www.36kr.com/p/4046852728330114",
-        "summary": "赛道没有留门，辉羲换了扇窗。",
+        "title": "压力来临时，你是哪一种领导者？",
+        "url": "https://www.36kr.com/p/4047616788789513",
+        "normalized_url": "https://www.36kr.com/p/4047616788789513",
+        "summary": "六种压力反应模式，优秀的领导者会根据情境切换应对模式。",
         "source": "36Kr AI",
-        "published": "2026-10-29T12:39:54+00:00",
-        "importance_hint": 4,
+        "published": "2026-10-30T00:28:35+00:00",
+        "importance_hint": 3,
+        "metadata": {
+          "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
+        }
+      },
+      {
+        "category": "news",
+        "title": "阿里AI双线战：阿里云守B端底仓，千问赌C端入口",
+        "url": "https://www.36kr.com/p/4046995399677829",
+        "normalized_url": "https://www.36kr.com/p/4046995399677829",
+        "summary": "阿里云MaaS近半份额，以B端利润养C端千问抢入口",
+        "source": "36Kr AI",
+        "published": "2026-10-30T00:25:26+00:00",
+        "importance_hint": 3,
         "metadata": {
           "feed_url": "https://rsshub.rssforever.com/36kr/search/articles/ai"
         }
@@ -946,6 +1078,19 @@
       },
       {
         "category": "news",
+        "title": "Chainguard 推出面向 AI 编码智能体的安全工作区与安全校验能力",
+        "url": "https://www.infoq.cn/article/UNli8x0wc8XUNjI5ETya?utm_source=rss&utm_medium=article",
+        "normalized_url": "https://www.infoq.cn/article/UNli8x0wc8XUNjI5ETya",
+        "summary": "点击查看原文>",
+        "source": "InfoQ 中文",
+        "published": "2026-10-30T09:23:00+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://www.infoq.cn/feed.xml"
+        }
+      },
+      {
+        "category": "news",
         "title": "Java 近期资讯：JDK 28 JEP、Azul Payara、Gatherers4j、Google ADK、Yupiik 与 Apache Camel CVE",
         "url": "https://www.infoq.cn/article/dfj1fLfP8iVLKFtEfr69?utm_source=rss&utm_medium=article",
         "normalized_url": "https://www.infoq.cn/article/dfj1fLfP8iVLKFtEfr69",
@@ -1037,28 +1182,15 @@
       },
       {
         "category": "news",
-        "title": "天数智芯公布天垓300实测数据：部分推理场景达到H200水平，端侧对标Thor T5000",
-        "url": "https://www.infoq.cn/article/tFaOHgBe8ENwteobTsLV?utm_source=rss&utm_medium=article",
-        "normalized_url": "https://www.infoq.cn/article/tFaOHgBe8ENwteobTsLV",
-        "summary": "点击查看原文>",
-        "source": "InfoQ 中文",
-        "published": "2026-10-29T16:38:28+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://www.infoq.cn/feed.xml"
-        }
-      },
-      {
-        "category": "news",
-        "title": "我用AI做了一张两千年的中国历史地图",
-        "url": "https://sspai.com/post/117510",
-        "normalized_url": "https://sspai.com/post/117510",
-        "summary": "10 月 21 号一大早醒来，我随手刷了一下 GitHub ，发现前几天还只有几十个 star 的 「江山时序」 ，一晚上多了一百多个。接下来几天，这个数字一路涨到了 1400。 江山时序 GitHub Star 曲线 到现在我还觉得有点不真实，所以还是写点东西，记录一下我为什么想做这样一个网站。 历史课本里的插图 我是个理科生，但从小就喜欢历史，也喜欢看地图。上学那会儿，历史、地理经常考全班最高分，一度很想选文科。可惜政治实在太差，一看到论述题就头疼，只好忍痛学了理科，后来顺理成章成了一名程序员。但喜欢人文地理的那颗心一直没变。 上学时我最爱翻的，就是初高中历史课本里的地图。看着大唐的疆域图，幻想贞观、开元的盛世；翻到宋朝，会为燕云十六州的丢失默默叹气；看到大明重整河山，再翻到清朝全盛时期的“秋海棠”，又总会兴奋半天。我常把不同朝代的地图摆在一起对比变迁，再对照今天的城市找位置，每次都有新发现。后来古文、诗词学得多了，读到诗文里的地名，我也习惯去地图上找找它们在今天的什么地方。 那时候我就想，要是有这么一张地图，能把整部中国历史的朝代更替都装进去，拖一下就能看变迁，可太酷了。 工作以",
-        "source": "SSPAI AI",
-        "published": "2026-10-27T00:57:38+00:00",
+        "title": "You don’t need to believe in a god to get a religious exemption from using AI at work",
+        "url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work/",
+        "normalized_url": "https://techcrunch.com/2026/10/29/you-dont-need-to-believe-in-a-god-to-get-a-religious-exemption-from-using-ai-at-work",
+        "summary": "David Durman, a University of Kentucky administrator, recently earned a religious exemption from using AI in the workplace.",
+        "source": "TechCrunch AI",
+        "published": "2026-10-30T01:20:48+00:00",
         "importance_hint": 3,
         "metadata": {
-          "feed_url": "https://rsshub.rssforever.com/sspai/tag/AI"
+          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
         }
       },
       {
@@ -1173,19 +1305,6 @@
         "summary": "Dream is grounded in real physics and construction standards. Just as LLMs learn from text, Dream's world model is trained on more than 100 million square feet of building data gathered from permit archives across the United States.",
         "source": "TechCrunch AI",
         "published": "2026-10-29T16:21:00+00:00",
-        "importance_hint": 4,
-        "metadata": {
-          "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
-        }
-      },
-      {
-        "category": "news",
-        "title": "Wabi, the AI agent that builds mini apps, now valued at $1.25B after latest round",
-        "url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round/",
-        "normalized_url": "https://techcrunch.com/2026/10/29/wabi-the-ai-agent-that-builds-mini-apps-now-valued-at-1-25b-after-latest-round",
-        "summary": "On Thursday, AI app Wabi, now describing itself as a \"personal agent,\" said it has raised $55 million at a $1.25 billion valuation.",
-        "source": "TechCrunch AI",
-        "published": "2026-10-29T14:35:26+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/"
@@ -2103,19 +2222,6 @@
       },
       {
         "category": "news",
-        "title": "Mistral Large 4 (Le Chonk) is now open weight",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xil3qy/mistral_large_4_le_chonk_is_now_open_weight/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xil3qy/mistral_large_4_le_chonk_is_now_open_weight",
-        "summary": "submitted by /u/Few_Painter_5588 [link] [comments]",
-        "source": "r/LocalLLaMA",
-        "published": "2026-10-29T14:11:42+00:00",
-        "importance_hint": 3,
-        "metadata": {
-          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
-        }
-      },
-      {
-        "category": "news",
         "title": "Sam Altman: “Local inference is a terrible allocation of scarce resources”",
         "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xizbq1/sam_altman_local_inference_is_a_terrible/",
         "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xizbq1/sam_altman_local_inference_is_a_terrible",
@@ -2129,13 +2235,13 @@
       },
       {
         "category": "news",
-        "title": "Qwen4 1M context window",
-        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xi7390/qwen4_1m_context_window/",
-        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xi7390/qwen4_1m_context_window",
-        "summary": "Qwen4 models will have a 1 million context window. Qwen4-27B was not mentioned here, but should be announced at Apsara netherlands tommorow. We have a date for Qwen4-max, it is November 1st. Edit: It says October 1st, so its probably a placeholder. PR: https://github.com/QwenLM/qwen-code/pull/15762 https://preview.redd.it/ounsliro9byh1.png?width=823&format=png&auto=webp&s=0762bd7178df8605b3082d60ff83da8e3d399ba7 submitted by /u/brainExploded99 [link] [comments]",
+        "title": "Mistral Large 4 (Le Chonk) is now open weight",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xil3qy/mistral_large_4_le_chonk_is_now_open_weight/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xil3qy/mistral_large_4_le_chonk_is_now_open_weight",
+        "summary": "submitted by /u/Few_Painter_5588 [link] [comments]",
         "source": "r/LocalLLaMA",
-        "published": "2026-10-29T01:42:55+00:00",
-        "importance_hint": 4,
+        "published": "2026-10-29T14:11:42+00:00",
+        "importance_hint": 3,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
         }
@@ -2187,6 +2293,19 @@
         "summary": "While looking for audio models, I came across OpenVoice. It's getting pretty old, but surprisingly still ranks high on TTS leaderboards. What caught my attention was its design: essentially TTS + voice conversion . The ToneColorConverter can run independently of the TTS model. That got me thinking: Can we pair it with other TTS models? I tried it with Kokoro, and the results were pretty good! So I added a small recipe any-tts to audio.cpp for Kokoro + OpenVoice ToneColorConverter. Recipes were i",
         "source": "r/LocalLLaMA",
         "published": "2026-10-29T16:59:08+00:00",
+        "importance_hint": 4,
+        "metadata": {
+          "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"
+        }
+      },
+      {
+        "category": "news",
+        "title": "Why you can't trust cloud API endpoints: 40 days of coding-agent telemetry showing the exact day providers silently overwrote deepseek-v4.1-flash with -1017 (\"faster execution, shorter answers\" = 3x more swearing and 6.7",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xiqw9i/why_you_cant_trust_cloud_api_endpoints_40_days_of/",
+        "normalized_url": "https://www.reddit.com/r/LocalLLaMA/comments/1xiqw9i/why_you_cant_trust_cloud_api_endpoints_40_days_of",
+        "summary": "Around mid-October deepseek-v4.1-flash suddenly started feeling much dumber in my coding agent, so I parsed my local session logs to see when it broke. Before the update it had a funny quirk where it would randomly reply in Chinese while being 100% convinced it was speaking English. In the -1017 update (released Oct 17) they fixed the Chinese leak and made it fire tool calls more aggressively - and somehow lobotomized the model in the process. Providers silently overwrote the deepseek-v4.1-flash",
+        "source": "r/LocalLLaMA",
+        "published": "2026-10-29T17:46:05+00:00",
         "importance_hint": 4,
         "metadata": {
           "feed_url": "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day"

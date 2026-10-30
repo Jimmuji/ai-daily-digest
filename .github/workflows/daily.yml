@@ -6,6 +6,11 @@ on:
     # Primary trigger: cron-job.org calls the GitHub API at 08:05 Beijing time.
     - cron: '0 22 * * *'  # UTC 22:00 (prev day) = Beijing 06:00, +3-4h GitHub delay → ~09:00-10:00 Beijing
   workflow_dispatch: # Allow manual trigger (also used by cron-job.org)
+    inputs:
+      force:
+        description: "Regenerate even if today's digest already exists"
+        type: boolean
+        default: false
 
 jobs:
   generate:
@@ -16,20 +21,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Both triggers fire for the same Beijing day: cron-job.org dispatches at
+      # ~06:00 and GitHub's own cron lands an hour or two later. Running twice
+      # pays for a second set of AI and TTS calls only to overwrite the first.
+      - name: Skip if today's digest already exists
+        id: guard
+        env:
+          FORCE: ${{ inputs.force }}
+        run: |
+          DATE=$(TZ=Asia/Shanghai date +"%Y-%m-%d")
+          if [ -f "daily/${DATE}.md" ] && [ "$FORCE" != "true" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Digest for ${DATE} already exists; skipping this run."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.guard.outputs.run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.guard.outputs.run == 'true'
         run: pip install -r requirements.txt
 
       # The social cover is rendered by headless Chrome (preinstalled on the
       # runner), which needs a CJK font or every character comes out as tofu.
       - name: Install CJK fonts for cover rendering
+        if: steps.guard.outputs.run == 'true'
         run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
 
       - name: Generate daily digest
+        if: steps.guard.outputs.run == 'true'
         env:
           API_KEY: ${{ secrets.API_KEY }}
           API_BASE_URL: ${{ vars.API_BASE_URL || 'https://api.deepseek.com' }}
@@ -38,6 +63,7 @@ jobs:
         run: cd scripts && python main.py
 
       - name: Commit and push
+        if: steps.guard.outputs.run == 'true'
         run: |
           git config user.name "AI Daily Bot"
           git config user.email "bot@github.com"

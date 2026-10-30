@@ -24,6 +24,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # The social cover is rendered by headless Chrome (preinstalled on the
+      # runner), which needs a CJK font or every character comes out as tofu.
+      - name: Install CJK fonts for cover rendering
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+
       - name: Generate daily digest
         env:
           API_KEY: ${{ secrets.API_KEY }}

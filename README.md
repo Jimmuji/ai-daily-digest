@@ -60,6 +60,7 @@ AI 领域每天产出大量信息——新论文、新模型、新产品、新�
  ├── 语音合成 MP3（edge-tts，免费神经网络语音）→ docs/audio/
  ├── 构建静态站点 → docs/（首页、每日页、全文搜索、热词、播客页）
  ├── 生成播客 RSS 订阅源 → docs/podcast.xml（可在小宇宙 / Apple 播客订阅）
+ ├── 渲染社交封面图 → docs/covers/{date}.png（1080×1440，可直接发小红书）
  └── 保存原始数据 JSON → data/，方便追踪来源
 ```
 
@@ -75,6 +76,40 @@ AI 领域每天产出大量信息——新论文、新模型、新产品、新�
 - **🔍 全文搜索**：跨全部历史日报即时搜索（中英皆可）。
 - **🔥 热词趋势**：近 7 天高频话题/公司标签，点击直达相关日报。
 - **🌓 浅色 / 深色主题**：跟随系统或手动切换，偏好本地记忆。
+- **📱 可安装为 App**：支持添加到手机 / 桌面主屏幕，独立窗口打开，最近 7 期自动离线缓存，地铁没信号也能读。
+
+---
+
+## 📱 装成 App
+
+站点本身就是一个 PWA，无需应用商店：
+
+- **iPhone / iPad**：Safari 打开站点 → 底部「分享」→ **添加到主屏幕**。
+- **Android / 桌面 Chrome、Edge**：页面底部会弹出「安装」提示，或用地址栏右侧的安装图标。
+
+装好之后：图标直达、全屏无浏览器地址栏、最近 7 期日报与最近听过的 5 期音频离线可用；断网时打开未缓存的日期会显示离线页并列出本地已有的期数。
+
+### 📦 JSON API
+
+给 App / 脚本 / 第三方客户端用的结构化数据，无需解析 HTML：
+
+| 接口 | 内容 |
+|------|------|
+| [`api/index.json`](https://jimmuji.github.io/ai-daily-digest/api/index.json) | 全部期号列表：日期、今日标题、条目数、音频时长、当期 3 条重点 |
+| [`api/{date}.json`](https://jimmuji.github.io/ai-daily-digest/api/2026-07-29.json) | 单期全文：今日标题 + 2 条备选、分类、摘要、核心价值、星级、来源链接，中英各一份 |
+
+「今日标题」是每期一句 20 字以内的概括，直接可用作社交媒体标题；`headline_alt` 是两条备选。
+早于该功能上线的日报没有这一字段，此时 `headline` 回落为当期星级最高的那条标题，并标记 `headline_is_fallback: true`。
+
+```bash
+# 最新一期的日期
+curl -s https://jimmuji.github.io/ai-daily-digest/api/index.json | jq -r .latest
+
+# 拉取该期全文
+curl -s https://jimmuji.github.io/ai-daily-digest/api/2026-07-29.json | jq '.zh.categories[].name'
+```
+
+所有 URL 均相对于站点根地址，客户端只需记住一个 base URL。
 
 ---
 
@@ -137,7 +172,10 @@ ai-daily-digest/
 │   ├── sources.py           # 数据源：HuggingFace / GitHub / RSS
 │   ├── summarize.py         # AI 总结：DeepSeek，中英双语单次调用
 │   ├── audio.py             # 口播稿 + edge-tts 语音合成 + 旧音频清理
-│   └── generate_site.py     # 静态站点 + 搜索/热词/播放器 + 播客 RSS
+│   ├── generate_site.py     # 静态站点 + 搜索/热词/播放器 + 播客 RSS + API/PWA
+│   ├── cover.py             # 每日社交封面图（1080×1440，headless Chrome 渲染）
+│   ├── brandmark.py         # 品牌标识几何定义（棱镜分光）
+│   └── make_icons.py        # 一次性：渲染 logo 与 App 图标
 ├── daily/                   # 📰 每日日报（{date}.md + {date}.en.md）
 │   ├── 2026-04-14.md
 │   └── ...
@@ -150,7 +188,14 @@ ai-daily-digest/
 │   ├── podcast.xml          #    📻 播客 RSS 订阅源
 │   ├── podcast.xsl          #    浏览器内美化播客页的样式表
 │   ├── podcast-cover.png    #    播客封面
-│   └── search-index.json    #    全文搜索索引
+│   ├── search-index.json    #    全文搜索索引
+│   ├── api/                 #    📦 JSON API（index.json + 每期一个文件）
+│   ├── covers/              #    🖼 每日社交封面图（保留最近 30 期）
+│   ├── icons/               #    App 图标（192/512/maskable/apple-touch）
+│   ├── manifest.webmanifest #    PWA 应用清单
+│   ├── sw.js                #    Service Worker：离线缓存
+│   └── offline.html         #    断网时的兜底页
+├── brand/                   # 🎨 logo 源文件与社交头像
 ├── requirements.txt
 └── README.md
 ```
@@ -220,6 +265,10 @@ schedule:
 - [x] 中英双语简报与界面切换
 - [x] 语音播报（edge-tts）+ 播客 RSS 订阅源
 - [x] 更多数据源（Hacker News、机器之心、量子位、Wired、IEEE 等）
+- [x] JSON API + PWA（可安装、离线阅读）
+- [x] 每期一句「今日标题」+ 自动生成社交封面图
+- [ ] 每日推送通知（Web Push）
+- [ ] 上架 App Store / Play（Capacitor 套壳，见 [APP.md](APP.md)）
 - [ ] 英文语音版
 - [ ] Telegram 推送
 - [ ] 每周回顾报告

@@ -18,8 +18,9 @@ from sources import (
     record_published_urls,
 )
 from summarize import summarize
-from generate_site import generate_site
+from generate_site import generate_site, parse_digest
 from audio import generate_audio, prune_old_audio
+from cover import generate_cover, prune_old_covers
 
 
 def send_to_buttondown(subject: str, markdown: str) -> None:
@@ -123,6 +124,17 @@ def main():
         prune_old_audio(audio_dir, keep=15)  # keep ~half a month of episodes
     except Exception as e:
         print(f"  Audio generation skipped: {e}")
+
+    # Step 5.5: Social cover image (ready to post to 小红书 / 微信)
+    print("\n[Step 5.5] Rendering social cover...")
+    root = Path(__file__).parent.parent
+    try:
+        issue_no = len([f for f in output_dir.glob("*.md")
+                        if not f.name.endswith(".en.md")])
+        generate_cover(root, date_str, parse_digest(markdown), issue_no)
+        prune_old_covers(root / "docs" / "covers", keep=30)
+    except Exception as e:
+        print(f"  Cover generation skipped: {e}")
 
     # Step 6: Rebuild static site (picks up today's audio + podcast feed)
     print("\n[Step 6] Rebuilding static site...")

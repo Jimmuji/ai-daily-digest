@@ -1,19 +1,22 @@
-name: Keepalive
+name: Missing digest watchdog
 
-# GitHub disables scheduled workflows on repos with no activity for 60 days.
-# This workflow keeps the repo "alive" by making a lightweight commit every 50 days.
-# It also serves as a fallback: if the daily digest somehow missed, re-trigger it.
+# Safety net: if a Beijing day has no digest yet, dispatch the daily workflow.
+# Covers a failed cron-job.org trigger or a daily run that errored out.
+#
+# This used to also push an empty commit every day, to stop GitHub disabling
+# scheduled workflows after 60 idle days. The digest commits every day on its
+# own, so the empty commits only added noise to the history.
 
 on:
   schedule:
-    - cron: '30 20 * * *'  # UTC 20:30 (prev day) = Beijing 04:30, +3-4h GitHub delay → ~08:00 Beijing
+    - cron: '30 20 * * *'  # UTC 20:30 = Beijing 04:30, +3-4h GitHub delay → ~08:00 Beijing
   workflow_dispatch:
 
 jobs:
-  keepalive:
+  watchdog:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       actions: write
 
     steps:
@@ -37,11 +40,3 @@ jobs:
         run: gh workflow run daily.yml
         env:
           GH_TOKEN: ${{ github.token }}
-
-      - name: Keepalive commit (prevent GitHub from disabling schedules)
-        run: |
-          git config user.name "Keepalive Bot"
-          git config user.email "bot@github.com"
-          git commit --allow-empty -m "keepalive: $(date -u +%Y-%m-%d)"
-          git pull --rebase
-          git push

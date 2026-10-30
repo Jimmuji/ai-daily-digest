@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>离线 · AI Daily Digest</title>
+<style>
+:root { color-scheme: dark; --bg:#0d1117; --text:#e6edf3; --muted:#8b949e;
+        --card:#161b22; --border:#30363d; }
+@media (prefers-color-scheme: light) {
+  :root { color-scheme: light; --bg:#fff; --text:#1f2328; --muted:#656d76;
+          --card:#f6f8fa; --border:#d0d7de; }
+}
+/* Honour the theme the reader picked on the site itself. */
+html[data-theme="light"] {
+  color-scheme: light; --bg:#fff; --text:#1f2328; --muted:#656d76;
+  --card:#f6f8fa; --border:#d0d7de;
+}
+html[data-theme="dark"] {
+  color-scheme: dark; --bg:#0d1117; --text:#e6edf3; --muted:#8b949e;
+  --card:#161b22; --border:#30363d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); min-height: 100vh;
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       line-height: 1.7; display: flex; align-items: center;
+       justify-content: center; padding: 24px; }
+.wrap { max-width: 460px; width: 100%; text-align: center; }
+.mark { font-size: 44px; }
+h1 { font-size: 20px; margin: 12px 0 6px; }
+p { color: var(--muted); font-size: 14px; }
+.row { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+a.btn, button.btn { font: inherit; font-size: 14px; cursor: pointer;
+  padding: 8px 16px; border-radius: 8px; text-decoration: none;
+  border: 1px solid var(--border); background: var(--card); color: var(--text); }
+button.btn.primary { background: #238636; border-color: #238636; color: #fff; }
+.cached { margin-top: 26px; text-align: left; display: none; }
+.cached h2 { font-size: 13px; color: var(--muted); font-weight: 600;
+  margin-bottom: 8px; text-align: center; }
+.cached a { display: block; padding: 9px 12px; margin-bottom: 6px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); text-decoration: none; font-size: 14px; }
+.cached a span { color: var(--muted); font-size: 12px; }
+</style>
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">📡</div>
+  <h1>当前离线 · You're offline</h1>
+  <p>这一期还没有下载到本地。连上网络后即可阅读，<br>已缓存的日报仍可离线查看。</p>
+  <div class="row">
+    <button class="btn primary" onclick="location.reload()">重试 Retry</button>
+    <a class="btn" href="./index.html">回到首页 Home</a>
+  </div>
+  <div class="cached" id="cached">
+    <h2>可离线阅读 · Available offline</h2>
+    <div id="list"></div>
+  </div>
+</div>
+<script>
+(function () {
+  if (!('caches' in window)) return;
+  var base = location.pathname.replace(/offline\.html$/, '');
+  caches.keys().then(function (keys) {
+    return Promise.all(keys.map(function (k) {
+      return caches.open(k).then(function (c) { return c.keys(); });
+    }));
+  }).then(function (groups) {
+    var days = {};
+    groups.forEach(function (reqs) {
+      reqs.forEach(function (r) {
+        var m = r.url.match(/\/daily\/(\d{4}-\d{2}-\d{2})\.html$/);
+        if (m) days[m[1]] = true;
+      });
+    });
+    var dates = Object.keys(days).sort().reverse().slice(0, 10);
+    if (!dates.length) return;
+    document.getElementById('list').innerHTML = dates.map(function (d) {
+      return '<a href="' + base + 'daily/' + d + '.html">' + d +
+             ' <span>已缓存</span></a>';
+    }).join('');
+    document.getElementById('cached').style.display = 'block';
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>

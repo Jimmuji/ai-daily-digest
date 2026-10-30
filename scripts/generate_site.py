@@ -25,6 +25,27 @@ REPO_URL = "https://github.com/Jimmuji/ai-daily-digest"
 SITE_URL = "https://jimmuji.github.io/ai-daily-digest/"
 XIAOYUZHOU_URL = "https://www.xiaoyuzhoufm.com/podcast/6a325e149357568efe4741ef"
 
+# Installed-app identity (PWA manifest + iOS home-screen)
+APP_NAME = "AI Daily Digest"
+APP_SHORT_NAME = "AI 简报"
+THEME_COLOR_DARK = "#0d1117"
+THEME_COLOR_LIGHT = "#ffffff"
+
+PWA_HEAD = """  <link rel="manifest" href="{base}manifest.webmanifest">
+  <meta name="theme-color" content="{dark}" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="{light}" media="(prefers-color-scheme: light)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="{short_name}">
+  <link rel="apple-touch-icon" href="{base}icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="{base}icons/icon-192.png">"""
+
+
+def pwa_head(base: str) -> str:
+    return PWA_HEAD.format(base=base, dark=THEME_COLOR_DARK,
+                           light=THEME_COLOR_LIGHT, short_name=APP_SHORT_NAME)
+
 
 # ── CSS ────────────────────────────────────────────────────────────────────────
 
@@ -510,119 +531,28 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
   color: #484f58; font-size: 13px; border-top: 1px solid var(--border);
 }
 
-/* ── Filter bar ── */
-.filter-bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+/* ── Install-to-home-screen prompt ── */
+#installBar {
+  position: fixed; left: 50%; transform: translateX(-50%) translateY(120%);
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 300; display: flex; align-items: center; gap: 12px;
+  width: min(420px, calc(100vw - 24px)); padding: 10px 12px 10px 14px;
+  background: var(--card); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.35); font-size: 14px;
+  transition: transform .28s ease; opacity: .98;
 }
-.filter-bar .tab {
-  font-size: 13px;
-  color: var(--text-muted);
-  padding: 5px 14px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all .15s;
-  user-select: none;
+#installBar.visible { transform: translateX(-50%) translateY(0); }
+#installBar .ib-text { flex: 1; min-width: 0; line-height: 1.45; }
+#installBar .ib-text small { display: block; color: var(--text-muted); font-size: 12px; }
+#installBar button {
+  flex-shrink: 0; cursor: pointer; font: inherit; white-space: nowrap;
+  border-radius: 8px; padding: 6px 12px;
 }
-.filter-bar .tab:hover { color: var(--text); border-color: #58a6ff; }
-.filter-bar .tab.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
-.filter-bar .star-toggle {
-  margin-left: auto;
-  font-size: 13px;
-  color: #e3b341;
-  padding: 5px 14px;
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all .15s;
-  user-select: none;
-}
-.filter-bar .star-toggle:hover { border-color: #e3b341; }
-.filter-bar .star-toggle.active { background: rgba(227,179,65,.15); border-color: #e3b341; }
-
-/* ── Category section ── */
-.category { margin-bottom: 40px; }
-.category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
-.category-header h2 { font-size: 18px; font-weight: 700; }
-.cat-line { flex: 1; height: 1px; background: var(--border); }
-
-/* ── Item card ── */
-.item-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px 24px;
-  margin-bottom: 14px;
-  transition: border-color .2s;
-}
-.item-card:hover { border-color: var(--border-strong); }
-.item-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
-.item-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
-.item-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.stars { font-size: 13px; color: #e3b341; letter-spacing: 1px; }
-.item-value {
-  font-size: 13px; color: #7ee787;
-  background: rgba(46,160,67,.1); padding: 2px 10px; border-radius: 999px;
-}
-.item-sources { font-size: 13px; color: var(--text-muted); margin-left: auto; }
-.item-sources a { color: #58a6ff; margin-left: 6px; }
-.item-sources a:first-child { margin-left: 0; }
-
-/* ── Observation box ── */
-.observation {
-  background: linear-gradient(135deg, rgba(31,111,235,.12), rgba(188,140,255,.08));
-  border: 1px solid rgba(88,166,255,.2);
-  border-radius: 12px;
-  padding: 24px;
-  margin-top: 40px;
-}
-.observation h2 { font-size: 16px; font-weight: 700; color: #58a6ff; margin-bottom: 12px; }
-.observation p { font-size: 14px; color: var(--text-soft); line-height: 1.8; }
-
-.empty-filter { display: none; color: var(--text-muted); font-size: 14px; text-align: center; padding: 32px; }
-
-/* ── Day nav ── */
-.day-nav {
-  display: flex; justify-content: space-between;
-  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
-}
-.nav-btn {
-  font-size: 14px; color: #58a6ff;
-  padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px;
-  transition: background .15s;
-}
-.nav-btn:hover { background: var(--card); text-decoration: none; }
-
-/* ── Back to top ── */
-#backToTop {
-  position: fixed;
-  right: 24px; bottom: 24px;
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  background: #1f6feb;
-  color: #fff;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s, transform .2s;
-  box-shadow: 0 6px 20px rgba(0,0,0,.4);
-  z-index: 120;
-}
-#backToTop.visible { opacity: 1; pointer-events: auto; }
-#backToTop:hover { transform: translateY(-2px); }
-
-/* ── Footer ── */
-.site-footer {
-  text-align: center; padding: 24px;
-  color: #484f58; font-size: 13px; border-top: 1px solid var(--border);
+#installBar .ib-go { background: #238636; color: #fff; border: none; }
+#installBar .ib-close {
+  background: transparent; color: var(--text-muted);
+  border: 1px solid var(--border-strong); padding: 6px 9px;
 }
 
 /* ── Responsive ── */
@@ -892,6 +822,78 @@ JS = """
       else { done(); }
     });
   });
+
+  // ── Service worker: offline reading + faster repeat visits ──
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register(BASE + 'sw.js').catch(function () {});
+    });
+  }
+
+  // ── Add to home screen ──
+  (function () {
+    var standalone = (window.matchMedia &&
+                      window.matchMedia('(display-mode: standalone)').matches) ||
+                     window.navigator.standalone === true;
+    if (standalone) return;
+    try { if (localStorage.getItem('installDismissed')) return; } catch (e) {}
+
+    var en = document.documentElement.getAttribute('data-lang') === 'en';
+    var deferred = null;
+
+    function show(html, onGo) {
+      var bar = document.createElement('div');
+      bar.id = 'installBar';
+      bar.innerHTML = html;
+      document.body.appendChild(bar);
+      setTimeout(function () { bar.classList.add('visible'); }, 400);
+
+      var close = bar.querySelector('.ib-close');
+      close.addEventListener('click', function () {
+        bar.classList.remove('visible');
+        try { localStorage.setItem('installDismissed', '1'); } catch (e) {}
+        setTimeout(function () { bar.remove(); }, 300);
+      });
+      var go = bar.querySelector('.ib-go');
+      if (go && onGo) go.addEventListener('click', function () { onGo(bar); });
+    }
+
+    // Chrome / Edge / Android: real install prompt.
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferred = e;
+      show('<div class="ib-text">' +
+             (en ? 'Install AI Daily Digest' : '把 AI 简报装到桌面') +
+             '<small>' + (en ? 'Offline reading, one tap away'
+                             : '离线可读，一个图标直达') + '</small></div>' +
+           '<button class="ib-go">' + (en ? 'Install' : '安装') + '</button>' +
+           '<button class="ib-close" aria-label="close">✕</button>',
+        function (bar) {
+          bar.classList.remove('visible');
+          deferred.prompt();
+          deferred.userChoice.then(function () {
+            try { localStorage.setItem('installDismissed', '1'); } catch (e) {}
+            bar.remove();
+          });
+        });
+    });
+
+    // iOS Safari has no prompt event — show the manual steps instead.
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS/.test(ua);
+    if (isIOS && isSafari) {
+      setTimeout(function () {
+        if (deferred) return;
+        show('<div class="ib-text">' +
+               (en ? 'Add to Home Screen' : '添加到主屏幕') +
+               '<small>' + (en ? 'Tap Share ↑ then “Add to Home Screen”'
+                               : '点击底部分享 ↑ → 添加到主屏幕') + '</small></div>' +
+             '<button class="ib-close" aria-label="close">✕</button>');
+      }, 2500);
+    }
+  })();
 })();
 """
 
@@ -931,6 +933,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content="{description}">
+{pwa_head}
   <script>
     (function () {{
       try {{
@@ -1304,6 +1307,7 @@ def build_day_html(date_str: str, digest: dict, dates: list[str],
     return PAGE_TEMPLATE.format(
         title=f"AI Daily Digest · {date_str}",
         description=f"AI领域{date_str}每日简报，涵盖行业新闻、重要论文与开源项目。",
+        pwa_head=pwa_head("../"),
         css=CSS,
         header=HEADER_HTML.format(base="../", repo=REPO_URL),
         body=body,
@@ -1487,6 +1491,7 @@ def build_index_html(dates: list[str], latest_digest: dict,
     return PAGE_TEMPLATE.format(
         title="AI Daily Digest · AI 领域每日简报",
         description="AI Daily Digest 每日自动采集 AI 领域最新资讯，涵盖行业新闻、重要论文与开源项目。",
+        pwa_head=pwa_head(""),
         css=CSS,
         header=HEADER_HTML.format(base="", repo=REPO_URL),
         body=body,
@@ -1728,6 +1733,395 @@ def build_creator_page(audio_dates_desc: list[str], parsed_by_date: dict) -> str
 
 # ── Main ────────────────────────────────────────────────────────────────────────
 
+# ── App layer: JSON API ────────────────────────────────────────────────────────
+
+# A stable, versioned feed so a native/PWA client never has to scrape the HTML.
+# All URLs are relative to SITE_URL, so a client only needs one base address.
+
+API_VERSION = 1
+
+
+def _api_item(item: dict) -> dict:
+    return {
+        "title": item["title"],
+        "desc": item["desc"],
+        "value": item["value"],
+        "stars": item["star_count"],
+        "sources": item["sources"],
+    }
+
+
+def _api_digest(digest: dict) -> dict:
+    return {
+        "headline": digest_headline(digest),
+        "headline_alt": digest.get("alt_headlines", []),
+        "headline_is_fallback": not digest.get("headline"),
+        "observation": digest.get("observation", ""),
+        "categories": [
+            {
+                "emoji": cat["emoji"],
+                "name": cat["name"],
+                "type": cat["type"],
+                "items": [_api_item(i) for i in cat["items"]],
+            }
+            for cat in digest["categories"] if cat["items"]
+        ],
+    }
+
+
+def _count_items(digest: dict) -> int:
+    return sum(len(c["items"]) for c in digest["categories"])
+
+
+def build_api(parsed_by_date: dict, parsed_by_date_en: dict, dates: list[str],
+              audio_dates: set, docs_dir: Path) -> None:
+    """Write docs/api/index.json + docs/api/{date}.json."""
+    api_dir = docs_dir / "api"
+    api_dir.mkdir(parents=True, exist_ok=True)
+    audio_dir = docs_dir / "audio"
+
+    issues = []
+    for i, date_str in enumerate(dates):
+        digest = parsed_by_date[date_str]
+        en_digest = parsed_by_date_en.get(date_str)
+
+        audio = None
+        if date_str in audio_dates:
+            size, duration = _mp3_meta(audio_dir / f"{date_str}.mp3")
+            audio = {"url": f"audio/{date_str}.mp3",
+                     "bytes": size, "duration": duration}
+
+        all_items = [i for c in digest["categories"] for i in c["items"]]
+        highlights = [i["title"] for i in
+                      sorted(all_items, key=lambda x: -x["star_count"])[:3]]
+
+        payload = {
+            "api_version": API_VERSION,
+            "date": date_str,
+            "weekday": weekday_of(date_str),
+            "weekday_en": weekday_of(date_str, "en"),
+            "audio": audio,
+            "prev": dates[i - 1] if i > 0 else None,
+            "next": dates[i + 1] if i < len(dates) - 1 else None,
+            "web_url": f"{SITE_URL}daily/{date_str}.html",
+            "zh": _api_digest(digest),
+            "en": _api_digest(en_digest) if en_digest else None,
+        }
+        (api_dir / f"{date_str}.json").write_text(
+            json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+
+        issues.append({
+            "date": date_str,
+            "weekday": weekday_of(date_str),
+            "weekday_en": weekday_of(date_str, "en"),
+            "headline": digest_headline(digest),
+            "headline_alt": digest.get("alt_headlines", []),
+            "items": _count_items(digest),
+            "has_en": en_digest is not None,
+            "audio": audio,
+            "highlights": highlights,
+            "api": f"api/{date_str}.json",
+            "web": f"daily/{date_str}.html",
+        })
+
+    issues.reverse()  # newest first
+    index = {
+        "api_version": API_VERSION,
+        "site": SITE_URL,
+        "generated_at": datetime.now(timezone(timedelta(hours=8))).isoformat(),
+        "count": len(issues),
+        "latest": issues[0]["date"] if issues else None,
+        "podcast": SITE_URL + "podcast.xml",
+        "issues": issues,
+    }
+    (api_dir / "index.json").write_text(
+        json.dumps(index, ensure_ascii=False), encoding="utf-8")
+    print(f"  API → api/index.json + {len(issues)} day file(s)")
+
+
+# ── App layer: PWA (manifest + service worker) ─────────────────────────────────
+
+def build_manifest() -> str:
+    manifest = {
+        "name": APP_NAME,
+        "short_name": APP_SHORT_NAME,
+        "description": PODCAST_DESC,
+        "start_url": "./index.html",
+        "scope": "./",
+        "display": "standalone",
+        "orientation": "portrait",
+        "background_color": THEME_COLOR_DARK,
+        "theme_color": THEME_COLOR_DARK,
+        "lang": "zh-Hans",
+        "categories": ["news", "technology"],
+        "icons": [
+            {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": "icons/icon-maskable-192.png", "sizes": "192x192",
+             "type": "image/png", "purpose": "maskable"},
+            {"src": "icons/icon-maskable-512.png", "sizes": "512x512",
+             "type": "image/png", "purpose": "maskable"},
+        ],
+        "shortcuts": [
+            {"name": "最新一期", "short_name": "最新", "url": "./index.html"},
+            {"name": "播客订阅", "short_name": "播客", "url": "./podcast.xml"},
+        ],
+    }
+    return json.dumps(manifest, ensure_ascii=False, indent=2)
+
+
+SW_JS = """/* AI Daily Digest service worker — generated by scripts/generate_site.py */
+const VERSION = '__VERSION__';
+const SHELL = 'shell-' + VERSION;
+const DATA = 'data-' + VERSION;
+const MEDIA = 'media-v1';          // survives rebuilds: episodes never change
+const MEDIA_KEEP = 5;              // ~10 MB of recent broadcasts
+
+const BASE = new URL(self.registration.scope).pathname;
+const PRECACHE = [
+  BASE,
+  BASE + 'index.html',
+  BASE + 'offline.html',
+  BASE + 'manifest.webmanifest',
+  BASE + 'api/index.json',
+  BASE + 'icons/icon-192.png',
+  BASE + 'icons/apple-touch-icon.png'
+];
+const WARM_DAYS = 7;               // recent issues kept readable offline
+
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(SHELL)
+      .then(function (c) { return c.addAll(PRECACHE); })
+      .catch(function () {})
+      .then(function () { return self.skipWaiting(); })
+  );
+});
+
+// Pull the last few issues (page + JSON) so the app opens fully offline even
+// on days the reader never tapped through.
+function warmRecent() {
+  return fetch(BASE + 'api/index.json', { cache: 'no-cache' })
+    .then(function (r) { return r.json(); })
+    .then(function (idx) {
+      var recent = (idx.issues || []).slice(0, WARM_DAYS);
+      return Promise.all([caches.open(SHELL), caches.open(DATA)])
+        .then(function (c) {
+          var shell = c[0], data = c[1];
+          return Promise.all(recent.map(function (it) {
+            return Promise.all([
+              shell.add(BASE + it.web).catch(function () {}),
+              data.add(BASE + it.api).catch(function () {})
+            ]);
+          }));
+        });
+    })
+    .catch(function () {});
+}
+
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) {
+        if (k !== SHELL && k !== DATA && k !== MEDIA) return caches.delete(k);
+      }));
+    })
+      .then(function () { return self.clients.claim(); })
+      .then(warmRecent)
+  );
+});
+
+function trimMedia() {
+  return caches.open(MEDIA).then(function (cache) {
+    return cache.keys().then(function (keys) {
+      if (keys.length <= MEDIA_KEEP) return;
+      // Filenames are ISO dates, so a lexical sort is a chronological sort.
+      keys.sort(function (a, b) { return a.url < b.url ? 1 : -1; });
+      return Promise.all(keys.slice(MEDIA_KEEP).map(function (k) {
+        return cache.delete(k);
+      }));
+    });
+  });
+}
+
+self.addEventListener('fetch', function (e) {
+  var req = e.request;
+  if (req.method !== 'GET') return;
+
+  var url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  // Pages: network-first so a new digest always wins, cache as offline backup.
+  if (req.mode === 'navigate') {
+    e.respondWith(
+      fetch(req).then(function (res) {
+        var copy = res.clone();
+        caches.open(SHELL).then(function (c) { c.put(req, copy); });
+        return res;
+      }).catch(function () {
+        return caches.match(req).then(function (hit) {
+          return hit || caches.match(BASE + 'offline.html');
+        });
+      })
+    );
+    return;
+  }
+
+  // Audio: cache-first, keep only the most recent episodes.
+  if (url.pathname.endsWith('.mp3')) {
+    e.respondWith(
+      caches.match(req).then(function (hit) {
+        if (hit) return hit;
+        return fetch(req).then(function (res) {
+          if (res.ok && res.status === 200) {
+            var copy = res.clone();
+            caches.open(MEDIA)
+              .then(function (c) { return c.put(req, copy); })
+              .then(trimMedia);
+          }
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  // JSON feeds: stale-while-revalidate — instant, then refreshed in background.
+  if (url.pathname.indexOf(BASE + 'api/') === 0 ||
+      url.pathname.endsWith('search-index.json')) {
+    e.respondWith(
+      caches.open(DATA).then(function (cache) {
+        return cache.match(req).then(function (hit) {
+          var net = fetch(req).then(function (res) {
+            if (res.ok) cache.put(req, res.clone());
+            return res;
+          }).catch(function () { return hit; });
+          return hit || net;
+        });
+      })
+    );
+    return;
+  }
+
+  // Icons, cover art, manifest: cache-first.
+  if (url.pathname.indexOf(BASE + 'icons/') === 0 ||
+      url.pathname.endsWith('.png') ||
+      url.pathname.endsWith('manifest.webmanifest')) {
+    e.respondWith(
+      caches.match(req).then(function (hit) {
+        return hit || fetch(req).then(function (res) {
+          if (res.ok) {
+            var copy = res.clone();
+            caches.open(SHELL).then(function (c) { c.put(req, copy); });
+          }
+          return res;
+        });
+      })
+    );
+  }
+});
+"""
+
+
+def build_sw(version: str) -> str:
+    return SW_JS.replace("__VERSION__", version)
+
+
+OFFLINE_HTML = """<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>离线 · AI Daily Digest</title>
+<style>
+:root { color-scheme: dark; --bg:#0d1117; --text:#e6edf3; --muted:#8b949e;
+        --card:#161b22; --border:#30363d; }
+@media (prefers-color-scheme: light) {
+  :root { color-scheme: light; --bg:#fff; --text:#1f2328; --muted:#656d76;
+          --card:#f6f8fa; --border:#d0d7de; }
+}
+/* Honour the theme the reader picked on the site itself. */
+html[data-theme="light"] {
+  color-scheme: light; --bg:#fff; --text:#1f2328; --muted:#656d76;
+  --card:#f6f8fa; --border:#d0d7de;
+}
+html[data-theme="dark"] {
+  color-scheme: dark; --bg:#0d1117; --text:#e6edf3; --muted:#8b949e;
+  --card:#161b22; --border:#30363d;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); min-height: 100vh;
+       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+       line-height: 1.7; display: flex; align-items: center;
+       justify-content: center; padding: 24px; }
+.wrap { max-width: 460px; width: 100%; text-align: center; }
+.mark { font-size: 44px; }
+h1 { font-size: 20px; margin: 12px 0 6px; }
+p { color: var(--muted); font-size: 14px; }
+.row { display: flex; gap: 10px; justify-content: center; margin-top: 20px; }
+a.btn, button.btn { font: inherit; font-size: 14px; cursor: pointer;
+  padding: 8px 16px; border-radius: 8px; text-decoration: none;
+  border: 1px solid var(--border); background: var(--card); color: var(--text); }
+button.btn.primary { background: #238636; border-color: #238636; color: #fff; }
+.cached { margin-top: 26px; text-align: left; display: none; }
+.cached h2 { font-size: 13px; color: var(--muted); font-weight: 600;
+  margin-bottom: 8px; text-align: center; }
+.cached a { display: block; padding: 9px 12px; margin-bottom: 6px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); text-decoration: none; font-size: 14px; }
+.cached a span { color: var(--muted); font-size: 12px; }
+</style>
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t) document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">📡</div>
+  <h1>当前离线 · You're offline</h1>
+  <p>这一期还没有下载到本地。连上网络后即可阅读，<br>已缓存的日报仍可离线查看。</p>
+  <div class="row">
+    <button class="btn primary" onclick="location.reload()">重试 Retry</button>
+    <a class="btn" href="./index.html">回到首页 Home</a>
+  </div>
+  <div class="cached" id="cached">
+    <h2>可离线阅读 · Available offline</h2>
+    <div id="list"></div>
+  </div>
+</div>
+<script>
+(function () {
+  if (!('caches' in window)) return;
+  var base = location.pathname.replace(/offline\\.html$/, '');
+  caches.keys().then(function (keys) {
+    return Promise.all(keys.map(function (k) {
+      return caches.open(k).then(function (c) { return c.keys(); });
+    }));
+  }).then(function (groups) {
+    var days = {};
+    groups.forEach(function (reqs) {
+      reqs.forEach(function (r) {
+        var m = r.url.match(/\\/daily\\/(\\d{4}-\\d{2}-\\d{2})\\.html$/);
+        if (m) days[m[1]] = true;
+      });
+    });
+    var dates = Object.keys(days).sort().reverse().slice(0, 10);
+    if (!dates.length) return;
+    document.getElementById('list').innerHTML = dates.map(function (d) {
+      return '<a href="' + base + 'daily/' + d + '.html">' + d +
+             ' <span>已缓存</span></a>';
+    }).join('');
+    document.getElementById('cached').style.display = 'block';
+  }).catch(function () {});
+})();
+</script>
+</body>
+</html>"""
+
+
 def generate_site(root: Path | None = None) -> None:
     if root is None:
         root = Path(__file__).parent.parent
@@ -1794,6 +2188,15 @@ def generate_site(root: Path | None = None) -> None:
         (docs_dir / "creator.html").write_text(
             build_creator_page(audio_desc, parsed_by_date), encoding="utf-8")
         print(f"  Podcast feed + creator page → {len(audio_desc)} episode(s)")
+
+    # App layer: JSON API for native/PWA clients + installable shell
+    build_api(parsed_by_date, parsed_by_date_en, dates, audio_dates, docs_dir)
+    (docs_dir / "manifest.webmanifest").write_text(build_manifest(),
+                                                   encoding="utf-8")
+    (docs_dir / "offline.html").write_text(OFFLINE_HTML, encoding="utf-8")
+    build_version = f"{dates[-1] if dates else 'empty'}-{len(dates)}"
+    (docs_dir / "sw.js").write_text(build_sw(build_version), encoding="utf-8")
+    print(f"  PWA → manifest + service worker (cache {build_version})")
 
     # 404 → back to index
     (docs_dir / "404.html").write_text(

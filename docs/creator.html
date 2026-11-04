@@ -36,6 +36,80 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-04">AI 每日简报 · 2026-11-04 周三</span>
+    <button class="cbtn" data-copy="t-2026-11-04">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-04.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-04.mp3" download="2026-11-04.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-04">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-04">AI 每日简报 · 2026-11-04 周三
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· Anthropic 开源 FlashProve，用 zkSNARK 证明模型身份：以 Apache 2.0 协议发布的原型可在不泄露权重的前提下，证明某条回复确实来自其所声称的模型；在单张 H100 上跑 Llama 4 Maverick 达 110 tokens/s，证明体积 19MB。
+  来源：https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/ / https://www.marktechpost.com/2026/11/03/anthropic-flashprove-provable-inference-zksnark/
+· Anthropic 推出 Message Threads，长对话首 token 延迟降 35%：Messages API 不再每轮重发完整上下文，只传输增量；在 50 万到 100 万 token 的请求中，首 token 延迟下降约 35%。
+  来源：https://the-decoder.com/anthropics-message-threads-cut-time-to-first-token-by-35-percent-for-long-conversations/
+· OpenAI：GPT-6 Astra 一周内从零设计出硬件设备：OpenAI 硬件团队用它为 Codex 编码 Agent 设计外壳、电路板与固件，因未充分考虑制造公差，经历多轮修订才投产。
+  来源：https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/
+· OpenAI 称 ChatGPT 搜索量已达 Google 的 20%：OpenAI 消费产品负责人 Adam Fry 在发布会上披露这一数据，称&quot;Ask Chat&quot;正在部分场景取代&quot;Google it&quot;。
+  来源：https://www.theverge.com/ai-artificial-intelligence/1025482/openai-says-chatgpt-is-catching-up-to-google-in-search
+· Google 对禁用 AI 的学校彻底关闭 Search：K-12 学生账号若拒绝 Gemini 等 AI 功能，将同时失去 Google Search 访问权限，因为 AI 已深度集成进搜索引擎。
+  来源：https://www.theverge.com/tech/1025411/google-turn-off-search-ai-features
+· 推理服务商 fal 估值翻倍至 160 亿美元：完成由 Bessemer 领投的 13 亿美元融资，AI 推理需求激增推动估值快速抬升。
+  来源：https://techcrunch.com/2026/11/03/ai-inference-startup-fal-doubles-its-valuation-to-16b-as-demand-surges/
+· 美科技巨头隐性 AI 债务半年增 90% 至 3.2 万亿美元：日经报道称大量 AI 相关负债未体现在常规财务披露中，Bloomberg 同期评论警告 AI 投资热潮需要更强金融监管。
+  来源：https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months
+· Anthropic 要求创建账号需政府身份证件：HN 用户反馈注册 Anthropic 账号现在必须提供政府签发的身份证明，引发对 AI 服务实名化趋势的讨论。
+  来源：https://news.ycombinator.com/item?id=50356209
+· Apple 向第三方 App 开放 Siri AI 能力：iOS 27.3 起开发者可将 Siri AI 集成进&quot;所有 App&quot;，支持个人上下文、自然语言指令与屏幕感知。
+  来源：https://www.theverge.com/tech/1025694/apple-siri-ai-third-party-apps
+· Postman 被指静默安装 AI 插件并尝试共享全部 API 数据：GitHub issue 引发 HN 近千点热议，用户称其未经许可自动安装 AI 插件并尝试上传 API 数据。
+  来源：https://github.com/postmanlabs/postman-app-support/issues/14370
+· DeepSeek V5 计划用华为昇腾芯片预训练：据供应链多方消息，昇腾此前主要用于 DeepSeek 模型推理，此次将首次承担预训练任务。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xmmadn/deepseek_v5_is_planned_to_be_pretrained_on_huawei/
+
+📄 重要论文
+· Stanford 研究：LLM 领域被广泛引用的结论平均 15.7 个月即&quot;过期&quot;：研究者用 20 个当前模型复测 50 条高引结论，44% 已失效，另 34% 显著减弱；关于&quot;模型做不到什么&quot;的论断失效最快。
+  来源：https://the-decoder.com/rapid-llm-development-is-outrunning-the-research-meant-to-explain-it-study-finds/
+· 普林斯顿空间智能基准：人类 83.3%，最强模型仅 39.7%：BedBench 用 13 类程序化生成任务测试 16 个模型，在按颜色计数任务上人类准确率 93.3%，最佳模型仅 7.2%。
+  来源：https://www.qbitai.com/p/4054651667813510 / https://huggingface.co/papers/2610.39639
+· MIT 权重空间编程被复现：Claude 改写 8 个神经元改变翻译行为：社区用户在 Gemma 4 12B 上手工编辑少量神经元，改变其意大利语时态翻译偏好，全程无训练。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xn1gs9/i_tried_mits_weightspace_programming_on_my_own/
+· Zyphra 提出分层注意力 ZHA，迈向真正次二次复杂度：树索引稀疏注意力方法只需 40 亿 token 蒸馏即可改造冻结 LLM，在推理与 256K 检索基准上追平稠密注意力。
+  来源：https://www.marktechpost.com/2026/11/02/zyphra-hierarchical-attention-zha-sparse-attention/
+· BYOD：仅用 LoRA 将自回归模型转为扩散语言模型：无需架构特定调优，即可在 Gemma 2 9B、Llama 3.1 8B、Qwen2.5 7B、Ministral 8B 上诱导扩散式生成。
+  来源：https://huggingface.co/papers/2610.41574
+· 预训练数据规模反转 Muon 与 AdamW 的微调差距：研究发现预训练数据量足够大后，AdamW 在微调阶段反超 Muon，且模型越大反超所需数据越少。
+  来源：https://arxiv.org/abs/2611.03633v1
+
+🔧 开源项目
+· mattpocock/skills：面向工程师的 Agent Skills 集合：作者直接开源其 `.agents` 目录下的实用技能配置，单日新增 1164 star。
+  来源：https://github.com/mattpocock/skills
+· Scrapling：单请求到大规模爬取的统一抓取框架：单日新增 1658 star，覆盖反爬处理与全站爬取场景。
+  来源：https://github.com/D4Vinci/Scrapling
+· worktrunk：为并行 AI Agent 工作流设计的 Git worktree CLI：解决多 Agent 同时改代码时的分支隔离与切换问题，单日 +438 star。
+  来源：https://github.com/max-sixty/worktrunk
+· Kronos：金融市场&quot;语言&quot;的基础模型：面向金融时序的开源基础模型，单日 +503 star。
+  来源：https://github.com/shiyu-coder/Kronos
+
+🐦 AI 圈热议
+· Qwen 3.8 27B 也能&quot;读懂&quot;模型权重，权重空间编程从前沿走向消费级硬件：Simon Willison 实测本地模型可解析权重文本描述；r/LocalLLaMA 上围绕&quot;这是真能力还是模式匹配&quot;争论激烈，同时 Qwen Code 仓库 PR 泄露了 qwen4-max、qwen4-coder-plus、qwen4-omni-120b 等型号 ID。
+  来源：https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/ / https://www.reddit.com/r/LocalLLaMA/comments/1xmitzx/alibabas_qwen_code_repo_just_leaked_qwen4max/
+· Google DeepMind 研究员公开要求&quot;说出所知的自由&quot;：华盛顿邮报报道 DeepMind 员工抗议公司对批评者的终身封禁政策，HN 讨论破百条，焦点集中在 AGI 风险披露与雇主保密协议的冲突。
+  来源：https://www.washingtonpost.com/technology/2026/11/03/google-deepmind-staff-protest-lifetime-ban-criticizing-company/
+
+💡 今日观察
+Anthropic 一天内连发 FlashProve 与 Message Threads，前者解决&quot;这条回复是不是真来自该模型&quot;的信任问题，后者解决长对话的成本问题，都指向同一个方向：模型能力之外的基础设施正成为竞争焦点。与此同时，Stanford 的研究提醒我们，这个领域里被广泛引用的&quot;常识&quot;平均只有一年半保质期，架构决策不能建立在旧论文的结论上。金融侧的信号同样值得警惕——3.2 万亿美元隐性债务与推理层的高估值同时出现，说明资本正在为尚未兑现的算力需求提前定价。对 builder 而言，今天最实际的动作是：把模型身份验证纳入 API 选型考量，并重新评估长上下文场景下的调用成本。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-03">AI 每日简报 · 2026-11-03 周二</span>
     <button class="cbtn" data-copy="t-2026-11-03">📋 复制标题</button>
   </div>
@@ -1178,78 +1252,6 @@
 
 💡 今日观察
 今天最清晰的信号是“成本”同时出现在三个层面：Anthropic 800 亿美元亏损与 OpenAI 300 亿美元抢融资说明前沿训练的资金结构已不可持续地紧绷；DeepSeek DeepInfer、MiniMax M3.1 Flash、Cloudflare Clairic 则从推理框架、模型定价、专用小模型三个方向继续压低单位 token 成本。研究侧同样在省钱——TokenGate 剪 prefill、StopLoss 提前终止失败轨迹，说明“少算”正成为与“算得更强”并列的一等公民。另一个值得警惕的是 Meta Muse 的分享链接泄露：agent 产品的隐私默认值设计，正在成为比模型能力更快引爆的信任风险。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-10-20">AI 每日简报 · 2026-10-20 周二</span>
-    <button class="cbtn" data-copy="t-2026-10-20">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-10-20.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-10-20.mp3" download="2026-10-20.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-10-20">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-10-20">AI 每日简报 · 2026-10-20 周二
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Nvidia 发布面向企业与 PC 端的开源 Agent 模型：Nvidia 推出新的开源模型系列，支持企业在自有数据中心运行 Agent，并推动设备端私有 Agent 落地。
-  来源：https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/
-· Amazon 推出 TorchNeuron，正面挑战 Nvidia 在 PyTorch 生态中的地位：Amazon 发布 TorchNeuron 开发工具，目标是让更多开发者在 Trainium 等非 Nvidia 芯片上运行 AI 应用。
-  来源：https://techcrunch.com/2026/10/19/amazon-is-taking-its-biggest-shot-at-nvidia-yet-with-new-torchneuron-dev-tool/
-· Tenstorrent 融资 15 亿美元，估值达 62 亿：这家 Nvidia 挑战者选择保持独立，继续扩展开放权重 AI 芯片业务。
-  来源：https://techcrunch.com/2026/10/19/tenstorrent-hits-6-2b-valuation-to-scale-open-weight-ai-chips/
-· Nscale 与 Anthropic 据报洽谈第二个 450 亿美元算力协议：两家公司在 8 月刚宣布同等规模的合作后，又传出新一轮谈判。
-  来源：https://techcrunch.com/2026/10/19/nscale-and-anthropic-are-reportedly-in-talks-for-yet-another-45-billion-compute-deal/
-· 微软称 AI Agent 如同“内部威胁”，前沿模型不可信：微软建议企业密切监控员工使用的、由非 OpenAI/Anthropic 实验室控制的 Agent 系统。
-  来源：https://techcrunch.com/2026/10/19/microsoft-says-ai-agents-are-like-insider-threats-as-frontier-models-cant-be-trusted/
-· 德国两家法院裁定 Google 需为 AI Overviews 内容负责：Aachen 法院沿用慕尼黑判例，将 Google 的 AI 回答视为公司自身内容，Google 上诉后悄然和解。
-  来源：https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/
-· Anthropic 计划将 5% 股份投入公共利益基金：该基金将研究向受 AI 冲击的工人直接发放款项，基金为公司持有的 LLC，Anthropic 保留控制权。
-  来源：https://the-decoder.com/anthropic-plans-fund-for-workers-threatened-by-ai-musk-counters-with-spacex-shares-for-children/
-· CoreWeave 债券跌入困境区间，neocloud 洗牌预警：CoreWeave 市值蒸发四分之一，微软退出与 Nscale 的 2.3 万块 Nvidia 芯片交易，业内预计数百家 AI 云厂商仅 7-10 家能存活。
-  来源：https://the-decoder.com/the-neocloud-shakeout-is-coming-and-nvidia-has-the-most-to-lose/
-· Cloudflare 推出 Clairic 提取模型系列：新“System One”类别提取模型，主打快速结构化信息抽取。
-  来源：https://blog.cloudflare.com/clairic-extraction-model/
-
-📄 重要论文
-· Mistral 发布 Timestral 时间序列基础模型家族：参数量 5M 至 209M，209M 版本在 GIFT-Eval、TIME、fev-bench 零样本评测中领先 Google TimesFM-3，且可在 CPU 运行。
-  来源：https://www.marktechpost.com/2026/10/18/mistral-timestral-time-series-foundation-model/
-· DisaggKD：通过师生解耦实现高效知识蒸馏：将 teacher 与学生分离到不同节点，teacher 副本流式传输 hidden states，行窗口+词表分片的 KD loss 在精确算术下等价于全词表 loss。
-  来源：https://huggingface.co/papers/2610.17644
-· Librarian Agents：训练 LLM 预判未来查询来整理长上下文：让 Agent 在推理前主动重组非结构化语料，替代被动的检索式方法。
-  来源：https://huggingface.co/papers/2610.22273
-· Lean4AgenticRL：可验证的多层级过程奖励推进 Agentic RL：在高层结果奖励之外，引入工具调用级与工作流阶段级奖励，用于 SWE 与终端任务。
-  来源：https://huggingface.co/papers/2610.22448
-· BELIEFWEAVER：用信念更新与世界模型做长程失败恢复：维护关于 frontier、尝试、观测、检查点的关系型信念状态，跨尝试更新优先级并诊断修复方向。
-  来源：https://huggingface.co/papers/2610.18082
-· EvoWeb：面向演进式 Web 应用的编码 Agent 基准：32 个应用、320 条累积请求，按功能依赖图组织，Agent 需迭代修改持久代码库。
-  来源：https://huggingface.co/papers/2610.16402
-
-🔧 开源项目
-· NVIDIA 以 Apache 2.0 开源 Run:ai GPU 编排平台：包含 KAI Scheduler、CUDA 13.4 GPU fractioning、配额管理与本地 Kind 开发环境。
-  来源：https://www.marktechpost.com/2026/10/18/nvidia-runai-open-source-gpu-orchestration-kubernetes/
-· Google 开源 Harness2 递归 Agent Harness 框架：Apache-2.0，在测试时重写 Agent harness，单次 refinement 让 GLM-5 在 WorkBuddy-Bench 上提升 11.5 分，无需更新权重。
-  来源：https://www.marktechpost.com/2026/10/18/google-harness2-recursive-agent-harnessing-framework/
-· MiniMax M3.1 Flash 发布：428B MoE Agentic 模型：约 23B 激活参数、1M 上下文，API 定价 $0.15/$0.60 每百万 token，权重 10 月 23 日开放。
-  来源：https://www.marktechpost.com/2026/10/19/minimax-m3-1-flash-release/
-· Cohere 官方为 llama.cpp 提供模型支持：Cohere 工程师在 r/LocalLLaMA 宣布兑现社区诉求，Command A+ 等模型可在 llama.cpp 运行。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xa0cyz/llamacpp_support_for_cohere_models/
-· headroom：在进入 LLM 前压缩工具输出与 RAG 块：编码 Agent 省 20% token，JSON 省 60-95%，提供库、代理与 MCP server 三种形态。
-  来源：https://github.com/headroomlabs-ai/headroom
-
-🐦 AI 圈热议
-· AI 实验室自报 benchmark 分数平均比独立测试高 6.4%：开发者用 1,629 条公开结果、611 组同模型同测试对比构建开源榜单 whatmodel.sh，发现系统性高估，数据集与代码全部开放。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1x9skrx/ai_labs_report_benchmark_scores_64_higher_than/
-· OpenCode 遭黑客攻击 48 小时，防守 AI 中途拒答：黑客窃取用户 API key 并刷爆账户，团队求助的 AI 工具因安全护栏拒绝查看恶意代码，官方“蒸馏攻击”说法遭质疑。
-  来源：https://www.infoq.cn/article/K5J7yb60djWKM6vUZqwq / https://techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts/
-
-💡 今日观察
-今天最清晰的信号是**Agent 基础设施正在快速成型**：Nvidia 开源 Run:ai、Google 开源 Harness2、Amazon 推 TorchNeuron，三层（调度、harness、编译）同时被大厂开源化，Agent 的“操作系统层”竞争已经开打。另一条主线是**信任危机**：实验室自报分数平均虚高 6.4%、微软把 Agent 定义为内部威胁、德国法院让 Google 为 AI 回答担责，评测、安全、法律三条战线同时收紧。值得警惕的是 neocloud 洗牌——CoreWeave 债券陷入困境区间、微软撤单，算力泡沫如果破裂，会最先传导到依赖低价 GPU 的创业公司。对 builder 而言，今天最实用的一条是 MiniMax M3.1 Flash 把 Agent 级能力压到 $0.15/M 输入，配合 headroom 这类上下文压缩工具，Agent 的单位经济模型正在被重写。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

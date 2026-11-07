@@ -1,8 +1,0 @@
-各位早上好，今天是 2026 年 10 月 23 日，欢迎收听今天的 AI 日报。今天的看点相当密集：一边是 OpenAI 传出万亿美元级融资、Anthropic 把 Agent 做成常驻后台，另一边是 Agent 的安全和治理问题集中冒头。我们一个个来说。
-先看资本和产品的大动作。OpenAI 正在谈一笔三百亿美元的融资，估值喊到一万两千五百亿美元，如果成了，就是史上估值最高的私营公司，这也是在为 IPO 铺路。头部公司的资本门槛又被抬高了一截，创业公司的融资环境只会更紧。产品这边，Anthropic 发布了常驻 Agent 产品 Claude Duet，基于 Claude Opus 五点五，接了 Gmail、Slack、Stripe 等六千多个连接器，用户离线的时候它也能自己干活，敏感操作前会请求审批。Agent 正在从你一句我一句的对话，变成一直在后台待命的助手。
-云厂商这边也有大新闻。Google Cloud 上线了 OpenAI 的模型，成了唯一同时托管 Gemini、Claude 和 GPT 三家的云厂商，GPT-6 系列以私有预览形式开放给企业客户。同时 Google 还推出了 Agent Compute Engine，给每个 Gemini Agent 分配硬件隔离的微虚拟机，跨云、混合和本地环境都能管。多云选型更灵活了，供应商锁定进一步减弱。
-企业落地方面，Uber 把 ChatGPT Work 推给了全部三万名员工，从小范围试点变成公司级部署，是个挺有参考价值的规模化样本。Canva 则发布了首个自研图像模型 Canva Craft，先生成设计方案再出图，强调精度和可控性，向全部用户开放。
-不过 Agent 跑得越快，安全这块的补位就越急。1Password 推出了一个机制，让 Agent 能替你登录账户，但自己看不到密码。可另一边，美国多家大行开始封堵用客户凭据登录的 AI Agent，摩根士丹利直接封锁，多数银行打算只开只读权限。Symantec 还发现了一种叫 Skynet 模式的攻击，能劫持网上没有防护的模型发起自维持攻击，不用人工介入就能跑十万步，账单最后算在被劫持模型的拥有者头上。能力扩张和治理约束，确实在同步加速。
-再看研究和开源。FrontierCS 2 这个新基准挺有意思，它把论文作者代码里的核心贡献删掉，让 Agent 在真实仓库里补回来，用真实科研贡献来衡量能力。Perplexity 和 NVIDIA 的 JOLT 让同一个模型兼任老师和学生，在 MATH 上用六点五倍更少的训练 token 达到同等精度。开源这边，Recursive 放出了 Flint，四十 B 的 MoE 本地编码模型，激活只有二点五 B，SWE-bench Verified 跑到 74.2%，在 M4 Pro 笔记本上每秒一百二十多个 token。Cloudflare 开源了安全审计技能，Vercel 的 durable-harness 能让编码 Agent 崩溃后接着跑。语音方向也很热闹，Kitten-TTS 2 是首个一点五八 bit 的开源 TTS，纯 CPU 就能实时跑；IBM 的 Granite Speech 五点零 二 B 也以 Apache 2.0 开源。
-最后一条圈内热议：Anthropic 把 Agent Skills 标准捐给了 Linux 基金会下的 Agentic AI Foundation，和 Block、OpenAI 一起创立，技能格式开始走向厂商中立。
-今日观察。今天最清晰的信号，是 Agent 基础设施正在集中补齐：Google 管运行时隔离，1Password 管凭据代持，Vercel 管崩溃续跑，Anthropic 把标准交给基金会。与此同时，银行封堵、自维持攻击这些事提醒我们，治理约束也在同步收紧。模型侧，Flint 用二点五 B 激活在本地跑出高分，配合 JOLT 的 token 节省，小团队自建编码 Agent 的门槛正快速下降。但别忘了 Gartner 那组数据：只有百分之十三的企业从 AI 拿到了真实回报，却有百分之五十一预计成本上升。落地的差距，仍然是这个行业最大的隐忧。好，今天就聊到这儿，我们明天见。

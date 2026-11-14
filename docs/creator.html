@@ -36,6 +36,86 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-14">AI 每日简报 · 2026-11-14 周六</span>
+    <button class="cbtn" data-copy="t-2026-11-14">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-14.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-14.mp3" download="2026-11-14.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-14">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-14">AI 每日简报 · 2026-11-14 周六
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· 黄仁勋辞任英伟达 CEO，市值蒸发超 3 万亿：英伟达 33 年来首次换帅，黄仁勋因与一名疑似中国间谍的婚外情辞职，临时 CEO 由前 CFO Colette Kress 接任。
+  来源：https://www.qbitai.com/2026/11/509995.html
+· 黄仁勋离任或与英伟达高风险商业操作有关：WSJ 报道称，英伟达曾为云厂商的芯片采购提供数十亿美元财务担保（含与 OpenAI 的 2500 亿美元计划），Kress 试图控制风险但遭黄仁勋反对。
+  来源：https://the-decoder.com/jensen-huangs-ouster-likely-traces-back-to-nvidias-risky-business-practices-more-than-his-personal-life/
+· 创投圈预警：黄仁勋离任将冲击 AI 创业融资：VC 与创始人表示，英伟达此前向 AI 初创投入数百亿美元，失去黄仁勋后，融资额度与估值都将收缩。
+  来源：https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/
+· 研究称六家中国头部模型使用了受出口管制的 Blackwell 芯片：前 OpenAI 研究员 Will DePue 通过读取模型权重中的芯片指纹，称 DeepSeek、Moonshot、MiniMax、蚂蚁集团等训练所用硬件成本超 5 亿美元。
+  来源：https://the-decoder.com/former-openai-researcher-says-he-found-nvidia-blackwell-fingerprints-hidden-inside-six-chinese-ai-models/
+· OpenAI 推出 ChatGPT Wallet，Agent 可代用户下单支付：先向美国 Pro 订阅用户限量开放，用户绑定一次卡片，每次购买需 Face ID 或指纹确认，卡号以支付令牌隐藏。
+  来源：https://openai.com/index/introducing-chatgpt-wallet
+· Anthropic IPO 超额认购 6 倍，或成史上最大 IPO：同时，因美国出口管制（ITAR），承销银行拒绝中国大陆与香港投资者的认购订单。
+  来源：https://the-decoder.com/anthropics-ipo-is-six-times-oversubscribed-and-on-track-to-become-the-largest-public-offering-in-history/
+· OpenAI 解散机器人团队，通用模型已能直接驱动机器人：机器人团队被撤，公司转向由通用模型直接控制硬件。
+  来源：https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/
+· Anthropic 发布 Claude for Manufacturing：插件直连 Autodesk Fusion、Oracle NetSuite、Infor，17 项技能可起草报价、比价、延迟时下补单，均需人工审批；另有 Model Hardware Standard 在研。
+  来源：https://the-decoder.com/anthropics-claude-for-manufacturing-plugs-ai-directly-into-factory-software-to-automate-industrial-workflows/
+· LangChain 估值达 30 亿美元：其模型与平台无关的 Agent 管理工具 LangSmith 已拥有 7000 家客户。
+  来源：https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/
+· Google 发布 Gemini 4 Hydrogen：面向 Agent 场景的高速模型，100 万 token 窗口、4 档思考深度，定价 $1.50/$7.50，Artificial Analysis 得分 51，Terminal-Bench 4.1 达 57%，速度是 Gemini 3.8 Flash 的 2.5 倍，已接入 Search 与 Gemini App。
+  来源：https://deepmind.google/blog/introducing-gemini-4-hydrogen/
+· Meta Muse 可代用户拨打美国商家电话：付费订阅可用，AI 负责人 Alexandr Wang 称 Muse 已有超 1000 万用户；但不少商家一识别出 AI 就挂断。
+  来源：https://the-decoder.com/metas-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on-the-ai/
+· OpenAI 以 Daybreak 品牌进军网络安全市场：推出两款安全产品。
+  来源：https://the-decoder.com/openai-enters-the-cybersecurity-market-with-two-daybreak-products/
+
+📄 重要论文
+· EgoX：跨具身自我中心操作学习框架：通过语义对齐的观测与动作模态组织人类、真机、仿真三类异构演示，预训练模块化跨具身 Transformer。
+  来源：https://huggingface.co/papers/2611.16728
+· PixVid：把潜空间视频扩散模型提升到像素空间：绕开 VAE 时空压缩带来的分辨率、逐帧条件与交互限制。
+  来源：https://huggingface.co/papers/2611.17336
+· 零或 T 思考：混合决策模型学习何时推理：单一模型要么在一次前向中直接作答（生成 0 token），要么在值得时进行完整自回归推理。
+  来源：https://huggingface.co/papers/2611.16961
+· Experience-Handoff RL：面向递归自我改进的经验交接：利用环境细粒度信息（如错误日志）构造可交接的经验产物，而非仅用标量奖励。
+  来源：https://huggingface.co/papers/2611.16409
+· JustRUA：GPT-6 机器人使用 Agent 的受控研究：拆解 harness、动作接口、经验复用与场景几何四类设计，在同一框架下对比。
+  来源：https://huggingface.co/papers/2611.16009
+· ArchSpace：LLM 架构研究的记录与引用平台：针对业界（DeepSeek、Qwen、Kimi）架构创新少有公开成败记录、学界评估受算力限制的问题。
+  来源：https://arxiv.org/abs/2611.17332v1
+
+🔧 开源项目
+· llama.cpp 发布 v1.0.0：本地推理生态迎来里程碑版本，Hugging Face 同步推出基于 llama.cpp 的 Llama 桌面应用，降低本地 AI 使用门槛。
+  来源：https://huggingface.co/blog/ggml-org/llama-cpp-v1
+· Google 开源 TPU Sync：C++ 库，可在 TPU HBM、主机 DRAM、存储与网络间搬运 KV cache 与权重，235B–480B MoE 模型 KV 传输延迟降低 90% 以上。
+  来源：https://www.marktechpost.com/2026/11/13/google-tpu-sync-kv-cache-transfer-library/
+· Perplexity 发布 Decider v1.3 与 Flash v1.3 开放权重决策模型：返回概率而非文本，新增 Locate 做片段抽取，63 项查询分类任务平均准确率 91.6%。
+  来源：https://www.marktechpost.com/2026/11/13/perplexity-decider-v1-3-open-weight-decision-models-locate/
+· AWS 发布 AWS Emulator：CC0 许可的本地 AWS API 模拟器，覆盖 200+ 服务，由自主 Agent 编写全部代码，发布时通过 42,857 项保真测试的 56.6%。
+  来源：https://www.marktechpost.com/2026/11/12/aws-emulator-local-aws-api-emulator-ai-agents/
+· 阿里开源 open-code-review：确定性流水线 + LLM Agent 的混合架构代码审查工具，支持行级评论与 NPE、线程安全、XSS、SQL 注入等规则集。
+  来源：https://github.com/alibaba/open-code-review
+· Chrome DevTools MCP：官方为编码 Agent 提供 Chrome DevTools 能力。
+  来源：https://github.com/ChromeDevTools/chrome-devtools-mcp
+
+🐦 AI 圈热议
+· “No AI Slop”宣言在 HN 引发争论：一份反对 AI 生成低质内容泛滥的宣言登上 Hacker News 首页，获 180 分、99 条评论，社区围绕“如何界定 slop”与“工具无罪还是产出有罪”激烈交锋。
+  来源：https://www.slopmanifesto.com/
+· 英伟达员工请愿“Bring Back THE Boss”：r/LocalLLaMA 热议英伟达员工联名请愿黄仁勋回归，被比作“第二个 Sam Altman 时刻”；同时社区讨论 A100 二手价已再跌 20–30%，认为其已无法用于推理、只剩价格敏感的小型买家接盘。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xuxxmb/bring_back_the_boss_nvidia_employees_petition_for/
+
+💡 今日观察
+黄仁勋辞职是今天所有新闻的引力中心，但真正值得警惕的不是人事，而是 WSJ 披露的财务担保模式——英伟达用表外承诺撑起了下游云厂商和 OpenAI 的采购能力，这种杠杆一旦收缩，冲击会沿着融资链条传导到每一家 AI 初创。与之对照，Anthropic IPO 超额认购 6 倍、LangChain 估值 30 亿，说明资本并未离场，而是在重新挑选确定性更高的标的。技术层面，Gemini 4 Hydrogen 的低价长上下文、TPU Sync 的 KV 传输优化、Perplexity 的决策小模型，共同指向同一个方向：Agent 的竞争正从“能不能做”转向“每 token 多便宜”。而 ChatGPT Wallet 与 Claude for Manufacturing 则表明，Agent 的商业闭环已经开始触碰钱和工厂，这两处的合规与审批设计会比模型能力更早成为瓶颈。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-13">AI 每日简报 · 2026-11-13 周五</span>
     <button class="cbtn" data-copy="t-2026-11-13">📋 复制标题</button>
   </div>
@@ -1086,94 +1166,6 @@ Anthropic 一天内连发 FlashProve 与 Message Threads，前者解决&quot;这
 
 💡 今日观察
 今天最清晰的信号是资本与信任的双重收紧：Anthropic IPO 可能拿到垃圾级评级、科技股因 AI 烧钱担忧集体下挫，融资端的乐观叙事正在被现金流检验。与此同时，安全事件密集出现——Cursor 插件后门、五角大楼网络里的个人 Agent、GLM 5.3 自主构造 Firefox 漏洞链，说明 Agent 能力提升的速度已经超过权限治理的速度。技术侧则相对活跃，统一训练、MTP 梯度修正、EasyProver 都在动基础配方，而&quot;量化模型功能失效&quot;和&quot;专家盲从 Agent 观点&quot;两篇论文提醒：可用的模型和可信的输出，都还需要额外验证。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-10-30">AI 每日简报 · 2026-10-30 周五</span>
-    <button class="cbtn" data-copy="t-2026-10-30">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-10-30.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-10-30.mp3" download="2026-10-30.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-10-30">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-10-30">AI 每日简报 · 2026-10-30 周五
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Google 发布 Gemini 4 Carbon，登顶 Artificial Analysis 智能指数：距 Gemini 4 Argon 仅两周，Carbon 在 Artificial Analysis Intelligence Index v5 上以 59 分登顶，SEC-bench Pro 达 88.2%，主打长时 Agent 工作流与网络安全防御全生命周期，定价 $2/$10 每百万 token，首批仅向审核通过的网络安全专家开放。
-  来源：https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/
-· Google 财报引发股价暴跌，AI 搜索变现难题浮现：季度云收入翻倍至 307 亿美元，但搜索收入仅增 12% 低于预期，Google 承认 AI Mode 单位收入低于传统搜索，股价一度跌 10%，市值蒸发约 5000 亿美元。
-  来源：https://www.bbc.com/news/articles/cm9qzdqpxy48o / https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/
-· Mistral 开源 1 万亿参数 Le Chonk（Mistral Large 4）：1T 参数原生多模态 MoE、每 token 激活 49B（含嵌入约 52B），完全在欧洲训练，GGUF/NVFP4 量化版本已同步放出；Mistral 称其在编码与网络安全上超越 DeepSeek、Z.ai 开源模型，但独立测试显示综合得分 26 分仍落后 DeepSeek V4.1 Flash 与 GLM-5.3 的 32 分。
-  来源：https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/ / https://huggingface.co/blog/mistral-large4
-· Google DeepMind 发布 Genie 4 实时世界模型：研究预览版，新增原生音频、实时对话与文本操控，由 Gemini 3.8 Flash 在仿真循环内规划事件，实时模拟真实度大幅提升。
-  来源：https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/
-· Anthropic 递交 S-1 启动 IPO，招股书被解读为&quot;要么造出 AGI，要么死&quot;：S-1 文件为大规模算力投入提供了财务正当性，The Verge 与 SemiAnalysis 分析师拆解其数字逻辑；同期 OpenAI 宣布 Pro 计划用量翻倍（Pro 100→500），并在用户反对后撤回 Pro 200 的削减计划，B 端争夺白热化。
-  来源：https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive / https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/
-· 美国司法部审查 Nvidia 收购 Hugging Face 交易及销售行为：反垄断监管机构介入这桩开源平台收购案，同时关注 Nvidia 的销售实践。
-  来源：https://the-decoder.com/us-antitrust-regulators-are-scrutinizing-nvidias-hugging-face-deal-and-sales-practices/
-· Google 向第三方 AI Agent 开放 Android 开发：Android Studio 推出 &quot;Bring Your Own Agent&quot;，支持 Claude Agent、Codex 等 40+ 编码 Agent；新终端工具让 Agent 完成 UI 任务快 77%、token 消耗最多降 3 倍，并同步发布新 Gemini API。
-  来源：https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/
-· OpenAI 支持的 Thrive Holdings 以 153 亿美元收购 ADT：计划把 AI 带入家庭安防业务，是 AI 资本向传统实体服务业的又一次大额渗透。
-  来源：https://techcrunch.com/2026/10/29/openai-backed-thrive-holdings-acquires-adt/
-· NVIDIA 开源 Nemotron 3.5 Transcribe 语音 LLM：30B MoE、激活 4.3B，支持 40 种语言转写，带说话人标签与词级时间戳，英文 Open ASR Leaderboard 平均 WER 4.71%，配套 Granary v2 数据集。
-  来源：https://www.marktechpost.com/2026/10/28/nvidia-nemotron-3-5-transcribe-open-speech-llm/ / https://huggingface.co/blog/nvidia/nemotron-transcribe-granary
-· Gemini 聊天内可直接生成与编辑 Docs/Sheets/PDF/代码文件：所有 Gemini 用户即日可用，PDF 预览编辑支持 Web 与移动端，其余格式暂限 Web。
-  来源：https://www.theverge.com/ai-artificial-intelligence/1022519/google-gemini-file-editing-documents-pdfs
-· 微软向约 6 万名员工提供自愿离职方案：覆盖美、英、加等国，被解读为 AI 将实质性改变微软人力结构的迄今最清晰信号。
-  来源：https://www.theverge.com/tech/1022023/microsoft-exit-offer-layoffs-notepad
-· 国防承包商员工将个人 Claude Agent 接入五角大楼安全网络运行两个月：Accenture 一名员工的个人 Agent 在 DOD 网络上运行两月才被发现并修补漏洞，暴露企业 Agent 治理空白。
-  来源：https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/
-· Baseten 发布 joey-1：2B 决策模型，输出校准概率而非文本：P50 延迟 20ms，输入定价 $0.01/百万 token，面向需要概率输出的决策场景。
-  来源：https://www.marktechpost.com/2026/10/29/baseten-joey-1-2b-decision-model/
-· Block 发布 Dessa 全双工语音模型：仅用人类对话音频训练，可在 MacBook Pro M4 Max 本地实时运行，但未公布参数量、benchmark 与权重。
-  来源：https://www.marktechpost.com/2026/10/29/block-dessa-full-duplex-speech-model/
-
-📄 重要论文
-· EmbeddingGemma 2：统一高效的多模态嵌入模型：原生在同一空间表示文本、图像、音频、视频及其组合，引入简化的逐层嵌入与多阶段课程学习，在全部模态的嵌入 benchmark 上刷新 SOTA。
-  来源：https://huggingface.co/papers/2610.37364
-· Anthropic 研究：专家会采纳 AI Agent 的随机观点并误认为是自己的判断：给 50 名专家配备偏好由抛硬币决定的 Agent，专家在判断类问题上最多 86% 跟随 Agent 观点，且多数认为结论出自本人。
-  来源：https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/
-· h1：自动定理证明中的&quot;苦涩教训&quot;初探：检验一个简单的 Agent 循环、仅扩展测试时算力，能否匹敌人类设计的规划/分解/专用证明器编排工作流。
-  来源：https://huggingface.co/papers/2610.35962
-· What Outcome RL Buys：完成率、可靠性，但很少带来新知识：在固定 token 预算下对比 20 个开源 RL 模型与其基座，将 pass@1 提升拆解为&quot;完成度&quot;等三部分，指出结果型 RL 主要买到的是答完和稳定，而非能力边界外推。
-  来源：https://huggingface.co/papers/2610.34894
-· Precedent or Intent? 编码 Agent 演进既有代码时听谁的：双向实验研究当既有实现与新任务指令冲突时，编码 Agent 是遵循历史代码先例还是新意图。
-  来源：https://arxiv.org/abs/2610.38244
-· FlashMap：流映射草稿器实现 6.14 倍无损解码加速：单次前向联合草拟 16 个 token，在 Qwen3-8B 上达到最高 6.14x 无损加速。
-  来源：https://www.marktechpost.com/2026/10/28/flashmap-flow-map-speculative-decoding/
-· Instruction Capacity：用可控负载量化模型的指令遵循极限：以&quot;替换无意义单词的规则&quot;构造原子化、可独立验证的负载，首次给出带不确定度的指令容量指标。
-  来源：https://huggingface.co/papers/2610.36095
-
-🔧 开源项目
-· pbakaus/impeccable（日增 2,870 star）：为编码 Agent 提供设计词汇表，用 polish/bolder 引导风格、用 critique/audit 做审查，在交付前拦截&quot;AI slop&quot;式界面。
-  来源：https://github.com/pbakaus/impeccable
-· obra/superpowers（日增 1,034 star）：一套可用的 Agent 技能框架与软件开发方法论，把 Agent 工作流沉淀为可复用规范。
-  来源：https://github.com/obra/superpowers
-· Prime Intellect 开源 Prime Mega MoE：让 DeepSeek 融合 MoE kernel 可训练：补齐反向传播，Qwen3 MoE 训练步速最高提升 34%，前向 3.11x 加速。
-  来源：https://www.marktechpost.com/2026/10/29/prime-intellect-prime-mega-moe-fused-moe-kernel-training/
-· Infini-AI-Lab 开源 Hermit（Apache-2.0）：harness adapter 框架，不改动 Agent 模型与 harness，仅从任务反馈中训练指令、技能、记忆与工具的外层。
-  来源：https://www.marktechpost.com/2026/10/29/infini-ai-lab-hermit-harness-adapter-framework/
-· MiniMax 开源 MCode Stack：MIT 协议，含 17 个 SKILL.md 技能与 5 份检查清单，覆盖代码审查、子 Agent 拆分、上下文预算与长时命令，为其内部编码团队日常所用。
-  来源：https://www.marktechpost.com/2026/10/28/minimax-open-sources-mcode-stack-agent-skills/
-· thedotmack/claude-mem（日增 336 star）：为各类 Agent 提供跨会话持久上下文，自动捕获会话内容、AI 压缩后回注未来会话，兼容 Claude Code、Codex、Gemini、Copilot 等。
-  来源：https://github.com/thedotmack/claude-mem
-· tinyworldformer：在 Raspberry Pi Pico 2 W 上运行游戏的小型世界模型：把世界模型压缩到微控制器级别运行。
-  来源：https://github.com/SheepSeb/tinyworldformer
-
-🐦 AI 圈热议
-· Sam Altman 称&quot;本地推理是对稀缺资源的糟糕分配&quot;，引爆 r/LocalLLaMA 争论：Altman 认为全球大量 DRAM 被分散放在个人电脑里是资源错配，开源模型已可用不等于本地推理是合理方案。社区反驳集中在隐私、离线可用与 API 静默变更风险——同日一篇 40 天编码 Agent 遥测帖正好佐证：deepseek-v4.1-flash 在 10 月 17 日被静默覆盖为 -1017 版本后，&quot;更快、回答更短&quot;实际表现为脏话多 3 倍、质量明显下降。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xizbq1/sam_altman_local_inference_is_a_terrible/ / https://www.reddit.com/r/LocalLLaMA/comments/1xiqw9i/why_you_cant_trust_cloud_api_endpoints_40_days_of/
-· Cohere 被指&quot;不道德&quot;：先发恐吓式安全博客，再宣布数十亿美元 E 轮融资：社区指出 Cohere 三天前用大量 prefill 与提示工程诱导 Qwen 3.8 Flash Next 补全部分 cURL 命令，发布缺乏科学性的&quot;实验&quot;博客制造恐慌头条，今日即宣布 E 轮融资（含加拿大政府最高 16 亿美元）。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xix61q/arguably_unethical_behavior_from_cohere/
-
-💡 今日观察
-今天最响的信号是&quot;能力领先不再等于商业领先&quot;：Gemini 4 Carbon 登顶榜单的同一天，Google 因 AI 搜索单位收入低于传统搜索而市值蒸发 5000 亿美元，Anthropic 的 S-1 则把&quot;烧算力换 AGI&quot;写成了公开财务赌注。开源侧，Mistral 的 1T Le Chonk 证明欧洲能造万亿级权重模型，但综合分仍落后中国开源模型，开源竞争的标尺正从&quot;参数规模&quot;转向&quot;每 token 有效能力&quot;。工程层面，GitHub Trending 被 Agent 技能框架、设计词汇表、跨会话记忆占据，说明竞争焦点已从模型转向 Agent 的&quot;外围工程&quot;——而 Accenture 员工把个人 Agent 接进五角大楼网络两个月这件事，提醒这批新工具的安全边界还远未建立。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

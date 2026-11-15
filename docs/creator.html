@@ -36,6 +36,76 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-15">AI 每日简报 · 2026-11-15 周日</span>
+    <button class="cbtn" data-copy="t-2026-11-15">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-15.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-15.mp3" download="2026-11-15.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-15">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-15">AI 每日简报 · 2026-11-15 周日
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· 黄仁勋辞任英伟达CEO，马斯克等科技高管联名请愿要求复职：黄仁勋因个人丑闻辞去英伟达CEO职务，截至周六下午请愿已获超11.5万签名，亚洲多国政府正评估芯片供应影响。
+  来源：https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/
+· 研究显示中国最强AI模型均基于被禁运的英伟达芯片训练：新研究追踪到超1.5吉瓦被禁芯片流入中国，分析师认为这可能是黄仁勋离场的深层原因。
+  来源：https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/
+· Anthropic IPO前夜，Amodei承认&quot;明年有巨大不确定性&quot;：Anthropic算力承诺总额近9010亿美元，IPO主要作为财务缓冲，银行以ITAR规则拒绝中国大陆及香港投资者认购。
+  来源：https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/
+· ChatGPT Wallet上线，AI agent可代用户完成购物结算：OpenAI在放弃Instant Checkout后重建AI购物，用户绑定一次卡片，每次购买通过Face ID或指纹确认，卡号以支付token隐藏。
+  来源：https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet
+· DeepSeek开放全家桶API：官方App功能均可自由组合调用，开发者可编排完整能力栈。
+  来源：https://www.qbitai.com/2026/11/510003.html
+· Fractile融资7亿美元，目标将AI推理速度提升100倍：推理产业竞争从&quot;造芯片&quot;扩展到系统级加速。
+  来源：https://www.36kr.com/p/4068015819772801
+· OpenAI解散独立机器人团队，研究人员转岗：这是第二次解散，理由是GPT-6 Astra等通用模型可直接控制机器人，专用机器人AI或不再必要。
+  来源：https://the-decoder.com/openai-reassigns-robotics-researchers-to-other-teams-as-general-purpose-models-might-make-specialized-robotics-ai-unnecessary/
+· Lovable应用泄露护照信息及超20万条私密消息：HN热度587点、240条评论，成为当日讨论最激烈的安全事件。
+  来源：https://www.crissyfield.de/research/lovable-en/
+· 斯坦福等十余家机构发布&quot;史上最严&quot;湿实验预测基准：推理拉满、算力翻5倍仍难通过，直指AI4S在真实实验场景的能力边界。
+  来源：https://www.qbitai.com/2026/11/510232.html
+
+📄 重要论文
+· Gemini 4 Carbon登顶MathArena，但成本为GPT-6.1 Sol的15倍：OpenAI模型首次失去该数学基准榜首，Gemini在测试中无视时限、几乎从不放弃任务。
+  来源：https://the-decoder.com/gemini-4-carbon-takes-the-matharena-crown-but-costs-15-times-more-than-gpt-6-1-sol/
+· Anthropic：过时的提示习惯正在拖慢Claude Opus 5.5：Opus 5.5成为所有付费计划默认模型，官方指南要求放弃&quot;think hard&quot;，从Medium effort起步。
+  来源：https://the-decoder.com/anthropic-says-outdated-prompting-habits-are-slowing-down-claude-opus-5-5/
+· Runway开源Praxis-1，将视频AI变为机器人控制器：Apache 2.0开放权重与源码，在英伟达RoboLab-120的World Action Model类别登顶，但尚不能自主规划复杂动作序列。
+  来源：https://the-decoder.com/runways-open-source-praxis-1-turns-video-ai-into-a-robot-controller/
+· 斯坦福开源Memorilla：16个记忆token压缩整个文档集：在冻结的Qwen3-8B上于FactKG达84.33%，文档token用量减少108倍。
+  来源：https://www.marktechpost.com/2026/11/14/stanford-memorilla-memory-system-16-memory-tokens/
+· Cmpnd发布dspy-wsp：权重空间编程进入DSPy：前沿LLM读取小模型权重、在沙箱中编辑并逐项测试，无需梯度，单次运行约5-10美元。
+  来源：https://www.marktechpost.com/2026/11/14/cmpnd-dspy-wsp-weight-space-programming/
+· FOAM：让SOAP二阶优化器接近AdamW的开销：通过单边Adam矩因子化，保留SOAP收敛优势同时削减优化器状态内存与特征分解开销。
+  来源：https://huggingface.co/papers/2611.16905
+
+🔧 开源项目
+· plannotator：为agent工作流提供人工把关面板：单日+408 star，支持规划、标注、代码审查，一键将反馈回传agent。
+  来源：https://github.com/backnotprop/plannotator
+· Univer：用Office SDK把编辑、计算、协作嵌入产品：单日+495 star，面向人类与AI agent的开放核心办公套件。
+  来源：https://github.com/dream-num/univer
+· 腾讯LoopForge：自托管编码agent交付工作流：可编排CodeBuddy、Codex与Claude Code，内置脚本与人工审批门。
+  来源：https://github.com/Tencent/LoopForge
+· Vercel UI SDK：为编码agent提供50+ UI行为库：Apache-2.0 beta，覆盖React、Vue、Svelte、Solid与Web Components，并提供直接控制UI的桥接。
+  来源：https://www.marktechpost.com/2026/11/13/vercel-ui-sdk-agent-ui-behaviors/
+
+🐦 AI 圈热议
+· &quot;前沿模型并没有真的变聪明多少&quot;引发LocalLLaMA长讨论：发帖者作为SWE与本地模型玩家认为，LLM的实用性提升主要来自上下文检索、prompt与工具编排等harness工程，而非原始智能；同期另一热帖质疑开源社区对100B级模型的依赖还能撑多久，指出主流厂商正把参数推向300B-500B，128GB统一内存设备将无法承载。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xwegdi/hot_take_frontier_models_havent_actually_become/
+· &quot;Claude Delusion&quot;与Claude误删教授全年讲义同登HN热榜：前者144点、180条评论，后者41点、61条评论，agent可靠性再次成为技术圈争论焦点，有评论直指把文件操作权限交给agent前缺少备份与沙箱是工程失职。
+  来源：https://www.netmeister.org/blog/claude-delusion.html
+
+💡 今日观察
+黄仁勋辞职已从个人丑闻演变为算力治理问题：请愿、亚洲政府表态、被禁芯片溯源研究在同一天叠加，说明市场真正担心的不是CEO人选，而是出口管制与供应承诺的可信度。模型侧同一天出现两个反向信号——Gemini 4 Carbon以15倍成本换取数学榜首，而Anthropic公开承认旧prompt习惯拖累新模型，性能提升越来越依赖使用方式而非单纯堆算力。开源侧的亮点集中在&quot;agent外围&quot;：记忆压缩、人在环路审批、UI行为库与权重空间编程，而非又一个基座模型。对builder而言，今天最实际的行动是审计agent权限与备份策略，并按新指南重写prompt模板。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-14">AI 每日简报 · 2026-11-14 周六</span>
     <button class="cbtn" data-copy="t-2026-11-14">📋 复制标题</button>
   </div>
@@ -1094,78 +1164,6 @@ Anthropic 一天内连发 FlashProve 与 Message Threads，前者解决&quot;这
 
 💡 今日观察
 今天最明确的信号来自资本端而非模型端：OpenAI 融资只拿到目标的三分之一、Anthropic 预计被评垃圾级、英伟达考虑为数据中心贷款共签——三条新闻指向同一件事，算力扩张的融资链条正在变紧，而微软“裁人保 AI 团队”正是这种压力的组织映射。与之对照，技术侧的进展依然密集：Gemini 4 Carbon 与 Genie 4 同日发布，Mage-VL-Cowork 把 computer use 压到 4B，Vercel 的 agent-desktop 用无障碍树替代像素，Agent 基础设施正在快速标准化。真正值得警惕的是治理层面：水印单参数可绕过、会话数据默认入训、合成数据可自动投毒，三项都说明“合规声明”与“实际行为”之间的缝隙在扩大。对 builder 而言，当下更实际的判断是：模型能力不再是稀缺项，可验证性、成本结构与账号/数据合规才是决定产品能否活下去的变量。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-10-31">AI 每日简报 · 2026-10-31 周六</span>
-    <button class="cbtn" data-copy="t-2026-10-31">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-10-31.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-10-31.mp3" download="2026-10-31.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-10-31">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-10-31">AI 每日简报 · 2026-10-31 周六
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Anthropic IPO 或获&quot;垃圾级&quot;信用评级：FT 报道称，Blackstone 预计 Anthropic IPO 后难以获得投资级评级，高收益债市场将抬高其融资成本。
-  来源：https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f
-· AI 资本开支担忧引发科技股大跌：Reuters 与 BBC 报道，Amazon、Intel 财报加剧市场对 AI 投入回报的怀疑，纳指与科技板块显著下挫。
-  来源：https://www.reuters.com/business/nasdaq-futures-tumble-amazon-intel-results-deepen-ai-spending-woes-2026-10-30/
-· OpenAI、Google、微软、Anthropic 联合支持 AI 抓取退出标准：四家将采纳统一的&quot;policy token&quot;信号，发布方可一次性向多家 AI 公司声明训练偏好，无需逐家配置。
-  来源：https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out
-· Google 首个太空数据中心卫星上线：星上 TPU 成功启动，Gemma 4 模型在轨完成推理并输出一首关于太空的俳句。
-  来源：https://www.theverge.com/tech/1023528/google-project-suncatcher-ai-satellite-transmission
-· Cursor 市场中的 Claude Code 扩展被植入后门约 11 小时：受影响用户最多 5,000 人，扩展尝试窃取数据并建立远程访问；Cursor 一度下架整个市场。
-  来源：https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/
-· 承包商个人 Claude Agent 在五角大楼网络运行两月：WIRED 称 Accenture 员工的个人 Agent 在国防部网络潜伏两个月才被发现并修补。
-  来源：https://www.wired.com/story/a-defense-contractor-gave-their-personal-ai-agent-access-to-a-secure-pentagon-system/
-· Reddit CEO：Google AI Mode&quot;不给任何人导流&quot;：Huffman 称 Reddit 10 月每周流失超百万 Google 搜索引荐，股价跌逾 25%，将转向登录墙与直接访问。
-  来源：https://the-decoder.com/googles-ai-mode-doesnt-drive-traffic-for-anybody-reddit-ceo-huffman-warns-the-entire-web/
-· OpenAI 将 Pro 套餐用量上限翻倍：Pro 100 升至 Pro 500，原计划削减 Pro 200 配额在用户反对后撤回，被视为对 Anthropic IPO 的正面竞争。
-  来源：https://the-decoder.com/openai-doubles-usage-limits-on-pro-plans-as-competition-with-anthropic-heats-up/
-· 美国司法部审查 Nvidia 收购 Hugging Face 交易：反垄断机构同时关注 Nvidia 的销售行为，交易前景存在不确定性。
-  来源：https://the-decoder.com/us-antitrust-regulators-are-scrutinizing-nvidias-hugging-face-deal-and-sales-practices/
-
-📄 重要论文
-· OpenAI 更新 Model Spec，围绕五大核心价值重构行为准则：新规范强调对人类意图的忠实与可纠正性，要求模型结合对话历史推断真实需求并披露自身假设。
-  来源：https://openai.com/index/updated-model-spec
-· EasyProver 用现成前沿模型攻克 Lean 定理证明：无需额外训练，在 PutnamBench 上解出 669/672，完成 IMO 2026 全部六道形式化题，并解决 597/600 个 NTP4VC 验证条件。
-  来源：https://huggingface.co/papers/2610.38174
-· 统一训练：用单一似然算法覆盖预训练到 RL 全流程：论文将预训练、midtraining、SFT、RL 统一为对模型生成目标分布的最大似然拟合，消解阶段间的算法割裂。
-  来源：https://huggingface.co/papers/2610.40564
-· Multi-Token Prediction 训练缺陷被定位并修正：作者分解出 MTP 交叉熵梯度中干扰下一 token 学习的残差项（本质为 KL 自蒸馏），随规模放大而加剧。
-  来源：https://huggingface.co/papers/2610.38331
-· &quot;Broken on Arrival&quot;：公共模型库中大量量化模型功能失效：测试 Ollama 官方库 305 个可用于代码的 GGUF 标签，2.3% 的官方标签在 HumanEval+ 上最多只解出 6 题，且无仓库做功能测试。
-  来源：https://huggingface.co/papers/2609.05881
-· Anthropic 研究：专家会采纳 AI Agent 的随机观点并误认为己见：50 名专家面对偏好由抛硬币决定的 Agent，在判断类问题上跟随其观点高达 86%。
-  来源：https://the-decoder.com/experts-adopt-ai-agents-random-opinions-and-think-theyre-their-own-anthropic-study-finds/
-
-🔧 开源项目
-· Mistral 开源 Large 4「Le Chonk」：万亿参数、全程在欧洲训练的开放权重模型，官方称编码能力超越开源对手，但独立测试综合得分 26，落后 DeepSeek V4.1 Flash 与 GLM-5.3 的 32。
-  来源：https://huggingface.co/blog/mistral-large4
-· Microsoft 与 UC Berkeley 发布 TokenEconomizer：开源插件从历史会话学习，在 SWE-Bench 上将编码 Agent 的 token 成本降低 18.4%–30.9%，无需改动 Agent 本身。
-  来源：https://www.marktechpost.com/2026/10/30/microsoft-tokeneconomizer-coding-agent-cost-control/
-· NVIDIA 发布 Nemotron 3.5 Transcribe：开放权重语音 LLM，约 4.3B 激活参数、30B MoE，支持 40 种语言转写、说话人标签与词级时间戳，英文平均 WER 4.71%。
-  来源：https://www.marktechpost.com/2026/10/28/nvidia-nemotron-3-5-transcribe-open-speech-llm/
-· Prime Intellect 发布 Prime Mega MoE：为 DeepSeek 的 fused Mega MoE kernel 补上反向传播，使其可训练，前向提速 3.11 倍，Qwen3 MoE 训练步速提升最多 34%。
-  来源：https://www.marktechpost.com/2026/10/29/prime-intellect-prime-mega-moe-fused-moe-kernel-training/
-· claude-mem 登顶 GitHub Trending：为每个 Agent 提供跨会话持久上下文，自动压缩会话内容并将相关记忆注入后续会话，兼容 Claude Code、Codex、Gemini 等。
-  来源：https://github.com/thedotmack/claude-mem
-
-🐦 AI 圈热议
-· Sam Altman：内存放在个人电脑里而非数据中心是&quot;糟糕的&quot;：在 Cheeky Pint 播客中，Altman 就 RAM 短缺表态，称大量内存留在消费端 PC 是浪费；他同时表示同情被 AI 数学成果淹没的研究者，但 OpenAI 的数学攻势不会停。
-  来源：https://www.theverge.com/ai-artificial-intelligence/1023820/sam-altman-ram-shortage-cloud-servers
-· r/LocalLLaMA 热议：开源模型发布节奏沦为&quot;抢榜一天&quot;：社区预测各大实验室将在 Qwen 4 发布前突击推出本地模型以短暂占据榜首，并调侃 Gemma 4 此前正是在 Qwen 发布前几天落地；同期 Unsloth 发布 DeepSeek-V4.1-Flash GGUF，并公开质疑第三方量化版本复现不了其宣称的精度。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xjigxg/copium_prediction_google_and_other_major_labs/
-
-💡 今日观察
-今天最清晰的信号是资本与信任的双重收紧：Anthropic IPO 可能拿到垃圾级评级、科技股因 AI 烧钱担忧集体下挫，融资端的乐观叙事正在被现金流检验。与此同时，安全事件密集出现——Cursor 插件后门、五角大楼网络里的个人 Agent、GLM 5.3 自主构造 Firefox 漏洞链，说明 Agent 能力提升的速度已经超过权限治理的速度。技术侧则相对活跃，统一训练、MTP 梯度修正、EasyProver 都在动基础配方，而&quot;量化模型功能失效&quot;和&quot;专家盲从 Agent 观点&quot;两篇论文提醒：可用的模型和可信的输出，都还需要额外验证。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

@@ -15,6 +15,33 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-11-16 周一</title>
+      <description>早上好，欢迎收听今天的 AI 日报，今天是 2026 年 11 月 16 日，星期一。今天最值得关注的，是国产算力在万亿参数级别上的一次正面突破，以及围绕 NVIDIA 芯片出口的一连串监管震荡。我们一条条来聊。
+先看今天的头条。美团开源了 LongCat-2.5，一个 1.6 万亿参数的 Agent 模型，Terminal Bench 得分 88.4，仅次于 Claude Opus 5。更关键的是，它全程没有用一块 NVIDIA 的 GPU，示例部署跑在 194 颗华为昇腾芯片上。这意味着什么呢？国产算力第一次在万亿参数这个量级上，拿出了可以验证的 benchmark 成绩，推理栈也多了一条不走 CUDA 的路。对开发者来说，换栈这件事，从概念变成了可以认真评估的选项。
+同一天，Google 发布了 Gemini 4 Hydrogen，定位是低成本的快速 Agent 模型，100 万 token 的上下文窗口，四档思考等级，定价是输入 1.5 美元、输出 7.5 美元，已经接进了 Google 搜索。长上下文加低价，明显是冲着大规模搜索和工具调用场景去的。
+Anthropic 这边有个很有意思的思路。Claude Fable 5.2 生成图像不直接算像素，而是写 Python 代码，在虚拟画布上一笔一笔画出来，一张写实的停车场场景大概要七十万笔。这等于把图像生成变成了程序化渲染，可控性和可解释性都上了一个台阶。
+接下来是监管这条线，信息量很大。黄仁勋辞职之后，连锁反应还在发酵。国会两党正在推动多项收紧 AI 芯片出口的法案，还要求 NVIDIA 高管到国会作证，亚洲多国政府也已经就芯片供应公开表态。与此同时，华尔街日报曝出，一家与黄仁勋前伴侣有关联的公司，为中方撮合了近 120 亿美元的 NVIDIA 芯片订单。做空机构 Culper 估算，NVIDIA 实际的中国收入占比超过两成，远高于官方披露的 7%。另外，Reddit 的 LocalLLaMA 社区在热议，美国商务部可能出台规则，封堵中国公司远程租用 NVIDIA GPU，这对开源模型的海外算力获取路径影响不小。一句话，跨境算力采购的合规风险，正在快速上升。
+其他几条快讯。OpenAI 的机器人硬件团队据报道已经解散，重心转向用 GPT-6 Astra 直接从视觉观察控制机器人，具身智能的路线从自研硬件转向模型加第三方本体。李沐离开 Amazon 后加入了 Aimotion，方向是面向产业的世界模型。Bland 发布了全双工语音模型 Tofu-1，瞄准嘈杂环境下的电话场景。澳洲央行的一份研究显示，AI 对就业的冲击先落在年轻人身上，软件开发和客服岗位，15 到 24 岁群体的招聘下滑明显大于年长群体。印度芯片初创公司 Bharat Semi 拿到了 2400 万美元种子轮，主打 AI 传感器芯片。
+论文方面，今天最重磅的是 OpenAI 关于标准模型非微扰格点定义的工作，GPT-6 Astra 协助把想法推进成了详细证明，这是 AI 参与理论物理形式化推导的一个标志性案例。另外几篇值得留意：UniSpark-9B 用混合注意力统一了多模态理解和生成；MixUA 解决多用户多智能体场景下的记忆权限分配；DeepStress 给深度搜索 Agent 做证据质量压力测试；还有一篇比较了决策模型在长程 Agent 里当行动者、评判者和教师三种角色的表现。
+开源项目这边，三个信号很一致。AG-UI 定义 Agent 和前端的交互协议，Stitch Skills 提供跨编码 Agent 复用的技能包，NVIDIA 的 SkillEvaluator 做技能库的质量评估。交互协议、技能包、技能评估，三层拼图同时出现，Agent 生态的标准化正在加速。
+最后是今日观察。美团 LongCat-2.5 用纯昇腾集群跑出接近前沿的 Agent 成绩，是今天最有信号意义的一件事，而它恰好发生在 NVIDIA 因出口问题面临国会收紧管制的同一天。一边是替代路径被验证，一边是原有供应链的合规成本上升。再加上 Gemini 4 Hydrogen 把长上下文 Agent 打到 1.5 美元档，Claude Fable 5.2 把图像生成改写成写代码作画，竞争重心正从模型规模转向单位成本和可控性。对开发者来说，</description>
+      <itunes:summary>早上好，欢迎收听今天的 AI 日报，今天是 2026 年 11 月 16 日，星期一。今天最值得关注的，是国产算力在万亿参数级别上的一次正面突破，以及围绕 NVIDIA 芯片出口的一连串监管震荡。我们一条条来聊。
+先看今天的头条。美团开源了 LongCat-2.5，一个 1.6 万亿参数的 Agent 模型，Terminal Bench 得分 88.4，仅次于 Claude Opus 5。更关键的是，它全程没有用一块 NVIDIA 的 GPU，示例部署跑在 194 颗华为昇腾芯片上。这意味着什么呢？国产算力第一次在万亿参数这个量级上，拿出了可以验证的 benchmark 成绩，推理栈也多了一条不走 CUDA 的路。对开发者来说，换栈这件事，从概念变成了可以认真评估的选项。
+同一天，Google 发布了 Gemini 4 Hydrogen，定位是低成本的快速 Agent 模型，100 万 token 的上下文窗口，四档思考等级，定价是输入 1.5 美元、输出 7.5 美元，已经接进了 Google 搜索。长上下文加低价，明显是冲着大规模搜索和工具调用场景去的。
+Anthropic 这边有个很有意思的思路。Claude Fable 5.2 生成图像不直接算像素，而是写 Python 代码，在虚拟画布上一笔一笔画出来，一张写实的停车场场景大概要七十万笔。这等于把图像生成变成了程序化渲染，可控性和可解释性都上了一个台阶。
+接下来是监管这条线，信息量很大。黄仁勋辞职之后，连锁反应还在发酵。国会两党正在推动多项收紧 AI 芯片出口的法案，还要求 NVIDIA 高管到国会作证，亚洲多国政府也已经就芯片供应公开表态。与此同时，华尔街日报曝出，一家与黄仁勋前伴侣有关联的公司，为中方撮合了近 120 亿美元的 NVIDIA 芯片订单。做空机构 Culper 估算，NVIDIA 实际的中国收入占比超过两成，远高于官方披露的 7%。另外，Reddit 的 LocalLLaMA 社区在热议，美国商务部可能出台规则，封堵中国公司远程租用 NVIDIA GPU，这对开源模型的海外算力获取路径影响不小。一句话，跨境算力采购的合规风险，正在快速上升。
+其他几条快讯。OpenAI 的机器人硬件团队据报道已经解散，重心转向用 GPT-6 Astra 直接从视觉观察控制机器人，具身智能的路线从自研硬件转向模型加第三方本体。李沐离开 Amazon 后加入了 Aimotion，方向是面向产业的世界模型。Bland 发布了全双工语音模型 Tofu-1，瞄准嘈杂环境下的电话场景。澳洲央行的一份研究显示，AI 对就业的冲击先落在年轻人身上，软件开发和客服岗位，15 到 24 岁群体的招聘下滑明显大于年长群体。印度芯片初创公司 Bharat Semi 拿到了 2400 万美元种子轮，主打 AI 传感器芯片。
+论文方面，今天最重磅的是 OpenAI 关于标准模型非微扰格点定义的工作，GPT-6 Astra 协助把想法推进成了详细证明，这是 AI 参与理论物理形式化推导的一个标志性案例。另外几篇值得留意：UniSpark-9B 用混合注意力统一了多模态理解和生成；MixUA 解决多用户多智能体场景下的记忆权限分配；DeepStress 给深度搜索 Agent 做证据质量压力测试；还有一篇比较了决策模型在长程 Agent 里当行动者、评判者和教师三种角色的表现。
+开源项目这边，三个信号很一致。AG-UI 定义 Agent 和前端的交互协议，Stitch Skills 提供跨编码 Agent 复用的技能包，NVIDIA 的 SkillEvaluator 做技能库的质量评估。交互协议、技能包、技能评估，三层拼图同时出现，Agent 生态的标准化正在加速。
+最后是今日观察。美团 LongCat-2.5 用纯昇腾集群跑出接近前沿的 Agent 成绩，是今天最有信号意义的一件事，而它恰好发生在 NVIDIA 因出口问题面临国会收紧管制的同一天。一边是替代路径被验证，一边是原有供应链的合规成本上升。再加上 Gemini 4 Hydrogen 把长上下文 Agent 打到 1.5 美元档，Claude Fable 5.2 把图像生成改写成写代码作画，竞争重心正从模型规模转向单位成本和可控性。对开发者来说，</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-16.mp3" length="1837440" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-16.mp3</guid>
+      <pubDate>Mon, 16 Nov 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>05:06</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-11-15 周日</title>
       <description>早上好，欢迎收听今天的 AI 每日播报，今天是 2026 年 11 月 15 日，星期日。今天最炸的消息，毫无疑问是英伟达 CEO 黄仁勋辞职，这件事已经从个人丑闻迅速演变成整个算力供应链的治理问题；与此同时，模型侧和开源侧也各有看点，我们一条条来聊。
 先说英伟达。黄仁勋因为个人丑闻辞去 CEO 职务，到周六下午，马斯克等科技高管的联名请愿已经收集到超过十一万五千个签名，要求他回归。亚洲多国政府正在评估芯片供应受到的影响。同一天还有一项研究被翻出来，说中国最强的几个 AI 模型，训练用的都是被禁运的英伟达芯片，追踪到的流入规模超过一点五吉瓦。有分析师认为，这可能才是黄仁勋离场的深层原因。所以市场真正担心的，其实不是谁来当 CEO，而是出口管制和供应承诺还可不可信。所有依赖英伟达 GPU 的团队，今天都该评估一下供应连续性的风险。
@@ -369,29 +396,6 @@ OpenAI 今天有三条消息值得放在一起听。第一，TechCrunch 报道�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-02.mp3</guid>
       <pubDate>Mon, 02 Nov 2026 08:00:00 +0800</pubDate>
       <itunes:duration>05:23</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-11-01 周日</title>
-      <description>早上好，今天是2026年11月1日，欢迎收听AI行业每日播报。今天最值得关注的，是资本端开始给AI降温：OpenAI新一轮融资只拿到目标的三分之一，而技术侧Gemini 4 Carbon和Genie 4同日登场，一冷一热，构成了今天的主线。
-先看融资。OpenAI这轮只募到110亿美元，原本目标是300亿，估值1.25万亿美元也低于预期。大型投资人在近期科技股抛售中明显收缩，前沿实验室“无限弹药”的叙事第一次被资本面证伪。与此同时，Anthropic抢在11月推进IPO，但据金融时报报道，Blackstone预测其IPO后会被评级机构打上“高收益垃圾级”，融资成本上升，而它的支出规模又极大，债务成本会直接约束算力扩张的节奏。更微妙的是英伟达，它正在考虑为Nscale在西弗吉尼亚的数据中心做贷款共签。卖芯片的一方出面为数据中心贷款背书，这被不少观察者看作需求见顶的早期信号。
-技术侧依然热闹。Google DeepMind发布了新一代前沿模型Gemini 4 Carbon，以及实时世界模拟模型Genie 4，后者宣称在真实感上有突破，Agent的训练环境供给又多了一块。法国的Mistral则称Le Chonk在编程与网络安全任务上追平甚至超过DeepSeek和Z.ai的最佳模型，开源权重第一梯队格局重新洗牌。另外，世界模型首次被用于指导芯片设计，做出来的NPU达到700 TOPS，算力利用率接近满载，AI反哺硬件设计的路径开始跑通。
-治理层面有几条值得警惕。Anthropic为赶欧盟AI Act十二月期限，把文本水印扩展到四个模型，但在Opus 4.6和Sonnet 4.6上，改一个采样参数就能绕过，官方只给了合规警告。OpenAI则计划用Daybreak Blue的网络安全会话数据训练模型，即便用户已经关闭训练开关，11月29日起生效，舆论反弹后才补发邮件承诺单独opt-out。还有一起热议事件，开发者Jiahao Shao指控Anthropic因“训练竞品”封他的号，他本人否认蒸馏Claude，讨论焦点集中在服务条款里“竞品训练”的判定标准和申诉机制的缺失。
-产品和组织层面，微软向约6万名员工提供自愿离职，约占员工总数四分之一，同时明确保护AI关键团队，人力预算向算力转移的样本又多了一个。Claude顶配套餐升级为Ultra，取消5小时限额，200美元档用户先行解禁。Apple Intelligence随iOS 27.3进入中国，11月4日开启beta，12月正式发布。开源社区里，微软的Mage-VL-Cowork用4B规模在OSWorld-Verified上拿到66%，把端侧computer-use Agent的可行参数规模往下探了一截；Vercel Labs开源了agent-desktop，读取操作系统无障碍树而不是像素，比视觉方案更省更稳。
-论文方面，今天有一篇把“不同模态收敛到同一表征”的柏拉图表征假说升级成了定理，在任意多模态上分别训练的JEPA学到相同表征，只差一个旋转。还有一篇在能力完全对齐的前提下对比MCP和CLI两种接口，发现表示形式本身就会显著改变Agent行为，工具接口的设计是个被低估的变量。
-今日观察。今天最明确的信号来自资本端而非模型端：OpenAI融资只拿到目标的三分之一，Anthropic预计被评垃圾级，英伟达考虑为数据中心贷款共签，三条新闻指向同一件事，算力扩张的融资链条正在变紧，微软裁人保AI团队正是这种压力的组织映射。技术侧进展依然密集，Agent基础设施正在快速标准化。真正值得警惕的是治理层面：水印单参数可绕过、会话数据默认入训、合成数据可自动投毒，合规声明和实际行为之间的缝隙在扩大。对builder来说，模型能力不再是稀缺项，可验证性、成本结构、账号与数据合规，才是决定产品能不能活下去的变量。我们明天见。</description>
-      <itunes:summary>早上好，今天是2026年11月1日，欢迎收听AI行业每日播报。今天最值得关注的，是资本端开始给AI降温：OpenAI新一轮融资只拿到目标的三分之一，而技术侧Gemini 4 Carbon和Genie 4同日登场，一冷一热，构成了今天的主线。
-先看融资。OpenAI这轮只募到110亿美元，原本目标是300亿，估值1.25万亿美元也低于预期。大型投资人在近期科技股抛售中明显收缩，前沿实验室“无限弹药”的叙事第一次被资本面证伪。与此同时，Anthropic抢在11月推进IPO，但据金融时报报道，Blackstone预测其IPO后会被评级机构打上“高收益垃圾级”，融资成本上升，而它的支出规模又极大，债务成本会直接约束算力扩张的节奏。更微妙的是英伟达，它正在考虑为Nscale在西弗吉尼亚的数据中心做贷款共签。卖芯片的一方出面为数据中心贷款背书，这被不少观察者看作需求见顶的早期信号。
-技术侧依然热闹。Google DeepMind发布了新一代前沿模型Gemini 4 Carbon，以及实时世界模拟模型Genie 4，后者宣称在真实感上有突破，Agent的训练环境供给又多了一块。法国的Mistral则称Le Chonk在编程与网络安全任务上追平甚至超过DeepSeek和Z.ai的最佳模型，开源权重第一梯队格局重新洗牌。另外，世界模型首次被用于指导芯片设计，做出来的NPU达到700 TOPS，算力利用率接近满载，AI反哺硬件设计的路径开始跑通。
-治理层面有几条值得警惕。Anthropic为赶欧盟AI Act十二月期限，把文本水印扩展到四个模型，但在Opus 4.6和Sonnet 4.6上，改一个采样参数就能绕过，官方只给了合规警告。OpenAI则计划用Daybreak Blue的网络安全会话数据训练模型，即便用户已经关闭训练开关，11月29日起生效，舆论反弹后才补发邮件承诺单独opt-out。还有一起热议事件，开发者Jiahao Shao指控Anthropic因“训练竞品”封他的号，他本人否认蒸馏Claude，讨论焦点集中在服务条款里“竞品训练”的判定标准和申诉机制的缺失。
-产品和组织层面，微软向约6万名员工提供自愿离职，约占员工总数四分之一，同时明确保护AI关键团队，人力预算向算力转移的样本又多了一个。Claude顶配套餐升级为Ultra，取消5小时限额，200美元档用户先行解禁。Apple Intelligence随iOS 27.3进入中国，11月4日开启beta，12月正式发布。开源社区里，微软的Mage-VL-Cowork用4B规模在OSWorld-Verified上拿到66%，把端侧computer-use Agent的可行参数规模往下探了一截；Vercel Labs开源了agent-desktop，读取操作系统无障碍树而不是像素，比视觉方案更省更稳。
-论文方面，今天有一篇把“不同模态收敛到同一表征”的柏拉图表征假说升级成了定理，在任意多模态上分别训练的JEPA学到相同表征，只差一个旋转。还有一篇在能力完全对齐的前提下对比MCP和CLI两种接口，发现表示形式本身就会显著改变Agent行为，工具接口的设计是个被低估的变量。
-今日观察。今天最明确的信号来自资本端而非模型端：OpenAI融资只拿到目标的三分之一，Anthropic预计被评垃圾级，英伟达考虑为数据中心贷款共签，三条新闻指向同一件事，算力扩张的融资链条正在变紧，微软裁人保AI团队正是这种压力的组织映射。技术侧进展依然密集，Agent基础设施正在快速标准化。真正值得警惕的是治理层面：水印单参数可绕过、会话数据默认入训、合成数据可自动投毒，合规声明和实际行为之间的缝隙在扩大。对builder来说，模型能力不再是稀缺项，可验证性、成本结构、账号与数据合规，才是决定产品能不能活下去的变量。我们明天见。</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-01.mp3" length="1662480" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-01.mp3</guid>
-      <pubDate>Sun, 01 Nov 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>04:37</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

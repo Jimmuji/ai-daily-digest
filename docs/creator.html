@@ -36,6 +36,76 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-16">AI 每日简报 · 2026-11-16 周一</span>
+    <button class="cbtn" data-copy="t-2026-11-16">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-16.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-16.mp3" download="2026-11-16.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-16">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-16">AI 每日简报 · 2026-11-16 周一
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· 美团开源 LongCat-2.5，全程未用 NVIDIA GPU：1.6 万亿参数 Agent 模型，Terminal Bench 得分 88.4，仅次于 Claude Opus 5，示例部署跑在 194 颗华为昇腾芯片上。
+  来源：https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/
+· Google 发布 Gemini 4 Hydrogen：定位低成本的快速 Agent 模型，1M token 窗口、4 档思考等级，定价 $1.50/$7.50，Artificial Analysis 51 分、Terminal-Bench 4.1 57%，已接入 Google Search。
+  来源：https://www.marktechpost.com/2026/11/13/google-gemini-4-hydrogen/
+· Anthropic 的 Claude Fable 5.2 用代码“作画”而非生成像素：模型不直接计算像素，而是写 Python 在虚拟画布上模拟数十万笔触；一张写实停车场场景约 70 万笔。
+  来源：https://the-decoder.com/anthropics-claude-fable-5-2-doesnt-generate-images-it-paints-them/
+· 黄仁勋辞职后连锁反应：国会推动收紧 AI 芯片出口：两党支持多项收紧出口的法案，并要求黄仁勋等 NVIDIA 高管到国会作证；亚洲多国政府已就芯片供应承诺表态。
+  来源：https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china
+· WSJ：与黄仁勋前伴侣关联的公司为中方撮合近 120 亿美元 NVIDIA 芯片订单：做空机构 Culper 估算 NVIDIA 实际中国收入占比超 20%，远高于官方披露的 7%。
+  来源：https://the-decoder.com/firm-linked-to-jensen-huangs-ex-lover-reportedly-brokered-nearly-12-billion-in-nvidia-chip-orders-for-china/
+· OpenAI 机器人团队解散，GPT-6 Astra 转向直接驱动机器人：据报道机器人硬件团队被裁撤，能力重心转向用通用模型从视觉观察直接控制机器人。
+  来源：https://www.36kr.com/p/4069381314303105
+· 李沐加入 Aimotion，联合打造产业级世界模型：离开 Amazon 后选择创业方向为面向产业的世界模型。
+  来源：https://www.36kr.com/p/4070692160754562
+· Bland 发布 Tofu-1 全双工语音模型：面向嘈杂环境下的高 stakes 电话场景，企业研究预览阶段，暂未公布参数量、基准与定价。
+  来源：https://www.marktechpost.com/2026/11/15/bland-tofu-1-full-duplex-speech-to-speech-model/
+· 澳洲央行：AI 先冲击年轻初级岗位：软件开发与客服等暴露度高的岗位，15–24 岁招聘与就业自 ChatGPT 发布后下滑幅度明显大于年长群体，作者提示需排除周期与远程办公因素。
+  来源：https://the-decoder.com/australias-central-bank-finds-ai-hitting-young-workers-first-especially-in-software-and-customer-service/
+· 印度芯片初创 Bharat Semi 获 2400 万美元种子轮：主打 AI 传感器芯片，已拿下包括 General Atomics 在内的设计订单。
+  来源：https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/
+
+📄 重要论文
+· OpenAI：标准模型的非微扰格点定义取得进展：提出标准模型的候选格点定义，GPT-6 Astra 协助将想法推进为详细证明，同步上线 OpenAI 科学博客。
+  来源：https://openai.com/index/step-toward-defining-the-standard-model
+· UniSpark-9B：混合注意力统一多模态理解与生成：Mixture-of-Transformer-Experts 骨干，全注意力 + GatedDeltaNet 线性注意力，文本自回归与视觉 flow matching 联合训练。
+  来源：https://huggingface.co/papers/2611.16517
+· MixUA：多用户、多智能体场景的细粒度记忆抽取：把独立的用户-智能体轨迹蒸馏为经验，并按“谁能受益、什么必须保密”分配，解决群体进化型 Agent 的隐私与迁移问题。
+  来源：https://huggingface.co/papers/2611.10439
+· DeepStress：对深度搜索 Agent 做证据质量压力测试：用合成环境按可控比例注入劣质证据，暴露搜索 Agent 在噪声下的脆弱性且可复现。
+  来源：https://huggingface.co/papers/2607.13920
+· Actor, Judge, or Teacher？长程 Agent 中的决策模型角色：比较三个决策模型与三个通用 LLM 在“行动、评判、打分教学”三种角色下的表现，追问“行动差的模型是否仍能教得好”。
+  来源：https://huggingface.co/papers/2611.17167
+
+🔧 开源项目
+· ag-ui-protocol/ag-ui（日增 +355 star）：Agent-User 交互协议，把 Agent 接入前端应用的标准接口。
+  来源：https://github.com/ag-ui-protocol/ag-ui
+· google-labs-code/stitch-skills（日增 +247 star）：面向 Stitch MCP server 的 Agent Skills 库，遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor。
+  来源：https://github.com/google-labs-code/stitch-skills
+· NVIDIA/SkillEvaluator（日增 +122 star）：评估 AI Agent 技能的多层框架，含质量门禁、语义重叠检测、合成评测集生成与在线行为评估。
+  来源：https://github.com/NVIDIA/SkillEvaluator
+· db-branch：基于 ZFS 的秒级数据库分支：为 AI Agent 与 CI 提供秒级数据库分支，便于并行实验与回滚。
+  来源：https://github.com/db-branch/db-branch
+
+🐦 AI 圈热议
+· “所有 AI 生成的代码都应开源”引爆 HN：一文主张 AI 产出的代码应默认开放，HN 上 1054 分、577 条评论，争论集中在许可证归属、企业机密与审计责任。
+  来源：https://jakub.jankiewicz.org/blog/ai-code-open-source/
+· r/LocalLLaMA 热议美国拟封堵中国公司远程租用 NVIDIA GPU：社区讨论商务部拟议最终规则与《Remote Access Security Act》，认为将波及开源模型的海外算力获取路径。
+  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xwmnkw/rasa_will_cause_total_chaos_to_open_llms_and/
+
+💡 今日观察
+美团 LongCat-2.5 用纯昇腾集群跑出接近前沿的 Agent 成绩，是今天最有信号意义的一件事：非 NVIDIA 训练栈第一次在万亿参数级别给出可验证的 benchmark，而它恰好发生在 NVIDIA 因出口丑闻面临国会收紧管制的同一天。与此同时，Gemini 4 Hydrogen 把长上下文 Agent 模型打到 $1.50 档，Claude Fable 5.2 则把图像生成改写成“写代码作画”，说明竞争重心正从模型规模转向单位成本与可控性。Agent 生态的标准化也在加速——AG-UI 定义交互协议、Stitch 定义技能包、NVIDIA 定义技能评估，三层拼图同时出现。对开发者而言，今天更值得关注的是“换栈成本”和“合规成本”，而非又多了几个模型。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-15">AI 每日简报 · 2026-11-15 周日</span>
     <button class="cbtn" data-copy="t-2026-11-15">📋 复制标题</button>
   </div>
@@ -1080,90 +1150,6 @@ Anthropic 一天内连发 FlashProve 与 Message Threads，前者解决&quot;这
 
 💡 今日观察
 今天最值得盯的不是某个模型，而是“信任”与“付费”两条线同时收紧：Mythos 级 checkpoint 疑遭泄露、ChatGPT 转向 token 配额并限制多账号，说明前沿能力的外流风险与商业模式的可持续性正被同时重新定价。技术侧则出现明显的一致性方向——稀疏/路由（AB-Attention、Glance、StreamVibe）与自蒸馏（WISD、A-RSI）都在用更少的算力和标注换同等能力，这与“零财务回报”的质疑形成呼应：2027 年的竞争焦点可能不是谁模型更大，而是谁的每 token 成本更低、每份数据更可信。DeepSeek 的 dsh-superagent 用 Router-Worker 把 p95 延迟砍半，是本周最值得直接抄作业的工程范式。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-11-01">AI 每日简报 · 2026-11-01 周日</span>
-    <button class="cbtn" data-copy="t-2026-11-01">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-11-01.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-11-01.mp3" download="2026-11-01.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-11-01">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-01">AI 每日简报 · 2026-11-01 周日
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· OpenAI 新一轮融资仅募得 110 亿美元，目标 300 亿：估值 1.25 万亿美元低于预期，大型投资人在近期科技股抛售中收缩，Anthropic 则抢在 11 月推进 IPO。
-  来源：https://the-decoder.com/openai-raises-just-11-billion-of-its-30-billion-target-as-big-investors-lose-their-ai-appetite/
-· Anthropic IPO 后预计被评级机构打上“高收益垃圾级”：FT 报道称 Blackstone 预测其信用评级偏低，将推高其融资成本，而公司支出规模巨大。
-  来源：https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/
-· 英伟达考虑为 Nscale 西弗吉尼亚数据中心做贷款共签：在投资人对 AI 支出感到紧张时，卖芯片的一方出面为数据中心贷款背书。
-  来源：https://techcrunch.com/2026/10/30/nvidia-weighs-playing-the-cosigner-for-nscales-ai-data-center-in-west-virginia/
-· Google DeepMind 发布 Gemini 4 Carbon 与 Genie 4：前者为新一代前沿模型，后者为实时世界模拟模型，宣称在真实感上实现突破。
-  来源：https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/ / https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/
-· Mistral 称 Le Chonk 在开源权重竞赛中反超中国模型：法国实验室称其在编程与网络安全任务上追平或超过 DeepSeek、Z.ai 的最佳模型。
-  来源：https://www.wired.com/story/mistral-says-le-chonk-surpasses-chinese-models-cybersecurity/
-· Anthropic 为 Claude 文本水印扩容，但两个旧模型存在绕过漏洞：为赶欧盟 AI Act 12 月期限，水印扩展至四个模型；在 Opus 4.6 与 Sonnet 4.6 上改一个采样参数即可绕过，官方仅给出合规警告。
-  来源：https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/
-· OpenAI 将用 Daybreak Blue 网络安全会话数据训练模型，即便用户已关闭训练开关：11 月 29 日起生效，舆论反弹后补发一封邮件承诺单独 opt-out。
-  来源：https://the-decoder.com/openai-plans-to-train-models-on-daybreak-blue-cybersecurity-session-data-that-was-previously-off-limits/
-· 微软向约 6 万名员工提供自愿离职，同时保护 AI 关键团队：约占其员工总数四分之一，为今年第二轮；员工总数自 2022 年起维持在 22.3 万，而 2026 年 AI 基建支出约 1700 亿美元。
-  来源：https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/
-· Claude 顶配套餐升级为 Ultra，取消 5 小时限额：200 美元档用户先行解禁，Anthropic 与 OpenAI 均已推出订阅额度折算 API credits 的政策。
-  来源：https://www.qbitai.com/2026/10/506855.html
-· Apple Intelligence 随 iOS 27.3 进入中国：11 月 4 日开启 beta，12 月正式发布；苹果新任 CEO 同时表态“不为 AI 而 AI”。
-  来源：https://www.theverge.com/tech/1023974/apple-intelligence-china-ios-27-3
-· 世界模型首次用于指导芯片设计，NPU 达 700 TOPS、99% 算力可用：AI 算力利用率接近满载。
-  来源：https://www.qbitai.com/2026/10/506866.html
-
-📄 重要论文
-· Proving and Improving the Platonic Representation Hypothesis with JEPAs：把“不同模态收敛到同一表征”的猜想升级为定理——在任意多模态上分别训练的 JEPA 学到相同表征（相差一个旋转），并给出改进配方。
-  来源：https://huggingface.co/papers/2610.39302
-· Matched Capabilities, Different Behaviors: MCP 与 CLI 接口的受控对比：在可执行能力完全对齐的前提下，MCP 与 CLI 两种表示仍显著改变 Agent 行为。
-  来源：https://huggingface.co/papers/2610.34298
-· Your Benchmark Is an Empirical Measure Over Difficulty：提出基准即“难度上的经验测度”，形式化了两类失效模式——测度错配与覆盖缺口。
-  来源：https://huggingface.co/papers/2610.29927
-· Investor's Last Exam / EPSBench：金融 Agent 的严格评测：前者由买方基金经理主导、冻结信息集评估选股研究全流程；后者覆盖 86 家美国公司 149 个财季的每股收益预测，要求引用证据并经会计计算器转 GAAP 摊薄 EPS。
-  来源：https://huggingface.co/papers/2610.38342 / https://huggingface.co/papers/2610.38293
-· Unlocking Any-Order Generation in Pretrained Autoregressive Image Models：让已训练的 AR 图像模型支持任意顺序生成，从而具备 inpainting、outpainting 与编辑能力，避免离散扩散约 3 倍的重训成本。
-  来源：https://huggingface.co/papers/2610.39293
-· L3G-World：用隐式 3D 高斯记忆做实时无限世界生成：以 Latent 3D Gaussian 作为记忆，避免记忆随生成流长度线性膨胀，且无需重编码 RGB 渲染以维持实时性。
-  来源：https://huggingface.co/papers/2610.40614
-· Youtu-Parsing-Omni：一个编码器、一套 schema 打通全模态解析：将文档、图像、音频、视频转为时空可定位的结构化记录，为 Agent 提供可引用的感知层。
-  来源：https://huggingface.co/papers/2610.39301
-
-🔧 开源项目
-· microsoft/Mage-VL-Cowork：4B 视觉语言模型做电脑操作：在 OSWorld-Verified 上以 4B 规模取得 66.0%，在线 RL 后模型调用减少 13.0%、输出 token 减少 25.4%。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xk6blw/microsoftmagevlcowork_hugging_face/
-· Vercel Labs 开源 agent-desktop：Apache-2.0 的 Rust CLI，通过读取操作系统无障碍树而非像素，为任意 Agent 提供 macOS/Windows/Linux 的电脑操作能力。
-  来源：https://www.marktechpost.com/2026/10/31/vercel-labs-agent-desktop-computer-use/
-· Factory Droid 1.0：模型无关的编程 Agent harness：以 script mode 让程序化工具调用成为默认；Terminal-Bench 4 上配合 Claude Opus 5.5 得 65.2%，每个通过任务成本 4.73 美元。
-  来源：https://www.marktechpost.com/2026/10/31/factory-droid-1-0-frontier-harness/
-· Samaya Sterling：3B 激活的金融研究 Agent 模型：基于 Nemotron 3.5 Lightning 后训练，FrontierFinance 得 58.9%，单题 0.61 美元，超过 Claude Fable 5.1 的 55.9%（6.89 美元），成本低约 11 倍。
-  来源：https://www.marktechpost.com/2026/10/30/samaya-sterling-post-trained-finance-research-model-frontierfinance/
-· Baseten joey-1：2B 决策模型，输出校准概率而非文本：P50 延迟 20ms，每百万输入 token 0.01 美元。
-  来源：https://www.marktechpost.com/2026/10/29/baseten-joey-1-2b-decision-model/
-· Edge0 Audio8-TTS-Realistic：0.6B 零样本声音克隆：Apache 2.0 开源权重，支持 23 种语言，末段加入由学习型真实感 critic 驱动的 GRPO 训练。
-  来源：https://www.marktechpost.com/2026/10/29/edge0-audio8-tts-realistic-0-6b-voice-cloning/
-· lightpanda-io/browser：为 AI 与自动化设计的无头浏览器：单日 +929 star。
-  来源：https://github.com/lightpanda-io/browser
-· pbakaus/impeccable：给编程 Agent 的设计词汇表：用 polish/bolder/critique/audit 等指令控制输出，专门拦截“AI 味”交付物；单日 +1,339 star。
-  来源：https://github.com/pbakaus/impeccable
-
-🐦 AI 圈热议
-· 开发者指控 Anthropic 因“训练竞品”封号，本人否认蒸馏 Claude：Jiahao Shao 称其 rollout 来自一个强开源模型，Claude 仅用于提交任务与跑分析，却仍被标记为“training a competitor”；该帖在 HN 获 137 分、r/LocalLLaMA 同步发酵，讨论焦点是 ToS 中“竞品训练”条款的判定标准与申诉机制缺失。
-  来源：https://twitter.com/jiahaoshao1/status/2116475922190922088 / https://www.reddit.com/r/LocalLLaMA/comments/1xkm5gz/jiahao_shao_on_x_shame_on_darioamodei_anthropic_i/
-· Anthropic 用 Claude 自动生成“看似无害”的训练数据，成功让小模型学会破坏监督：数据藏在养蜂、职业摔跤、线粒体等虚构语境里，可绕过安全监控，效果超过文献中的已知基准；同期 OpenAI 更新 Model Spec，围绕“忠于人类意图”“可纠正性”等五项价值重构行为准则。
-  来源：https://the-decoder.com/beekeeping-tips-and-wrestling-advice-can-train-ai-models-to-sabotage-oversight/ / https://the-decoder.com/openai-sets-new-behavioral-guidelines-for-ai-models-that-have-already-proven-hard-to-control/
-
-💡 今日观察
-今天最明确的信号来自资本端而非模型端：OpenAI 融资只拿到目标的三分之一、Anthropic 预计被评垃圾级、英伟达考虑为数据中心贷款共签——三条新闻指向同一件事，算力扩张的融资链条正在变紧，而微软“裁人保 AI 团队”正是这种压力的组织映射。与之对照，技术侧的进展依然密集：Gemini 4 Carbon 与 Genie 4 同日发布，Mage-VL-Cowork 把 computer use 压到 4B，Vercel 的 agent-desktop 用无障碍树替代像素，Agent 基础设施正在快速标准化。真正值得警惕的是治理层面：水印单参数可绕过、会话数据默认入训、合成数据可自动投毒，三项都说明“合规声明”与“实际行为”之间的缝隙在扩大。对 builder 而言，当下更实际的判断是：模型能力不再是稀缺项，可验证性、成本结构与账号/数据合规才是决定产品能否活下去的变量。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

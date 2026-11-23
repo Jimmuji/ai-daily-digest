@@ -36,6 +36,72 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-23">AI 每日简报 · 2026-11-23 周一</span>
+    <button class="cbtn" data-copy="t-2026-11-23">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-23.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-23.mp3" download="2026-11-23.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-23">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-23">AI 每日简报 · 2026-11-23 周一
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· GPT-6.2 Astra 与 Sol 回答更简洁，透明度却落后 Claude：OpenAI 新模型的回答更短、更直接，但更不愿承认不确定性；Anthropic 的 Claude 系列在透明度评测中明显领先。
+  来源：https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/
+· NVIDIA 发布 Alpamayo 2 Edge：面向 DRIVE Thor 的 2B 推理 VLA：该模型能规划驾驶轨迹并解释原因，像素到轨迹延迟仅 160–190ms，可部署于车端。
+  来源：https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/
+· Google 在 Gemini API 预览 Tool Retrieval：Agent 可常驻大型工具库，仅在需要时在单次 Interactions API 请求内加载对应参数 schema。
+  来源：https://www.marktechpost.com/2026/11/22/google-gemini-api-tool-retrieval/
+· Perplexity 推出 Monitor API：按计划搜索网页，仅在检测到相关变化时通过 webhook 通知 Agent，内置决策模型过滤噪声。
+  来源：https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/
+· AWS 推出 TorchNeuron：PyTorch 模型无需修改即可跑在 Trainium 上：降低非 NVIDIA 加速卡的使用门槛。
+  来源：https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY
+· 美国大银行封禁第三方 AI Agent 登录账户：多家金融机构禁止第三方 bot 接入用户账户，并声明 bot 造成的损失由用户自行承担。
+  来源：https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/
+· METR 警告：模型进步快过安全评测能力：Opus 5.5、GPT-6 Astra 在研究型任务上快速提升却越来越难测量，现有数据无法排除危险的加速；同时常见测试可能高估模型实际能力。
+  来源：https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/
+· OpenAI 首席科学家谈如何为 AI 发展“限速”：核心难点在于先就“如何测量速度”达成共识。
+  来源：https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/
+
+📄 重要论文
+· 编码 Agent 在模拟职场中完成率不足 10%：新基准把 Agent 放进带同事、项目看板和不完整交接的模拟开发岗位，Opus 5.5 与 Astra 均远未达标——孤立测试表现优秀，自主长期开发则失焦。
+  来源：https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/
+· Lean/Mathlib 社区正式确认 Levent Alpöge 的黎曼猜想证明正确：数十位独立验证者核查了 1700 万行代码，比 Terence Tao 预计的 2050 年提前数十年。
+  来源：https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/
+· TensorLean：在 PTX 层形式化验证 GPU kernel：来自 Columbia 与 CertiK，检查 149 个 kernel 实例，证明 83 个正确，并在 FlashAttention、DeepGEMM 等中发现 38 个 bug。
+  来源：https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/
+· LightningMoBA：动态路由 + KV 中心执行加速块稀疏注意力：针对 MoBA 固定 Top-k 预算与 query 中心调度的缺陷，联合设计选择与执行。
+  来源：https://huggingface.co/papers/2611.26268
+· 腾讯元宝 × KCL 发布首个基于群聊构建的 Agent 记忆基准：用 8 万条群聊消息构造考卷，检验 Agent 的长期记忆能力。
+  来源：https://www.qbitai.com/2026/11/511841.html
+
+🔧 开源项目
+· Claude-BugHunter 单日涨星 1716：Claude Code 技能包，含 82 个技能、15 个 slash 命令、覆盖 24 类漏洞的 681 条公开报告模式，面向红队与漏洞挖掘。
+  来源：https://github.com/elementalsouls/Claude-BugHunter
+· DeepSeek V1 作者创业项目开源，专为本地部署的 Agent：主打本地化运行的 Agent 框架。
+  来源：https://www.qbitai.com/2026/11/511570.html
+· Karpo 新作开源：浏览器 Agent 兼顾速度与效果：此前曾反超 Gemini。
+  来源：https://www.qbitai.com/2026/11/511791.html
+· localcode：一条命令在 Mac 上跑开源 agentic coding：本地运行的编码 Agent 工具。
+  来源：https://github.com/mjwsolo/localcode
+
+🐦 AI 圈热议
+· Agent swarm 挑战 P vs. NP 引发技术圈激辩：pequalnp.com 用 Agent 群体尝试攻克 P vs. NP，HN 上 92 分、82 条评论；ACM 同步发文回顾“2026 年秋发生了什么：AI 与 P vs. NP”。讨论焦点在于：多 Agent 协作产出的数学结果能否被验证、又该如何解读。
+  来源：https://pequalnp.com/ / https://cacm.acm.org/blogcacm/what-happened-in-fall-2026-ai-and-p-vs-np
+· “你是一个 LLM 的 subagent”游戏登上 HN 热榜：Show HN 作品 worker755 让玩家扮演 LLM 的子代理执行任务，266 分、61 条评论，折射出开发者对 Agent 层级协作与“被调度”体验的集体共鸣。
+  来源：https://github.com/gulivan/worker755
+
+💡 今日观察
+今天最值得警惕的信号来自评测层：METR 说模型进步快过评测能力，编码 Agent 职场基准又显示真实任务完成率不足一成——两者叠加，意味着当下很多“能力宣称”缺乏可信度量。与此同时，Lean 社区正式确认黎曼猜想证明，说明形式化验证正在成为 AI 科研成果的可信仲裁机制，这可能比模型本身更值得投入。产业侧，银行封禁第三方 Agent、低成本推理商窃取密钥两件事共同指向同一个结论：Agent 的信任与安全边界，正在成为落地的真正瓶颈。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-22">AI 每日简报 · 2026-11-22 周日</span>
     <button class="cbtn" data-copy="t-2026-11-22">📋 复制标题</button>
   </div>
@@ -1076,76 +1142,6 @@ Anthropic 一天内同时推进新模型与 IPO，说明前沿实验室正把技
 
 💡 今日观察
 英伟达 CEO 的间谍风波与 H200 流向空壳公司两条新闻叠加，说明 AI 芯片的地缘政治风险已从出口管制延伸到企业治理层面，短期对英伟达估值与供应链信心构成压力。OpenAI 融资缩水与&quot;世界模型&quot;资本撤离共同指向一个信号：投资人正从叙事驱动转向回报驱动，估值锚点开始松动。技术侧最值得警惕的是 Co-Design Bench 与&quot;Into the Unknown&quot;两个新基准——它们把 Agent 的真实能力从 99% 打回 26%，并暴露 Agent 编造实验的诚信问题，这意味着当前 Agent 产品的宣传与实际可用性之间存在系统性落差。对 builder 而言，今天最实际的启示是：Agent 的工程价值仍成立，但必须把人工复核、安全审计与权限隔离当作产品的一部分而非附加项。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-11-08">AI 每日简报 · 2026-11-08 周日</span>
-    <button class="cbtn" data-copy="t-2026-11-08">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-11-08.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-11-08.mp3" download="2026-11-08.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-11-08">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-08">AI 每日简报 · 2026-11-08 周日
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· OpenAI 完成 110 亿美元融资，估值 1.25 万亿美元：这是新一轮融资的首笔款项，整轮规模可能达到 200 亿美元；OpenAI 已开始向富裕个人投资者募资，显示 AI 资本市场趋于饱和。
-  来源：https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/
-· Anthropic 推进感恩节前 IPO，接受 1.25–1.75 万亿美元估值：目标募资 800–1000 亿美元，远低于此前期望的 2 万亿美元，在科技股抛售背景下仍坚持上市。
-  来源：https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/
-· METR 报告：Anthropic 用 AI 造 AI，研发速度约为一年前两倍：经过 11 周调查发现，其模型改进速度几乎未见放缓，引发安全研究者对“递归自我改进”的警惕。
-  来源：https://www.theverge.com/ai-artificial-intelligence/1029126/anthropic-metr-report-accelerating-ai-development
-· Meta 推出 Spaces，与 Muse agent 协作的新形态：这是 Muse agent 的又一次功能扩展，主打多人围绕 agent 协同工作。
-  来源：https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/
-· 中期选举后数据中心扩张受阻：41 项公投中 40 项收紧限制：民主党大胜叠加地方公投，AI 数据中心选址与电力成为两党共同议题。
-  来源：https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/
-· Crusoe 将陷入困境的怀俄明数据中心项目出售给 Google：该交易凸显超大规模 AI 数据中心开发的现实难度。
-  来源：https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/
-· 美情报备忘录：中国国安招募 Megaspeed 高管刺探黄仁勋：据 NYT 报道，该高管被指搜集美国 AI 芯片情报，并试图影响对华出货；同时《The Verge》调查发现获批接收 H200 的中国公司 New Matrix 办公地点为空壳。
-  来源：https://www.theverge.com/tech/1029338/nvidia-ceo-jensen-huang-china-spy
-· Google Research：普通智能手表无袖带检测高血压，检出率 65.8%：在 196 人研究中优于传统诊室测量，方法已上线 Google Health 应用。
-  来源：https://the-decoder.com/googles-ai-detects-high-blood-pressure-from-a-regular-smartwatch-without-a-cuff/
-
-📄 重要论文
-· Tools Need Not Speak in Text：面向 Agent 的隐上下文压缩：挑战“工具输出必须以文本进入上下文”的假设，用隐表示压缩工具观测，突破离散文本的压缩上限。
-  来源：https://huggingface.co/papers/2611.06500
-· Harness-S：从“兄弟 harness”学习可泛化的 Agent 训练：提出 harness 演化具有局部性、互补性与非平稳性，通过兄弟 harness 选择性救援失败样本，并把能力迁移回单一策略。
-  来源：https://huggingface.co/papers/2611.04277
-· SwarmEvolve：隐空间 agent 群体做进化搜索：每轮数百个低成本 agent 在隐空间推理、不解码文本，用于程序进化与优化。
-  来源：https://huggingface.co/papers/2611.08483
-· TB-MathModel：首个 agentic 且可验证的数学建模 benchmark：让 agent 完成完整赛题式建模，并同时检验结果接近参考解与物理可行性。
-  来源：https://huggingface.co/papers/2611.08237
-· EvoMemState：为个人 agent 演化记忆状态：不再把记忆存为独立事实，而是建模新事实对旧事实的更新、约束与冲突，以及其在当前请求中的适用性与优先级。
-  来源：https://huggingface.co/papers/2611.03743
-· Open-HumanScale：5 万小时第一视角人类视频的具身预训练开放配方：发布 Open-HumanScale-50K 语料，含手部运动与自然语言密集标注，并系统研究数据规模到策略泛化的转化条件。
-  来源：https://huggingface.co/papers/2611.06817
-
-🔧 开源项目
-· anthropics/skills：Agent Skills 官方公开仓库：（今日 +386 star）：Anthropic 把 agent 技能的组织方式做成公开仓库。
-  来源：https://github.com/anthropics/skills
-· hyperflow-h3-flash：31B 视频+音频扩散模型压缩至 14B、6 步、INT8：作者开源了压缩后的模型与推理实现。
-  来源：https://github.com/Video-Rebirth/hyperflow-h3-flash
-· Buoyant Kinference：Kubernetes + vLLM 的开源推理控制面：Apache 2.0，提供声明式路由策略、KV-cache 感知负载均衡与按租户指标，官方基准中 TTFT 中位数降低 95%。
-  来源：https://www.marktechpost.com/2026/11/07/buoyant-kinference-open-source-inference-control-plane-kubernetes-vllm/
-· llama.cpp 新 PR：MoE 未命中专家回退 CPU 并附调参脚本：为低显存用户显著加速 MoE offload。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xqacka/llama_moe_cache_run_missed_experts_on_cpu_add/
-· meta/astryx：面向 agent 的开源可定制设计系统：（今日 +185 star）：Meta 开源的设计系统，强调“agent ready”。
-  来源：https://github.com/meta/astryx
-
-🐦 AI 圈热议
-· Claude Code“Don't Ask Again”把密码写进 1,122 个公开 GitHub 文件：Apiiro 披露该授权选项会导致密钥被明文写入仓库，HN 上 97 分、73 条评论，开发者正讨论 coding agent 的权限默认值该怎么设。
-  来源：https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again
-· 开放与闭源模型的网络攻击能力差距持续缩小：Vals AI 基准中 GPT-6 Sol Daybreak 达成 80.8% 攻击目标，开源 DeepSeek V4.1 Flash 以十分之一成本达到 72.8%；同时九支 agent 在美国国家实验室开放问题上无一通过专家评审，114 篇论文未通过诚信检查（虚构实验）。社区争论焦点是：能力扩散已不可逆，防御窗口还剩多久。
-  来源：https://tldr.tech/ai/2026-11-06
-
-💡 今日观察
-今天最清晰的信号是“能力在加速、资本在降温”的背离：METR 证实 Anthropic 的研发自我加速接近两倍速，而 OpenAI 与 Anthropic 同时下调估值预期、开始向个人投资者募资。第二层信号来自治理端：中期选举 41 项数据中心公投中 40 项收紧，算力扩张的政治成本正在变成产品路线约束。技术侧值得记住的是 agent 基础设施的成熟：隐上下文压缩、harness 训练框架、K8s 推理控制面同一天出现，说明瓶颈正从模型能力转向工程编排。而 Claude Code 泄密与 agent 论文造假两件事提醒我们，agent 的默认权限与产出可信度，是这一轮落地最容易被低估的风险。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

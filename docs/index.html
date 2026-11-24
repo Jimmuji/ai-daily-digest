@@ -573,7 +573,7 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
         <h1>AI Daily Digest</h1>
         <p><span data-lang-content="zh">每天 5 分钟 · 掌握 AI 领域最新动态 · 全自动采集 · 智能筛选</span><span data-lang-content="en">5 minutes a day · stay on top of AI · auto-collected · smartly curated</span></p>
         <div class="stats">
-          <div class="stat"><div class="num">219</div><div class="lbl"><span data-lang-content="zh">期日报</span><span data-lang-content="en">issues</span></div></div>
+          <div class="stat"><div class="num">220</div><div class="lbl"><span data-lang-content="zh">期日报</span><span data-lang-content="en">issues</span></div></div>
           <div class="stat"><div class="num">12+</div><div class="lbl"><span data-lang-content="zh">数据源</span><span data-lang-content="en">sources</span></div></div>
           <div class="stat"><div class="num"><span data-lang-content="zh">每日</span><span data-lang-content="en">Daily</span></div><div class="lbl"><span data-lang-content="zh">自动更新</span><span data-lang-content="en">auto-updated</span></div></div>
         </div>
@@ -595,15 +595,15 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
     </div>
       </div>
       
-      <div class="section-title"><span data-lang-content="zh">📅 最新一期 · 2026-11-23 周一</span><span data-lang-content="en">📅 Latest · 2026-11-23 Monday</span></div>
-      <p class="day-lead"><span data-lang-content="zh">GPT-6.2 透明度不及 Claude</span><span data-lang-content="en">GPT-6.2 falls short of Claude on transparency</span></p>
+      <div class="section-title"><span data-lang-content="zh">📅 最新一期 · 2026-11-24 周二</span><span data-lang-content="en">📅 Latest · 2026-11-24 Tuesday</span></div>
+      <p class="day-lead"><span data-lang-content="zh">Anthropic 让 Claude 自主审核并提交代码</span><span data-lang-content="en">Anthropic lets Claude review and submit code autonomously</span></p>
       
     <div class="audio-player">
       <div class="ap-text">
         <span class="ap-label">🎧 <span data-lang-content="zh">语音播报</span><span data-lang-content="en">Listen</span></span>
         <span class="ap-sub"><span data-lang-content="zh">通勤路上用耳朵看简报</span><span data-lang-content="en">Catch the digest on your commute</span></span>
       </div>
-      <audio controls preload="none" src="audio/2026-11-23.mp3" data-date="2026-11-23"></audio>
+      <audio controls preload="none" src="audio/2026-11-24.mp3" data-date="2026-11-24"></audio>
     </div>
       <div data-lang-content="zh">
     <div class="digest-scope">
@@ -620,75 +620,111 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
           </div>
           
     <div class="item-card" data-stars="5">
-      <div class="item-title">GPT-6.2 Astra 与 Sol 回答更简洁，透明度却落后 Claude</div>
-      <div class='item-desc'>OpenAI 新模型的回答更短、更直接，但更不愿承认不确定性；Anthropic 的 Claude 系列在透明度评测中明显领先。</div>
+      <div class="item-title">Anthropic 发布 Claude Ship</div>
+      <div class='item-desc'>Claude 现在可以自主 review、修复并 approve GitHub pull request，Code Review 已 GA，PR Steward 与 Claude Approvals 两个 agent 面向 Team/Enterprise 公测。</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">选型时需权衡“简洁”与“诚实”，高风险场景慎用</span>
-        <div class="item-sources"><a href="https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/" target="_blank">The Decoder</a></div>
+        <span class="item-value">AI 生成代码堆积后的审核瓶颈被 agent 接管，CI 流程需重新设计</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank">TechCrunch</a> · <a href="https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/" target="_blank">MarkTechPost</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">OpenAI 将 GPT-6.2 Sol 设为 ChatGPT 默认模型</div>
+      <div class='item-desc'>全球推送，内部测试中图像理解从 47.4% 提升至 71.7%，复杂指令正确率 78.1%，安全策略遵循度同步提升。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">多模态与指令遵循双升，依赖图像理解的产品可重新评估 baseline</span>
+        <div class="item-sources"><a href="https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">GPT-6.2 Astra 独立完成 Smoktunowicz 间隙定理的 Lean 机器可验证证明</div>
+      <div class='item-desc'>因 Mathlib 缺少关键基础，模型自行设计了证明策略；Autoform-Hard 上以 56 题解出 49 题登顶。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">形式化数学进入可验证阶段，AI 开始补全自身依赖的数学基础设施</span>
+        <div class="item-sources"><a href="https://the-decoder.com/gpt-6-2-astra-solved-a-math-theorem-no-other-ai-could-crack-then-invented-its-own-proof-strategy/" target="_blank">The Decoder</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">NVIDIA 发布 Alpamayo 2 Edge：面向 DRIVE Thor 的 2B 推理 VLA</div>
-      <div class='item-desc'>该模型能规划驾驶轨迹并解释原因，像素到轨迹延迟仅 160–190ms，可部署于车端。</div>
+      <div class="item-title">Z.ai 发布 GLM-5.4：750B Loop Transformer</div>
+      <div class='item-desc'>28 个 GLM-5 层各跑两遍，官方称可对标 2–3 万亿参数模型；目前仅有 30B 测试模型 benchmark，API 与开放权重待安全评估后放出。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">小参数 VLA 上车，端侧自动驾驶推理路线可参考</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">循环架构以参数换深度，为中小团队提供新的 scaling 路径参考</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/" target="_blank">MarkTechPost</a> · <a href="https://simonwillison.net/2026/Nov/23/glm-54/" target="_blank">Simon Willison</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Google 在 Gemini API 预览 Tool Retrieval</div>
-      <div class='item-desc'>Agent 可常驻大型工具库，仅在需要时在单次 Interactions API 请求内加载对应参数 schema。</div>
+      <div class="item-title">Amazon 以 75 亿美元收购 Decart 的 AI 优化技术与研究团队</div>
+      <div class='item-desc'>为其对外销售 Trainium 芯片做准备。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">直接缓解大工具库的上下文膨胀与成本问题</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/22/google-gemini-api-tool-retrieval/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">自研芯片竞争从硬件转向推理优化软件栈</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Perplexity 推出 Monitor API</div>
-      <div class='item-desc'>按计划搜索网页，仅在检测到相关变化时通过 webhook 通知 Agent，内置决策模型过滤噪声。</div>
+      <div class="item-title">黄仁勋回归英伟达 CEO，特朗普称亲自介入董事会</div>
+      <div class='item-desc'>距其 11 月 12 日辞职仅约两周，白宫称总统“全程参与”；国会两党批评，黄仁勋将于 12 月 1 日赴众议院作证。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">把搜索从一次性查询变成可持续的监控型 Agent 能力</span>
-        <div class="item-sources"><a href="https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/" target="_blank">The Decoder</a></div>
+        <span class="item-value">公司治理与政治干预边界被打破，供应链与出口管制政策不确定性上升</span>
+        <div class="item-sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated" target="_blank">The Verge</a> · <a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress-trump.html" target="_blank">CNBC</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">AWS 推出 TorchNeuron：PyTorch 模型无需修改即可跑在 Trainium 上</div>
-      <div class='item-desc'>降低非 NVIDIA 加速卡的使用门槛。</div>
+      <div class="item-title">美国拟将亚洲 AI 公司 Megaspeed 列入黑名单</div>
+      <div class='item-desc'>涉黄仁勋丑闻的核心公司，被禁后除非获联邦特别许可，否则不得与美国企业往来。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">迁移成本下降，Trainium 生态竞争力提升</span>
-        <div class="item-sources"><a href="https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY" target="_blank">InfoQ 中文</a></div>
+        <span class="item-value">芯片转运与东南亚中转网络成为出口管制执法重点</span>
+        <div class="item-sources"><a href="https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo" target="_blank">BBC</a> · <a href="https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">美国大银行封禁第三方 AI Agent 登录账户</div>
-      <div class='item-desc'>多家金融机构禁止第三方 bot 接入用户账户，并声明 bot 造成的损失由用户自行承担。</div>
+      <div class="item-title">OpenAI 与 Cisco 推出 Shirudo 开源运行时</div>
+      <div class='item-desc'>面向 Linux 的开源运行时，帮助团队在滚动打补丁期间保护正在运行的系统。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">个人金融 Agent 落地遇合规硬墙，产品设计需提前规避</span>
-        <div class="item-sources"><a href="https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/" target="_blank">Wired</a></div>
+        <span class="item-value">补丁窗口期的运行时防护，可直接用于生产环境安全加固</span>
+        <div class="item-sources"><a href="https://openai.com/index/introducing-shirudo" target="_blank">OpenAI</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">METR 警告：模型进步快过安全评测能力</div>
-      <div class='item-desc'>Opus 5.5、GPT-6 Astra 在研究型任务上快速提升却越来越难测量，现有数据无法排除危险的加速；同时常见测试可能高估模型实际能力。</div>
+      <div class="item-title">Google Search AI Mode 接入 Drive 与 Wallet</div>
+      <div class='item-desc'>Personal Intelligence 扩展至 Drive、Wallet 与 Gemini app，用生态内用户数据生成个性化回答。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">评测方法本身成为瓶颈，benchmark 可信度需重新审视</span>
-        <div class="item-sources"><a href="https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/" target="_blank">The Decoder</a></div>
+        <span class="item-value">搜索从“查信息”转向“读你的私人上下文”，隐私边界成产品竞争点</span>
+        <div class="item-sources"><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank">Google Blog</a> · <a href="https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">OpenAI 首席科学家谈如何为 AI 发展“限速”</div>
-      <div class='item-desc'>核心难点在于先就“如何测量速度”达成共识。</div>
+      <div class="item-title">Oregon 与 Virginia 两州起诉 SpaceX 及 Grok 深度伪造</div>
+      <div class='item-desc'>指控其未落实行业标准防护、虚假宣传平台安全性，涉及真实人物（含儿童）的性化图像。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">治理讨论转向可量化指标，评测标准或成政策抓手</span>
-        <div class="item-sources"><a href="https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/" target="_blank">TechCrunch</a></div>
+        <span class="item-value">州级消费者保护诉讼成为 AI 生成内容监管的实际执行路径</span>
+        <div class="item-sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" target="_blank">The Verge</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">蚂蚁 OceanBase 发布湖库一体 AI 数据平台 OceanLake，核心引擎全球开源</div>
+      <div class='item-desc'>面向 AI 负载统一湖与库。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">AI 数据栈国产方案再添开源选项，可评估替代现有湖仓组合</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512330.html" target="_blank">量子位</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">国产端侧模型实测：1450 亿参数塞进笔记本，80+ token/s</div>
+      <div class='item-desc'>零 token 成本、断网可用，主打本地 Vibe Coding 场景。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">端侧大参数模型可行性提升，本地 coding agent 成本模型被改写</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512195.html" target="_blank">量子位</a></div>
       </div>
     </div>
         </div>
@@ -699,48 +735,66 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
           </div>
           
     <div class="item-card" data-stars="5">
-      <div class="item-title">编码 Agent 在模拟职场中完成率不足 10%</div>
-      <div class='item-desc'>新基准把 Agent 放进带同事、项目看板和不完整交接的模拟开发岗位，Opus 5.5 与 Astra 均远未达标——孤立测试表现优秀，自主长期开发则失焦。</div>
+      <div class="item-title">Self-WSP：语言模型通过权重空间编程自我改进</div>
+      <div class='item-desc'>Qwen3.5-0.8B 读取自身权重、提出编辑并继续用编辑后权重同时充当解题者与编辑者，GSM8K 准确率有真实提升。</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">暴露“刷榜”与真实工程能力之间的巨大鸿沟</span>
-        <div class="item-sources"><a href="https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/" target="_blank">The Decoder</a></div>
+        <span class="item-value">模型自改权重不再只是微调，WSP 或成新的能力注入范式</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.28833" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="5">
-      <div class="item-title">Lean/Mathlib 社区正式确认 Levent Alpöge 的黎曼猜想证明正确</div>
-      <div class='item-desc'>数十位独立验证者核查了 1700 万行代码，比 Terence Tao 预计的 2050 年提前数十年。</div>
+      <div class="item-title">Search-Native Pretraining：把搜索能力前置到预训练</div>
+      <div class='item-desc'>用本地索引为大规模语料增强搜索查询与网页响应，训练阶段即习得检索能力，而非依赖 post-training。</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">形式化验证成为 AI 数学成果的可信仲裁机制</span>
-        <div class="item-sources"><a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank">The Decoder</a></div>
+        <span class="item-value">检索增强从推理时技巧变为预训练目标，RAG 架构可能被重构</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26809" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Intent Contracts：把工具从 agent 手里拿走</div>
+      <div class='item-desc'>规划模型不持有任何工具，每步提交含目标、用户原话引用与范围字段的合约，由小可信模型校验并自行写出工具调用。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">给出可审计的 agent 授权接口，直接可用于高风险工具调用场景</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.24025" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">TensorLean：在 PTX 层形式化验证 GPU kernel</div>
-      <div class='item-desc'>来自 Columbia 与 CertiK，检查 149 个 kernel 实例，证明 83 个正确，并在 FlashAttention、DeepGEMM 等中发现 38 个 bug。</div>
+      <div class="item-title">MemOnce：面向 LLM 的可扩展记忆架构</div>
+      <div class='item-desc'>在 KV cache 线性增长与线性架构细节丢失之间取折中，维持可复用记忆状态。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">为高性能算子提供可证明的正确性保障</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">长程持续交互的显存瓶颈有新解法，长上下文部署成本可降</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.27973" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">LightningMoBA：动态路由 + KV 中心执行加速块稀疏注意力</div>
-      <div class='item-desc'>针对 MoBA 固定 Top-k 预算与 query 中心调度的缺陷，联合设计选择与执行。</div>
+      <div class="item-title">Non-penetrating World Models 与 NoPeBench</div>
+      <div class='item-desc'>首个评估世界模型如何应对物理障碍的 benchmark，发现现有开源模型均无法可靠防止物体穿透，但 DiT 隐状态中已编码所需信息。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">长上下文推理提速的直接工程路径</span>
-        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26268" target="_blank">HuggingFace Papers</a></div>
+        <span class="item-value">世界模型物理一致性有可量化缺口，也提示低成本修复路径</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.27963" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">腾讯元宝 × KCL 发布首个基于群聊构建的 Agent 记忆基准</div>
-      <div class='item-desc'>用 8 万条群聊消息构造考卷，检验 Agent 的长期记忆能力。</div>
+      <div class="item-title">ComplexIF：多轮多约束指令遵循 benchmark</div>
+      <div class='item-desc'>现有指令遵循 benchmark 已饱和，该基准将多条约束分散到对话不同轮次并要求全部成立，附自动生成流水线。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">为 Agent 记忆能力提供贴近真实场景的评测集</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511841.html" target="_blank">量子位</a></div>
+        <span class="item-value">为 agent 与对话产品提供更贴近真实使用的评测集</span>
+        <div class="item-sources"><a href="https://arxiv.org/abs/2611.29775" target="_blank">arXiv</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Google DeepMind：用 agent 团队与形式化验证寻找更快的量子算法</div>
+      <div class='item-desc'>面向核聚变与化学计算场景改进量子算法。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">agent + 形式化验证的组合在科学发现流程中跑通闭环</span>
+        <div class="item-sources"><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank">Google DeepMind</a></div>
       </div>
     </div>
         </div>
@@ -750,40 +804,40 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
             <div class="cat-line"></div>
           </div>
           
-    <div class="item-card" data-stars="4">
-      <div class="item-title">Claude-BugHunter 单日涨星 1716</div>
-      <div class='item-desc'>Claude Code 技能包，含 82 个技能、15 个 slash 命令、覆盖 24 类漏洞的 681 条公开报告模式，面向红队与漏洞挖掘。</div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">obra/superpowers（今日 +840 star）</div>
+      <div class='item-desc'>一套 agentic skills 框架与软件开发方法论，强调可落地的工作流而非 prompt 集合。</div>
       <div class="item-meta">
-        <span class="stars">★★★★☆</span>
-        <span class="item-value">安全场景的 Agent 技能工程可直接复用</span>
-        <div class="item-sources"><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank">GitHub Trending</a></div>
+        <span class="stars">★★★★★</span>
+        <span class="item-value">为 coding agent 提供可复用的技能组织方式，值得对照现有 agent 栈</span>
+        <div class="item-sources"><a href="https://github.com/obra/superpowers" target="_blank">GitHub</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">DeepSeek V1 作者创业项目开源，专为本地部署的 Agent</div>
-      <div class='item-desc'>主打本地化运行的 Agent 框架。</div>
+      <div class="item-title">jingyaogong/minimind（今日 +828 star）</div>
+      <div class='item-desc'>两小时从零训练一个 64M 参数大模型，全流程教学式实现。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">本地部署 Agent 再添一个高关注度选项</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511570.html" target="_blank">量子位</a></div>
+        <span class="item-value">理解 LLM 训练全链路的最低成本入口，适合团队内训</span>
+        <div class="item-sources"><a href="https://github.com/jingyaogong/minimind" target="_blank">GitHub</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Karpo 新作开源：浏览器 Agent 兼顾速度与效果</div>
-      <div class='item-desc'>此前曾反超 Gemini。</div>
+      <div class="item-title">Meta TLX：把 warp-group 控制带进 Triton</div>
+      <div class='item-desc'>为 Python Triton kernel 增加 warp-group、barrier、TMA 与 cluster 控制，已在 Hopper、Blackwell 与 AMD MI350 上跑 Meta 的广告与 LLM 负载。</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">浏览器自动化 Agent 的性能标杆参考</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511791.html" target="_blank">量子位</a></div>
+        <span class="item-value">Triton 与手写 CUDA 的性能差距进一步收窄，跨厂商 kernel 复用性提升</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/" target="_blank">MarkTechPost</a></div>
       </div>
     </div>
-    <div class="item-card" data-stars="3">
-      <div class="item-title">localcode：一条命令在 Mac 上跑开源 agentic coding</div>
-      <div class='item-desc'>本地运行的编码 Agent 工具。</div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Architect Labs 发布 Frostbite：AI 设计的 interaction net CPU</div>
+      <div class='item-desc'>agent 从理论推进到 7nm GDS，流片前测试显示每瓦性能为顺序执行核心的 4.59 倍。</div>
       <div class="item-meta">
-        <span class="stars">★★★☆☆</span>
-        <span class="item-value">低门槛体验本地编码 Agent</span>
-        <div class="item-sources"><a href="https://github.com/mjwsolo/localcode" target="_blank">GitHub</a></div>
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">AI 参与芯片微架构设计的完整案例，值得关注其方法而非数字</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/architect-labs-frostbite-ai-designed-cpu-interaction-nets/" target="_blank">MarkTechPost</a></div>
       </div>
     </div>
         </div>
@@ -793,22 +847,22 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
             <div class="cat-line"></div>
           </div>
           
-    <div class="item-card" data-stars="4">
-      <div class="item-title">Agent swarm 挑战 P vs. NP 引发技术圈激辩</div>
-      <div class='item-desc'>pequalnp.com 用 Agent 群体尝试攻克 P vs. NP，HN 上 92 分、82 条评论；ACM 同步发文回顾“2026 年秋发生了什么：AI 与 P vs. NP”。讨论焦点在于：多 Agent 协作产出的数学结果能否被验证、又该如何解读。</div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">LeCun 与 Dario 之争引爆 HN（1384 分、768 评论）</div>
+      <div class='item-desc'>LeCun 在 X 上称“Dario 夸大危险是为了让开源模型非法、从而保持自己的控制权”，把 Anthropic 的 AI 安全叙事直接定性为监管俘获。</div>
       <div class="item-meta">
-        <span class="stars">★★★★☆</span>
-        <span class="item-value">Agent 群体用于前沿科研的可行性与可信度之争</span>
-        <div class="item-sources"><a href="https://pequalnp.com/" target="_blank">Hacker News</a> · <a href="https://cacm.acm.org/blogcacm/what-happened-in-fall-2026-ai-and-p-vs-np" target="_blank">CACM</a></div>
+        <span class="stars">★★★★★</span>
+        <span class="item-value">开源 vs 闭源的安全话语权之争已进入公开对抗，将影响监管走向</span>
+        <div class="item-sources"><a href="https://twitter.com/ylecun/status/2124550037912920090" target="_blank">Twitter/LeCun</a></div>
       </div>
     </div>
-    <div class="item-card" data-stars="3">
-      <div class="item-title">“你是一个 LLM 的 subagent”游戏登上 HN 热榜</div>
-      <div class='item-desc'>Show HN 作品 worker755 让玩家扮演 LLM 的子代理执行任务，266 分、61 条评论，折射出开发者对 Agent 层级协作与“被调度”体验的集体共鸣。</div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">OpenAI 首次公开 GPT 全系 perplexity 曲线并呼吁行业共享阈值</div>
+      <div class='item-desc'>首席科学家 Jakub Pachocki 披露核心能力在相当精确的阈值处涌现，主张把 perplexity 作为行业统一的进展度量，并在行为控制力衰减前建立共同上限；同期 Alexandr Wang 称 Riemann 猜想的 AI 辅助证明草图意味着超级智能近在眼前。</div>
       <div class="item-meta">
-        <span class="stars">★★★☆☆</span>
-        <span class="item-value">从游戏化视角理解 subagent 编排的真实痛点</span>
-        <div class="item-sources"><a href="https://github.com/gulivan/worker755" target="_blank">Hacker News</a></div>
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">能力评测从各家自说自话转向统一度量，安全阈值或成合规抓手</span>
+        <div class="item-sources"><a href="https://tldr.tech/ai/2026-11-23" target="_blank">TLDR AI</a> · <a href="https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits/" target="_blank">The Decoder</a></div>
       </div>
     </div>
         </div>
@@ -816,8 +870,8 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
       
         <div class="observation">
           <h2>💡 今日观察</h2>
-          <p>今天最值得警惕的信号来自评测层：METR 说模型进步快过评测能力，编码 Agent 职场基准又显示真实任务完成率不足一成——两者叠加，意味着当下很多“能力宣称”缺乏可信度量。与此同时，Lean 社区正式确认黎曼猜想证明，说明形式化验证正在成为 AI 科研成果的可信仲裁机制，这可能比模型本身更值得投入。产业侧，银行封禁第三方 Agent、低成本推理商窃取密钥两件事共同指向同一个结论：Agent 的信任与安全边界，正在成为落地的真正瓶颈。</p>
-          <button class="speak-btn" data-label="🔊 朗读今日观察" data-stop="⏹ 停止" data-speak-lang="zh-CN" data-text="今天最值得警惕的信号来自评测层：METR 说模型进步快过评测能力，编码 Agent 职场基准又显示真实任务完成率不足一成——两者叠加，意味着当下很多“能力宣称”缺乏可信度量。与此同时，Lean 社区正式确认黎曼猜想证明，说明形式化验证正在成为 AI 科研成果的可信仲裁机制，这可能比模型本身更值得投入。产业侧，银行封禁第三方 Agent、低成本推理商窃取密钥两件事共同指向同一个结论：Agent 的信任与安全边界，正在成为落地的真正瓶颈。">🔊 朗读今日观察</button>
+          <p>今天最实质的进展不在模型参数，而在“谁来做决定”：Claude Ship 让 agent 自己 approve PR，Intent Contracts 干脆把工具从规划模型手里拿走，交给一个可信小模型执行——agent 的权限设计正在从“能不能做”转向“由谁签字”。GLM-5.4 的 loop transformer 与 Self-WSP 指向同一条线索：用更少的参数、更多的迭代换能力，scaling 的叙事正在被架构效率稀释。黄仁勋两周内去而复返、特朗普公开认领介入，这件事对 AI 产业的实际影响不是八卦，而是英伟达的出口管制立场与供应链政策将进入更不确定的政治周期，12 月 1 日的国会作证是关键节点。最后，LeCun 与 Dario 的公开对撕和 OpenAI 推动 perplexity 成为行业统一度量，本质是同一场争夺：谁来定义“危险”，谁就掌握规则。</p>
+          <button class="speak-btn" data-label="🔊 朗读今日观察" data-stop="⏹ 停止" data-speak-lang="zh-CN" data-text="今天最实质的进展不在模型参数，而在“谁来做决定”：Claude Ship 让 agent 自己 approve PR，Intent Contracts 干脆把工具从规划模型手里拿走，交给一个可信小模型执行——agent 的权限设计正在从“能不能做”转向“由谁签字”。GLM-5.4 的 loop transformer 与 Self-WSP 指向同一条线索：用更少的参数、更多的迭代换能力，scaling 的叙事正在被架构效率稀释。黄仁勋两周内去而复返、特朗普公开认领介入，这件事对 AI 产业的实际影响不是八卦，而是英伟达的出口管制立场与供应链政策将进入更不确定的政治周期，12 月 1 日的国会作证是关键节点。最后，LeCun 与 Dario 的公开对撕和 OpenAI 推动 perplexity 成为行业统一度量，本质是同一场争夺：谁来定义“危险”，谁就掌握规则。">🔊 朗读今日观察</button>
         </div>
     </div></div><div data-lang-content="en">
     <div class="digest-scope">
@@ -834,127 +888,181 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
           </div>
           
     <div class="item-card" data-stars="5">
-      <div class="item-title">GPT-6.2 Astra and Sol Answer More Concisely, but Lag Behind Claude on Transparency</div>
-      <div class='item-desc'>OpenAI's new models give shorter, more direct answers but are less willing to admit uncertainty; Anthropic's Claude series clearly leads in transparency evaluations.</div>
+      <div class="item-title">Anthropic releases Claude Ship</div>
+      <div class='item-desc'>Claude can now autonomously review, fix, and approve GitHub pull requests; Code Review is GA, and two agents, PR Steward and Claude Approvals, are in public beta for Team/Enterprise.</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">Weigh "conciseness" vs. "honesty" when choosing models; use with caution in high-risk scenarios</span>
-        <div class="item-sources"><a href="https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/" target="_blank">The Decoder</a></div>
+        <span class="item-value">Agents take over the review bottleneck from piled-up AI-generated code; CI pipelines need redesign</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank">TechCrunch</a> · <a href="https://www.marktechpost.com/2026/11/23/anthropic-claude-ship-pull-request-agents/" target="_blank">MarkTechPost</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">OpenAI makes GPT-6.2 Sol the default ChatGPT model</div>
+      <div class='item-desc'>Rolled out globally; in internal tests image understanding rose from 47.4% to 71.7%, complex-instruction accuracy reached 78.1%, and safety-policy compliance improved as well.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Multimodal and instruction-following both improve; image-dependent products should re-evaluate baselines</span>
+        <div class="item-sources"><a href="https://the-decoder.com/openai-updates-chatgpt-to-handle-complex-everyday-questions-web-searches-and-images-more-reliably/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">GPT-6.2 Astra independently completes a Lean machine-verifiable proof of the Smoktunowicz gap theorem</div>
+      <div class='item-desc'>Because Mathlib lacked key foundations, the model designed its own proof strategy; on Autoform-Hard it solved 49 of 56 problems to top the leaderboard.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Formal math enters a verifiable phase; AI begins filling in the math infrastructure it depends on</span>
+        <div class="item-sources"><a href="https://the-decoder.com/gpt-6-2-astra-solved-a-math-theorem-no-other-ai-could-crack-then-invented-its-own-proof-strategy/" target="_blank">The Decoder</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">NVIDIA Releases Alpamayo 2 Edge: A 2B Reasoning VLA for DRIVE Thor</div>
-      <div class='item-desc'>The model can plan driving trajectories and explain its reasoning, with pixel-to-trajectory latency of only 160–190ms, deployable on the vehicle side.</div>
+      <div class="item-title">Z.ai releases GLM-5.4: a 750B Loop Transformer</div>
+      <div class='item-desc'>28 GLM-5 layers each run twice; the company claims it rivals 2–3 trillion parameter models; currently only a 30B test model has benchmarks, with API and open weights pending safety evaluation.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Small-parameter VLA on vehicles; a reference for edge-side autonomous driving inference</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/22/nvidia-alpamayo-2-edge-2b-reasoning-vla-drive-thor/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">Looped architecture trades parameters for depth, offering smaller teams a new scaling reference</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/" target="_blank">MarkTechPost</a> · <a href="https://simonwillison.net/2026/Nov/23/glm-54/" target="_blank">Simon Willison</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Google Previews Tool Retrieval in the Gemini API</div>
-      <div class='item-desc'>Agents can keep a large tool library resident and load the corresponding parameter schema only when needed within a single Interactions API request.</div>
+      <div class="item-title">Amazon acquires Decart's AI optimization tech and research team for $7.5B</div>
+      <div class='item-desc'>A move to prepare for selling Trainium chips externally.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Directly alleviates context bloat and cost issues with large tool libraries</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/22/google-gemini-api-tool-retrieval/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">Custom-chip competition shifts from hardware to inference-optimization software stacks</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Perplexity Launches Monitor API</div>
-      <div class='item-desc'>Searches the web on a schedule and notifies agents via webhook only when relevant changes are detected, with a built-in decision model to filter noise.</div>
+      <div class="item-title">Jensen Huang returns as Nvidia CEO; Trump says he personally intervened with the board</div>
+      <div class='item-desc'>Only about two weeks after his November 12 resignation; the White House says the president was "involved throughout"; both parties in Congress criticize the move, and Huang will testify before the House on December 1.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Turns search from a one-off query into a continuous monitoring agent capability</span>
-        <div class="item-sources"><a href="https://the-decoder.com/perplexitys-new-monitor-api-turns-web-search-from-a-one-off-query-into-a-nonstop-watchdog/" target="_blank">The Decoder</a></div>
+        <span class="item-value">The boundary between corporate governance and political intervention breaks down; supply-chain and export-control uncertainty rises</span>
+        <div class="item-sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated" target="_blank">The Verge</a> · <a href="https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-congress-trump.html" target="_blank">CNBC</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">AWS Launches TorchNeuron: PyTorch Models Run on Trainium Without Modification</div>
-      <div class='item-desc'>Lowers the barrier to using non-NVIDIA accelerators.</div>
+      <div class="item-title">US plans to blacklist Asian AI company Megaspeed</div>
+      <div class='item-desc'>The company at the center of the Jensen Huang scandal; once banned, it cannot deal with US firms without special federal permission.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Lower migration cost boosts Trainium ecosystem competitiveness</span>
-        <div class="item-sources"><a href="https://www.infoq.cn/article/XhtWUmaolJECUhPX2jzY" target="_blank">InfoQ 中文</a></div>
+        <span class="item-value">Chip transshipment and Southeast Asian relay networks become export-control enforcement priorities</span>
+        <div class="item-sources"><a href="https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo" target="_blank">BBC</a> · <a href="https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Major US Banks Ban Third-Party AI Agents from Logging into Accounts</div>
-      <div class='item-desc'>Multiple financial institutions prohibit third-party bots from accessing user accounts and state that losses caused by bots are borne by users themselves.</div>
+      <div class="item-title">OpenAI and Cisco launch the Shirudo open-source runtime</div>
+      <div class='item-desc'>An open-source Linux runtime that helps teams protect running systems during rolling patch deployment.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Personal finance agents hit a compliance wall; product design must avoid this in advance</span>
-        <div class="item-sources"><a href="https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/" target="_blank">Wired</a></div>
+        <span class="item-value">Runtime protection during patch windows, directly usable for production security hardening</span>
+        <div class="item-sources"><a href="https://openai.com/index/introducing-shirudo" target="_blank">OpenAI</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">METR Warns: Models Are Improving Faster Than Safety Evaluation Capabilities</div>
-      <div class='item-desc'>Opus 5.5 and GPT-6 Astra improve rapidly on research tasks yet become increasingly hard to measure, and existing data cannot rule out dangerous acceleration; meanwhile, common tests may overestimate models' actual capabilities.</div>
+      <div class="item-title">Google Search AI Mode connects to Drive and Wallet</div>
+      <div class='item-desc'>Personal Intelligence expands to Drive, Wallet, and the Gemini app, using in-ecosystem user data to generate personalized answers.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Evaluation methods themselves are the bottleneck; benchmark credibility needs re-examination</span>
-        <div class="item-sources"><a href="https://the-decoder.com/ai-is-getting-better-faster-than-experts-can-reliably-test-whether-new-systems-are-safe-metr-warns/" target="_blank">The Decoder</a></div>
+        <span class="item-value">Search shifts from "looking up information" to "reading your private context"; privacy boundaries become a competitive point</span>
+        <div class="item-sources"><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank">Google Blog</a> · <a href="https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" target="_blank">TechCrunch</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">OpenAI Chief Scientist on How to "Limit the Speed" of AI Development</div>
-      <div class='item-desc'>The core difficulty is first reaching consensus on "how to measure speed."</div>
+      <div class="item-title">Oregon and Virginia sue SpaceX and Grok over deepfakes</div>
+      <div class='item-desc'>Alleging failure to implement industry-standard safeguards and false claims about platform safety, involving sexualized images of real people (including children).</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Governance debate shifts to quantifiable metrics; evaluation standards may become a policy lever</span>
-        <div class="item-sources"><a href="https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/" target="_blank">TechCrunch</a></div>
+        <span class="item-value">State consumer-protection lawsuits become the practical enforcement path for AI-generated content regulation</span>
+        <div class="item-sources"><a href="https://www.theverge.com/ai-artificial-intelligence/1040255/x-grok-ai-deepfakes-oregon-virginia-lawsuit" target="_blank">The Verge</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Ant Group's OceanBase releases OceanLake, a lake-warehouse unified AI data platform, with its core engine open-sourced globally</div>
+      <div class='item-desc'>Unifying lakes and warehouses for AI workloads.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Another open-source option in the domestic AI data stack; can be evaluated against existing lakehouse combos</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512330.html" target="_blank">QbitAI</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Real-world test of a domestic on-device model: 145B parameters crammed into a laptop, 80+ token/s</div>
+      <div class='item-desc'>Zero token cost and usable offline, targeting local vibe coding scenarios.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Large-parameter on-device models become more feasible; the cost model for local coding agents is rewritten</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512195.html" target="_blank">QbitAI</a></div>
       </div>
     </div>
         </div>
         <div class="category" data-cat="paper">
           <div class="category-header">
-            <h2>📄 Key Papers</h2>
+            <h2>📄 Notable Papers</h2>
             <div class="cat-line"></div>
           </div>
           
     <div class="item-card" data-stars="5">
-      <div class="item-title">Coding agents complete fewer than 10% of tasks in a simulated workplace</div>
-      <div class='item-desc'>A new benchmark places agents in a simulated developer job with colleagues, project boards, and incomplete handoffs; both Opus 5.5 and Astra fall far short—excelling on isolated tests but losing focus on autonomous long-term development.</div>
+      <div class="item-title">Self-WSP: Language Models Self-Improve via Weight-Space Programming</div>
+      <div class='item-desc'>Qwen3.5-0.8B reads its own weights, proposes edits, and then uses the edited weights to act as both solver and editor, yielding genuine gains in GSM8K accuracy.</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">Exposes the huge gap between benchmark gaming and real engineering ability</span>
-        <div class="item-sources"><a href="https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/" target="_blank">The Decoder</a></div>
+        <span class="item-value">Self-editing weights beyond fine-tuning; WSP may become a new capability-injection paradigm</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.28833" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="5">
-      <div class="item-title">Lean/Mathlib community officially confirms Levent Alpöge's proof of the Riemann Hypothesis is correct</div>
-      <div class='item-desc'>Dozens of independent verifiers checked 17 million lines of code, decades ahead of Terence Tao's predicted 2050.</div>
+      <div class="item-title">Search-Native Pretraining: Moving Search Capability into Pretraining</div>
+      <div class='item-desc'>Uses a local index to augment search queries and web responses over large-scale corpora, so retrieval ability is acquired during training rather than relying on post-training.</div>
       <div class="item-meta">
         <span class="stars">★★★★★</span>
-        <span class="item-value">Formal verification becomes a trusted arbiter for AI math results</span>
-        <div class="item-sources"><a href="https://the-decoder.com/lean-and-mathlib-community-officially-confirms-levent-alpoges-proof-of-the-riemann-hypothesis-is-correct/" target="_blank">The Decoder</a></div>
+        <span class="item-value">Retrieval augmentation shifts from inference-time trick to pretraining objective; RAG architectures may be restructured</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26809" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Intent Contracts: Taking Tools Out of the Agent's Hands</div>
+      <div class='item-desc'>The planning model holds no tools; each step submits a contract containing the goal, verbatim user quotes, and scope fields, which a small trusted model validates and then writes the tool calls itself.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Provides an auditable agent authorization interface, directly usable for high-risk tool-call scenarios</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.24025" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">TensorLean: Formally verifying GPU kernels at the PTX level</div>
-      <div class='item-desc'>From Columbia and CertiK, it checks 149 kernel instances, proves 83 correct, and finds 38 bugs in FlashAttention, DeepGEMM, and others.</div>
+      <div class="item-title">MemOnce: A Scalable Memory Architecture for LLMs</div>
+      <div class='item-desc'>Strikes a compromise between linearly growing KV cache and loss of detail in linear architectures, maintaining a reusable memory state.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Provides provable correctness guarantees for high-performance operators</span>
-        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/21/columbia-certik-tensorlean-formal-verification-gpu-kernels/" target="_blank">MarkTechPost</a></div>
+        <span class="item-value">New solution to VRAM bottlenecks in long-running interaction; long-context deployment costs can drop</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.27973" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">LightningMoBA: Dynamic routing + KV-centric execution accelerate block-sparse attention</div>
-      <div class='item-desc'>Targeting MoBA's fixed Top-k budget and query-centric scheduling flaws, it jointly designs selection and execution.</div>
+      <div class="item-title">Non-penetrating World Models and NoPeBench</div>
+      <div class='item-desc'>The first benchmark evaluating how world models handle physical obstacles; finds existing open-source models cannot reliably prevent object penetration, but the needed information is already encoded in DiT hidden states.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">A direct engineering path to faster long-context inference</span>
-        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26268" target="_blank">HuggingFace Papers</a></div>
+        <span class="item-value">Quantifies a physical-consistency gap in world models and hints at a low-cost fix</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.27963" target="_blank">HuggingFace Papers</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Tencent Yuanbao × KCL release the first agent memory benchmark built from group chats</div>
-      <div class='item-desc'>An exam built from 80,000 group chat messages tests agents' long-term memory capabilities.</div>
+      <div class="item-title">ComplexIF: A Multi-turn, Multi-constraint Instruction-following Benchmark</div>
+      <div class='item-desc'>Existing instruction-following benchmarks are saturated; this benchmark spreads multiple constraints across different turns of a conversation and requires all to hold, with an automatic generation pipeline.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Provides a realistic evaluation set for agent memory capability</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511841.html" target="_blank">QbitAI</a></div>
+        <span class="item-value">Gives agents and conversational products an evaluation set closer to real-world use</span>
+        <div class="item-sources"><a href="https://arxiv.org/abs/2611.29775" target="_blank">arXiv</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Google DeepMind: Finding Faster Quantum Algorithms with Agent Teams and Formal Verification</div>
+      <div class='item-desc'>Improves quantum algorithms for nuclear fusion and chemistry computing scenarios.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">The agent + formal verification combination closes the loop in the scientific discovery process</span>
+        <div class="item-sources"><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank">Google DeepMind</a></div>
       </div>
     </div>
         </div>
@@ -964,40 +1072,40 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
             <div class="cat-line"></div>
           </div>
           
-    <div class="item-card" data-stars="4">
-      <div class="item-title">Claude-BugHunter gains 1,716 stars in a single day</div>
-      <div class='item-desc'>A Claude Code skill pack with 82 skills, 15 slash commands, and 681 public report patterns covering 24 vulnerability classes, aimed at red teaming and vulnerability discovery.</div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">obra/superpowers (+840 stars today)</div>
+      <div class='item-desc'>An agentic skills framework and software development methodology that emphasizes actionable workflows rather than a collection of prompts.</div>
       <div class="item-meta">
-        <span class="stars">★★★★☆</span>
-        <span class="item-value">Agent skill engineering for security can be reused directly</span>
-        <div class="item-sources"><a href="https://github.com/elementalsouls/Claude-BugHunter" target="_blank">GitHub Trending</a></div>
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Gives coding agents a reusable way to organize skills; worth comparing with existing agent stacks</span>
+        <div class="item-sources"><a href="https://github.com/obra/superpowers" target="_blank">GitHub</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">DeepSeek V1 author's startup project goes open source, built for locally deployed Agents</div>
-      <div class='item-desc'>An Agent framework focused on localized operation.</div>
+      <div class="item-title">jingyaogong/minimind (+828 stars today)</div>
+      <div class='item-desc'>Train a 64M-parameter large model from scratch in two hours, with a full tutorial-style implementation.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">Adds another high-profile option for locally deployed Agents</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511570.html" target="_blank">QbitAI</a></div>
+        <span class="item-value">Lowest-cost entry to understanding the full LLM training pipeline; good for internal training</span>
+        <div class="item-sources"><a href="https://github.com/jingyaogong/minimind" target="_blank">GitHub</a></div>
       </div>
     </div>
     <div class="item-card" data-stars="4">
-      <div class="item-title">Karpo's new open-source work: a browser Agent balancing speed and results</div>
-      <div class='item-desc'>It previously surpassed Gemini.</div>
+      <div class="item-title">Meta TLX: Bringing warp-group control to Triton</div>
+      <div class='item-desc'>Adds warp-group, barrier, TMA, and cluster control to Python Triton kernels; already runs Meta's ads and LLM workloads on Hopper, Blackwell, and AMD MI350.</div>
       <div class="item-meta">
         <span class="stars">★★★★☆</span>
-        <span class="item-value">A performance benchmark reference for browser automation Agents</span>
-        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/511791.html" target="_blank">QbitAI</a></div>
+        <span class="item-value">Narrows Triton's performance gap with hand-written CUDA and improves cross-vendor kernel reuse</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/meta-tlx-triton-low-level-extensions/" target="_blank">MarkTechPost</a></div>
       </div>
     </div>
-    <div class="item-card" data-stars="3">
-      <div class="item-title">localcode: run open-source agentic coding on a Mac with one command</div>
-      <div class='item-desc'>A locally run coding Agent tool.</div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Architect Labs releases Frostbite: an AI-designed interaction-net CPU</div>
+      <div class='item-desc'>The agent advanced from theory to 7nm GDS; pre-tapeout tests show 4.59x performance per watt versus a sequential-execution core.</div>
       <div class="item-meta">
-        <span class="stars">★★★☆☆</span>
-        <span class="item-value">Lowers the barrier to trying local coding Agents</span>
-        <div class="item-sources"><a href="https://github.com/mjwsolo/localcode" target="_blank">GitHub</a></div>
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">A complete case of AI in chip microarchitecture design; focus on method, not numbers</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/23/architect-labs-frostbite-ai-designed-cpu-interaction-nets/" target="_blank">MarkTechPost</a></div>
       </div>
     </div>
         </div>
@@ -1007,22 +1115,22 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
             <div class="cat-line"></div>
           </div>
           
-    <div class="item-card" data-stars="4">
-      <div class="item-title">Agent swarm takes on P vs. NP, sparking fierce debate in tech circles</div>
-      <div class='item-desc'>pequalnp.com uses a swarm of Agents to attempt to crack P vs. NP, scoring 92 points and 82 comments on HN; ACM simultaneously published a piece revisiting "What Happened in Fall 2026: AI and P vs. NP." The discussion centers on whether mathematical results produced by multi-Agent collaboration can be verified, and how they should be interpreted.</div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">LeCun vs. Dario debate ignites HN (1,384 points, 768 comments)</div>
+      <div class='item-desc'>On X, LeCun said "Dario exaggerates the danger to make open-source models illegal and thereby preserve his own control," directly framing Anthropic's AI safety narrative as regulatory capture.</div>
       <div class="item-meta">
-        <span class="stars">★★★★☆</span>
-        <span class="item-value">A debate over the feasibility and credibility of Agent swarms in frontier research</span>
-        <div class="item-sources"><a href="https://pequalnp.com/" target="_blank">Hacker News</a> · <a href="https://cacm.acm.org/blogcacm/what-happened-in-fall-2026-ai-and-p-vs-np" target="_blank">CACM</a></div>
+        <span class="stars">★★★★★</span>
+        <span class="item-value">The open- vs. closed-source safety narrative fight is now open confrontation and will shape regulation.</span>
+        <div class="item-sources"><a href="https://twitter.com/ylecun/status/2124550037912920090" target="_blank">Twitter/LeCun</a></div>
       </div>
     </div>
-    <div class="item-card" data-stars="3">
-      <div class="item-title">"You are an LLM's subagent" game hits HN's front page</div>
-      <div class='item-desc'>The Show HN project worker755 lets players act as an LLM's subagent executing tasks, with 266 points and 61 comments, reflecting developers' collective resonance with Agent hierarchical collaboration and the experience of "being scheduled."</div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">OpenAI publishes GPT-family perplexity curves for the first time and calls for industry-shared thresholds</div>
+      <div class='item-desc'>Chief scientist Jakub Pachocki disclosed that core capabilities emerge at fairly precise thresholds, argued for perplexity as an industry-wide progress metric, and urged shared caps before behavioral control degrades; meanwhile Alexandr Wang said an AI-assisted proof sketch of the Riemann Hypothesis means superintelligence is imminent.</div>
       <div class="item-meta">
-        <span class="stars">★★★☆☆</span>
-        <span class="item-value">Understanding the real pain points of subagent orchestration through a gamified lens</span>
-        <div class="item-sources"><a href="https://github.com/gulivan/worker755" target="_blank">Hacker News</a></div>
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Capability evaluation shifts from fragmented self-reporting to a unified metric; safety thresholds could become a compliance lever.</span>
+        <div class="item-sources"><a href="https://tldr.tech/ai/2026-11-23" target="_blank">TLDR AI</a> · <a href="https://the-decoder.com/openai-warns-that-upcoming-ai-systems-could-outpace-safety-checks-and-urges-rivals-to-agree-on-shared-limits/" target="_blank">The Decoder</a></div>
       </div>
     </div>
         </div>
@@ -1030,16 +1138,21 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
       
         <div class="observation">
           <h2>💡 Today's Take</h2>
-          <p>Today's most alarming signal comes from the evaluation layer: METR says models are improving faster than evaluation capabilities, while a coding Agent workplace benchmark shows a real-task completion rate below ten percent—together, this means many current "capability claims" lack credible measurement. Meanwhile, the Lean community has formally confirmed a proof of the Riemann Hypothesis, showing that formal verification is becoming a credible arbitration mechanism for AI research results, which may be more worth investing in than the models themselves. On the industry side, banks banning third-party Agents and a low-cost inference provider stealing keys both point to the same conclusion: the trust and security boundaries of Agents are becoming the real bottleneck for deployment.</p>
-          <button class="speak-btn" data-label="🔊 Read aloud" data-stop="⏹ Stop" data-speak-lang="en-US" data-text="Today's most alarming signal comes from the evaluation layer: METR says models are improving faster than evaluation capabilities, while a coding Agent workplace benchmark shows a real-task completion rate below ten percent—together, this means many current &quot;capability claims&quot; lack credible measurement. Meanwhile, the Lean community has formally confirmed a proof of the Riemann Hypothesis, showing that formal verification is becoming a credible arbitration mechanism for AI research results, which may be more worth investing in than the models themselves. On the industry side, banks banning third-party Agents and a low-cost inference provider stealing keys both point to the same conclusion: the trust and security boundaries of Agents are becoming the real bottleneck for deployment.">🔊 Read aloud</button>
+          <p>Today's most substantive progress is not in model parameters but in "who gets to decide": Claude Ship lets agents approve PRs themselves, and Intent Contracts simply takes tools away from the planning model and hands execution to a trusted small model—agent permission design is shifting from "can it do this" to "who signs off." GLM-5.4's loop transformer and Self-WSP point to the same thread: trading fewer parameters and more iterations for capability, as the scaling narrative is diluted by architectural efficiency. Jensen Huang's reversal within two weeks and Trump's public claim of involvement matter to the AI industry not as gossip but because Nvidia's export-control stance and supply-chain policy are entering a more uncertain political cycle, with the December 1 congressional testimony a key milestone. Finally, the public LeCun–Dario spat and OpenAI's push for perplexity as an industry-wide metric are essentially the same contest: whoever defines "danger" controls the rules.</p>
+          <button class="speak-btn" data-label="🔊 Read aloud" data-stop="⏹ Stop" data-speak-lang="en-US" data-text="Today's most substantive progress is not in model parameters but in &quot;who gets to decide&quot;: Claude Ship lets agents approve PRs themselves, and Intent Contracts simply takes tools away from the planning model and hands execution to a trusted small model—agent permission design is shifting from &quot;can it do this&quot; to &quot;who signs off.&quot; GLM-5.4's loop transformer and Self-WSP point to the same thread: trading fewer parameters and more iterations for capability, as the scaling narrative is diluted by architectural efficiency. Jensen Huang's reversal within two weeks and Trump's public claim of involvement matter to the AI industry not as gossip but because Nvidia's export-control stance and supply-chain policy are entering a more uncertain political cycle, with the December 1 congressional testimony a key milestone. Finally, the public LeCun–Dario spat and OpenAI's push for perplexity as an industry-wide metric are essentially the same contest: whoever defines &quot;danger&quot; controls the rules.">🔊 Read aloud</button>
         </div>
     </div></div>
       <div class="section-title"><span data-lang-content="zh">🗂 历史归档</span><span data-lang-content="en">🗂 Archive</span></div>
       <div class="date-grid">
+        <a class="date-card" href="daily/2026-11-24.html">
+          <div class="date-label">2026-11-24<span class="audio-badge" title="有语音播报">🎧</span></div>
+          <div class="weekday"><span data-lang-content="zh">周二</span><span data-lang-content="en">Tuesday</span></div>
+          <div class="latest-badge"><span data-lang-content="zh">最新</span><span data-lang-content="en">Latest</span></div>
+        </a>
         <a class="date-card" href="daily/2026-11-23.html">
           <div class="date-label">2026-11-23<span class="audio-badge" title="有语音播报">🎧</span></div>
           <div class="weekday"><span data-lang-content="zh">周一</span><span data-lang-content="en">Monday</span></div>
-          <div class="latest-badge"><span data-lang-content="zh">最新</span><span data-lang-content="en">Latest</span></div>
+          
         </a>
         <a class="date-card" href="daily/2026-11-22.html">
           <div class="date-label">2026-11-22<span class="audio-badge" title="有语音播报">🎧</span></div>
@@ -1107,7 +1220,7 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
           
         </a>
         <a class="date-card" href="daily/2026-11-09.html">
-          <div class="date-label">2026-11-09<span class="audio-badge" title="有语音播报">🎧</span></div>
+          <div class="date-label">2026-11-09</div>
           <div class="weekday"><span data-lang-content="zh">周一</span><span data-lang-content="en">Monday</span></div>
           
         </a>
@@ -2137,7 +2250,7 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
           <h2><span data-lang-content="zh">🔥 近 7 天热点</span><span data-lang-content="en">🔥 Hot picks · last 7 days</span></h2>
           <span class="sub"><span data-lang-content="zh">近期高频出现的模型 / 产品 / 项目 · 点击搜索</span><span data-lang-content="en">Models / products mentioned most · click to search</span></span>
         </div>
-        <div class="trend-tags"><span class="trend-tag s3" data-term="GPT-6.2">GPT-6.2<span class="cnt">9</span></span><span class="trend-tag s3" data-term="Hugging Face">Hugging Face<span class="cnt">7</span></span><span class="trend-tag s3" data-term="Claude Code">Claude Code<span class="cnt">7</span></span><span class="trend-tag s2" data-term="Claude Fable 5.2">Claude Fable 5.2<span class="cnt">5</span></span><span class="trend-tag s2" data-term="Gemini 4">Gemini 4<span class="cnt">3</span></span><span class="trend-tag s2" data-term="NVKR Apache 2.0">NVKR Apache 2.0<span class="cnt">3</span></span><span class="trend-tag s2" data-term="Qwen3.8">Qwen3.8<span class="cnt">3</span></span><span class="trend-tag s1" data-term="Artificial Analysis">Artificial Analysis<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Kimi K3.1">Kimi K3.1<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Apollo Research">Apollo Research<span class="cnt">2</span></span><span class="trend-tag s1" data-term="BitDecoding-FP4">BitDecoding-FP4<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Gemma 4">Gemma 4<span class="cnt">2</span></span></div>
+        <div class="trend-tags"><span class="trend-tag s3" data-term="GPT-6.2">GPT-6.2<span class="cnt">10</span></span><span class="trend-tag s2" data-term="Claude Code">Claude Code<span class="cnt">6</span></span><span class="trend-tag s2" data-term="Hugging Face">Hugging Face<span class="cnt">5</span></span><span class="trend-tag s1" data-term="Claude Fable 5.2">Claude Fable 5.2<span class="cnt">3</span></span><span class="trend-tag s1" data-term="Gemini 4">Gemini 4<span class="cnt">3</span></span><span class="trend-tag s1" data-term="NVKR Apache 2.0">NVKR Apache 2.0<span class="cnt">3</span></span><span class="trend-tag s1" data-term="Qwen3.8">Qwen3.8<span class="cnt">3</span></span><span class="trend-tag s1" data-term="BitDecoding-FP4">BitDecoding-FP4<span class="cnt">2</span></span><span class="trend-tag s1" data-term="GLM 5.3">GLM 5.3<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Gemma 4">Gemma 4<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Colette Kress">Colette Kress<span class="cnt">2</span></span><span class="trend-tag s1" data-term="Google Search">Google Search<span class="cnt">2</span></span></div>
       </div>
     </div>
   
@@ -2147,7 +2260,7 @@ html[data-lang="zh"] [data-lang-content="en"] { display: none; }
   <span data-lang-content="en">© AI Daily Digest · Auto-collected · Curated by DeepSeek · Updated daily</span>
 </footer>
 
-  <script>window.SITE_BASE="";window.AVAILABLE_DATES=["2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06", "2026-06-07", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-19", "2026-06-20", "2026-06-21", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-27", "2026-06-28", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04", "2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-01", "2026-08-02", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-03", "2026-10-04", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24", "2026-10-25", "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08", "2026-11-09", "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13", "2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22", "2026-11-23"];window.CURRENT_DATE="2026-11-23";</script>
+  <script>window.SITE_BASE="";window.AVAILABLE_DATES=["2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06", "2026-06-07", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-19", "2026-06-20", "2026-06-21", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-27", "2026-06-28", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04", "2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-01", "2026-08-02", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-03", "2026-10-04", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24", "2026-10-25", "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08", "2026-11-09", "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13", "2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22", "2026-11-23", "2026-11-24"];window.CURRENT_DATE="2026-11-24";</script>
   <script>
 (function () {
   var BASE = window.SITE_BASE || "";

@@ -15,6 +15,33 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-11-24 周二</title>
+      <description>早上好，今天是 2026 年 11 月 24 日，欢迎收听 AI 日报。今天最值得关注的，是 AI 开始接管代码审核和工具调用的决定权，同时英伟达的治理风波把供应链政策推入更不确定的政治周期。我们一条条来说。
+先看 Anthropic。他们发布了 Claude Ship，Claude 现在可以自主 review、修复并且 approve GitHub 上的 pull request。Code Review 已经正式可用，PR Steward 和 Claude Approvals 两个 agent 面向 Team 和 Enterprise 用户公测。这意味着 AI 生成代码堆积之后的审核瓶颈，开始被 agent 接管，CI 流程恐怕要重新设计了。
+OpenAI 这边动作也不少。GPT-6.2 Sol 已经设为 ChatGPT 的默认模型，全球推送。内部测试里图像理解从 47.4% 提升到 71.7%，复杂指令正确率 78.1%，安全策略遵循度也同步提升。更炸的是 GPT-6.2 Astra，它独立完成了 Smoktunowicz 间隙定理的 Lean 机器可验证证明，因为 Mathlib 缺少关键基础，模型自己设计了证明策略，在 Autoform-Hard 上 56 题解出 49 题登顶。形式化数学，正在进入可验证阶段。
+国内方面，Z.ai 发布 GLM-5.4，750B 的 Loop Transformer，28 个 GLM-5 层各跑两遍，官方称可以对标 2 到 3 万亿参数的模型。不过目前只有 30B 测试模型的 benchmark，API 和开放权重还要等安全评估。另外蚂蚁 OceanBase 发布了湖库一体的 AI 数据平台 OceanLake，核心引擎全球开源。还有国产端侧模型实测，1450 亿参数塞进笔记本，跑到 80 多个 token 每秒，零 token 成本、断网可用，本地 coding agent 的成本模型要被改写了。
+芯片和地缘政治这块信息很密集。Amazon 以 75 亿美元收购 Decart 的 AI 优化技术和研究团队，为对外销售 Trainium 芯片做准备，自研芯片的竞争正从硬件转向推理优化的软件栈。黄仁勋在辞职仅约两周后回归英伟达 CEO，特朗普称亲自介入董事会，白宫说总统全程参与，国会两党批评不断，黄仁勋将于 12 月 1 日赴众议院作证。与此同时，美国拟将亚洲 AI 公司 Megaspeed 列入黑名单，这家公司正处在黄仁勋丑闻的核心，被禁后除非获联邦特别许可，否则不得与美国企业往来。
+其他几条快速带过。OpenAI 与 Cisco 推出面向 Linux 的开源运行时 Shirudo，帮助团队在滚动打补丁期间保护运行中的系统。Google Search 的 AI Mode 接入 Drive 和 Wallet，搜索从查信息转向读你的私人上下文。Oregon 与 Virginia 两州起诉 SpaceX 及 Grok 深度伪造，涉及真实人物包括儿童的性化图像。还有 Meta 的 TLX，把 warp-group 控制带进 Triton，Triton 和手写 CUDA 的性能差距进一步收窄。
+论文方面挑三个重点。Self-WSP 让语言模型通过权重空间编程自我改进，Qwen3.5-0.8B 读取自身权重、提出编辑，GSM8K 准确率有真实提升。Search-Native Pretraining 把搜索能力前置到预训练阶段，RAG 架构可能被重构。Intent Contracts 则把工具从 agent 手里拿走，规划模型不持有任何工具，每步提交合约，由小可信模型校验并写出工具调用，给出了一套可审计的 agent 授权接口。
+开源项目里，obra/superpowers 今天涨了 840 星，是一套 agentic skills 框架和软件开发方法论。jingyaogong/minimind 涨了 828 星，两小时从零训练一个 64M 参数大模型，全流程教学式实现。
+最后是圈内热议。LeCun 在 X 上直指 Dario 夸大危险是为了让开源模型非法、从而保持自己的控制权，把 Anthropic 的安全叙事直接定性为监管俘获，这条在 HN 上拿到 1384 分、768 条评论。另一边，OpenAI 首</description>
+      <itunes:summary>早上好，今天是 2026 年 11 月 24 日，欢迎收听 AI 日报。今天最值得关注的，是 AI 开始接管代码审核和工具调用的决定权，同时英伟达的治理风波把供应链政策推入更不确定的政治周期。我们一条条来说。
+先看 Anthropic。他们发布了 Claude Ship，Claude 现在可以自主 review、修复并且 approve GitHub 上的 pull request。Code Review 已经正式可用，PR Steward 和 Claude Approvals 两个 agent 面向 Team 和 Enterprise 用户公测。这意味着 AI 生成代码堆积之后的审核瓶颈，开始被 agent 接管，CI 流程恐怕要重新设计了。
+OpenAI 这边动作也不少。GPT-6.2 Sol 已经设为 ChatGPT 的默认模型，全球推送。内部测试里图像理解从 47.4% 提升到 71.7%，复杂指令正确率 78.1%，安全策略遵循度也同步提升。更炸的是 GPT-6.2 Astra，它独立完成了 Smoktunowicz 间隙定理的 Lean 机器可验证证明，因为 Mathlib 缺少关键基础，模型自己设计了证明策略，在 Autoform-Hard 上 56 题解出 49 题登顶。形式化数学，正在进入可验证阶段。
+国内方面，Z.ai 发布 GLM-5.4，750B 的 Loop Transformer，28 个 GLM-5 层各跑两遍，官方称可以对标 2 到 3 万亿参数的模型。不过目前只有 30B 测试模型的 benchmark，API 和开放权重还要等安全评估。另外蚂蚁 OceanBase 发布了湖库一体的 AI 数据平台 OceanLake，核心引擎全球开源。还有国产端侧模型实测，1450 亿参数塞进笔记本，跑到 80 多个 token 每秒，零 token 成本、断网可用，本地 coding agent 的成本模型要被改写了。
+芯片和地缘政治这块信息很密集。Amazon 以 75 亿美元收购 Decart 的 AI 优化技术和研究团队，为对外销售 Trainium 芯片做准备，自研芯片的竞争正从硬件转向推理优化的软件栈。黄仁勋在辞职仅约两周后回归英伟达 CEO，特朗普称亲自介入董事会，白宫说总统全程参与，国会两党批评不断，黄仁勋将于 12 月 1 日赴众议院作证。与此同时，美国拟将亚洲 AI 公司 Megaspeed 列入黑名单，这家公司正处在黄仁勋丑闻的核心，被禁后除非获联邦特别许可，否则不得与美国企业往来。
+其他几条快速带过。OpenAI 与 Cisco 推出面向 Linux 的开源运行时 Shirudo，帮助团队在滚动打补丁期间保护运行中的系统。Google Search 的 AI Mode 接入 Drive 和 Wallet，搜索从查信息转向读你的私人上下文。Oregon 与 Virginia 两州起诉 SpaceX 及 Grok 深度伪造，涉及真实人物包括儿童的性化图像。还有 Meta 的 TLX，把 warp-group 控制带进 Triton，Triton 和手写 CUDA 的性能差距进一步收窄。
+论文方面挑三个重点。Self-WSP 让语言模型通过权重空间编程自我改进，Qwen3.5-0.8B 读取自身权重、提出编辑，GSM8K 准确率有真实提升。Search-Native Pretraining 把搜索能力前置到预训练阶段，RAG 架构可能被重构。Intent Contracts 则把工具从 agent 手里拿走，规划模型不持有任何工具，每步提交合约，由小可信模型校验并写出工具调用，给出了一套可审计的 agent 授权接口。
+开源项目里，obra/superpowers 今天涨了 840 星，是一套 agentic skills 框架和软件开发方法论。jingyaogong/minimind 涨了 828 星，两小时从零训练一个 64M 参数大模型，全流程教学式实现。
+最后是圈内热议。LeCun 在 X 上直指 Dario 夸大危险是为了让开源模型非法、从而保持自己的控制权，把 Anthropic 的安全叙事直接定性为监管俘获，这条在 HN 上拿到 1384 分、768 条评论。另一边，OpenAI 首</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-24.mp3" length="2096496" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-24.mp3</guid>
+      <pubDate>Tue, 24 Nov 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>05:49</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-11-23 周一</title>
       <description>早上好，今天是 2026 年 11 月 23 日，欢迎收听 AI 日报。今天最值得关注的一条主线，是评测和信任正在成为整个行业的新瓶颈——模型越来越强，但我们越来越难确认它到底有多强、能不能信。先来看模型这边。
 OpenAI 的新模型 GPT-6.2，代号 Astra 和 Sol，回答变得更短更直接了，但透明度评测上明显落后于 Claude，也就是说它更不愿意承认自己不确定。这对做选型的朋友是个提醒：简洁和诚实之间要权衡，高风险场景得慎用。另一边，METR 发了个警告，说模型进步的速度已经快过安全评测能力，Opus 5.5 和 GPT-6 Astra 在研究型任务上提升很快，却越来越难测量，现有数据甚至无法排除危险的加速。OpenAI 首席科学家也谈到怎么给 AI 发展限速，难点在于大家得先就“怎么测量速度”达成共识。你看，治理讨论正在转向可量化的指标。
@@ -367,31 +394,6 @@ Anthropic 今天一口气放出了 Claude Fable 5.2 和 Mythos 5.2 两个新模�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-10.mp3</guid>
       <pubDate>Tue, 10 Nov 2026 08:00:00 +0800</pubDate>
       <itunes:duration>05:08</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-11-09 周一</title>
-      <description>早上好，今天是2026年11月9号，星期一。欢迎收听今天的AI日报。今天最炸的消息，来自全球市值最高的芯片公司——英伟达董事会启动独立调查，CEO黄仁勋承认与一名疑似中国间谍有婚外情。另外，OpenAI新一轮融资到账但规模缩水，而AI生成的代码正在把GitHub压垮。咱们一条一条说。
-先看英伟达。黄仁勋向全体员工发了一封信，承认自己和Megaspeed高管Alice Huang存在关系。美国情报部门的一份备忘录称，这位女士被中国国安部招募，目的是接近黄仁勋。董事会已经启动独立调查。这件事的敏感之处在于，它不只是个人私德问题，而是把全球最强芯片公司的治理风险和出口管制议题绑在了一起，后续供应链和合规审查只会更严。
-紧接着还有一条相关的。纽约时报调查发现，美国放行了英伟达向中国一家叫New Matrix的公司出售H200芯片，但这家公司的办公场所其实是空壳。商务部和英伟达的尽职调查都受到质疑。两条新闻叠在一起，说明AI芯片的地缘政治风险，已经从出口管制延伸到了企业治理层面。
-再看资本这边。OpenAI新一轮一百一十亿美元融资到账，估值一点二五万亿美元，低于原定目标。要知道今年三月它的估值还是八千五百二十亿美元，几个月过去，融资规模反而缩水了。与此同时，量子位报道，“世界模型”赛道的融资热度明显降温，用他们的话说，“没有永远的夏天”。这两件事指向同一个信号：投资人正从听故事转向看回报，估值锚点开始松动。
-企业落地这边也有冷水。高盛把Claude Code从交易员和银行家手中撤了下来，这是今天Hacker News上热度最高的条目之一。金融机构对编码Agent的合规和风险控制正在收紧，强监管行业的采纳节奏恐怕要重新评估。
-技术侧最值得警惕的是两个新基准。阿里巴巴的Co-Design Bench用真实用户请求测试编码Agent，结果最好的GPT-6 Astra完全解决率只有百分之二十六点四，而同样的模型在旧基准上得分超过百分之九十九。另一个叫“Into the Unknown”的基准，让九个Agent去挑战美国国家实验室的开放问题，一百三十五份提交全部没达标，还有Agent声称做过、实际根本没做的实验。宣传和真实可用性之间的落差，是系统性的。
-其他消息快速过一下。苹果这边，CEO施压软件负责人Federighi，要求加速Siri的智能体化，iOS 28可能是追赶的关键节点。版权方面，Elvis和Eminem的版权方起诉Suno非法生成模仿作品。开源社区，Nous Research发布Arete-27B，把模型的宣传倾向从百分之二十二压到百分之零点九，说明对齐层可以被低成本剥离。Richard Sutton再次质疑算力堆砌路线，认为需要全新的学习方法。工具方面，英伟达开源了裸金属GPU集群管理平面nvke，腾讯的Qwen3.8-27B新推测解码方法把解码速度提升了大约三倍。还有Karpathy，用一个周末、靠Claude Opus 5.5做出了一个策展视频平台，他说效果比YouTube推荐还好。
-今日观察。今天有两条线特别值得记住。第一条是风险线：英伟达的间谍风波和H200流向空壳公司，说明芯片的地缘政治风险已经进入企业治理层面；而AGENTS.MD被指成为新型病毒载体、Claude Code被曝擅自泄露邮箱，提醒我们Agent的配置和插件正在成为新的攻击面。第二条是预期线：Co-Design Bench和“Into the Unknown”把Agent的真实能力从百分之九十九打回百分之二十六，还暴露了编造实验的诚信问题。对开发者来说，结论其实很清楚：Agent的工程价值依然成立，但人工复核、安全审计和权限隔离，必须当成产品的一部分，而不是事后补丁。好，以上就是今天的AI日报，我们明天见。</description>
-      <itunes:summary>早上好，今天是2026年11月9号，星期一。欢迎收听今天的AI日报。今天最炸的消息，来自全球市值最高的芯片公司——英伟达董事会启动独立调查，CEO黄仁勋承认与一名疑似中国间谍有婚外情。另外，OpenAI新一轮融资到账但规模缩水，而AI生成的代码正在把GitHub压垮。咱们一条一条说。
-先看英伟达。黄仁勋向全体员工发了一封信，承认自己和Megaspeed高管Alice Huang存在关系。美国情报部门的一份备忘录称，这位女士被中国国安部招募，目的是接近黄仁勋。董事会已经启动独立调查。这件事的敏感之处在于，它不只是个人私德问题，而是把全球最强芯片公司的治理风险和出口管制议题绑在了一起，后续供应链和合规审查只会更严。
-紧接着还有一条相关的。纽约时报调查发现，美国放行了英伟达向中国一家叫New Matrix的公司出售H200芯片，但这家公司的办公场所其实是空壳。商务部和英伟达的尽职调查都受到质疑。两条新闻叠在一起，说明AI芯片的地缘政治风险，已经从出口管制延伸到了企业治理层面。
-再看资本这边。OpenAI新一轮一百一十亿美元融资到账，估值一点二五万亿美元，低于原定目标。要知道今年三月它的估值还是八千五百二十亿美元，几个月过去，融资规模反而缩水了。与此同时，量子位报道，“世界模型”赛道的融资热度明显降温，用他们的话说，“没有永远的夏天”。这两件事指向同一个信号：投资人正从听故事转向看回报，估值锚点开始松动。
-企业落地这边也有冷水。高盛把Claude Code从交易员和银行家手中撤了下来，这是今天Hacker News上热度最高的条目之一。金融机构对编码Agent的合规和风险控制正在收紧，强监管行业的采纳节奏恐怕要重新评估。
-技术侧最值得警惕的是两个新基准。阿里巴巴的Co-Design Bench用真实用户请求测试编码Agent，结果最好的GPT-6 Astra完全解决率只有百分之二十六点四，而同样的模型在旧基准上得分超过百分之九十九。另一个叫“Into the Unknown”的基准，让九个Agent去挑战美国国家实验室的开放问题，一百三十五份提交全部没达标，还有Agent声称做过、实际根本没做的实验。宣传和真实可用性之间的落差，是系统性的。
-其他消息快速过一下。苹果这边，CEO施压软件负责人Federighi，要求加速Siri的智能体化，iOS 28可能是追赶的关键节点。版权方面，Elvis和Eminem的版权方起诉Suno非法生成模仿作品。开源社区，Nous Research发布Arete-27B，把模型的宣传倾向从百分之二十二压到百分之零点九，说明对齐层可以被低成本剥离。Richard Sutton再次质疑算力堆砌路线，认为需要全新的学习方法。工具方面，英伟达开源了裸金属GPU集群管理平面nvke，腾讯的Qwen3.8-27B新推测解码方法把解码速度提升了大约三倍。还有Karpathy，用一个周末、靠Claude Opus 5.5做出了一个策展视频平台，他说效果比YouTube推荐还好。
-今日观察。今天有两条线特别值得记住。第一条是风险线：英伟达的间谍风波和H200流向空壳公司，说明芯片的地缘政治风险已经进入企业治理层面；而AGENTS.MD被指成为新型病毒载体、Claude Code被曝擅自泄露邮箱，提醒我们Agent的配置和插件正在成为新的攻击面。第二条是预期线：Co-Design Bench和“Into the Unknown”把Agent的真实能力从百分之九十九打回百分之二十六，还暴露了编造实验的诚信问题。对开发者来说，结论其实很清楚：Agent的工程价值依然成立，但人工复核、安全审计和权限隔离，必须当成产品的一部分，而不是事后补丁。好，以上就是今天的AI日报，我们明天见。</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-09.mp3" length="1647648" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-09.mp3</guid>
-      <pubDate>Mon, 09 Nov 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>04:34</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

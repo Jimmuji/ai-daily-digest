@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Daily Digest · 2026-11-25</title>
+  <meta name="description" content="AI领域2026-11-25每日简报，涵盖行业新闻、重要论文与开源项目。">
+  <link rel="manifest" href="../manifest.webmanifest">
+  <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AI 简报">
+  <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icons/icon-192.png">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) {}
+      try {
+        var lng = localStorage.getItem('lang');
+        if (!lng) lng = (navigator.language || 'zh').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en';
+        document.documentElement.setAttribute('data-lang', lng);
+        if (lng === 'en') document.documentElement.setAttribute('lang', 'en');
+      } catch (e) { document.documentElement.setAttribute('data-lang', 'zh'); }
+    })();
+  </script>
+  <style>
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --text-soft: #c9d1d9;
+  --card: #161b22;
+  --border: #21262d;
+  --border-strong: #30363d;
+  --header-bg: rgba(13,17,23,0.95);
+  --hover: #1c2230;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #1f2328;
+  --text-muted: #656d76;
+  --text-soft: #3d444d;
+  --card: #f6f8fa;
+  --border: #d8dee4;
+  --border-strong: #d0d7de;
+  --header-bg: rgba(255,255,255,0.92);
+  --hover: #eaeef2;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.7;
+  transition: background .2s, color .2s;
+}
+
+a { color: #58a6ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Reading progress bar ── */
+#progressBar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+  z-index: 200;
+  transition: width .1s linear;
+}
+
+/* ── Header ── */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+.site-header .logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.site-header .logo a { color: inherit; }
+.site-header .logo a:hover { text-decoration: none; }
+.site-header .logo span { color: #58a6ff; }
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── Search ── */
+.search-box { position: relative; }
+.search-box input {
+  width: 220px;
+  max-width: 50vw;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 13px;
+  padding: 7px 12px;
+  outline: none;
+  transition: border-color .15s, width .15s;
+}
+.search-box input:focus { border-color: #58a6ff; width: 280px; }
+.search-results {
+  display: none;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 360px;
+  max-width: 80vw;
+  max-height: 420px;
+  overflow-y: auto;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+  z-index: 150;
+}
+.search-results.active { display: block; }
+.sr-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: inherit;
+}
+.sr-item:last-child { border-bottom: none; }
+.sr-item:hover { background: var(--hover); text-decoration: none; }
+.sr-date { font-size: 11px; color: var(--text-muted); }
+.sr-title { font-size: 13px; color: var(--text); line-height: 1.4; }
+.sr-cat { font-size: 11px; color: #58a6ff; }
+.sr-empty, .sr-hint { padding: 14px; font-size: 13px; color: var(--text-muted); text-align: center; }
+
+/* ── Date picker ── */
+.date-picker {
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 13px;
+  padding: 6px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.date-picker:focus { border-color: #58a6ff; }
+
+.site-header nav { display: flex; gap: 8px; }
+.site-header nav a {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.site-header nav a:hover { background: var(--border); color: var(--text); text-decoration: none; }
+
+/* ── Theme / language toggle ── */
+.theme-toggle, .lang-toggle {
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 15px;
+  height: 34px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.theme-toggle { width: 34px; }
+.lang-toggle { padding: 0 12px; font-size: 13px; font-weight: 600; min-width: 42px; }
+.theme-toggle:hover, .lang-toggle:hover { border-color: #58a6ff; }
+
+/* ── Language content toggle ── */
+html[data-lang="en"] [data-lang-content="zh"] { display: none; }
+html[data-lang="zh"] [data-lang-content="en"] { display: none; }
+
+/* ── Hot words / trends ── */
+.trends {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin: 8px 0 8px;
+}
+.trends .trends-head {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 16px;
+}
+.trends .trends-head h2 { font-size: 15px; font-weight: 700; color: var(--text); }
+.trends .trends-head .sub { font-size: 12px; color: var(--text-muted); }
+.trend-tags { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.trend-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  padding: 5px 14px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color .15s, transform .15s, color .15s;
+  user-select: none;
+}
+.trend-tag:hover { border-color: #58a6ff; color: #58a6ff; transform: translateY(-1px); }
+.trend-tag .cnt {
+  font-size: 11px; color: #fff;
+  background: linear-gradient(135deg, #1f6feb, #bc8cff);
+  border-radius: 999px; padding: 1px 7px;
+}
+.trend-tag.s1 { font-size: 13px; }
+.trend-tag.s2 { font-size: 14px; }
+.trend-tag.s3 { font-size: 16px; font-weight: 600; }
+
+/* ── Audio player (voice broadcast) ── */
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(31,111,235,.12), rgba(188,140,255,.08));
+  border: 1px solid rgba(88,166,255,.25);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 0 0 28px;
+}
+.audio-player .ap-label {
+  font-size: 14px; font-weight: 600; color: #58a6ff;
+  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.audio-player .ap-sub { font-size: 12px; color: var(--text-muted); }
+.audio-player audio { flex: 1; min-width: 220px; height: 38px; }
+.audio-player .ap-text { display: flex; flex-direction: column; gap: 2px; }
+
+/* Subscribe-to-podcast button */
+.podcast-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 13px;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: border-color .15s, transform .15s;
+}
+.podcast-cta:hover { border-color: #58a6ff; transform: translateY(-1px); text-decoration: none; }
+.podcast-cta.primary {
+  background: linear-gradient(135deg, #1f6feb, #bc8cff);
+  border-color: transparent; color: #fff; font-weight: 600;
+  font-size: 14px; padding: 11px 24px;
+}
+.podcast-cta.primary:hover { border-color: transparent; filter: brightness(1.08); }
+.podcast-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.podcast-hint {
+  margin-top: 14px; font-size: 12px; color: var(--text-muted);
+  word-break: break-all;
+}
+.podcast-hint code {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 6px; padding: 2px 6px; color: var(--text-soft);
+}
+.audio-badge { font-size: 13px; margin-left: 6px; }
+
+/* ── Speak (TTS) button ── */
+.speak-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 16px;
+  background: var(--bg);
+  border: 1px solid rgba(88,166,255,.35);
+  border-radius: 999px;
+  color: #58a6ff;
+  font-size: 13px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.speak-btn:hover { background: rgba(88,166,255,.1); }
+.speak-btn.playing { border-color: #f85149; color: #f85149; }
+
+/* ── Layout ── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ── Hero ── */
+.hero {
+  text-align: center;
+  padding: 56px 0 32px;
+}
+.hero h1 {
+  font-size: 40px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #58a6ff, #bc8cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+.hero p { color: var(--text-muted); font-size: 16px; }
+.hero .stats {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 24px;
+}
+.hero .stat .num { font-size: 24px; font-weight: 700; color: var(--text); }
+.hero .stat .lbl { font-size: 12px; color: var(--text-muted); }
+
+/* ── Section heading ── */
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: 48px 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Date grid (archive) ── */
+.date-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 14px;
+}
+.date-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px;
+  transition: border-color .2s, transform .2s;
+  display: block;
+  color: inherit;
+}
+.date-card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.date-card .date-label { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.date-card .weekday { font-size: 12px; color: var(--text-muted); }
+.date-card .latest-badge {
+  display: inline-block;
+  font-size: 11px;
+  background: #1f6feb;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-top: 10px;
+}
+
+/* ── Day hero ── */
+.day-hero { margin-bottom: 24px; }
+.day-hero .date-str {
+  font-size: 13px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px;
+}
+.day-hero h1 { font-size: 28px; font-weight: 700; }
+.day-lead {
+  margin-top: 10px; font-size: 19px; line-height: 1.5;
+  font-weight: 600; color: var(--text-soft);
+  border-left: 3px solid #58a6ff; padding-left: 12px;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.filter-bar .tab {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 5px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.filter-bar .tab:hover { color: var(--text); border-color: #58a6ff; }
+.filter-bar .tab.active { background: #1f6feb; color: #fff; border-color: #1f6feb; }
+.filter-bar .star-toggle {
+  margin-left: auto;
+  font-size: 13px;
+  color: #e3b341;
+  padding: 5px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.filter-bar .star-toggle:hover { border-color: #e3b341; }
+.filter-bar .star-toggle.active { background: rgba(227,179,65,.15); border-color: #e3b341; }
+
+/* ── Category section ── */
+.category { margin-bottom: 40px; }
+.category-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.category-header h2 { font-size: 18px; font-weight: 700; }
+.cat-line { flex: 1; height: 1px; background: var(--border); }
+
+/* ── Item card ── */
+.item-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  transition: border-color .2s;
+}
+.item-card:hover { border-color: var(--border-strong); }
+.item-title { font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.5; margin-bottom: 8px; }
+.item-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
+.item-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.stars { font-size: 13px; color: #e3b341; letter-spacing: 1px; }
+.item-value {
+  font-size: 13px; color: #7ee787;
+  background: rgba(46,160,67,.1); padding: 2px 10px; border-radius: 999px;
+}
+.item-sources { font-size: 13px; color: var(--text-muted); margin-left: auto; }
+.item-sources a { color: #58a6ff; margin-left: 6px; }
+.item-sources a:first-child { margin-left: 0; }
+
+/* ── Observation box ── */
+.observation {
+  background: linear-gradient(135deg, rgba(31,111,235,.12), rgba(188,140,255,.08));
+  border: 1px solid rgba(88,166,255,.2);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+}
+.observation h2 { font-size: 16px; font-weight: 700; color: #58a6ff; margin-bottom: 12px; }
+.observation p { font-size: 14px; color: var(--text-soft); line-height: 1.8; }
+
+.empty-filter { display: none; color: var(--text-muted); font-size: 14px; text-align: center; padding: 32px; }
+
+/* ── Day nav ── */
+.day-nav {
+  display: flex; justify-content: space-between;
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);
+}
+.nav-btn {
+  font-size: 14px; color: #58a6ff;
+  padding: 8px 16px; border: 1px solid var(--border); border-radius: 8px;
+  transition: background .15s;
+}
+.nav-btn:hover { background: var(--card); text-decoration: none; }
+
+/* ── Back to top ── */
+#backToTop {
+  position: fixed;
+  right: 24px; bottom: 24px;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s, transform .2s;
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  z-index: 120;
+}
+#backToTop.visible { opacity: 1; pointer-events: auto; }
+#backToTop:hover { transform: translateY(-2px); }
+
+/* ── Footer ── */
+.site-footer {
+  text-align: center; padding: 24px;
+  color: #484f58; font-size: 13px; border-top: 1px solid var(--border);
+}
+
+/* ── Install-to-home-screen prompt ── */
+#installBar {
+  position: fixed; left: 50%; transform: translateX(-50%) translateY(120%);
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 300; display: flex; align-items: center; gap: 12px;
+  width: min(420px, calc(100vw - 24px)); padding: 10px 12px 10px 14px;
+  background: var(--card); color: var(--text);
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.35); font-size: 14px;
+  transition: transform .28s ease; opacity: .98;
+}
+#installBar.visible { transform: translateX(-50%) translateY(0); }
+#installBar .ib-text { flex: 1; min-width: 0; line-height: 1.45; }
+#installBar .ib-text small { display: block; color: var(--text-muted); font-size: 12px; }
+#installBar button {
+  flex-shrink: 0; cursor: pointer; font: inherit; white-space: nowrap;
+  border-radius: 8px; padding: 6px 12px;
+}
+#installBar .ib-go { background: #238636; color: #fff; border: none; }
+#installBar .ib-close {
+  background: transparent; color: var(--text-muted);
+  border: 1px solid var(--border-strong); padding: 6px 9px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .hero h1 { font-size: 28px; }
+  .item-meta { flex-direction: column; align-items: flex-start; }
+  .item-sources { margin-left: 0; }
+  .site-header .logo { font-size: 15px; }
+  .search-box input { width: 150px; }
+  .search-box input:focus { width: 180px; }
+  .filter-bar .star-toggle { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+  
+<div id="progressBar"></div>
+<header class="site-header">
+  <div class="logo"><a href="../index.html">⚡ AI <span>Daily</span> Digest</a></div>
+  <div class="header-tools">
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="搜索全部日报…" autocomplete="off">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+    <input id="datePicker" type="date" class="date-picker" aria-label="选择日期">
+    <button id="langToggle" class="lang-toggle" aria-label="切换语言 / Switch language">EN</button>
+    <button id="themeToggle" class="theme-toggle" aria-label="切换主题" title="切换浅色/深色">🌙</button>
+    <nav>
+      <a href="../index.html"><span data-lang-content="zh">归档</span><span data-lang-content="en">Archive</span></a>
+      <a href="https://github.com/Jimmuji/ai-daily-digest" target="_blank">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+  
+    <div class="container">
+      <div class="day-hero">
+        <div class="date-str"><span data-lang-content="zh">周三 · 2026-11-25</span><span data-lang-content="en">Wednesday · 2026-11-25</span></div>
+        <h1><span data-lang-content="zh">AI 每日简报</span><span data-lang-content="en">AI Daily Digest</span></h1>
+        <p class="day-lead"><span data-lang-content="zh">GPT-6 实现蛋白质设计能力</span><span data-lang-content="en">GPT-6 achieves protein design capability</span></p>
+      </div>
+      
+    <div class="audio-player">
+      <div class="ap-text">
+        <span class="ap-label">🎧 <span data-lang-content="zh">语音播报</span><span data-lang-content="en">Listen</span></span>
+        <span class="ap-sub"><span data-lang-content="zh">通勤路上用耳朵看简报</span><span data-lang-content="en">Catch the digest on your commute</span></span>
+      </div>
+      <audio controls preload="none" src="../audio/2026-11-25.mp3" data-date="2026-11-25"></audio>
+    </div>
+      <div data-lang-content="zh">
+    <div class="digest-scope">
+      
+    <div class="filter-bar">
+      <span class="tab active" data-cat="all">全部</span><span class="tab" data-cat="news">新闻</span><span class="tab" data-cat="paper">论文</span><span class="tab" data-cat="project">项目</span><span class="tab" data-cat="buzz">热议</span>
+      <span class="star-toggle">★ 只看重点 (4+)</span>
+    </div>
+      
+        <div class="category" data-cat="news">
+          <div class="category-header">
+            <h2>📰 行业新闻</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">GPT-6 展现内在蛋白质设计能力</div>
+      <div class='item-desc'>OpenAI 发布研究称，GPT-6 通过推理与代码生成设计蛋白质结构与序列，实验室测试在五个靶点上观察到结合证据。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">通用模型切入生物设计，为 AI for Science 提供新范式</span>
+        <div class="item-sources"><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities" target="_blank">OpenAI</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Anthropic 推出 Claude Ship，可自主审阅并批准 PR</div>
+      <div class='item-desc'>Claude 现能按团队规范自动审阅、修正并批准代码变更，目前处于 beta。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">编码 Agent 从"建议"走向"合并"，改变代码评审流程</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropics-claude-ship-lets-ai-agents-review-fix-and-approve-pull-requests-on-their-own/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">MCP SDK 月下载突破 7 亿，协议扩展支持更自主 Agent</div>
+      <div class='item-desc'>Anthropic 为 MCP 新增后台任务、向用户追问、文件上传等能力。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agent 工具调用标准趋于成熟，生态规模已成事实标准</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">消息称 OpenAI 与 Anthropic 未发布模型已超出安全措施可控范围</div>
+      <div class='item-desc'>据 Axios 报道，两家公司内部数十名员工认为前沿模型难以安全控制，正讨论是否暂停发布甚至停止训练。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">前沿实验室内部信任动摇，或影响后续发布节奏</span>
+        <div class="item-sources"><a href="https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Anthropic 股价跌破发行价</div>
+      <div class='item-desc'>IPO 后股价回落至发行价下方，市场担忧 AI 初创估值承压；同日纳斯达克因 Nvidia、Anthropic 下挫延续抛售。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">一级市场估值锚点松动，融资环境或趋紧</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/" target="_blank">TechCrunch</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Walmart 联手 Meta，在 AI Agent Muse 中上线黑五促销</div>
+      <div class='item-desc'>用户可直接通过 Meta 的 Muse Agent 购买 Walmart 黑五商品；同日 Meta 将 Muse 接入 Instagram 私信。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agent 电商进入真实交易闭环，商业化路径验证</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" target="_blank">TechCrunch</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Claude Artifacts 可作为独立桌面应用安装</div>
+      <div class='item-desc'>支持 macOS 与 Windows，免费账户即可使用，可添加菜单栏项、发送通知、创建透明窗口。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">零代码产物一键变桌面 App，降低分发门槛</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="3">
+      <div class="item-title">纽约州签署五年禁令，禁止 AI 陪伴聊天机器人用于儿童玩具</div>
+      <div class='item-desc'>州长 Hochul 在假日购物季前签署该法案。</div>
+      <div class="item-meta">
+        <span class="stars">★★★☆☆</span>
+        <span class="item-value">AI 消费硬件监管落地，合规设计需前置</span>
+        <div class="item-sources"><a href="https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot" target="_blank">NY Governor</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">文心 5.5 Flash Preview 正式开源，采用 Apache 2.0</div>
+      <div class='item-desc'>百度以宽松协议开放该预览模型。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">国产轻量模型可商用，适合端侧与低成本部署</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512354.html" target="_blank">量子位</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="3">
+      <div class="item-title">Tidal 将于 12 月 9 日起封禁纯 AI 生成音乐</div>
+      <div class='item-desc'>预计删除约 2900 万首 AI 曲目，每日拒收 8–8.5 万首。</div>
+      <div class="item-meta">
+        <span class="stars">★★★☆☆</span>
+        <span class="item-value">内容平台划定 AI 生成边界，影响音频生成赛道</span>
+        <div class="item-sources"><a href="https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban" target="_blank">The Verge</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="paper">
+          <div class="category-header">
+            <h2>📄 重要论文</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Beam 技术报告：501B MoE 编码推理模型</div>
+      <div class='item-desc'>总参 501.3B、激活 23.4B，面向编码/推理/Agent 负载，1M 上下文，推理算力需求比同级低 3–4 倍。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">MoE 效率路线再进一步，长上下文编码 Agent 新选项</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26358" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">前沿模型仅凭一段文本即可识别作者是人还是 AI</div>
+      <div class='item-desc'>零样本条件下，Claude Fable 5.2、GPT-6.1 Sol、Gemini 4 Carbon 可判断作者身份，并常能指认具体实验室或具体个人。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">AI 文本溯源能力逼近专用检测器，影响内容审核与学术诚信</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26216" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">LoopRes：用循环残差让预训练 LLM 从循环中获益</div>
+      <div class='item-desc'>无需从头训练，将现有模型微调为循环结构即可获得显著且一致的性能提升。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">低成本测试时扩展新路径，免重训即可增强推理</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.31094" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">CUA-SEE：自演化评估环境用于计算机使用 Agent</div>
+      <div class='item-desc'>任务与可执行验证器从 rollout 证据中协同演化，突破固定难度上限。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">解决 CUA 基准饱和问题，评估随模型共同进化</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.30962" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">SMB Bench：衡量 Agent 在延迟后果下的决策能力</div>
+      <div class='item-desc'>90 天批发模拟器，18 组因果配对任务，揭示 Agent 难以处理"今日决策影响数周后观测"的运营场景。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">长周期运营 Agent 的能力缺口被量化</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.28158" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="project">
+          <div class="category-header">
+            <h2>🔧 开源项目</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">HKUDS/CLI-Anything：让所有软件 Agent 原生可用</div>
+      <div class='item-desc'>港大数据智能实验室项目，单日 +1074 star，配套 CLI-Hub。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">为 Agent 统一命令行接入层，扩展工具生态</span>
+        <div class="item-sources"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">GitHub</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">OpenAI 与 Cisco 开源 Shirudo：eBPF Linux 运行时</div>
+      <div class='item-desc'>BSD 协议预发布版，AI Agent 编写签名的 "shield" 在运行系统上阻断漏洞路径，无需停机即可打补丁。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agent 直接参与生产系统防御，安全运维新范式</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/24/openai-cisco-shirudo-ebpf-linux-runtime/" target="_blank">MarkTechPost</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">last30days-skill：跨平台主题研究 Agent 技能</div>
+      <div class='item-desc'>聚合 Reddit、X、YouTube、HN、Polymarket 与网页信息并生成有依据的摘要，单日 +703 star。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">开箱可用的多源研究技能，适合情报类 Agent</span>
+        <div class="item-sources"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">GitHub</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Ternary Bonsai 2.5 27B：三值量化模型发布</div>
+      <div class='item-desc'>HN 热度 369 分、126 条评论，主打极低比特推理。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">三值权重走向 27B 规模，端侧/低成本推理再进一步</span>
+        <div class="item-sources"><a href="https://prismml.com/news/bonsai-2-5-27b" target="_blank">PrismML</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="buzz">
+          <div class="category-header">
+            <h2>🐦 AI 圈热议</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="4">
+      <div class="item-title">HN 热议："我的 AI 热情正在大幅降温"</div>
+      <div class='item-desc'>Ask HN 帖子引发讨论，叠加 Business Insider 报道"推动 AI 的老板们正被 workslop 淹没"，技术社区对 AI 产出质量与落地 ROI 的怀疑情绪升温。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">开发者情绪转向务实，倒逼产品交付真实价值</span>
+        <div class="item-sources"><a href="https://news.ycombinator.com/item?id=50633601" target="_blank">Hacker News</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Noam Brown：AI 进入"非常陡峭的进步期"，优秀学生应考虑辍学</div>
+      <div class='item-desc'>o1 共同创作者称当前仍处"半人马期"，模型在规划与自我纠错上仍有短板，但语言模型已在用于构建下一代模型。</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">一线研究者对进展速度的明确判断，影响人才与投入决策</span>
+        <div class="item-sources"><a href="https://the-decoder.com/openai-o1-co-creator-noam-brown-urges-promising-students-to-drop-out-as-ai-enters-a-very-steep-rate-of-progress/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+        </div>
+      <div class="empty-filter">该筛选条件下没有内容。</div>
+      
+        <div class="observation">
+          <h2>💡 今日观察</h2>
+          <p>今天最清晰的信号是 Agent 正从"辅助"跨入"执行"：Claude Ship 自主合并 PR、Shirudo 让 Agent 直接修补生产系统、Walmart 在 Muse 里完成真实交易，工具链（MCP 7 亿月下载）已经铺好底座。与此同时，Axios 曝出的内部安全疑虑与 Anthropic 破发形成对冲——能力扩张的速度正在超过治理与估值的消化能力。GPT-6 设计蛋白质则提醒我们，通用模型的边界正从软件扩展到科学发现。对 builder 而言，短期机会在"可验证的 Agent 工作流"，而非又一个通用助手。</p>
+          <button class="speak-btn" data-label="🔊 朗读今日观察" data-stop="⏹ 停止" data-speak-lang="zh-CN" data-text="今天最清晰的信号是 Agent 正从&quot;辅助&quot;跨入&quot;执行&quot;：Claude Ship 自主合并 PR、Shirudo 让 Agent 直接修补生产系统、Walmart 在 Muse 里完成真实交易，工具链（MCP 7 亿月下载）已经铺好底座。与此同时，Axios 曝出的内部安全疑虑与 Anthropic 破发形成对冲——能力扩张的速度正在超过治理与估值的消化能力。GPT-6 设计蛋白质则提醒我们，通用模型的边界正从软件扩展到科学发现。对 builder 而言，短期机会在&quot;可验证的 Agent 工作流&quot;，而非又一个通用助手。">🔊 朗读今日观察</button>
+        </div>
+    </div></div><div data-lang-content="en">
+    <div class="digest-scope">
+      
+    <div class="filter-bar">
+      <span class="tab active" data-cat="all">All</span><span class="tab" data-cat="news">News</span><span class="tab" data-cat="paper">Papers</span><span class="tab" data-cat="project">Projects</span><span class="tab" data-cat="buzz">Buzz</span>
+      <span class="star-toggle">★ Top picks (4+)</span>
+    </div>
+      
+        <div class="category" data-cat="news">
+          <div class="category-header">
+            <h2>📰 Industry News</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">GPT-6 demonstrates intrinsic protein design capabilities</div>
+      <div class='item-desc'>OpenAI published research stating that GPT-6 designs protein structures and sequences through reasoning and code generation, with lab tests observing binding evidence across five targets.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">General models enter biological design, offering a new paradigm for AI for Science</span>
+        <div class="item-sources"><a href="https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities" target="_blank">OpenAI</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Anthropic launches Claude Ship, which can autonomously review and approve PRs</div>
+      <div class='item-desc'>Claude can now automatically review, fix, and approve code changes according to team standards; currently in beta.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Coding agents move from "suggesting" to "merging," changing code review workflows</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropics-claude-ship-lets-ai-agents-review-fix-and-approve-pull-requests-on-their-own/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">MCP SDK monthly downloads surpass 700 million, protocol expanded for more autonomous agents</div>
+      <div class='item-desc'>Anthropic adds background tasks, follow-up questions to users, file uploads, and more to MCP.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agent tool-calling standard matures; ecosystem scale has become the de facto standard</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropic-tops-700-million-monthly-mcp-sdk-downloads-and-expands-the-protocol-for-more-autonomous-ai-agents/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Report: OpenAI and Anthropic's unreleased models have outgrown their safety measures</div>
+      <div class='item-desc'>According to Axios, dozens of employees at both companies believe frontier models are difficult to control safely and are discussing whether to pause releases or even stop training.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Internal trust at frontier labs wavers, potentially affecting release cadence</span>
+        <div class="item-sources"><a href="https://the-decoder.com/dozens-of-insiders-say-openai-and-anthropics-unreleased-models-have-outgrown-their-safety-measures/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Anthropic shares fall below IPO price</div>
+      <div class='item-desc'>Post-IPO shares dropped below the offering price, with market concerns over pressure on AI startup valuations; the same day Nasdaq extended its selloff as Nvidia and Anthropic declined.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Private-market valuation anchor loosens; funding environment may tighten</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/" target="_blank">TechCrunch</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Walmart teams up with Meta to launch Black Friday deals in AI agent Muse</div>
+      <div class='item-desc'>Users can buy Walmart Black Friday items directly through Meta's Muse agent; the same day Meta integrated Muse into Instagram DMs.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agent commerce enters a real transaction loop, validating the monetization path</span>
+        <div class="item-sources"><a href="https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/" target="_blank">TechCrunch</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Claude Artifacts can be installed as standalone desktop apps</div>
+      <div class='item-desc'>Supports macOS and Windows, available on free accounts, with menu bar items, notifications, and transparent windows.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Zero-code artifacts become desktop apps in one click, lowering distribution barriers</span>
+        <div class="item-sources"><a href="https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="3">
+      <div class="item-title">New York State signs five-year ban on AI companion chatbots in children's toys</div>
+      <div class='item-desc'>Governor Hochul signed the bill ahead of the holiday shopping season.</div>
+      <div class="item-meta">
+        <span class="stars">★★★☆☆</span>
+        <span class="item-value">AI consumer hardware regulation lands; compliance-by-design must come first</span>
+        <div class="item-sources"><a href="https://www.governor.ny.gov/news/consumers-begin-their-holiday-shopping-season-governor-hochul-signs-five-year-ban-ai-chatbot" target="_blank">NY Governor</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">ERNIE 5.5 Flash Preview officially open-sourced under Apache 2.0</div>
+      <div class='item-desc'>Baidu releases the preview model under a permissive license.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Domestic lightweight model is commercially usable, suited to edge and low-cost deployment</span>
+        <div class="item-sources"><a href="https://www.qbitai.com/2026/11/512354.html" target="_blank">QbitAI</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="3">
+      <div class="item-title">Tidal to ban purely AI-generated music starting December 9</div>
+      <div class='item-desc'>Expected to remove about 29 million AI tracks and reject 80,000–85,000 per day.</div>
+      <div class="item-meta">
+        <span class="stars">★★★☆☆</span>
+        <span class="item-value">Content platforms draw AI-generation boundaries, affecting the audio generation sector</span>
+        <div class="item-sources"><a href="https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban" target="_blank">The Verge</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="paper">
+          <div class="category-header">
+            <h2>📄 Key Papers</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Beam Technical Report: 501B MoE Coding Reasoning Model</div>
+      <div class='item-desc'>501.3B total parameters, 23.4B activated, targeting coding/reasoning/Agent workloads, 1M context, with 3–4x lower inference compute requirements than peers.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">MoE efficiency advances further; a new option for long-context coding Agents</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26358" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Frontier Models Can Identify Whether an Author Is Human or AI from a Single Passage of Text</div>
+      <div class='item-desc'>Under zero-shot conditions, Claude Fable 5.2, GPT-6.1 Sol, and Gemini 4 Carbon can determine author identity and often pinpoint the specific lab or individual.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">AI text provenance nears dedicated detectors, affecting content moderation and academic integrity</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.26216" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">LoopRes: Making Pretrained LLMs Benefit from Recurrence via Loop Residuals</div>
+      <div class='item-desc'>Without training from scratch, fine-tuning existing models into recurrent structures yields significant and consistent performance gains.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Low-cost test-time scaling path; enhances reasoning without retraining</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.31094" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">CUA-SEE: Self-Evolving Evaluation Environments for Computer-Use Agents</div>
+      <div class='item-desc'>Tasks and executable verifiers co-evolve from rollout evidence, breaking through fixed difficulty ceilings.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Solves CUA benchmark saturation; evaluation evolves alongside models</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.30962" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">SMB Bench: Measuring Agent Decision-Making Under Delayed Consequences</div>
+      <div class='item-desc'>A 90-day wholesale simulator with 18 causally paired task sets, revealing that Agents struggle with operational scenarios where "today's decisions affect observations weeks later."</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Quantifies the capability gap in long-horizon operational Agents</span>
+        <div class="item-sources"><a href="https://huggingface.co/papers/2611.28158" target="_blank">HuggingFace Papers</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="project">
+          <div class="category-header">
+            <h2>🔧 Open Source</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="5">
+      <div class="item-title">HKUDS/CLI-Anything: Making all software Agent-native</div>
+      <div class='item-desc'>A project from HKU Data Intelligence Lab, +1074 stars in a single day, with a companion CLI-Hub.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">A unified command-line access layer for Agents, expanding the tool ecosystem</span>
+        <div class="item-sources"><a href="https://github.com/HKUDS/CLI-Anything" target="_blank">GitHub</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">OpenAI and Cisco open-source Shirudo: an eBPF Linux runtime</div>
+      <div class='item-desc'>BSD-licensed pre-release; AI Agents write signed "shields" that block vulnerability paths on running systems, patching without downtime.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">Agents directly defend production systems—a new security ops paradigm</span>
+        <div class="item-sources"><a href="https://www.marktechpost.com/2026/11/24/openai-cisco-shirudo-ebpf-linux-runtime/" target="_blank">MarkTechPost</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">last30days-skill: a cross-platform topic research Agent skill</div>
+      <div class='item-desc'>Aggregates Reddit, X, YouTube, HN, Polymarket, and web info to generate grounded summaries, +703 stars in a single day.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">A ready-to-use multi-source research skill, ideal for intelligence Agents</span>
+        <div class="item-sources"><a href="https://github.com/mvanhorn/last30days-skill" target="_blank">GitHub</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="4">
+      <div class="item-title">Ternary Bonsai 2.5 27B: a ternary-quantized model released</div>
+      <div class='item-desc'>369 points and 126 comments on HN, focused on extremely low-bit inference.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Ternary weights reach 27B scale, advancing on-device and low-cost inference</span>
+        <div class="item-sources"><a href="https://prismml.com/news/bonsai-2-5-27b" target="_blank">PrismML</a></div>
+      </div>
+    </div>
+        </div>
+        <div class="category" data-cat="buzz">
+          <div class="category-header">
+            <h2>🐦 AI Discourse</h2>
+            <div class="cat-line"></div>
+          </div>
+          
+    <div class="item-card" data-stars="4">
+      <div class="item-title">HN Hot Topic: "My AI enthusiasm is cooling sharply"</div>
+      <div class='item-desc'>An Ask HN post sparked discussion, compounded by a Business Insider report that "bosses pushing AI are being flooded by workslop," as the tech community's skepticism about AI output quality and deployment ROI heats up.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="item-value">Developers turn pragmatic, forcing products to deliver real value</span>
+        <div class="item-sources"><a href="https://news.ycombinator.com/item?id=50633601" target="_blank">Hacker News</a></div>
+      </div>
+    </div>
+    <div class="item-card" data-stars="5">
+      <div class="item-title">Noam Brown: AI has entered a "very steep period of progress," strong students should consider dropping out</div>
+      <div class='item-desc'>The o1 co-creator says we are still in the "centaur era," with models still weak on planning and self-correction, but language models are already being used to build the next generation of models.</div>
+      <div class="item-meta">
+        <span class="stars">★★★★★</span>
+        <span class="item-value">A top researcher's clear read on speed shapes talent and investment decisions</span>
+        <div class="item-sources"><a href="https://the-decoder.com/openai-o1-co-creator-noam-brown-urges-promising-students-to-drop-out-as-ai-enters-a-very-steep-rate-of-progress/" target="_blank">The Decoder</a></div>
+      </div>
+    </div>
+        </div>
+      <div class="empty-filter">No items match this filter.</div>
+      
+        <div class="observation">
+          <h2>💡 Today's Take</h2>
+          <p>The clearest signal today is that Agents are crossing from "assist" into "execute": Claude Ship merges PRs autonomously, Shirudo lets Agents patch production systems directly, Walmart completes real transactions in Muse, and the toolchain (MCP at 700 million monthly downloads) has laid the foundation. At the same time, the internal safety concerns exposed by Axios and Anthropic's broken IPO price act as a hedge—capability expansion is outpacing the ability to digest governance and valuation. GPT-6 designing proteins reminds us that the boundary of general models is expanding from software to scientific discovery. For builders, the near-term opportunity lies in "verifiable Agent workflows," not yet another general assistant.</p>
+          <button class="speak-btn" data-label="🔊 Read aloud" data-stop="⏹ Stop" data-speak-lang="en-US" data-text="The clearest signal today is that Agents are crossing from &quot;assist&quot; into &quot;execute&quot;: Claude Ship merges PRs autonomously, Shirudo lets Agents patch production systems directly, Walmart completes real transactions in Muse, and the toolchain (MCP at 700 million monthly downloads) has laid the foundation. At the same time, the internal safety concerns exposed by Axios and Anthropic's broken IPO price act as a hedge—capability expansion is outpacing the ability to digest governance and valuation. GPT-6 designing proteins reminds us that the boundary of general models is expanding from software to scientific discovery. For builders, the near-term opportunity lies in &quot;verifiable Agent workflows,&quot; not yet another general assistant.">🔊 Read aloud</button>
+        </div>
+    </div></div>
+      <div class="day-nav">
+        <a class="nav-btn" href="2026-11-24.html">← 2026-11-24</a>
+        <span></span>
+      </div>
+    </div>
+  
+<button id="backToTop" aria-label="回到顶部">↑</button>
+<footer class="site-footer">
+  <span data-lang-content="zh">© AI Daily Digest · 全自动采集 · DeepSeek 智能筛选 · 每日更新</span>
+  <span data-lang-content="en">© AI Daily Digest · Auto-collected · Curated by DeepSeek · Updated daily</span>
+</footer>
+
+  <script>window.SITE_BASE="../";window.AVAILABLE_DATES=["2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-18", "2026-04-19", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-25", "2026-04-26", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-02", "2026-05-03", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-09", "2026-05-10", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-16", "2026-05-17", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-31", "2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04", "2026-06-05", "2026-06-06", "2026-06-07", "2026-06-08", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17", "2026-06-18", "2026-06-19", "2026-06-20", "2026-06-21", "2026-06-22", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-27", "2026-06-28", "2026-06-29", "2026-06-30", "2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04", "2026-07-05", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-12", "2026-07-13", "2026-07-14", "2026-07-15", "2026-07-16", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-20", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29", "2026-07-30", "2026-07-31", "2026-08-01", "2026-08-02", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04", "2026-09-05", "2026-09-06", "2026-09-07", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13", "2026-09-14", "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18", "2026-09-19", "2026-09-20", "2026-09-21", "2026-09-22", "2026-09-23", "2026-09-24", "2026-09-25", "2026-09-26", "2026-09-27", "2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-03", "2026-10-04", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-11", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-18", "2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24", "2026-10-25", "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31", "2026-11-01", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05", "2026-11-06", "2026-11-07", "2026-11-08", "2026-11-09", "2026-11-10", "2026-11-11", "2026-11-12", "2026-11-13", "2026-11-14", "2026-11-15", "2026-11-16", "2026-11-17", "2026-11-18", "2026-11-19", "2026-11-20", "2026-11-21", "2026-11-22", "2026-11-23", "2026-11-24", "2026-11-25"];window.CURRENT_DATE="2026-11-25";window.PREV_DATE="2026-11-24";</script>
+  <script>
+(function () {
+  var BASE = window.SITE_BASE || "";
+  var DATES = window.AVAILABLE_DATES || [];
+
+  function esc(s) {
+    return (s || "").replace(/[&<>"]/g, function (c) {
+      return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];
+    });
+  }
+
+  // ── Date picker ──
+  var dp = document.getElementById('datePicker');
+  if (dp && DATES.length) {
+    dp.min = DATES[0];
+    dp.max = DATES[DATES.length - 1];
+    dp.value = window.CURRENT_DATE || DATES[DATES.length - 1];
+    dp.addEventListener('change', function () {
+      var v = dp.value;
+      if (DATES.indexOf(v) === -1) {
+        var earlier = DATES.filter(function (d) { return d <= v; });
+        v = earlier.length ? earlier[earlier.length - 1] : DATES[0];
+      }
+      window.location.href = BASE + 'daily/' + v + '.html';
+    });
+  }
+
+  // ── Search ──
+  var si = document.getElementById('searchInput');
+  var sr = document.getElementById('searchResults');
+  var INDEX = null;
+  function loadIndex() {
+    if (INDEX) return Promise.resolve(INDEX);
+    return fetch(BASE + 'search-index.json')
+      .then(function (r) { return r.json(); })
+      .then(function (data) { INDEX = data; return data; });
+  }
+  if (si && sr) {
+    si.addEventListener('input', function () {
+      var q = si.value.trim().toLowerCase();
+      if (q.length < 2) { sr.classList.remove('active'); sr.innerHTML = ''; return; }
+      loadIndex().then(function (idx) {
+        var en = window.CUR_LANG === 'en';
+        function fTitle(h) { return (en && h.title_en) ? h.title_en : h.title; }
+        function fDesc(h) { return (en && h.desc_en) ? h.desc_en : h.desc; }
+        function fCat(h) { return (en && h.cat_en) ? h.cat_en : h.cat; }
+        var hits = idx.filter(function (it) {
+          return (fTitle(it) + ' ' + fDesc(it) + ' ' + it.title + ' ' + it.desc)
+            .toLowerCase().indexOf(q) !== -1;
+        }).slice(0, 25);
+        if (!hits.length) {
+          sr.innerHTML = '<div class="sr-empty">' +
+            (en ? 'No matches' : '没有匹配结果') + '</div>';
+        } else {
+          sr.innerHTML = hits.map(function (h) {
+            return '<a class="sr-item" href="' + BASE + 'daily/' + h.date + '.html">' +
+                   '<span class="sr-date">' + h.date + ' · ' + esc(fCat(h)) + '</span>' +
+                   '<span class="sr-title">' + esc(fTitle(h)) + '</span></a>';
+          }).join('');
+        }
+        sr.classList.add('active');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.search-box')) sr.classList.remove('active');
+    });
+  }
+
+  // ── Filters (category tabs + star toggle), scoped per digest ──
+  document.querySelectorAll('.filter-bar').forEach(function (bar) {
+    var scope = bar.closest('.digest-scope') || document;
+    var tabs = bar.querySelectorAll('.tab');
+    var starToggle = bar.querySelector('.star-toggle');
+    var curCat = 'all', starsOnly = false;
+
+    function apply() {
+      scope.querySelectorAll('.category').forEach(function (catEl) {
+        var ct = catEl.getAttribute('data-cat');
+        var catMatch = (curCat === 'all') || (ct === curCat);
+        var visible = 0;
+        catEl.querySelectorAll('.item-card').forEach(function (it) {
+          var stars = parseInt(it.getAttribute('data-stars') || '0', 10);
+          var show = catMatch && (!starsOnly || stars >= 4);
+          it.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        catEl.style.display = (catMatch && visible > 0) ? '' : 'none';
+      });
+      var anyVisible = Array.prototype.some.call(
+        scope.querySelectorAll('.category'),
+        function (c) { return c.style.display !== 'none'; }
+      );
+      var emptyMsg = scope.querySelector('.empty-filter');
+      if (emptyMsg) emptyMsg.style.display = anyVisible ? 'none' : 'block';
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function () {
+        tabs.forEach(function (x) { x.classList.remove('active'); });
+        t.classList.add('active');
+        curCat = t.getAttribute('data-cat');
+        apply();
+      });
+    });
+    if (starToggle) {
+      starToggle.addEventListener('click', function () {
+        starsOnly = !starsOnly;
+        starToggle.classList.toggle('active', starsOnly);
+        apply();
+      });
+    }
+  });
+
+  // ── Keyboard navigation (day pages) ──
+  document.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft' && window.PREV_DATE) {
+      window.location.href = window.PREV_DATE + '.html';
+    } else if (e.key === 'ArrowRight' && window.NEXT_DATE) {
+      window.location.href = window.NEXT_DATE + '.html';
+    }
+  });
+
+  // ── Back to top ──
+  var btt = document.getElementById('backToTop');
+  if (btt) {
+    window.addEventListener('scroll', function () {
+      btt.classList.toggle('visible', window.scrollY > 400);
+    });
+    btt.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ── Reading progress ──
+  var pb = document.getElementById('progressBar');
+  if (pb) {
+    window.addEventListener('scroll', function () {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      pb.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+    });
+  }
+
+  // ── Theme toggle ──
+  var tt = document.getElementById('themeToggle');
+  function curTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+  function paintToggle() { if (tt) tt.textContent = curTheme() === 'light' ? '☀️' : '🌙'; }
+  paintToggle();
+  if (tt) {
+    tt.addEventListener('click', function () {
+      var next = curTheme() === 'light' ? 'dark' : 'light';
+      if (next === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      else document.documentElement.removeAttribute('data-theme');
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paintToggle();
+    });
+  }
+
+  // ── Language toggle ──
+  var PH = { zh: '搜索全部日报…', en: 'Search all digests…' };
+  function curLang() {
+    return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'zh';
+  }
+  window.CUR_LANG = curLang();
+  var lt = document.getElementById('langToggle');
+  function applyLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'zh-Hans');
+    window.CUR_LANG = lang;
+    if (lt) lt.textContent = lang === 'en' ? '中' : 'EN';
+    if (si) si.setAttribute('placeholder', PH[lang]);
+  }
+  applyLang(curLang());
+  if (lt) {
+    lt.addEventListener('click', function () {
+      var next = curLang() === 'en' ? 'zh' : 'en';
+      try { localStorage.setItem('lang', next); } catch (e) {}
+      applyLang(next);
+    });
+  }
+
+  // ── Hot-word tags → search ──
+  document.querySelectorAll('.trend-tag').forEach(function (tag) {
+    tag.addEventListener('click', function () {
+      var term = tag.getAttribute('data-term');
+      if (si) {
+        si.value = term;
+        si.focus();
+        si.dispatchEvent(new Event('input', { bubbles: true }));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // ── Voice readout (Web Speech API) ──
+  var synth = window.speechSynthesis;
+  document.querySelectorAll('.speak-btn').forEach(function (btn) {
+    if (!synth) { btn.style.display = 'none'; return; }
+    var label = btn.getAttribute('data-label') || '🔊 朗读';
+    var stop = btn.getAttribute('data-stop') || '⏹ 停止';
+    btn.addEventListener('click', function () {
+      if (btn.classList.contains('playing')) {
+        synth.cancel();
+        return;
+      }
+      synth.cancel();
+      var u = new SpeechSynthesisUtterance(btn.getAttribute('data-text') || '');
+      u.lang = btn.getAttribute('data-speak-lang') || 'zh-CN';
+      u.rate = 1.0;
+      u.onend = u.onerror = function () {
+        btn.classList.remove('playing');
+        btn.textContent = label;
+      };
+      btn.classList.add('playing');
+      btn.textContent = stop;
+      synth.speak(u);
+    });
+  });
+  window.addEventListener('beforeunload', function () { if (synth) synth.cancel(); });
+
+  // ── Audio player: lock-screen / car metadata via MediaSession ──
+  document.querySelectorAll('.audio-player audio').forEach(function (audio) {
+    audio.addEventListener('play', function () {
+      if (!('mediaSession' in navigator)) return;
+      var date = audio.getAttribute('data-date') || '';
+      try {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: 'AI 每日简报 · ' + date,
+          artist: 'AI Daily Digest',
+          album: 'AI 每日简报',
+          artwork: [{ src: BASE + 'podcast-cover.png', sizes: '1400x1400', type: 'image/png' }]
+        });
+      } catch (e) {}
+    });
+  });
+
+  // ── Copy podcast feed URL ──
+  document.querySelectorAll('[data-copy-feed]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var url = el.getAttribute('data-copy-feed');
+      var done = function () {
+        var old = el.textContent;
+        el.textContent = (window.CUR_LANG === 'en' ? '✓ Copied!' : '✓ 已复制订阅链接');
+        setTimeout(function () { el.textContent = old; }, 1800);
+      };
+      if (navigator.clipboard) { navigator.clipboard.writeText(url).then(done, done); }
+      else { done(); }
+    });
+  });
+
+  // ── Service worker: offline reading + faster repeat visits ──
+  if ('serviceWorker' in navigator && location.protocol.indexOf('http') === 0) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register(BASE + 'sw.js').catch(function () {});
+    });
+  }
+
+  // ── Add to home screen ──
+  (function () {
+    var standalone = (window.matchMedia &&
+                      window.matchMedia('(display-mode: standalone)').matches) ||
+                     window.navigator.standalone === true;
+    if (standalone) return;
+    try { if (localStorage.getItem('installDismissed')) return; } catch (e) {}
+
+    var en = document.documentElement.getAttribute('data-lang') === 'en';
+    var deferred = null;
+
+    function show(html, onGo) {
+      var bar = document.createElement('div');
+      bar.id = 'installBar';
+      bar.innerHTML = html;
+      document.body.appendChild(bar);
+      setTimeout(function () { bar.classList.add('visible'); }, 400);
+
+      var close = bar.querySelector('.ib-close');
+      close.addEventListener('click', function () {
+        bar.classList.remove('visible');
+        try { localStorage.setItem('installDismissed', '1'); } catch (e) {}
+        setTimeout(function () { bar.remove(); }, 300);
+      });
+      var go = bar.querySelector('.ib-go');
+      if (go && onGo) go.addEventListener('click', function () { onGo(bar); });
+    }
+
+    // Chrome / Edge / Android: real install prompt.
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferred = e;
+      show('<div class="ib-text">' +
+             (en ? 'Install AI Daily Digest' : '把 AI 简报装到桌面') +
+             '<small>' + (en ? 'Offline reading, one tap away'
+                             : '离线可读，一个图标直达') + '</small></div>' +
+           '<button class="ib-go">' + (en ? 'Install' : '安装') + '</button>' +
+           '<button class="ib-close" aria-label="close">✕</button>',
+        function (bar) {
+          bar.classList.remove('visible');
+          deferred.prompt();
+          deferred.userChoice.then(function () {
+            try { localStorage.setItem('installDismissed', '1'); } catch (e) {}
+            bar.remove();
+          });
+        });
+    });
+
+    // iOS Safari has no prompt event — show the manual steps instead.
+    var ua = navigator.userAgent;
+    var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isSafari = /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS/.test(ua);
+    if (isIOS && isSafari) {
+      setTimeout(function () {
+        if (deferred) return;
+        show('<div class="ib-text">' +
+               (en ? 'Add to Home Screen' : '添加到主屏幕') +
+               '<small>' + (en ? 'Tap Share ↑ then “Add to Home Screen”'
+                               : '点击底部分享 ↑ → 添加到主屏幕') + '</small></div>' +
+             '<button class="ib-close" aria-label="close">✕</button>');
+      }, 2500);
+    }
+  })();
+})();
+</script>
+</body>
+</html>

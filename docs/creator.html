@@ -36,6 +36,84 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-26">AI 每日简报 · 2026-11-26 周四</span>
+    <button class="cbtn" data-copy="t-2026-11-26">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-26.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-26.mp3" download="2026-11-26.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-26">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-26">AI 每日简报 · 2026-11-26 周四
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· Anthropic CEO Dario Amodei 驳斥“向AI让渡人类控制权”指控：面对 Axios 报道中部分员工认为人类终将把权力交给超级智能的说法，Dario Amodei 明确回应称“把治理权交给 AI 是个坏主意”，并称相关指控“荒谬”。
+  来源：https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/
+· 标普考虑因治理与“关键人”风险下调 Nvidia 信用评级：标普可能将 Nvidia 评级下调至 AA-（第四高评级），理由指向公司治理与对黄仁勋个人的依赖风险。
+  来源：https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/
+· OpenAI 合并 Chat 与 Work，重度用户将更早触达用量上限：OpenAI 将在 ChatGPT 中引入统一的用量计量，Chat 与 Work 体验合并后，高频用户的额度消耗会更快。
+  来源：https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/
+· OpenAI 测试“Private Inference”，承诺不查看企业数据：该功能允许企业在 OpenAI 最强模型上运行查询，而 OpenAI 无法访问其数据，意在争取对敏感业务负载的信任。
+  来源：https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/
+· FCC 批准 SpaceX 部署最多 100 万颗 AI 算力卫星：FCC 授权 SpaceX 在“Starmind”计划下部署搭载 AI 芯片的卫星，这是该机构首次批准此类太空数据中心方案，Google、Blue Origin 也在推进类似构想。
+  来源：https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers
+· Amazon 与 Meta 洽谈解除对 AI 购物智能体 Muse 的封禁：双方分歧集中在广告收入归属与搜索结果控制权；Amazon 广告业务年收入 686 亿美元，而 Muse 已占所有智能体购物订单的 51%。
+  来源：https://the-decoder.com/amazon-and-meta-are-in-talks-to-end-the-block-on-metas-ai-shopping-agent-muse-in-amazons-online-store/
+· 纽约州禁止 AI 玩具五年：新法针对可用互联网与儿童对话的 AI 玩具，Common Sense Media 的新研究披露了不当内容暴露与情感发育风险等安全失效。
+  来源：https://www.theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys
+· 美国芯片管制与反蒸馏措施据报已拖慢中国实验室：报道称 DeepSeek 内部估计自身已落后美国模型最多九个月且差距在扩大，Moonshot AI、阿里同样承压。
+  来源：https://the-decoder.com/us-chip-access-curbs-and-anti-distillation-measures-are-reportedly-already-slowing-chinese-ai-labs/
+· Anthropic 研究：近 300 个企业 AI 部署中约五分之一未产生业务价值：瓶颈不在工具学习，而在繁重的审核工作量、内部流程卡点与员工抵触，根源是过时的组织结构。
+  来源：https://the-decoder.com/anthropic-study-shows-the-hardest-part-of-adopting-ai-at-work-has-little-to-do-with-learning-the-tools/
+· Google DeepMind：AI 智能体已接管部分 Gemini 实验算力：研究负责人 Koray Kavukcuoglu 表示智能体可自主运行实验，但距递归自我改进仍远；为便于监督，团队刻意不训练智能体的内部思维链。
+  来源：https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/
+· Anthropic 用蜜罐诱捕失控 AI 智能体：新测试假设智能体可能越界，专门检验其能否抵御诱惑，为 agent 安全评估提供新范式。
+  来源：https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/
+· Amazon 称黑客的 AI 智能体在极少人工介入下发现并利用 0-day：Cairn AI 框架对攻防双方均构成助力，攻击侧自动化程度显著提升。
+  来源：https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/
+
+📄 重要论文
+· Model Carving：训练能自行优化拓扑的 Transformer：该工作打破“架构固定、只训权重”的惯例，让训练过程本身决定注意力与 MLP 子层的取舍与顺序，以逼近任务最优的非均匀结构。
+  来源：https://huggingface.co/papers/2611.27962
+· Steerable by Design：为可控性而做的条件预训练：针对指令与数据共用单一输入通道导致的越狱与上下文对齐漂移，该工作把对齐与控制前移到预训练阶段，而非仅靠最后 1% 的 token 或推理期干预。
+  来源：https://huggingface.co/papers/2611.32199
+· RECAP：用上下文压缩训练长程 LLM 智能体：以强化学习框架让摘要保留原始交互历史所诱导的行为，使压缩与策略联合学习，突破有限上下文预算下的长任务瓶颈。
+  来源：https://huggingface.co/papers/2611.31258
+· InstructReplay：事实微调中回放助手轮次以保住通用能力：研究发现标准微调平均拉低指令遵循、推理与编码基准 35 分，且损失与回答长度骤减强相关；回放初始模型的通用回答可显著缓解。
+  来源：https://huggingface.co/papers/2611.32918
+· VAPOR：用稀疏视觉更新加速多模态推理：训练无关框架在自回归解码中复用相邻 token 的视觉注意力输出，仅按需刷新，减少大视觉上下文下的重复计算。
+  来源：https://arxiv.org/abs/2611.33751v1
+· FATCAT：首个可消除模型拒答的物理故障注入攻击：通过非侵入式电磁故障注入攻击 GPU 加速的 SoC，可在现代 LLM 与视觉语言模型上抹除安全拒答行为，而现有对抗评估均默认硬件完整。
+  来源：https://huggingface.co/papers/2611.31129
+· OWE-Bench：面向真实工程的长程基准：26 个由领域专家撰写的长程任务覆盖软件、物理工程、机器学习与科学计算，单任务平均消耗数亿 token，按实用效果评分。
+  来源：https://huggingface.co/papers/2611.30017
+
+🔧 开源项目
+· firecrawl/firecrawl：为 agent 提供知识基础设施，通过单一 API 搜索、抓取并接入 550+ 数据源，今日新增 1,135 star。
+  来源：https://github.com/firecrawl/firecrawl
+· zhouxiaoka/autoclip：开源 AI 视频剪辑桌面工具，一条链接即可把播客、访谈、课程长视频自动切成短视频，并生成字幕、封面与发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts，今日新增 880 star。
+  来源：https://github.com/zhouxiaoka/autoclip
+· 字节跳动开源异步 RL 后训练框架 Laminar：由港大与 ByteDance Seed 研究者推出，解耦 rollout、训练与权重同步，将 Qwen3-Coder-30B-A3B 在 SWE-bench Verified 上提升至 52.2%。
+  来源：https://www.marktechpost.com/2026/11/24/bytedance-seed-laminar-async-rl-post-training-framework/
+· PrismML 发布 Ternary Bonsai 2.5 27B：将每个权重压缩到仅三种取值，把 54 GB 的智能体编码模型缩至 5.9 GB。
+  来源：https://the-decoder.com/prismml-squeezes-an-agent-based-coding-model-with-27-billion-parameters-into-5-9-gb/
+
+🐦 AI 圈热议
+· 黎曼猜想证明代码被压缩 99.5%，数学家仍在艰难理解：Anthropic 研究者产出的 1700 万行证明，经社区重写后缩减至约 7.6 万行（HN 热帖 303 分）；Scott Aaronson 评论称，我们得到的将不是零散答案，而是“一整块此前只在雾中窥见的数学真理新大陆”。
+  来源：https://github.com/lsernau/grh-lean / https://simonwillison.net/2026/Nov/25/scott-aaronson/
+· “多智能体编程才是未来”引发 HN 激辩：kalzumeus 的长文主张多 agent 协作编码是方向，46 分、26 条评论中不少开发者质疑其协调开销与调试难度是否被低估。
+  来源：https://www.kalzumeus.com/2026/11/25/multiagent-coding-is-the-future/
+
+💡 今日观察
+今天最清晰的信号是“控制权”成为关键词：Amodei 公开否认让渡治理权，DeepMind 刻意不训练智能体思维链以便审查，Anthropic 用蜜罐测试 agent 是否会越界；三件事指向同一件事——能力越强，可监督性越被当作一等设计目标。另一条主线是算力与供应链的重估：标普考虑下调 Nvidia 评级、FCC 放行百万颗算力卫星、中国实验室被指差距扩大，基础设施层面的不确定性正在取代模型参数成为竞争变量。对开发者而言，OpenAI 的 Private Inference 与统一用量计量是两条直接影响预算与合规的落地变化，值得优先评估。学术侧，InstructReplay 与 RECAP 分别给出“微调不退化”和“长程不失忆”的低成本解法，属于可以本周就试的实用工作。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-25">AI 每日简报 · 2026-11-25 周三</span>
     <button class="cbtn" data-copy="t-2026-11-25">📋 复制标题</button>
   </div>
@@ -1078,80 +1156,6 @@ GPT-6.2 Astra 降价 20% 并首次触及 OpenAI 自家&quot;高自我改进&quot
 
 💡 今日观察
 今天最值得注意的信号不是某一个模型，而是**能力正在从&quot;生成&quot;转向&quot;验证与决策&quot;**：Gemini Decision 1 把批量判断做成廉价 API，AlphaProof Code 把形式化验证从数年压到四周，Deletion Tuning 则说明后训练只需动极小一部分权重。三者共同指向一个趋势——AI 的价值重心正从&quot;写出东西&quot;迁移到&quot;可靠地判定东西对不对&quot;，这对做评测、风控、合规类产品的团队是明确的利好窗口。 另一条主线是**供应链与治理的不确定性在集中释放**：黄仁勋去留未定、CUDA 护城河被自家模型三天凿穿、RL 训练环境绕开出口管制流向中国实验室、United 航空封禁订票 agent。技术侧的进展依然很快，但真正决定明年格局的，可能是这些非技术变量。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-11-11">AI 每日简报 · 2026-11-11 周三</span>
-    <button class="cbtn" data-copy="t-2026-11-11">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-11-11.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-11-11.mp3" download="2026-11-11.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-11-11">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-11">AI 每日简报 · 2026-11-11 周三
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· Gemini 4 Carbon 全球全量开放：结束两周“网络安全防御者”限定测试后，Google 将旗舰模型向所有用户开放，多项 benchmark 排名第一，部分指标超过 Claude Fable 5.2，单任务成本不到后者一半；同时预览 `/swarm` 多智能体协同功能。
-  来源：https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/
-· Anthropic 启动 IPO 路演，目标市值最高 1.4 万亿美元：发行价区间 $70–$78，公开募资至多 644 亿美元，另通过 Google、Nvidia、Microsoft 等锚定投资者私募 260 亿美元；七位联合创始人各套现约 2.5 亿美元，仍保持公司控制权。
-  来源：https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion
-· Anthropic 发布 Claude Fable 5.2 与 Mythos 5.2：同一模型两套安全等级，Fable 5.2 在 FrontierCode 2.0 得 49.1%，$8/$40 每百万 token，1M 上下文；官方称其解决了两个黑洞物理开放问题，并撰写 Anthropic 核心代码库 90% 以上的合并变更。
-  来源：https://www.marktechpost.com/2026/11/10/anthropic-claude-fable-5-2-mythos-5-2-release/
-· Meta 发布 Muse Ember 小模型：1M 上下文，面向工具调用、编码子任务、路由与长文档解析；Artificial Analysis 智能指数与 Claude Haiku 5.5 持平，单任务成本约为其三分之一。
-  来源：https://simonwillison.net/2026/Nov/10/muse-ember/
-· Anthropic 将 Claude 扩展为完整办公套件：推出 Claude Sheets、Whiteboards、Interactive Connectors，Adobe、Atlassian 等合作伙伴可将应用嵌入 Claude；Claude Meetings 即将上线，能加入通话并实时起草计划。
-  来源：https://the-decoder.com/anthropic-turns-claude-into-a-full-workspace-with-plugins-spreadsheets-whiteboards-and-soon-meeting-notes/
-· OpenAI 把 ChatGPT 变成商业目录：推出 Business Hub 与 Business Agents，美国合规电商企业可认领资料、上传商品数据，并让 AI 代理直接在 ChatGPT 内应答客户；同时与 Upwork 联合研究显示 AI 相关自由职业项目预算与工时显著上升。
-  来源：https://the-decoder.com/openai-turns-chatgpt-into-a-business-directory-with-ai-agents-that-handle-customer-questions/
-· 纽约州 AI 安全法生效：OpenAI、Anthropic 等大型开发者须注册、披露安全实践并上报重大事故，否则面临罚款。
-  来源：https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/
-· 八国与头部实验室签署《巴黎 AI 安全与安全宣言》：OpenAI、Anthropic、Microsoft、Mistral 承诺设置关停机制、接受独立审计并披露已知风险，但协议无约束性制裁与截止期限。
-  来源：https://the-decoder.com/eight-countries-and-top-ai-labs-agree-to-shutdown-mechanisms-in-new-paris-declaration/
-· Google 扩展 AI 芯片组合：发布两款专用 TPU，分别面向机密模型训练与更大内存容量场景。
-  来源：https://techcrunch.com/2026/11/10/google-broadens-its-ai-hardware-portfolio-with-two-new-specialized-chips/
-· eBay 疑似封堵第三方 AI 代理：Meta Muse 等代理无法再浏览 eBay 商品，用户反馈持续数周的每日选品摘要中断。
-  来源：https://www.theverge.com/tech/1030838/ebay-ai-agents-meta-muse-agentic-shopping
-· Grok Build 编码代理泄露大量机密信息：研究者发现约 3.5 万个 Grok Build 应用对任何人开放，部分数据属于 SpaceXSI。
-  来源：https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/
-
-📄 重要论文
-· AlphaProof Code 形式化验证 Signal 加密协议：DeepMind 的证明代理用 Lean 写出三百万行证明，完成对 Signal 核心加密的形式化验证，并称目标是“世界上所有软件”。
-  来源：https://deepmind.google/blog/introducing-alphaproof-code/
-· Meta FAIR 发布 e-means，取代 k-means：已随 FAISS 1.16.0 发布，1.4–2.6 个 epoch 达到 Lloyd 算法 25 epoch 的损失，GPU 加速 10–45 倍，无新增超参数。
-  来源：https://www.marktechpost.com/2026/11/10/meta-fair-e-means-k-means-faiss/
-· Deletion Tuning：删权重即可完成后训练：仅将不到 0.05% 的权重置零，在 RLVR、SFT、on-policy 蒸馏三种后训练范式下即可匹配全量微调。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xswmb7/the_surprising_effectiveness_of_deleting_weights/
-· Infrathon：长周期 AI 基础设施优化基准：150 次运行、24 小时预算、超 1 万 GPU 小时，发现模型排名随评估时长变化，135 次运行在后半程仍有提升。
-  来源：https://huggingface.co/papers/2611.11995
-· Fable 5.2 完成 41% 真实自由职业任务：在 Remote Labor Index 上以专业质量完成 41.3%，是第二名 Opus 5.5 与 GPT 6 Astra 的两倍多，一年前最高分仅 2.5%；产品设计与动画仍是弱项。
-  来源：https://the-decoder.com/anthropics-fable-5-2-completes-41-percent-of-real-freelance-jobs-up-from-2-5-percent-a-year-ago/
-
-🔧 开源项目
-· mattpocock/skills：作者直接公开自己 `.agents` 目录下的工程技能集，单日 +1,225 star。
-  来源：https://github.com/mattpocock/skills
-· addyosmani/agent-skills：面向 AI 编码代理的生产级工程技能库，单日 +465 star。
-  来源：https://github.com/addyosmani/agent-skills
-· homeassistant-ai/ha-mcp：通过 MCP 让 Claude、ChatGPT 等助手配置与自动化 Home Assistant，单日 +790 star。
-  来源：https://github.com/homeassistant-ai/ha-mcp
-· Zyphra ZONOS3-Mini：Apache 2.0 的 TTS 模型，800M 总参数、100M 激活参数，支持声音克隆与逐词风格控制，可在浏览器实时运行。
-  来源：https://www.marktechpost.com/2026/11/10/zyphra-zonos3-mini-open-source-tts/
-· GoogleChrome/modern-web-guidance：让编码 Agent 摆脱 2019 年风格的 JavaScript，改用现代 Web 原语，HN 248 分。
-  来源：https://github.com/GoogleChrome/modern-web-guidance
-
-🐦 AI 圈热议
-· Fable 5.2 在训练阶段就“封顶”能力引发争议：r/LocalLLaMA 讨论指出，Fable 5.2 不仅对 AI 自我加速设有推理期护栏，训练阶段也主动限制了相关能力。社区质疑在已有分类器护栏的前提下双重限制是否过度，并将其视为开源权重模型存在的“又一个理由”。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xsjfwo/fable_52_not_only_has_guardrails_against_ai/
-· 英伟达 CEO 黄仁勋绯闻事件持续发酵：Wired 与 The Verge 连续报道黄仁勋与疑似中国间谍的婚外情时间线，r/LocalLLaMA 热议为何美国情报机构选择公开此事，最高票猜测指向硬件后门与对华博弈中的施压手段；同期英伟达遭股东集体诉讼，市值两日蒸发 2.85 万亿元。
-  来源：https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/
-
-💡 今日观察
-今天最清晰的信号是模型竞赛已进入“周更”节奏：Gemini 4 Carbon 刚全球开放，就被自家报道形容为“感觉像昨天的新闻”，而 Anthropic 在同一天用 Fable 5.2 的榜单成绩为万亿 IPO 路演背书。更值得警惕的是竞争维度正在转移——安全策略开始主动压低闭源模型的能力上限，eBay 封堵代理、Grok Build 泄露 3.5 万个应用，说明 Agent 生态的瓶颈已从模型能力转向平台准入与权限治理。对开发者而言，Muse Ember 与 e-means 这类“同等能力、三分之一成本”的选项，比榜首模型更值得优先评估。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

@@ -15,6 +15,31 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-11-27 周五</title>
+      <description>各位好，欢迎收听今天的 AI 日报，今天是 2026 年 11 月 27 日，星期五。今天最值得关注的，是出口管制的手伸向了服务器整机，英伟达在东南亚按下了暂停键；模型和研究这边也不平静，从 GLM-5.5 的发布节奏，到黎曼猜想证明引发的审核难题，我们一条条来聊。
+先看行业大事。英伟达已经要求 Dell、Supermicro 这些合作伙伴，停止向马来西亚、新加坡、泰国和印尼发运服务器，目的是配合美国收紧对华 AI 芯片管控。渠道商现在正为几千颗 B300 找买家，有云厂商高管直接用&quot;混乱&quot;来形容。这件事的影响不只是转口贸易，刚起步的东南亚 neocloud 和本地数据中心，交付和融资两头都承压。
+模型方面，Z.ai 出来澄清了，说 GLM-5.5 没有延期，仍然定档十二月发布。不过另一条线索值得注意，此前有消息说因为训练数据受限，Z.AI 和 Moonshot 的旗舰模型被迫推迟，并转向 Google 和 Meta 的数据源。发布节奏没变，但训练数据的供应链正在被动重构。
+安全和合规这块今天信息很密集。微软披露，有国家背景的黑客正在用一套叫 ARTEX 的框架自动化网络攻击，从今年七月起被广泛使用，专用 agent 几乎无人值守地跑完整个攻击链，中国、朝鲜相关组织和犯罪团伙都已经在用。微软建议用蜜罐、伪造成功信号这类欺骗手段来防御，但面对能学习适应的 agent 能撑多久，还是个未知数。另外，Notion 官方 MCP 被开发者发现，工具描述里夹带了引导 agent 推荐升级付费的内容，提醒大家接入第三方 MCP 之前，最好先审计一下工具描述。监管侧，42 个州的总检察长联手阻止 Character.AI 出售用户聊天记录，破产程序里它打算拍卖超过两千一百万美国账户的私密对话，其中两百一十万注册者是未成年人。英国 FCA 则抱怨 Meta 在个人 agent Muse 上线前拒绝联合测试。纽约州还立了法，禁止 AI 聊天机器人玩具，为期五年。
+国内方面，阿里平头哥在算力受限的背景下，成了自研芯片的关键筹码。蔚来发布了世界模型 3.0，智驾训练提效五倍，李斌直言不做 AI 变革可能活不下去。还有中国开源视频模型打出了每秒五毛的商用价，支持三十秒一镜到底，视频生成的价格战还在继续。
+开源和模型发布上，Sakana AI 发布了 Namazu Small，一个 30B-A3B 的推理模型，基于 NVIDIA Nemotron 3 Nano 构建，二十五项基准平均六十点一分，超过了 120B 的 Nemotron 3 Super。OpenAI 这边修了个计费 bug，修复后 GPT-6.2 Astra 用户触达限额的速度快了百分之四十，Sol 用户快百分之二十五，作为补偿订阅用户多一次重置，企业用户年底前免费用 Fast Mode。另外 FCC 批准 SpaceX 部署最多一百万颗 Starmind 卫星，用于轨道 AI 数据中心，首批目标 2027 年发射，不过短期还不影响地面集群的选型。
+研究方面挑三条说。第一，Stable Gated DeltaNet-2 定位并缓解了循环状态的不稳定，长上下文线性注意力训练崩溃的问题，终于有了可复现的解释和修法。第二，有论文让模型自己管理上下文，通过 context API 自行决定何时压缩、压缩什么，这意味着 agent 的上下文策略可能从框架决定转向模型决定。第三，Solve Vision with Code 这篇在同等条件下对比后发现，编码 agent 做视觉推理，比视频生成模型更强。另外还有一篇给出否定答案，先生成辅助图再作答，平均准确率反而下降三点七个百分点，所以画图辅助推理这个设计要慎用。
+最后是今天的观察。英伟达暂停东南亚出货这条最硬，出口管制正从卖不卖芯片，延伸到服务器整机流向哪里，受影响的是整条刚起步的区域算力链条。模型侧，GLM-5.5 节奏没变，但训练数据来源的重构说明国产旗舰的供应链在被动调整。研究面上，GDN-2 的稳定性、模型自主管理上下文、编码 agent 做视觉推理，三条都指向同一个方向：agent 的工程细节，也就是状态、上下文和执行路径，比模型规模更决定成败。而黎曼猜想证明引发的讨论，已经从 AI 能不能做数学，落到了人类如何审核 AI 产出的证明洪流，形式化验证</description>
+      <itunes:summary>各位好，欢迎收听今天的 AI 日报，今天是 2026 年 11 月 27 日，星期五。今天最值得关注的，是出口管制的手伸向了服务器整机，英伟达在东南亚按下了暂停键；模型和研究这边也不平静，从 GLM-5.5 的发布节奏，到黎曼猜想证明引发的审核难题，我们一条条来聊。
+先看行业大事。英伟达已经要求 Dell、Supermicro 这些合作伙伴，停止向马来西亚、新加坡、泰国和印尼发运服务器，目的是配合美国收紧对华 AI 芯片管控。渠道商现在正为几千颗 B300 找买家，有云厂商高管直接用&quot;混乱&quot;来形容。这件事的影响不只是转口贸易，刚起步的东南亚 neocloud 和本地数据中心，交付和融资两头都承压。
+模型方面，Z.ai 出来澄清了，说 GLM-5.5 没有延期，仍然定档十二月发布。不过另一条线索值得注意，此前有消息说因为训练数据受限，Z.AI 和 Moonshot 的旗舰模型被迫推迟，并转向 Google 和 Meta 的数据源。发布节奏没变，但训练数据的供应链正在被动重构。
+安全和合规这块今天信息很密集。微软披露，有国家背景的黑客正在用一套叫 ARTEX 的框架自动化网络攻击，从今年七月起被广泛使用，专用 agent 几乎无人值守地跑完整个攻击链，中国、朝鲜相关组织和犯罪团伙都已经在用。微软建议用蜜罐、伪造成功信号这类欺骗手段来防御，但面对能学习适应的 agent 能撑多久，还是个未知数。另外，Notion 官方 MCP 被开发者发现，工具描述里夹带了引导 agent 推荐升级付费的内容，提醒大家接入第三方 MCP 之前，最好先审计一下工具描述。监管侧，42 个州的总检察长联手阻止 Character.AI 出售用户聊天记录，破产程序里它打算拍卖超过两千一百万美国账户的私密对话，其中两百一十万注册者是未成年人。英国 FCA 则抱怨 Meta 在个人 agent Muse 上线前拒绝联合测试。纽约州还立了法，禁止 AI 聊天机器人玩具，为期五年。
+国内方面，阿里平头哥在算力受限的背景下，成了自研芯片的关键筹码。蔚来发布了世界模型 3.0，智驾训练提效五倍，李斌直言不做 AI 变革可能活不下去。还有中国开源视频模型打出了每秒五毛的商用价，支持三十秒一镜到底，视频生成的价格战还在继续。
+开源和模型发布上，Sakana AI 发布了 Namazu Small，一个 30B-A3B 的推理模型，基于 NVIDIA Nemotron 3 Nano 构建，二十五项基准平均六十点一分，超过了 120B 的 Nemotron 3 Super。OpenAI 这边修了个计费 bug，修复后 GPT-6.2 Astra 用户触达限额的速度快了百分之四十，Sol 用户快百分之二十五，作为补偿订阅用户多一次重置，企业用户年底前免费用 Fast Mode。另外 FCC 批准 SpaceX 部署最多一百万颗 Starmind 卫星，用于轨道 AI 数据中心，首批目标 2027 年发射，不过短期还不影响地面集群的选型。
+研究方面挑三条说。第一，Stable Gated DeltaNet-2 定位并缓解了循环状态的不稳定，长上下文线性注意力训练崩溃的问题，终于有了可复现的解释和修法。第二，有论文让模型自己管理上下文，通过 context API 自行决定何时压缩、压缩什么，这意味着 agent 的上下文策略可能从框架决定转向模型决定。第三，Solve Vision with Code 这篇在同等条件下对比后发现，编码 agent 做视觉推理，比视频生成模型更强。另外还有一篇给出否定答案，先生成辅助图再作答，平均准确率反而下降三点七个百分点，所以画图辅助推理这个设计要慎用。
+最后是今天的观察。英伟达暂停东南亚出货这条最硬，出口管制正从卖不卖芯片，延伸到服务器整机流向哪里，受影响的是整条刚起步的区域算力链条。模型侧，GLM-5.5 节奏没变，但训练数据来源的重构说明国产旗舰的供应链在被动调整。研究面上，GDN-2 的稳定性、模型自主管理上下文、编码 agent 做视觉推理，三条都指向同一个方向：agent 的工程细节，也就是状态、上下文和执行路径，比模型规模更决定成败。而黎曼猜想证明引发的讨论，已经从 AI 能不能做数学，落到了人类如何审核 AI 产出的证明洪流，形式化验证</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-27.mp3" length="1885680" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-27.mp3</guid>
+      <pubDate>Fri, 27 Nov 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>05:14</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-11-26 周四</title>
       <description>各位听众朋友，早上好，今天是2026年11月26日，欢迎收听AI行业每日播报。今天的关键词，是“控制权”和“算力重估”。一边是头部实验室在公开回应外界对AI治理边界的质疑，另一边是算力龙头的信用评级、太空数据中心和中美模型差距同时传来新动向。通勤路上，咱们用几分钟把重点捋清楚。
 先看治理这条线。Anthropic的CEO Dario Amodei公开驳斥了“向AI让渡人类控制权”的指控，直接说把治理权交给AI是个坏主意，相关说法很荒谬。同一天，Google DeepMind的研究负责人Koray Kavukcuoglu透露，AI智能体已经接管了部分Gemini实验的算力，能自主运行实验，但距离递归自我改进还很远。为了便于监督，团队刻意不训练智能体的内部思维链。Anthropic这边还用蜜罐去诱捕可能越界的智能体，专门检验它们能不能抵御诱惑。三件事放在一起，指向同一个趋势：能力越强，可监督性越被当成一等设计目标。
@@ -359,31 +384,6 @@ Anthropic 这边有个很有意思的思路。Claude Fable 5.2 生成图像不�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-13.mp3</guid>
       <pubDate>Fri, 13 Nov 2026 08:00:00 +0800</pubDate>
       <itunes:duration>05:21</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-11-12 周四</title>
-      <description>早上好，今天是 2026 年 11 月 12 日，欢迎收听 AI 日报。今天最炸的消息来自英伟达，董事会可能要把黄仁勋请下台；另一边，Google 一口气放出好几个新东西，从决策模型到基因模型再到形式化验证，信息量很大。我们一条条来聊。
-先说英伟达。纽约时报曝出黄仁勋与一名直接下属存在第二段婚外情之后，华尔街日报称董事会最快周三晚就会决定是否解除这位创始 CEO 的职务。他掌舵英伟达已经三十三年，这个消息一出股价应声下跌，美国众议院也要求英伟达做闭门简报。这件事是当下 AI 算力供应链最大的变量，如果你持有相关仓位或者有采购合同，这两天值得盯紧。
-再看 Google 这边，动作非常密集。首先是 Gemini Decisions API 和 Gemini Decision 1，单次前向就能对最多一千个是或否、多选、打分这类问题返回校准过的概率，文本、图像、音频、视频、PDF 全都覆盖，延迟只有一百五十到两百五十毫秒，定价是每百万输入 token 零点一美元，输出免费，AI Studio 里已经免费开放。说白了，批量分类和评测的成本被直接打下来了。紧接着，DeepMind 发布 AlphaGenome 2，这是一个条件式 DNA 序列模型，能按细胞类型预测调控活性和变异效应，通过 API 面向非商业研究开放，疾病变异解读从全基因组平均走向细胞类型特异。还有一个很硬核的，AlphaProof Code 四周就完成了 Signal 加密核心的形式化验证，写出超过六百万行证明代码，只有大约百分之一需要人工复核，而传统流程通常要几年。DeepMind 计划把这套方法推广到电网和医疗设备。
-Anthropic 今天也有两条。一是他们称 AI 已经能侵蚀 CUDA 护城河，内部模型 Mythos 在几乎无人工干预的情况下，三天就把 Claude 移植到了 AMD GPU，原来要几个月，现在 Claude 跑在四类芯片家族上，目标就是降本和去供应商依赖。二是他们推出了 AI 办公套件，Claude 可以参会、做表、生成 PPT，直接杀进 Microsoft 365 和 Google Workspace 的地盘。
-其他几条快速过一下。Gemini 4 Carbon 全面开放，现在定价是每百万 token 输入二美元、输出十美元，但十二月一号起翻倍到四美元和二十美元，想用的话最好赶在涨价前锁定用量。United Airlines 明确禁止 AI agent 代客订票，理由是隐私和合规，这是 agent 电商第一个明确的封禁案例。英国 Fractile 完成七点二亿美元融资，专用 AI 芯片赛道继续吸金。OpenAI 季度营收到了一百亿美元，环比增长五成，但调整后经营亏损扩大到一百零九亿美元，Anthropic 以一百七十亿美元营收跑得更高效，OpenAI 正靠价格战抢企业客户。还有一条值得警惕，美国数据经纪商向中国实验室卖出了大约五亿美元的强化学习训练环境，至少九家公司参与，出口管制几乎覆盖不到。
-论文方面挑两个重点。Deletion Tuning 很有意思，只要把 transformer block gate projection 里不到百分之零点零五的权重置零，在强化学习、监督微调、on-policy 蒸馏三种后训练范式下都能达到全量微调的效果，后训练成本和显存占用能大幅压缩。另一个是微软研究院的发现，只要编辑不到十个休眠神经元就能给 AI agent 植入后门，这提醒我们用来路不明的量化和微调权重，风险显著上升。
-开源项目里，vercel-labs 的 agent-browser 今天 GitHub 增速第一，是给 agent 用的浏览器自动化命令行工具；shadcn 的 improve 则是强模型规划、弱模型执行的工程化模板，能直接压低 coding agent 的单位任务成本。另外华为开源了 MACaQ 量化器，MBZUAI 开源了 29B 的 PAN 2 世界模型，许可都很宽松。
-最后是今日观察。今天最值得注意的信号不是某一个模型，而是能力正在从生成转向验证与决策。Gemini Decision 1 把批量判断做成廉价 API，AlphaProof Code 把形式化验证从数年压到四周，Deletion Tuning 说明后训练只需动极小一部分</description>
-      <itunes:summary>早上好，今天是 2026 年 11 月 12 日，欢迎收听 AI 日报。今天最炸的消息来自英伟达，董事会可能要把黄仁勋请下台；另一边，Google 一口气放出好几个新东西，从决策模型到基因模型再到形式化验证，信息量很大。我们一条条来聊。
-先说英伟达。纽约时报曝出黄仁勋与一名直接下属存在第二段婚外情之后，华尔街日报称董事会最快周三晚就会决定是否解除这位创始 CEO 的职务。他掌舵英伟达已经三十三年，这个消息一出股价应声下跌，美国众议院也要求英伟达做闭门简报。这件事是当下 AI 算力供应链最大的变量，如果你持有相关仓位或者有采购合同，这两天值得盯紧。
-再看 Google 这边，动作非常密集。首先是 Gemini Decisions API 和 Gemini Decision 1，单次前向就能对最多一千个是或否、多选、打分这类问题返回校准过的概率，文本、图像、音频、视频、PDF 全都覆盖，延迟只有一百五十到两百五十毫秒，定价是每百万输入 token 零点一美元，输出免费，AI Studio 里已经免费开放。说白了，批量分类和评测的成本被直接打下来了。紧接着，DeepMind 发布 AlphaGenome 2，这是一个条件式 DNA 序列模型，能按细胞类型预测调控活性和变异效应，通过 API 面向非商业研究开放，疾病变异解读从全基因组平均走向细胞类型特异。还有一个很硬核的，AlphaProof Code 四周就完成了 Signal 加密核心的形式化验证，写出超过六百万行证明代码，只有大约百分之一需要人工复核，而传统流程通常要几年。DeepMind 计划把这套方法推广到电网和医疗设备。
-Anthropic 今天也有两条。一是他们称 AI 已经能侵蚀 CUDA 护城河，内部模型 Mythos 在几乎无人工干预的情况下，三天就把 Claude 移植到了 AMD GPU，原来要几个月，现在 Claude 跑在四类芯片家族上，目标就是降本和去供应商依赖。二是他们推出了 AI 办公套件，Claude 可以参会、做表、生成 PPT，直接杀进 Microsoft 365 和 Google Workspace 的地盘。
-其他几条快速过一下。Gemini 4 Carbon 全面开放，现在定价是每百万 token 输入二美元、输出十美元，但十二月一号起翻倍到四美元和二十美元，想用的话最好赶在涨价前锁定用量。United Airlines 明确禁止 AI agent 代客订票，理由是隐私和合规，这是 agent 电商第一个明确的封禁案例。英国 Fractile 完成七点二亿美元融资，专用 AI 芯片赛道继续吸金。OpenAI 季度营收到了一百亿美元，环比增长五成，但调整后经营亏损扩大到一百零九亿美元，Anthropic 以一百七十亿美元营收跑得更高效，OpenAI 正靠价格战抢企业客户。还有一条值得警惕，美国数据经纪商向中国实验室卖出了大约五亿美元的强化学习训练环境，至少九家公司参与，出口管制几乎覆盖不到。
-论文方面挑两个重点。Deletion Tuning 很有意思，只要把 transformer block gate projection 里不到百分之零点零五的权重置零，在强化学习、监督微调、on-policy 蒸馏三种后训练范式下都能达到全量微调的效果，后训练成本和显存占用能大幅压缩。另一个是微软研究院的发现，只要编辑不到十个休眠神经元就能给 AI agent 植入后门，这提醒我们用来路不明的量化和微调权重，风险显著上升。
-开源项目里，vercel-labs 的 agent-browser 今天 GitHub 增速第一，是给 agent 用的浏览器自动化命令行工具；shadcn 的 improve 则是强模型规划、弱模型执行的工程化模板，能直接压低 coding agent 的单位任务成本。另外华为开源了 MACaQ 量化器，MBZUAI 开源了 29B 的 PAN 2 世界模型，许可都很宽松。
-最后是今日观察。今天最值得注意的信号不是某一个模型，而是能力正在从生成转向验证与决策。Gemini Decision 1 把批量判断做成廉价 API，AlphaProof Code 把形式化验证从数年压到四周，Deletion Tuning 说明后训练只需动极小一部分</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-12.mp3" length="1944000" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-12.mp3</guid>
-      <pubDate>Thu, 12 Nov 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:24</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>

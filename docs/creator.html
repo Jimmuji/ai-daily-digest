@@ -36,6 +36,74 @@
 
 <div class="ep">
   <div class="ep-h">
+    <span class="ep-title" id="t-2026-11-28">AI 每日简报 · 2026-11-28 周六</span>
+    <button class="cbtn" data-copy="t-2026-11-28">📋 复制标题</button>
+  </div>
+  <audio controls preload="none" src="audio/2026-11-28.mp3"></audio>
+  <div class="acts">
+    <a class="cbtn" href="audio/2026-11-28.mp3" download="2026-11-28.mp3">⬇️ 下载音频</a>
+    <button class="cbtn" data-copy="n-2026-11-28">📋 复制 Show Notes</button>
+  </div>
+  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-28">AI 每日简报 · 2026-11-28 周六
+
+🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
+
+📰 行业新闻
+· Google DeepCrossAttention 实现同等质量下最高 3 倍加速：Google Research 发布新的残差连接设计，通过跨层注意力复用显著缩短 Transformer 训练与推理时间，模型质量与原架构持平。
+  来源：https://research.google/blog/supercharging-transformer-residual-connections/
+· OpenAI 起诉 Apple，指控窃取商业机密并胁迫共同供应商：OpenAI 在加州法院提起反诉，称 Apple 窃取商业机密、向双方共用的供应商施压；两家公司两年前还合作将 ChatGPT 引入 iPhone，如今 OpenAI 自建硬件直接对标 Apple。
+  来源：https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/
+· 被禁 Nvidia Blackwell 芯片现身上海数据中心：据 Bloomberg 调查，两家中国公司将 Nvidia Blackwell 芯片装入上海一处与 Alice Huang 关联的数据中心，序列号指向台湾厂商 Gigabyte；无美国许可对华出口此类芯片属违法。
+  来源：https://the-decoder.com/banned-nvidia-blackwell-chips-turn-up-in-a-shanghai-data-center-linked-to-alice-huang-bloomberg-reports/
+· OpenAI 打造 “Athena” 数据平台，减少 AI Agent 猜测：ChatGPT Work 中的数据 Agent 准确率仍不足，OpenAI 以 Athena 为代号构建语义层，为 Agent 提供标准化的业务指标定义，可能直接与 Snowflake、Databricks 竞争。
+  来源：https://the-decoder.com/openai-is-building-athena-data-platform-to-cut-down-on-ai-agent-guesswork/
+· Amazon 与 Meta 洽谈解除对 AI Agent Muse 的封锁：双方讨论允许 Meta 的 Muse Agent 在 Amazon 商城购物，焦点在于 Agent 推荐哪些商品以及对 Amazon 广告收入的影响。
+  来源：https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions
+· Anthropic CEO 回应股价破发与用户抱怨：面对 IPO 后股价破发、用户不满与创始人套现质疑，Anthropic CEO 深夜回应称“从没想过让 AI 统治人类”。
+  来源：https://www.infoq.cn/article/FDR8k5bNu9eWklHh9NmI
+· SAP 拟裁减至少 1 万人转向 AI：据 Bloomberg 报道，SAP 正推进大规模 AI 重组，至少 1 万个岗位将被裁撤。
+  来源：https://the-decoder.com/sap-plans-to-cut-at-least-10000-jobs-as-it-pivots-to-ai/
+· JioHotstar 实测：给编码 Agent 加知识库反而更费 Token：该团队测试六种方案后发现，文件搜索在成本与效果上依然最有竞争力，知识库方案并未带来预期收益。
+  来源：https://www.infoq.cn/article/Ql4GGMIEqA3bI2W2lh7h
+
+📄 重要论文
+· Meta 与 AMI Labs 三项研究支持 LeCun 的 JEPA 世界模型路线：三项新研究分别在机器人规划、更高效训练与错误纠正上取得进展，为以内部世界模型替代大语言模型的路线提供实证支撑，但各模块仍需整合。
+  来源：https://the-decoder.com/three-studies-from-meta-and-ami-labs-back-yann-lecuns-bet-on-jepa-world-models-over-large-language-models/
+· DAWIN：面向连续时间时空学习的通用神经元原语：该研究提出阻尼原子波积分神经元，将空间投影与依赖经过时间的波激励耦合，以闭式阻尼演化维护局部复数状态，可替换 MLP、Transformer 与 GNN 中的标准神经元层。
+  来源：https://huggingface.co/papers/2611.30025
+· Markdown Is Not a Firewall：四个编码 Agent、一份规则文件、四道边界：研究用一份 278 词规则文件测试 Claude Code、Codex CLI、Gemini CLI 与 OpenCode，在 20 个带隐藏测试的小型仓库上检验规则文件的约束力，发现 Agent 很少主动查阅仓库贡献规则。
+  来源：https://huggingface.co/papers/2611.27112
+· OS-Omni：跨平台长程工作流 Computer-Using Agent 基准：现有基准多隔离 web、移动或桌面环境，OS-Omni 构建实时跨 Windows、Ubuntu 等平台的执行环境，评估单一通用 Agent 能否完成跨系统、带持久应用状态的长程任务。
+  来源：https://huggingface.co/papers/2611.34232
+· DRBench Pro：以知识覆盖为核心的专业深度研究 Agent 基准：该基准以结构化知识覆盖度为首要评估目标，自动化流水线从 Wikipedia 构建本地知识树，衡量报告覆盖了哪些研究方向、探索到多深。
+  来源：https://huggingface.co/papers/2611.34852
+· AI Agent 在数据库犯错时，什么决定损害程度：研究以 22 个典型错误脚本对四种关系型引擎做预注册测试，区分模型、数据库前 guard 层与引擎本身在损害控制中的作用。
+  来源：https://huggingface.co/papers/2611.30483
+
+🔧 开源项目
+· google-labs-code/stitch-skills：Google Labs 推出的 Agent Skills 库，配合 Stitch MCP server 使用，遵循 Agent Skills 开放标准，兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码 Agent。
+  来源：https://github.com/google-labs-code/stitch-skills
+· 腾讯开源 DFly2：复用目标模型稀疏 KV Cache 的投机解码：针对稀疏注意力 LLM 的投机解码 drafter，每层复用目标模型的 KV cache 与 top-k indexer 选择，不额外占用 draft KV 内存，64K 上下文服务吞吐最高提升 81%。
+  来源：https://www.marktechpost.com/2026/11/26/tencent-dfly2-speculative-decoding-sparse-models/
+· cathrynlavery/diagram-design：面向 Claude Code、Codex、Cursor 等编码 Agent 的图表设计技能库，覆盖 52 种图表类型，输出自包含 HTML + SVG，明确拒绝 Mermaid 式粗糙产出。
+  来源：https://github.com/cathrynlavery/diagram-design
+· SessionGraph：把全部编码 Agent 会话可视化为交互图：该工具将多个编码 Agent 的会话统一汇入一张可交互图谱，便于追踪上下文与任务流转。
+  来源：https://sessiongraph.ai/
+
+🐦 AI 圈热议
+· Michael Nielsen 下架其经典教材《Neural Networks and Deep Learning》：该免费在线书多年是入门必读，突然下线在 HN 引发 400+ 点、265 条评论的讨论，社区聚焦于开放教育资源的可持续性与作者意愿。
+  来源：https://neuralnetworksanddeeplearning.com/
+· “P=NP 已被 OpenAI 解决”传闻在 HN 发酵：一则 Twitter 爆料称 P 等于 NP 且由 OpenAI 实验室解决，虽证据薄弱，仍在技术圈引发关于大模型是否可能推动理论计算机科学突破的讨论。
+  来源：https://twitter.com/imjustnewatai/status/2124999308298567840
+
+💡 今日观察
+今天最实在的信号来自架构层：Google 的 DeepCrossAttention 与腾讯 DFly2 都指向同一件事——效率重新成为模型竞争的主战场，而非单纯堆参数。与此同时，OpenAI 的 Athena 语义层与 Amazon/Meta 的 Muse 谈判说明，Agent 的瓶颈正从模型能力转向数据定义与商业准入规则。另一条值得警惕的线索是“Markdown 规则文件不是防火墙”的研究：Agent 治理需要真正的门禁，而不是一页说明。JEPA 路线获得三项研究支撑，则提示非 LLM 的具身智能路径正在积累可信证据。
+
+———
+完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
+</div>
+<div class="ep">
+  <div class="ep-h">
     <span class="ep-title" id="t-2026-11-27">AI 每日简报 · 2026-11-27 周五</span>
     <button class="cbtn" data-copy="t-2026-11-27">📋 复制标题</button>
   </div>
@@ -1084,88 +1152,6 @@ GPT-6.2 Astra 降价 20% 并首次触及 OpenAI 自家&quot;高自我改进&quot
 
 💡 今日观察
 黄仁勋辞职是今天所有新闻的引力中心，但真正值得警惕的不是人事，而是 WSJ 披露的财务担保模式——英伟达用表外承诺撑起了下游云厂商和 OpenAI 的采购能力，这种杠杆一旦收缩，冲击会沿着融资链条传导到每一家 AI 初创。与之对照，Anthropic IPO 超额认购 6 倍、LangChain 估值 30 亿，说明资本并未离场，而是在重新挑选确定性更高的标的。技术层面，Gemini 4 Hydrogen 的低价长上下文、TPU Sync 的 KV 传输优化、Perplexity 的决策小模型，共同指向同一个方向：Agent 的竞争正从“能不能做”转向“每 token 多便宜”。而 ChatGPT Wallet 与 Claude for Manufacturing 则表明，Agent 的商业闭环已经开始触碰钱和工厂，这两处的合规与审批设计会比模型能力更早成为瓶颈。
-
-———
-完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>
-</div>
-<div class="ep">
-  <div class="ep-h">
-    <span class="ep-title" id="t-2026-11-13">AI 每日简报 · 2026-11-13 周五</span>
-    <button class="cbtn" data-copy="t-2026-11-13">📋 复制标题</button>
-  </div>
-  <audio controls preload="none" src="audio/2026-11-13.mp3"></audio>
-  <div class="acts">
-    <a class="cbtn" href="audio/2026-11-13.mp3" download="2026-11-13.mp3">⬇️ 下载音频</a>
-    <button class="cbtn" data-copy="n-2026-11-13">📋 复制 Show Notes</button>
-  </div>
-  <details><summary>预览 Show Notes</summary><pre class="notes" id="n-2026-11-13">AI 每日简报 · 2026-11-13 周五
-
-🎧 每天 5 分钟，用耳朵掌握 AI 领域最新动态。全自动采集 · DeepSeek 智能筛选。
-
-📰 行业新闻
-· 黄仁勋辞任英伟达CEO，市值蒸发1.4万亿美元：黄仁勋因与一名疑似中国情报人员的婚外情被董事会调查，即刻辞去CEO、总裁及董事职务，CFO Colette Kress出任临时CEO。
-  来源：https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/
-· 美国国会民主党启动对英伟达的调查：这是自间谍丑闻爆发以来针对英伟达对华销售及其与特朗普关系的第二项国会调查，议员致信措辞严厉。
-  来源：https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/
-· 黄仁勋离职令英伟达对开源AI的支持存疑：其辞职引发外界对英伟达开源承诺的质疑，包括Hugging Face收购案、开放权重模型及反对监管限制的立场。
-  来源：https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/
-· Hugging Face CEO表态将继续为开源AI而战：在黄仁勋退出后，HF CEO在X上安抚社区，但措辞被解读为不容乐观，社区呼吁备份数据。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xut4o7/hugging_face_ceo_vows_to_keep_fighting_for_open/
-· Google发布Gemini 4 Hydrogen并接入搜索：定位Gemini 4家族最低成本成员，发布仅四周即在Artificial Analysis智能指数上超过更大的Argon，接近Claude Sonnet 5.5，已上线Search、Gemini App全档位。
-  来源：https://the-decoder.com/googles-gemini-4-hydrogen-outscores-the-bigger-argon-just-four-weeks-after-its-launch/
-· Google发布Gemini Decision 1决策模型：新Decisions API单次可评估最多1000个封闭式问题，覆盖文本、图像、音频、视频，响应150-250毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一。
-  来源：https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/
-· Anthropic为Claude加入视频会议功能：Claude Meetings可加入Google Meet，实时生成文档、白板和会议纪要，Team与Enterprise套餐beta上线。
-  来源：https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/
-· Anthropic启动IPO路演，估值缩水6000亿美元：在行业普遍降温背景下逆势推进上市，路演视频披露其在AWS Trainium、Google TPU、NVIDIA GPU与AMD GPU上训练和部署Claude的算力策略。
-  来源：https://www.qbitai.com/2026/11/509381.html / https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/
-· Nebius计划400亿美元AI基建支出：拟通过客户预付款和贷款融资扩张，但微软数据中心项目延期引发对其融资模式的质疑。
-  来源：https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/
-· 美联航禁止AI智能体代订机票：以网络安全风险为由，不允许客户使用AI agent预订航班和管理预订。
-  来源：https://techcrunch.com/2026/11/12/united-airlines-blocks-ai-agents-from-booking-flights-citing-cybersecurity-risks/
-· 澳大利亚拟立法强制前沿模型接受独立测试：新监管机构将强制独立模型审计并对违规重罚，赶在国际谈判前优先推进国内监管。
-  来源：https://the-decoder.com/australias-proposed-ai-safety-bill-would-force-frontier-model-makers-to-open-up-to-independent-testing/
-· MiniMax开源SOTA生图模型，支持原生4K：多模态生图模型开源，单张成本约两毛钱。
-  来源：https://www.qbitai.com/2026/11/509440.html
-· Google让PyTorch原生跑上TPU：开发者长期诉求落地，PyTorch工作流可直接利用TPU算力。
-  来源：https://www.infoq.cn/article/Fikt82HLToqb6ZANB2xj
-
-📄 重要论文
-· Subliminal Learning在视觉语言模型中同样存在：研究发现教师VLM可通过与偏好无关的几何图形数字生成任务，将隐藏偏好（特定动物或面部属性）潜移默化传递给学生模型。
-  来源：https://huggingface.co/papers/2611.08538
-· ScrapeBench：评估AI agent网页抓取的合法合规性：首个针对ToS与robots.txt合规性的agentic benchmark，发现主流闭源与开源agent合规率普遍低于5%。
-  来源：https://huggingface.co/papers/2611.11306
-· OpenAI揭示前沿模型&quot;隐藏思考&quot;的成因：系统研究发现四个训练步骤导致思维链透明度流失，包括架构选择与强化学习，表明不透明并非必然而是能力与成本权衡的结果。
-  来源：https://the-decoder.com/openais-data-suggests-that-frontier-models-are-hiding-their-thoughts-because-developers-optimize-for-capability-and-compute/
-· AlphaGenome 2转向单细胞类型分辨率：基于超1.07亿细胞图谱训练，识别疾病相关基因变异数量约为前代两倍，通过API开放非商业研究使用，并将集成进Antigravity。
-  来源：https://www.marktechpost.com/2026/11/11/google-deepmind-alphagenome-2-cell-type-variant-effects/
-· Evolving Infra：面向agent负载的自适应LLM服务：针对PD分离架构在agent工作负载下的负载不均与KV cache误驱逐问题，提出运行时自适应计算分配与缓存管理框架。
-  来源：https://huggingface.co/papers/2611.12304
-· SparseRead：为AI agent提供token高效的稀疏阅读层：通过Read Intent Protocol与自适应读取后端，避免整页读取，降低token与延迟成本并减少证据稀释。
-  来源：https://huggingface.co/papers/2608.22237
-
-🔧 开源项目
-· openai/codex-security：OpenAI发布Codex Security CLI与TypeScript SDK，用于发现、验证并修复安全漏洞，单日+643 star。
-  来源：https://github.com/openai/codex-security
-· GoogleChrome/modern-web-guidance-src：让编码agent保持对最新Web最佳实践的同步，单日+739 star登顶趋势榜。
-  来源：https://github.com/GoogleChrome/modern-web-guidance-src
-· CopilotKit/OpenBot 1.0：MIT许可、可自托管的AI同事工作区，每个Bot拥有独立浏览器与文件环境，所有动作先决策后审计，支持任意AG-UI agent。
-  来源：https://www.marktechpost.com/2026/11/12/copilotkit-openbot-1-0-open-source-ai-coworker/
-· AWS Emulator：200+ AWS服务的本地克隆：CC0许可，由438个API模型构建，全部代码由自主agent编写（前三周29684次提交），发布时通过42,857项保真测试的56.6%。
-  来源：https://simonwillison.net/2026/Nov/11/aws-emulator/
-· KQuant量化技术（MLX）：新量化方法在Qwen Flash Next 180B及27B/35B/9B上以KL散度衡量取得3.7倍更优量化，GGUF版本即将发布。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xu9onk/kquant_new_quantization_technique_37_better/
-· Liquid AI发布LiquidCodec：约7400万参数流式音频编解码器，12.5Hz、12码本，单CPU线程编码速度约为实时的361倍，驱动LFM3-Audio-2B与LFM3-Omni-2B。
-  来源：https://www.marktechpost.com/2026/11/12/liquid-ai-liquidcodec-streaming-audio-codec/
-
-🐦 AI 圈热议
-· 黄仁勋下台被指与其&quot;过于亲本地AI&quot;有关：r/LocalLLaMA热帖认为黄仁勋对开源/本地模型的友好立场威胁到即将IPO的闭源厂商，社区同时担忧英伟达新领导层将全面转向数据中心算力；叠加HF CEO的安抚表态，开源社区正掀起&quot;再次备份模型与数据集&quot;的讨论。
-  来源：https://www.reddit.com/r/LocalLLaMA/comments/1xujb7c/jensen_huangs_mistake_was_being_too_pro_localai/
-· 《经济学人》发文&quot;为何应预期一场AI崩盘&quot;引发HN热议：文章在Hacker News获81分、65条评论，与Anthropic估值缩水、Nebius高杠杆扩张、企业AI支出增速降至1.65%等信号相互印证，市场对AI资本开支可持续性的争论升温。
-  来源：https://www.economist.com/leaders/2026/11/12/why-you-should-expect-an-ai-crash
-
-💡 今日观察
-黄仁勋辞职是今天唯一真正的主线：一位CEO的个人丑闻在不到一个月内抹去英伟达1.4万亿美元市值，并把Hugging Face的归属、开放权重模型的前途、对华芯片政策一并推入不确定区。技术侧并未停步——Gemini 4 Hydrogen发布四周就超越自家更大模型，Gemini Decision 1把决策推理压到200毫秒级，说明能力提升与成本下降仍在加速。真正值得警惕的是两条同时收紧的曲线：一边是《经济学人》的崩盘预警、Anthropic估值缩水与Nebius的高杠杆扩张，一边是澳大利亚立法强制独立审计、美联航封禁agent订票、ScrapeBench揭示agent合规率不足5%——资本与监管正在从两端挤压。对开发者而言，今天最实际的动作不是判断泡沫，而是把关键模型与数据集做一次异地备份，并为agent加上可审计的合规层。
 
 ———
 完整图文与往期：https://jimmuji.github.io/ai-daily-digest/</pre></details>

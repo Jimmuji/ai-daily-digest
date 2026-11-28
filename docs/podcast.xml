@@ -15,6 +15,29 @@
     <image><url>https://jimmuji.github.io/ai-daily-digest/podcast-cover.png</url><title>AI 每日简报</title><link>https://jimmuji.github.io/ai-daily-digest/</link></image>
     <itunes:owner><itunes:name>AI Daily Digest</itunes:name></itunes:owner>
     <item>
+      <title>AI 每日简报 · 2026-11-28 周六</title>
+      <description>各位听众早上好，今天是2026年11月28日，欢迎收听AI行业每日播报。今天最值得关注的是，效率重新成为模型竞争的主战场，Google和腾讯分别在架构和推理层面拿出了实打实的提速方案；与此同时，Agent的瓶颈正从模型能力转向数据定义和商业准入规则。咱们一条条来说。
+先看架构层的大新闻。Google Research发布了新的残差连接设计DeepCrossAttention，通过跨层注意力复用，在模型质量持平的前提下，把Transformer的训练和推理时间最高缩短到原来的三分之一。这个改动是架构层面的，可以直接迁移到现有模型上，对训练成本和推理延迟都是直接利好。无独有偶，腾讯开源了DFly2，这是一个针对稀疏注意力大模型的投机解码方案，每一层复用目标模型的KV cache和top-k索引，不额外占用显存，在六万四千token的长上下文场景下，服务吞吐最高提升百分之八十一。两件事放在一起看，信号很明确：拼参数的时代正在让位给拼效率。
+再看Agent这边。OpenAI正在打造一个代号Athena的数据平台，核心是给Agent提供标准化的业务指标定义，减少它在企业数据里瞎猜。这个语义层一旦做成，可能直接和Snowflake、Databricks正面竞争。另一边，Amazon和Meta正在谈，讨论允许Meta的Muse Agent在Amazon商城购物，焦点是Agent推荐哪些商品、会不会冲击广告收入。谁能定下Agent电商的准入规则，谁就握住了下一代流量入口。
+治理层面有个研究值得警惕。一篇论文用一份二百七十八个词的规则文件，测试了Claude Code、Codex CLI、Gemini CLI和OpenCode四个编码Agent，结果发现它们很少主动去查仓库的贡献规则。结论很直白：把规则文件当安全控制是个误区，Agent治理需要真正的门禁，而不是一页说明。另外JioHotstar的实测也挺反直觉，给编码Agent加知识库反而更费token，文件搜索在成本和效果上依然最能打。
+公司和资本方面。OpenAI在加州法院反诉Apple，指控窃取商业机密、向双方共用供应商施压，两家两年前还合作把ChatGPT带进iPhone，如今OpenAI自建硬件直接对标。被禁的Nvidia Blackwell芯片据Bloomberg调查现身上海一处数据中心，出口管制的执行漏洞再次曝光。Anthropic CEO深夜回应股价破发和用户抱怨，说从没想过让AI统治人类。SAP则计划裁减至少一万个岗位，全面转向AI。
+研究方面，Meta和AMI Labs的三项新研究为LeCun的JEPA世界模型路线提供了实证支撑，分别在机器人规划、高效训练和错误纠正上取得进展，但各模块还需整合。开源这边，Google Labs推出了跨Agent的技能库stitch-skills，兼容Antigravity、Gemini CLI、Claude Code等工具，降低多工具迁移成本。
+今日观察。今天最实在的信号来自架构层，DeepCrossAttention和DFly2指向同一件事：效率是新的护城河。Agent的竞争焦点正从模型能力转向语义层和商业准入，OpenAI的Athena和Amazon与Meta的谈判都是明证。而规则文件不是防火墙的研究提醒我们，Agent治理要靠真门禁。JEPA路线拿到三项支撑，说明非大语言模型的具身智能路径正在积累可信证据。好，今天就聊到这儿，我们明天见。</description>
+      <itunes:summary>各位听众早上好，今天是2026年11月28日，欢迎收听AI行业每日播报。今天最值得关注的是，效率重新成为模型竞争的主战场，Google和腾讯分别在架构和推理层面拿出了实打实的提速方案；与此同时，Agent的瓶颈正从模型能力转向数据定义和商业准入规则。咱们一条条来说。
+先看架构层的大新闻。Google Research发布了新的残差连接设计DeepCrossAttention，通过跨层注意力复用，在模型质量持平的前提下，把Transformer的训练和推理时间最高缩短到原来的三分之一。这个改动是架构层面的，可以直接迁移到现有模型上，对训练成本和推理延迟都是直接利好。无独有偶，腾讯开源了DFly2，这是一个针对稀疏注意力大模型的投机解码方案，每一层复用目标模型的KV cache和top-k索引，不额外占用显存，在六万四千token的长上下文场景下，服务吞吐最高提升百分之八十一。两件事放在一起看，信号很明确：拼参数的时代正在让位给拼效率。
+再看Agent这边。OpenAI正在打造一个代号Athena的数据平台，核心是给Agent提供标准化的业务指标定义，减少它在企业数据里瞎猜。这个语义层一旦做成，可能直接和Snowflake、Databricks正面竞争。另一边，Amazon和Meta正在谈，讨论允许Meta的Muse Agent在Amazon商城购物，焦点是Agent推荐哪些商品、会不会冲击广告收入。谁能定下Agent电商的准入规则，谁就握住了下一代流量入口。
+治理层面有个研究值得警惕。一篇论文用一份二百七十八个词的规则文件，测试了Claude Code、Codex CLI、Gemini CLI和OpenCode四个编码Agent，结果发现它们很少主动去查仓库的贡献规则。结论很直白：把规则文件当安全控制是个误区，Agent治理需要真正的门禁，而不是一页说明。另外JioHotstar的实测也挺反直觉，给编码Agent加知识库反而更费token，文件搜索在成本和效果上依然最能打。
+公司和资本方面。OpenAI在加州法院反诉Apple，指控窃取商业机密、向双方共用供应商施压，两家两年前还合作把ChatGPT带进iPhone，如今OpenAI自建硬件直接对标。被禁的Nvidia Blackwell芯片据Bloomberg调查现身上海一处数据中心，出口管制的执行漏洞再次曝光。Anthropic CEO深夜回应股价破发和用户抱怨，说从没想过让AI统治人类。SAP则计划裁减至少一万个岗位，全面转向AI。
+研究方面，Meta和AMI Labs的三项新研究为LeCun的JEPA世界模型路线提供了实证支撑，分别在机器人规划、高效训练和错误纠正上取得进展，但各模块还需整合。开源这边，Google Labs推出了跨Agent的技能库stitch-skills，兼容Antigravity、Gemini CLI、Claude Code等工具，降低多工具迁移成本。
+今日观察。今天最实在的信号来自架构层，DeepCrossAttention和DFly2指向同一件事：效率是新的护城河。Agent的竞争焦点正从模型能力转向语义层和商业准入，OpenAI的Athena和Amazon与Meta的谈判都是明证。而规则文件不是防火墙的研究提醒我们，Agent治理要靠真门禁。JEPA路线拿到三项支撑，说明非大语言模型的具身智能路径正在积累可信证据。好，今天就聊到这儿，我们明天见。</itunes:summary>
+      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-28.mp3" length="1447632" type="audio/mpeg"/>
+      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-28.mp3</guid>
+      <pubDate>Sat, 28 Nov 2026 08:00:00 +0800</pubDate>
+      <itunes:duration>04:01</itunes:duration>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
+    </item>
+    <item>
       <title>AI 每日简报 · 2026-11-27 周五</title>
       <description>各位好，欢迎收听今天的 AI 日报，今天是 2026 年 11 月 27 日，星期五。今天最值得关注的，是出口管制的手伸向了服务器整机，英伟达在东南亚按下了暂停键；模型和研究这边也不平静，从 GLM-5.5 的发布节奏，到黎曼猜想证明引发的审核难题，我们一条条来聊。
 先看行业大事。英伟达已经要求 Dell、Supermicro 这些合作伙伴，停止向马来西亚、新加坡、泰国和印尼发运服务器，目的是配合美国收紧对华 AI 芯片管控。渠道商现在正为几千颗 B300 找买家，有云厂商高管直接用&quot;混乱&quot;来形容。这件事的影响不只是转口贸易，刚起步的东南亚 neocloud 和本地数据中心，交付和融资两头都承压。
@@ -363,27 +386,6 @@ Anthropic 这边有个很有意思的思路。Claude Fable 5.2 生成图像不�
       <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-14.mp3</guid>
       <pubDate>Sat, 14 Nov 2026 08:00:00 +0800</pubDate>
       <itunes:duration>05:01</itunes:duration>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
-    </item>
-    <item>
-      <title>AI 每日简报 · 2026-11-13 周五</title>
-      <description>早上好，今天是2026年11月13日，欢迎收听AI每日播报。今天的头条只有一个，但足够震动整个行业——黄仁勋辞任英伟达CEO，一夜之间市值蒸发一万四千亿美元。与此同时，技术侧依然在加速，Gemini 4家族再添新成员，Anthropic逆势启动IPO路演。我们一项一项来说。
-先说英伟达。黄仁勋因与一名疑似中国情报人员的婚外情被董事会调查，即刻辞去CEO、总裁和董事职务，CFO Colette Kress出任临时CEO。这个消息在不到一个月内抹去了英伟达一万四千亿美元的市值，领导层真空让算力供应链和开源战略都充满不确定性。紧接着，美国国会民主党启动了针对英伟达的第二项调查，聚焦对华销售以及黄仁勋与特朗普之间的关系，监管风险明显升级。更让开发者紧张的是，黄仁勋的离开让英伟达对开源AI的支持打上了问号，包括Hugging Face收购案、开放权重模型以及反对监管限制的立场，全都悬而未决。Hugging Face的CEO在社交平台上安抚社区，说会继续为开源而战，但措辞被不少人解读为不容乐观，社区里已经掀起“再次备份模型和数据集”的讨论。顺便说一句，圈内还有热帖认为，黄仁勋下台的真正原因是他对本地AI过于友好，威胁到了即将IPO的闭源厂商。
-再看模型侧。Google发布了Gemini 4 Hydrogen，定位是Gemini 4家族里成本最低的成员，发布仅四周就在Artificial Analysis智能指数上超过了更大的Argon，接近Claude Sonnet 5.5，已经上线搜索和Gemini App全档位。不过要注意，它的每任务成本仍是GPT-6.1 Sol的二点五倍。Google还推出了Gemini Decision 1决策模型，配套的Decisions API单次可以评估最多一千个封闭式问题，覆盖文本、图像、音频和视频，响应时间一百五十到二百五十毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一，很适合高频分类和路由场景。Anthropic这边，Claude加入了视频会议功能，可以进Google Meet实时生成文档、白板和会议纪要，Team和Enterprise套餐已经beta上线。另外，Anthropic启动了IPO路演，估值缩水六千亿美元，路演视频还首次披露了它在AWS Trainium、Google TPU、NVIDIA GPU和AMD GPU上训练部署Claude的多芯片策略。
-基础设施和监管方面也有几条值得关注。Nebius计划投入四百亿美元搞AI基建，靠客户预付款和贷款融资，但微软数据中心项目延期让外界对其融资模式产生质疑。美联航以网络安全风险为由，禁止AI智能体代订机票和管理预订，agent落地遇到了企业侧的风控阻力。澳大利亚则拟立法强制前沿模型接受独立测试，可能成为首个把前沿AI安全规则写进法律的国家样本。
-论文和开源项目快速过几条。研究发现在视觉语言模型里同样存在潜隐学习，教师模型可以通过看似无关的几何图形任务，把隐藏偏好悄悄传给学生模型。ScrapeBench这个新基准专门评估网页抓取agent的合规性，结果主流agent合规率普遍低于百分之五。OpenAI则揭示了前沿模型“隐藏思考”的成因，指出四个训练步骤导致思维链透明度流失。开源方面，OpenAI发布了Codex Security，把安全审计嵌进编码agent工作流；CopilotKit的OpenBot 1.0是一个可自托管、自带审计轨迹的企业级agent框架；还有KQuant量化技术在MLX上取得三点七倍更优的量化效果，Mac本地跑大模型精度明显改善。
-最后进入今日观察。黄仁勋辞职是今天唯一真正的主线，一位CEO的个人丑闻在不到一个月内抹去英伟达一万四千亿美元市值，并把Hugging Face的归属、开放权重模型的前途、对华芯片政策一并推入不确定区。技术侧并没有停步，Gemini 4 Hydrogen发布四周就超越自家更大模型，Gemini Decision 1把决策推理压到两百毫秒级，说明能力提升和成本下降仍在加速。真正值得警惕的是两条同时收紧的曲线：一边是经济学人的崩盘预警、Anthropic估值缩水与Nebius的高杠杆扩张，一边是澳大利亚立法强制独立审计、美联航封禁agent订票、ScrapeBench揭示的合规率不足百分之五。资</description>
-      <itunes:summary>早上好，今天是2026年11月13日，欢迎收听AI每日播报。今天的头条只有一个，但足够震动整个行业——黄仁勋辞任英伟达CEO，一夜之间市值蒸发一万四千亿美元。与此同时，技术侧依然在加速，Gemini 4家族再添新成员，Anthropic逆势启动IPO路演。我们一项一项来说。
-先说英伟达。黄仁勋因与一名疑似中国情报人员的婚外情被董事会调查，即刻辞去CEO、总裁和董事职务，CFO Colette Kress出任临时CEO。这个消息在不到一个月内抹去了英伟达一万四千亿美元的市值，领导层真空让算力供应链和开源战略都充满不确定性。紧接着，美国国会民主党启动了针对英伟达的第二项调查，聚焦对华销售以及黄仁勋与特朗普之间的关系，监管风险明显升级。更让开发者紧张的是，黄仁勋的离开让英伟达对开源AI的支持打上了问号，包括Hugging Face收购案、开放权重模型以及反对监管限制的立场，全都悬而未决。Hugging Face的CEO在社交平台上安抚社区，说会继续为开源而战，但措辞被不少人解读为不容乐观，社区里已经掀起“再次备份模型和数据集”的讨论。顺便说一句，圈内还有热帖认为，黄仁勋下台的真正原因是他对本地AI过于友好，威胁到了即将IPO的闭源厂商。
-再看模型侧。Google发布了Gemini 4 Hydrogen，定位是Gemini 4家族里成本最低的成员，发布仅四周就在Artificial Analysis智能指数上超过了更大的Argon，接近Claude Sonnet 5.5，已经上线搜索和Gemini App全档位。不过要注意，它的每任务成本仍是GPT-6.1 Sol的二点五倍。Google还推出了Gemini Decision 1决策模型，配套的Decisions API单次可以评估最多一千个封闭式问题，覆盖文本、图像、音频和视频，响应时间一百五十到二百五十毫秒，成本约为Gemini 3.5 Flash-Lite的五分之一，很适合高频分类和路由场景。Anthropic这边，Claude加入了视频会议功能，可以进Google Meet实时生成文档、白板和会议纪要，Team和Enterprise套餐已经beta上线。另外，Anthropic启动了IPO路演，估值缩水六千亿美元，路演视频还首次披露了它在AWS Trainium、Google TPU、NVIDIA GPU和AMD GPU上训练部署Claude的多芯片策略。
-基础设施和监管方面也有几条值得关注。Nebius计划投入四百亿美元搞AI基建，靠客户预付款和贷款融资，但微软数据中心项目延期让外界对其融资模式产生质疑。美联航以网络安全风险为由，禁止AI智能体代订机票和管理预订，agent落地遇到了企业侧的风控阻力。澳大利亚则拟立法强制前沿模型接受独立测试，可能成为首个把前沿AI安全规则写进法律的国家样本。
-论文和开源项目快速过几条。研究发现在视觉语言模型里同样存在潜隐学习，教师模型可以通过看似无关的几何图形任务，把隐藏偏好悄悄传给学生模型。ScrapeBench这个新基准专门评估网页抓取agent的合规性，结果主流agent合规率普遍低于百分之五。OpenAI则揭示了前沿模型“隐藏思考”的成因，指出四个训练步骤导致思维链透明度流失。开源方面，OpenAI发布了Codex Security，把安全审计嵌进编码agent工作流；CopilotKit的OpenBot 1.0是一个可自托管、自带审计轨迹的企业级agent框架；还有KQuant量化技术在MLX上取得三点七倍更优的量化效果，Mac本地跑大模型精度明显改善。
-最后进入今日观察。黄仁勋辞职是今天唯一真正的主线，一位CEO的个人丑闻在不到一个月内抹去英伟达一万四千亿美元市值，并把Hugging Face的归属、开放权重模型的前途、对华芯片政策一并推入不确定区。技术侧并没有停步，Gemini 4 Hydrogen发布四周就超越自家更大模型，Gemini Decision 1把决策推理压到两百毫秒级，说明能力提升和成本下降仍在加速。真正值得警惕的是两条同时收紧的曲线：一边是经济学人的崩盘预警、Anthropic估值缩水与Nebius的高杠杆扩张，一边是澳大利亚立法强制独立审计、美联航封禁agent订票、ScrapeBench揭示的合规率不足百分之五。资</itunes:summary>
-      <enclosure url="https://jimmuji.github.io/ai-daily-digest/audio/2026-11-13.mp3" length="1930320" type="audio/mpeg"/>
-      <guid isPermaLink="true">https://jimmuji.github.io/ai-daily-digest/audio/2026-11-13.mp3</guid>
-      <pubDate>Fri, 13 Nov 2026 08:00:00 +0800</pubDate>
-      <itunes:duration>05:21</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:image href="https://jimmuji.github.io/ai-daily-digest/podcast-cover.png"/>
     </item>
